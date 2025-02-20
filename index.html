@@ -4,39 +4,288 @@
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario</title>
-      <script src="./src/assets/prism.js"></script>
-      <link rel="stylesheet" href="./src/assets/prism.css" > 
-      <script src="./src/assets/jquery-2.1.4.min.js"></script>       
-      <link rel="stylesheet" href="./src/assets/instrucciones.css">    
-     
+    <script src="./src/assets/prism.js"></script>
+    <link rel="stylesheet" href="./src/assets/prism.css" > 
+    <script src="./src/assets/jquery-2.1.4.min.js"></script>       
+    <link rel="stylesheet" href="./src/assets/instrucciones.css">         
   </head>
+  
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <div class="contenedor w-95 background esp-5-bottom">
-      <!-- LINKS FO -->
-      <div class="contenedor w-95 background esp-5-bottom">            
-      
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#linksfo').toggle();">
-          <h3>Links FO - <a href="https://portfolioaab.netlify.app/" class="underline underline-offset-2" target="_blank">Portfolio aab</a> y Tareas</h3>		
-          <span class="cambiaicono ico_chevron_down esp-10-right"></span>
-        </div>
-        
-        <div id="linksfo" class="hidden">  
+    <div class="bg-gray-100 pb-2.5">
+
+
+      <!-- TAREAS FO -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#tareasfo').toggle();">
+          <h3>Tareas FO</h3>		
+          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>        
+        <div id="tareasfo" class="hidden"> 
+
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+            <span class="verde">Completadas</span>
+
+            <div> 
+              <ul class="list-disc">
+                <li class="line-through">portfolio-XXX</li>
+                <li class="line-through">Códigos javascript de primeros videos</li>
+                <li class="line-through">Hacer build de Delorean</li>
+                <li class="line-through">Seguir con mejoras de diseño en nueva rama de calorie-tracker</li>
+                <li class="line-through">seguir limpiando estilos DIARIO</li>
+                <li>Sección 11 Migrar el carrito de compras a useReducer --&gt; 171-175 / 20-02 177 /</li>
+              </ul>             
+              
+            </div>
+          </div>
+
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+            <span class="rojo">Haciendo</span>
+
+            <div class="flex flex-col">
+              <p>- Publicar Diario para TENERLO de consulta (QUITAR TODAS LAS REF PERSONALES POSIBLES Y CAMBIAR A NOMBRE)</p>
+              <p>- Actualizar el portfolio con Calorie Tracker ¿MEJORAS? </p>
+
+                <p>--&gt; quitar jquery de portfolio: - link DOM typescript -> https://fullstackpro.es/courses/curso-typescript/gestion-del-dom</p>
+                <p>--&gt; Arreglar despliegue automático portfolio en netlify (Nuevo y cambiar de nombre) --&gt; X18/08 - XX19/02 (desinstalado cli de netlify y vuelto a instalar, no global sino dev)</p>
+                <p>--&gt; Adaptar GuitarLA para añdirla al portfolio</p>
+                
+                <p>--&gt; ¿Mejoras css en visualización de imágenes de proyectos?</p>
+                <p>--&gt; ¿Mejorar componente modal panel?</p>
+                <p>--&gt; Añadir boton encendido y apagado de CSS (y mirar mas)</p>
+              
+            </div>
+          </div>
           
-          <a href="https://github.com/andune55/" class="txt-primario" target="blank">https://github.com/andune55/</a> - 
-          <a href="https://app.netlify.com/teams/andune55/sites" class="txt-primario" target="blank">https://app.netlify.com/teams/andune55/sites</a> -  <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br>
-  
-          <a href="https://manual-react.netlify.app/" class="txt-negro" target="blank">https://manual-react.netlify.app/</a> -
-          <a href="https://andune55.github.io/manual-react/" class="txt-negro" target="blank">https://andune55.github.io/manual-react/</a>
-          <a href="https://andune55.github.io/bttf/" class="txt-negro" target="blank">https://andune55.github.io/bttf/</a><br>
-        
+            <p><span class="rojo">TAREAS </span> <a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></p>
+            
+            <p>Páginas individuales para secciones <a href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></p>
+            <p>Hacer build de Calendario litúrgico</p>
+            <p>Hacer build de Silmarillion</p>
+            
+          
+
+        </div>
+      </div>
+
+
+      <!-- LINKS FO -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#linksfo').toggle();">
+          <h3>Proyectos, Git, Herramientas</h3>		
+          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>        
+        <div id="linksfo" class="hidden">            
+          <a href="https://app.netlify.com/teams/an.....5/sites" class="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> - 
+          <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> - 
+          <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br>
           <a href="https://doesitmutate.xyz/" class="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> / 
           <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> / 
           <a href="https://developer.mozilla.org/es/docs/Web/API/Element" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a><br>
+            
+
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <p class="flex items-center">
+              <span class="naranja">Proyectos</span>
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </p>
+            <div class="flex flex-wrap items-center">
+              <div class="flex w-[100%]"></div>    
+              <a href="https://github.com/an.....5/diario" class="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
+              <div class="flex w-[100%]"></div>
+              <a href="https://manual-xxxxx.netlify.app/" class="underline mx-1.5" target="blank">https://manual-xxxxx.netlify.app/</a> - 
+              <a href="https://an.....5.github.io/manual-xxxxx/" class="underline mx-1.5" target="blank">https://an.....5.github.io/manual-xxxxx/</a>
+              <div class="flex w-[100%]"></div>              
+              
+              <a href="https://portfolioXXX.netlify.app/" class="underline mx-1.5 text-red-600" target="blank">https://portfolioXXX.netlify.app/</a> - 
+              <a href="https://an.....5.github.io/portfolio-XXX/" class="underline mx-1.5" target="blank">https://an.....5.github.io/portfolio-XXX/</a>
+              <div class="flex w-[100%]"></div>
+              <a href="https://XXX-calory-tracker.netlify.app/" class="underline mx-1.5" target="blank">https://XXX-calory-tracker.netlify.app/</a> -
+              <a href="https://an.....5.github.io/calory-tracker/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calory-tracker/</a>
+              <div class="flex w-[100%]"></div>
+
+              <div class="flex w-[100%]"></div>
+              <a href="https://calcula-propinas.netlify.app/" class="underline mx-1.5" target="blank">https://calcula-propinas.netlify.app/</a> -
+              <a href="https://an.....5.github.io/calculadora_propinas/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calculadora_propinas/</a>
+
+              <div class="flex w-[100%]"></div>
+              <a href="https://react-tienda-guitarras.netlify.app/" class="underline mx-1.5" target="blank">https://react-tienda-guitarras.netlify.app/</a>
+              <a href="https://an.....5.github.io/guitarla-ts/" class="underline mx-1.5" target="blank">https://an.....5.github.io/guitarla-ts/</a>
+              
+              <div class="flex w-[100%]"></div>
+              <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
+              <a href="https://an.....5.github.io/bttf/" class="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
+              <div class="flex w-[100%]"></div>
+              
+              <!-- Crear proyecto e instalar dependencias útiles,... -->
+              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#comandos-npm').toggle();">	
+                <h3>Crear proyecto e instalar dependencias útiles,...</h3>			
+                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+              </div>
+              <div id="comandos-npm" class="hidden">
+                <p class="font-bold">Crear proyecto:</p>
+                <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                  <li><span>Vamos al directorio donde queremos crearlo</span></li>
+                  <li><span><span class="destacado">npm create vite@latest</span> > <strong>calorie-tracker</strong> > <strong>react TypeScript + SWC</strong> > <span class="destacado">npm install</span></span></li>
+                  <li><span>arrancamos el servidor de desarrollo <span class="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src>assets, eliminamos src>App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code class="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
+                </ul>                   
+                
+                <p class="font-bold">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
+              
+                <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                  <li><span class="destacado">npm install tailwindcss @tailwindcss/vite</span></li>
+                  <li>configurar el plugin: 
+                    <pre><code class="language-js">
+                      //vite.config.ts
+                      import tailwindcss from '@tailwindcss/vite'
+                      export default defineConfig({
+                        plugins: [
+                          tailwindcss(),
+                        ],
+                      })
+                    </code></pre>
+                  </li>
+                  <li>importar tailwindcss en nuestra css principal: 
+                    <pre><code class="language-js">
+                      //src>index.css
+                      @import "tailwindcss";
+                    </code></pre>
+                  </li>
+                  </ul>
+                
+                <p class="font-bold">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
+                <pre><code class="language-js">
+                  // Importing Prism.js
+                  import Prism from 'prismjs'
+                  
+                  // Importing a language
+                  import 'prismjs/components/prism-javascript'
+                  
+                  // Importing a theme
+                  import 'prismjs/themes/prism-tomorrow.css'          
+                </code></pre>
+      
+                <p>De momento este es mi componente 'CodePrism.tsx' y su uso desde el compo ppal 'App.tsx'</p>
+      
+                <div class="flex max-sm:flex-col">
+                  <div class="w-[50%] max-sm:w-[100%]">
+                    <pre><code class="language-js">
+                      //App.tsx
+                      &lt;CodePrism 
+                        code={`
+                          // Importing Prism.js
+                          import Prism from &#39;prismjs&#39;
+                          
+                          // Importing a language
+                          import &#39;prismjs/components/prism-javascript&#39;
+                          
+                          // Importing a theme
+                          import &#39;prismjs/themes/prism-tomorrow.css&#39;          
+                        `}
+                        language={&#39;js&#39;}
+                      /&gt;              
+                    </code></pre>
+                  </div>
+                  <div class="w-[50%] max-sm:w-[100%]">
+                    <pre><code class="language-js">
+                      //CodePrism.tsx
+                      import { useEffect } from &#39;react&#39;;
+                      import Prism from &#39;prismjs&#39;
+                      
+                      import &#39;prismjs/themes/prism-tomorrow.css&#39;; // Importing a Prism theme
+                      import &#39;prismjs/components/prism-javascript&#39; // Importing js language
+                      import &#39;prismjs/components/prism-typescript&#39; // Importing ts language
+                      
+                      type CodePrismProps = {
+                          code: string,
+                          language: string
+                      }
+                      
+                      export default function CodePrism({code, language} : CodePrismProps) {
+                      
+                          useEffect(() =&gt; {
+                              Prism.highlightAll();
+                              }, [code, language]);
+                            
+                      
+                          return (
+                              &lt;pre&gt;
+                                  &lt;code className={`language-${language}`}&gt;
+                                  {code}
+                                  &lt;/code&gt;
+                              &lt;/pre&gt;
+                          )
+                      }
+                    </code></pre>
+                  </div>
+                </div>
+      
+                
+      
+                <p><strong>Instalar heroicons:</strong> <span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a></p>
+                <pre><code class="language-js">
+                  import { BeakerIcon } from '@heroicons/react/24/solid'
+                  function MyComponent() {
+                    return (
+                      &lt;div&gt;
+                        &lt;BeakerIcon className=&quot;size-6 text-blue-500&quot; /&gt;
+                        &lt;p&gt;...&lt;/p&gt;
+                      &lt;/div&gt;
+                    )
+                  }
+                </code></pre>
+                
+                <p class="font-bold">Instalar dependencia para generar ids únicos <span class="destacado">npm i uuid</span>
+                <pre><code class="language-js">
+                  import { v4 as uuidv4 } from 'uuid'
+                  ...
+                  uuidv4()
+                </code></pre></p>
+      
+                
+                <p class="font-bold">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p>
+                <p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p>
+              </div>            
   
-          
+              <!-- Respaldo git de web smmdd 16-02-25 -->
+              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#web-smmdd').toggle();">	
+                <h3>Respaldo git de web smmdd 16-02-25</h3>			
+                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+              </div>
+              <div id="web-smmdd" class="hidden">
+                <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+                  <div class="flex flex-col">
+                    - Creo repositorio privado https://github.com/an.....5/websmmdd<br>
+                    - Como hay un límite de espacio en github, creo en el raíz de mi carpeta local un .gitignore donde incluyo carpetas como documentos, flip-book, temp,... (solo quiero - subir las versiones últimas funcionales de los htmls, phps...pero SOBRE TODO LOS JS DE LECTURAS Y CALENDARIO LITURGICO PARA TENER ALMACENADAS VERSIONES OPERATIVAS ANTE POSIBLE FALLO)<br> 
+                    - me situo en la terminal en mi carpeta local C:\Users\FOS\OneDrive\Webs\Web SMMDD<br>
+                    - desde el terminal de VSC:<br>
+                      - git init<br>
+                    -  git add .<br>
+                      - git commit -m "first commit"<br>
+                      - git branch -M main<br>
+                      - git remote add origin https://github.com/an.....5/websmmdd.git<br>
+                      - git push -u origin main<br>
+                    <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">A partir de ahora su quiero <strong>innovar, probar, cambiar </strong>algo en js de lecturas, arranco mi local server con xamp y cuando esté seguro de que funciona el cambio:</span>
+                    <ul>
+                      <li>respaldo cambio de mi repo local en mi repo github</li>
+                      <li>subo con dw al hosting de la parro</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>  
+              
+            </div>
+          </div>        
           
           <!-- / GIT /////////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -50,245 +299,19 @@
               <a class="underline mx-1.5" href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" target="_blank"><strong>Git basis</strong></a> /
               <a class="underline mx-1.5" href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git" target="_blank">Fundamentos Control de versiones Git</a> /
               
-                  <div class="flex w-[100%]"></div>
+              <div class="flex w-[100%]"></div>
   
               <a class="underline mx-1.5" href="https://medium.com/@diego.coder/despliega-tu-aplicaci%C3%B3n-de-reactjs-vite-en-github-pages-34d25e619dae" target="blank">Despliega tu aplicación de ReactJS +Vite en GitHub Pages</a> /
-              <a class="underline mx-1.5" href="https://es.stackoverflow.com/questions/544213/c%C3%B3mo-compartir-un-repositorio-privado-mediante-una-url" target="blank">¿Cómo compartir un repositorio privado mediante una URL?</a> / <a href="https://gitfront.io/r/andune/LqWHLJa4HdLF/diario/">Repo privado</a> /  <a class="underline mx-1.5" href="https://gitfront.io/" target="blank">https://gitfront.io/</a> /       
+              <a class="underline mx-1.5" href="https://es.stackoverflow.com/questions/544213/c%C3%B3mo-compartir-un-repositorio-privado-mediante-una-url" target="blank">¿Cómo compartir un repositorio privado mediante una URL?</a> / <a class="underline mx-1.5" href="https://gitfront.io/r/andune/LqWHLJa4HdLF/diario/" target="blank">Repo privado</a> /  <a class="underline mx-1.5" href="https://gitfront.io/" target="blank">https://gitfront.io/</a> /       
             </div>
-          </div>
-          
-          <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// -->
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <p class="flex items-center">
-              <span class="naranja">Tailwindcss</span>
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-            </p>
-            <div class="flex flex-wrap items-center">
-            <a class="underline mx-1.5" href="Tailwindcss-cheatsheet.html" target="_blank"><strong>Tailwindcss-cheatsheet FO</strong></a> /
-              <a class="underline mx-1.5" href="https://tailwindcss.com/" target="_blank"><strong>Tailwindcss</strong></a> /
-              <a class="underline mx-1.5" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank"><strong>Installation y docs</strong></a> /
-              <a class="underline mx-1.5" href="https://certidevs.com/tutorial-tailwindcss-introduccion" target="_blank"><strong>Tutorial certidevs</strong></a> /
-              <a class="underline mx-1.5" href="https://heroicons.com/" target="_blank"><strong>https://heroicons.com/</strong></a> /
+
+            <!-- GIT-->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#git').toggle();">	
+              <h3>GIT</h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
             </div>
-          </div>
-  
-          <!-- / HERRAMIENTAS /////////////////////////////////////////////////////////////// -->
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <p class="flex items-center">
-              <span class="naranja">Herramientas</span>
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-            </p>
-            <div class="flex flex-wrap items-center">
-              <a href="https://git-scm.com/" class="underline mx-1.5" target="blank">Git</a> / 
-              <a href="https://nodejs.org/es/" class="underline mx-1.5" target="blank">https://nodejs.org/es/</a> /  		
-              <a href="https://react.dev/" class="underline mx-1.5" target="blank">https://react.dev/</a> /  
-              <a href="https://vite.dev/" class="underline mx-1.5" target="blank">https://vite.dev/</a> (https://es.vite.dev/guide/ --&gt; una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos) 
-              <a href="https://autoprefixer.github.io/" class="txt-negro">https://autoprefixer.github.io/</a> / 
-              <a href="https://llamacoder.together.ai/" class="txt-negro">https://llamacoder.together.ai/</a> / 
-              <a href="https://www.postman.com/downloads/" class="underline mx-1.5" target="blank">Postman</a> /  
-              
-              
-              <div class="flex w-[100%]"></div>
-              <a href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&pli=1" class="underline mx-1.5" target="_blank">Ext Chrome React developer tools</a> /  
-              <a href="https://chromewebstore.google.com/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc" class="underline mx-1.5" target="_blank">Ext Chrome JSON viewer Pro</a> /  
-              <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" class="underline mx-1.5" target="blank">Iconos VS Code</a>
-            </div>
-          </div>
-          
-          <!-- / TUTORIALES REACT /////////////////////////////////////////////////////////////// -->
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <p class="flex items-center">
-              <span class="naranja">Tutoriales React y Typescript</span>
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-            </p>
-            <div class="flex flex-wrap items-center">
-              <a href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" class="underline mx-1.5" target="blank">Explicación por qué map genera coma y solventarlo</a> /
-              <a href="https:https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" class="underline mx-1.5" target="blank">Primeros pasos con React Router DOM</a> /
-              <a href="https://medium.com/@rishikeshsolapure0720/building-a-reusable-accordion-component-in-react-using-typescript-3a474a468f20" class="underline mx-1.5" target="blank">Building a Reusable Accordion Component in React using Typescript</a> /                      
-              <a href="https://medium.com/@rishikeshsolapure0720" class="underline mx-1.5" target="blank">El del acordeon (y 3 artículos más interesantes)</a>
-              <a href="https://medium.com/@diego.coder" class="underline mx-1.5" target="blank">Artículos Diego Esteban</a>
-              <a href="http://dhiwise.com/post/understanding-react-prism-building-blocks-of-modern-web" class="underline mx-1.5" target="blank">Comprender React Prism</a>
-              <a href="https://prince.dev/blog/highlight-with-react/" class="underline mx-1.5" target="blank">Add line highlighting to prism-react-renderer</a>
-              <a href="" class="underline mx-1.5" target="blank">xxxxxx</a>
-              <a href="" class="underline mx-1.5" target="blank">xxxxxx</a>
-  
-              <div class="flex w-[100%]"></div>
-  
-              <a href="https://blog.logrocket.com/responsive-image-gallery-css-flexbox/" class="underline mx-1.5">Responsive Image Gallery with flexbox</a> /
-            </div>
-          </div>     
-                
-            
-          <div class="border-t-2 p-4 border-gray-200">
-            <p><span class="rojo">seguir con el </span> <a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></p>
-            
-            <p>Páginas individuales para secciones <a href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></p>
-            <p>Hacer build de Calendario litúrgico</p>
-            <p>Hacer build de Silmarillion</p>
-            <p><span class="verde">portfolio-aab</span> - <a href="https://portfolioaab.netlify.app/" target="blank">https://portfolioaab.netlify.app/</a> - <span class="verde">Códigos javascript de primeros videos</span> - <span class="verde">Hacer build de Delorean</span></p>
-      </div>
-  
-  
-        
-                    
-        </div>
-        
-      </div>
-  
-      <!-- BLOQUES A REUTILIZAR Y EXPLICACIONES  -->
-      <div class="contenedor w-95 w-96-s background esp-5-bottom">		
-        
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#snipets').toggle();">	
-          <h3>Bloques reutilizar y explicaciones</h3>				
-          <span class="cambiaicono ico_chevron_down esp-10-right" title=""></span>
-        </div>
-          
-        <div id="snipets" class="hidden">
-  
-          <!-- Crear proyecto e instalar dependencias útiles,... -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#comandos-npm').toggle();">	
-            <h3>Crear proyecto e instalar dependencias útiles,...</h3>			
-            <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-          </div>
-          <div id="comandos-npm" class="">
-            <p class="titulo">Crear proyecto:</p>
-            <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-              <li><span>Vamos al directorio donde queremos crearlo</span></li>
-              <li><span><span class="destacado">npm create vite@latest</span> > <strong>calorie-tracker</strong> > <strong>react TypeScript + SWC</strong> > <span class="destacado">npm install</span></span></li>
-              <li><span>arrancamos el servidor de desarrollo <span class="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src>assets, eliminamos src>App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code class="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
-            </ul>                   
-            
-            <p class="titulo">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
-          
-            <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-              <li><span class="destacado">npm install tailwindcss @tailwindcss/vite</span></li>
-              <li>configurar el plugin: 
-                <pre><code class="language-js">
-                  //vite.config.ts
-                  import tailwindcss from '@tailwindcss/vite'
-                  export default defineConfig({
-                    plugins: [
-                      tailwindcss(),
-                    ],
-                  })
-                </code></pre>
-              </li>
-              <li>importar tailwindcss en nuestra css principal: 
-                <pre><code class="language-js">
-                  //src>index.css
-                  @import "tailwindcss";
-                </code></pre>
-              </li>
-              </ul>
-            
-            <p class="titulo">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
-            <pre><code class="language-js">
-              // Importing Prism.js
-              import Prism from 'prismjs'
-              
-              // Importing a language
-              import 'prismjs/components/prism-javascript'
-              
-              // Importing a theme
-              import 'prismjs/themes/prism-tomorrow.css'          
-            </code></pre>
-  
-            <p>De momento este es mi componente 'CodePrism.tsx' y su uso desde el compo ppal 'App.tsx'</p>
-  
-            <div class="flex max-sm:flex-col">
-              <div class="w-[50%] max-sm:w-[100%]">
-                <pre><code class="language-js">
-                  //App.tsx
-                  &lt;CodePrism 
-                    code={`
-                      // Importing Prism.js
-                      import Prism from &#39;prismjs&#39;
-                      
-                      // Importing a language
-                      import &#39;prismjs/components/prism-javascript&#39;
-                      
-                      // Importing a theme
-                      import &#39;prismjs/themes/prism-tomorrow.css&#39;          
-                    `}
-                    language={&#39;js&#39;}
-                  /&gt;              
-                </code></pre>
-              </div>
-              <div class="w-[50%] max-sm:w-[100%]">
-                <pre><code class="language-js">
-                  //CodePrism.tsx
-                  import { useEffect } from &#39;react&#39;;
-                  import Prism from &#39;prismjs&#39;
-                  
-                  import &#39;prismjs/themes/prism-tomorrow.css&#39;; // Importing a Prism theme
-                  import &#39;prismjs/components/prism-javascript&#39; // Importing js language
-                  import &#39;prismjs/components/prism-typescript&#39; // Importing ts language
-                  
-                  type CodePrismProps = {
-                      code: string,
-                      language: string
-                  }
-                  
-                  export default function CodePrism({code, language} : CodePrismProps) {
-                  
-                      useEffect(() =&gt; {
-                          Prism.highlightAll();
-                          }, [code, language]);
-                        
-                  
-                      return (
-                          &lt;pre&gt;
-                              &lt;code className={`language-${language}`}&gt;
-                              {code}
-                              &lt;/code&gt;
-                          &lt;/pre&gt;
-                      )
-                  }
-                </code></pre>
-              </div>
-            </div>
-  
-            
-  
-            <p><strong>Instalar heroicons:</strong> <span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a></p>
-            <pre><code class="language-js">
-              import { BeakerIcon } from '@heroicons/react/24/solid'
-              function MyComponent() {
-                return (
-                  &lt;div&gt;
-                    &lt;BeakerIcon className=&quot;size-6 text-blue-500&quot; /&gt;
-                    &lt;p&gt;...&lt;/p&gt;
-                  &lt;/div&gt;
-                )
-              }
-            </code></pre>
-            
-            <p class="titulo">Instalar dependencia para generar ids únicos <span class="destacado">npm i uuid</span>
-            <pre><code class="language-js">
-              import { v4 as uuidv4 } from 'uuid'
-              ...
-              uuidv4()
-            </code></pre></p>
-  
-            
-            <p class="titulo">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p>
-            <p class="titulo">Instalar CLI de Netlify: <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p>
-          </div>            
-          
-          <!-- GIT-->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#git').toggle();">	
-            <h3>GIT</h3>			
-            <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-          </div>
-          <div id="git" class="hidden">
-            <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-              <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="block underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="block underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
+            <div id="git" class="hidden">
+              <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
               <ul class="list-disc ml-5 my-2.5">
                 <li class="mb-5">
                   <span class="destacado">git init</span> <strong>Inicializar repositorio en un directorio existente:</strong> esto crea un nuevo subdirectorio llamado .gitque contiene todos los archivos necesarios del repositorio: un esqueleto de repositorio de Git. En este punto, todavía no se realiza ningún seguimiento de nada en el proyecto. 
@@ -533,324 +556,483 @@
                   <p>es decir es una función de conveniencia, mv es un único comando en vez de tres.</p>
                 </li>
   
-                <li class="mb-5">
-                  <strong>Crear una rama y movernos a ella</strong> <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path></svg>
-                  <span class="destacado">git branch estilos-fo</span> <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path></svg>
-                  <span class="destacado">git log</span> (para ver a donde apunta cada rama) <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path></svg>
-                  <span class="destacado">git checkout estilos-fo</span> (para cambiar de rama)<br>
+                <li class="mb-1.25"><strong>TRABAJO CON RAMAS:</strong>
+
+                  <ul class="list-disc">
+                    <li><strong>Consultar las ramas que hay:</strong> <span class="destacado">git branch</span></li>
+                    <li><strong>Ver a donde apunta cada rama:</strong> <span class="destacado">git log</span></li>
+                    <li><strong>Crear una rama:</strong> <span class="destacado">git branch nombre_rama</span></li>
+                    <li><strong>Movernos a otra rama: </strong> <span class="destacado">git checkout nombre_rama</span></li>
+                    <li class="mb-1.25"><strong>Eliminar una rama:</strong> <span class="destacado">git branch -d nombre_rama</span>. En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el siguiente error:
+                      <pre><code class="language-js">
+                        error: The branch 'nombre-rama' is not an ancestor of your current HEAD.
+                        If you are sure you want to delete it, run 'git branch -D nombre-rama'.
+                      </code></pre>
+                      Y si aún así queremos eliminar esa rama: <span class="destacado">git branch -D nombre-rama</span>
+                    </li>  
+                    <li>
+                      <strong>Eliminar una rama del repositorio remoto</strong> <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                      </svg>
+                      <span class="destacado">git push origin :nombre-rama</span>
+                    </li>
+                    <li>He creado nueva rama "rediseño1" en calorie-tracker y me he puesto a trabajar. Tras añadir git <strong>add .</strong>, y confirmar <strong>git commit -m ""</strong> mis cambios, cuando he intentado hacer un <strong>git push</strong> desde esa rama nueva "rediseño1", como no había añadido previamente esa rama en github para seguimiento me dice esto:
+                      <pre><code class="language-js">
+                        PS C:\Users\FOS\Desktop\Curso React\calorie-tracker> git push
+                        fatal: The current branch rediseño1 has no upstream branch.
+                        To push the current branch and set the remote as upstream, use
+                        
+                            git push --set-upstream origin rediseño1
+                        
+                        To have this happen automatically for branches without a tracking
+                        upstream, see 'push.autoSetupRemote' in 'git help config'.
+                      </code></pre>
+
+                      así que en vez de un <span class="rojo">git push</span> he hecho un <span class="destacado">git push --set-upstream origin rediseño1</span> y yaprepara esa rama en github para seguimiento:
+                      <pre><code class="language-js">
+                        PS C:\Users\FOS\Desktop\Curso React\calorie-tracker> git push --set-upstream origin rediseño1
+                        Enumerating objects: 17, done.
+                        Counting objects: 100% (17/17), done.
+                        Delta compression using up to 12 threads
+                        Compressing objects: 100% (9/9), done.
+                        Writing objects: 100% (9/9), 1.57 KiB | 1.57 MiB/s, done.
+                        Total 9 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+                        remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+                        remote:
+                        remote: Create a pull request for 'rediseño1' on GitHub by visiting:
+                        remote:      https://github.com/an.....5/calory-tracker/pull/new/redise%C3%B1o1
+                        remote:
+                        To https://github.com/an.....5/calory-tracker.git
+                         * [new branch]      rediseño1 -> rediseño1
+                        branch 'rediseño1' set up to track 'origin/rediseño1'.
+                      </code></pre>
+
+                    </li>
+
+                  </ul>
+                </li>  
+              </ul>
+                  
+               
+            </div>        
   
+            <!-- Explicación y pasos repositorio GIT (mas completo el anterior)-->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#tutorial-git').toggle();">	
+              <h3>Explicación y pasos repositorio GIT (mas completo el anterior)</h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>
+            <div id="tutorial-git" class="hidden">
+              <a class="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>        
+              <ul class="my-3.5">
+                <li class="my-3.5"><span class="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
+                  <pre><code class="language-js">
+                    cd /path/to/your/existing/code 
+                    git init
+                  </code></pre>
+                </li>
+    
+                <li class="my-3.5"><span class="destacado">Para clonar un repositorio existente</span>, usa el comando <strong>git clone</strong>. Si un repositorio ya se ha configurado en un repositorio central, el comando de clonación es la manera más común de obtener una copia de desarrollo local. Igual que git init, la clonación suele ser una operación única. Una vez que un desarrollador ha obtenido una copia de trabajo, todas las operaciones de control de versiones se administran por medio de su repositorio local.
+                  <pre><code class="language-js">
+                    git clone <repo url>
+                  </code></pre>
+    
+                  <p><strong>El comando git clone se usa para crear una copia o clonar un repositorio remoto</strong>. Se utiliza git clone con la URL de un repositorio. Git es compatible con varios protocolos de red y sus formatos de URL correspondientes. En este ejemplo, usaremos el protocolo Git SSH. Las URL Git SSH siguen la siguiente estructura: git@HOSTNAME:USERNAME/REPONAME.git.</p>
+    
+                  <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+                    
+                    <div class="flex flex-col">
+                      <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                      </svg> Un ejemplo de una URL Git SSH sería el siguiente: git@bitbucket.org:rhyolight/javascript-data-store.git, donde los valores de la plantilla equivalen a:
+                      <ul class="list-disc ml-3 bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">
+                        <li>HOSTNAME: bitbucket.org</li>
+                        <li>USERNAME: rhyolight</li>
+                        <li>REPONAME: javascript-data-store</li>
+                      </ul>
+                      <p>Al ejecutarlo, se extraerá la última versión de los archivos del repositorio remoto en la rama principal y se añadirá a una nueva carpeta. Esta carpeta nueva tendrá el mismo nombre que el repositorio (REPONAME), en este caso, javascript-data-store. La carpeta contendrá el historial completo del repositorio remoto y una rama principal recién creada.</p>               
+                    </div>
+                  </div>
+                  <p>              
+                </li>
+    
+                <li class="my-3.5"><span class="destacado">Para guardar cambios en el repositorio:</span> <strong>git add y git commit</strong>
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Ahora que has iniciado o clonado un repositorio, puedes realizar commits en la versión del archivo. Para el siguiente ejemplo asumiremos que has configurado un proyecto en /path/to/project. Los pasos son los siguientes:</p>
+    
+                  <ul class="list-disc ml-3">
+                    <li>Cambia el directorio a /path/to/project</li>
+                    <li>Crea un archivo nuevo CommitTest.txt con el contenido "test content for git tutorial"</li>
+                    <li>Ejecuta el comando git add para añadir CommitTest.txt al área de preparación del repositorio</li>
+                    <li>Crea un commit nuevo con un mensaje que describa qué trabajo se ha hecho en el commit</li>
+                  </ul>
+                  <pre><code class="language-js">
+                    cd /path/to/project 
+                    echo "test content for git tutorial" >> CommitTest.txt 
+                    git add CommitTest.txt 
+                    git commit -m "added CommitTest.txt to the repo"
+                  </code></pre>
+    
+                  <p>Tras hacer esto, en el historial de nuestro repositorio se mostrará <strong>CommitTest.txt</strong> y se realizará el seguimiento de las actualizaciones futuras a este archivo.</p>
+    
+                  <p>El comando <strong>git add se suele usar con la opción --all</strong>. Al ejecutar git add --all, se añadirán todos los archivos con cambios y sin seguimiento al repositorio y se actualizará el árbol de trabajo.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Para colaboración entre repositorios:</span> <strong>git push</strong>
+                
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Es importante comprender que la idea de "copia de trabajo" de Git es muy distinta a la copia de trabajo que se obtiene al extraer código fuente de un repositorio SVN. A diferencia de SVN, Git no distingue entre las copias de trabajo y el repositorio central: todos son repositorios Git completos.</p>
+                  <p>Por tanto, colaborar con Git es intrínsecamente distinto que con SVN. Mientras que SVN depende de la relación entre el repositorio central y la copia de trabajo, <strong>el modelo de colaboración de Git se basa en la interacción entre repositorios. En lugar de insertar una copia de trabajo en el repositorio central de SVN, se extraen o envían commits de un repositorio a otro</strong>.</p>
+    
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Por supuesto, nada te impide dar un significado especial a ciertos repositorios Git. Por ejemplo, con solo definir un repositorio de Git como el "central", es posible replicar un workflow centralizado usando Git. Esto se consigue por medio de convenciones, no porque esté integrado en el propio VCS.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Repositorios bare (vacíos) frente a repositorios clonados</span>
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si en la sección anterior, "Inicio de un nuevo repositorio", has usado <strong>git clone</strong> para configurar tu repositorio local, entonces ya está listo para la colaboración remota. El comando <strong>git clone</strong> configura automáticamente el repositorio con un remote que apunta a la URL Git de donde lo has clonado. Esto significa que, una vez hagas cambios en un archivo y lo confirmes, puedes enviar los cambios al repositorio remoto con <strong>git push</strong>.</p>
+                  
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si has usado el comando <strong>git init</strong> para crear un repositorio nuevo, entonces no tendrás ningún repositorio remoto al cual enviar cambios. Un patrón común a la hora de iniciar un nuevo repositorio es ir a un servicio Git alojado, como Bitbucket, y crear un repositorio ahí. El servicio te proporcionará una URL Git que podrás añadir a tu repositorio de Git local y enviar con <strong>git push</strong> al repositorio alojado. <span class="destacado">Una vez que hayas creado un repositorio remoto con el servicio de tu elección, deberás actualizar tu repositorio local con una asignación. Comentaremos este proceso en la guía de ajustes y configuración que hay más adelante.</span></p>
+                  
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si prefieres alojar tu propio repositorio remoto, deberás configurar un "repositorio bare". Tanto <strong>git init</strong> como <strong>git clone</strong> aceptan el argumento <strong>--bare</strong>. Un repositorio bare se suele usar para crear un repositorio central de Git remoto.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Para ajustes y configuración:</span> <strong>git config</strong> PENDIENTE DE SEGUIR LINK Y QUE FUNCIONE</li>
+                </ul>
+            </div>
+
+            <!-- Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages-->          	
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-github-pages').toggle();">
+              <h3>Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>		
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>            
+            <div id="deploy-github-pages" class="hidden">
+                <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
+                <ul class="ml-7 list-disc">
+                  <li>Tener un repositorio creado: <strong>https://github.com/XXXXXXX55/XXXXXXXXXXXXXX/</strong></li>
+                  <li><span class="destacado">Modificar la opción base de nuestro archivo <span class="file">vite.config.js</span></span>. <strong>En el contexto de un archivo de configuración de Vite, la opción base se refiere a la ruta base de nuestra aplicación cuando se sirve en un entorno de producción.</strong> Esta opción es parte de la configuración de construcción (build) de Vite.
+                  <pre data-line="7"><code class="language-ts">
+                    //vite.config.js
+                    import { defineConfig } from 'vite'
+                    import tailwindcss from '@tailwindcss/vite'
+                    import react from '@vitejs/plugin-react-swc'
+                    
+                    // https://vite.dev/config/
+                    export default defineConfig({
+                      base: "https://XXXXXX.github.io/XXXXX/",
+                      plugins: [
+                        react(),
+                        tailwindcss()
+                      ],
+                    })
+                  </code></pre>
+                  </li>
+                  <li><span class="destacado">npm install --save-dev gh-pages</span> &lt;-- Instalamos la librería de NPM para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages:</li>
+                  <li>Ya con nuestro paquete instalado, <span class="destacado">En nuestro <span class="file">package.json</span> creamos un nuevo script de NPM para ayudarnos a realizar el empaquetado y el despliegue</span>. A este script lo llamomos <strong>"deploy"</strong>.
+                  <pre><code class="language-ts">
+                    .... 
+                    "scripts": {
+                        ....
+                    
+                        "deploy": "npm run build && gh-pages -d dist"
+                      },                  
+                    ...
+                  </code></pre>
+                  </li>
+                  <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos nuestro script para poder desplegar.
+                  <img src="./src/assets/img/github-pages-deploy.png" alt="">
+                  </li>
+                  <li><strong>Al acceder a nuestro repositorio, notaremos la presencia de una nueva rama llamada “gh-pages”</strong>. La rama “gh-pages” es una convención utilizada en GitHub para la publicación de sitios web directamente desde un repositorio. Cuando habilitas GitHub Pages para un repositorio, este servicio busca automáticamente una rama llamada “gh-pages” para construir y desplegar el sitio web asociado.
+                  <img src="./src/assets/img/github-pages-branch.png" alt=""></li>
+                  <li><span class="destacado">En Settings>Pages> seleccionamos la rama gh-pages</span>
+                  <img src="./src/assets/img/github-pages-setting-pages.png" alt=""></li>                  
+                </li>
+                <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos de nuevo nuestro script para poder desplegar (el anterior lo ha hecho en la main).</li>
+                <li>Si nos vamos a la pestaña de “Actions” notaremos que se ha creado un nuevo “Workflow” y se ha ejecutado. En GitHub, un “workflow” (flujo de trabajo) se refiere a la automatización de una serie de pasos que se ejecutan cada vez que ocurre un evento específico en nuestro repositorio. <strong>Estos eventos pueden incluir acciones como el envío de cambios a un repositorio (push), la creación de una solicitud de extracción (pull request), o incluso el calendario programado.</strong>. <span class="destacado">Hemos creado y ejecutado nuestro flujo de trabajo utilizando el paquete “gh-pages” de NPM. Esto significa que hemos automatizado todo el proceso necesario para llevar a cabo el despliegue de manera eficiente y sin intervención manual. Por último, <span class="destacado">para visualizar nuestra web en GitHub, debemos dar clic a nuestro workflow y revisar los detalles.</span> Dentro de los detalles se encontrará la URL de nuestro sitio.</span>
+                <img src="./src/assets/img/github-pages-actions.png" alt=""></li>  
                 </li>
                 
               </ul>
-  
-  
-  
-                
-              </div>
-          </div>
-        
-  
-          <!-- Explicación y pasos repositorio GIT (mas completo el anterior)-->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#tutorial-git').toggle();">	
-            <h3>Explicación y pasos repositorio GIT (mas completo el anterior)</h3>			
-            <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-          </div>
-          <div id="tutorial-git" class="hidden">
-            <a class="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>        
-            <ul class="my-3.5">
-              <li class="my-3.5"><span class="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
-                <pre><code class="language-js">
-                  cd /path/to/your/existing/code 
-                  git init
-                </code></pre>
-              </li>
-  
-              <li class="my-3.5"><span class="destacado">Para clonar un repositorio existente</span>, usa el comando <strong>git clone</strong>. Si un repositorio ya se ha configurado en un repositorio central, el comando de clonación es la manera más común de obtener una copia de desarrollo local. Igual que git init, la clonación suele ser una operación única. Una vez que un desarrollador ha obtenido una copia de trabajo, todas las operaciones de control de versiones se administran por medio de su repositorio local.
-                <pre><code class="language-js">
-                  git clone <repo url>
-                </code></pre>
-  
-                <p><strong>El comando git clone se usa para crear una copia o clonar un repositorio remoto</strong>. Se utiliza git clone con la URL de un repositorio. Git es compatible con varios protocolos de red y sus formatos de URL correspondientes. En este ejemplo, usaremos el protocolo Git SSH. Las URL Git SSH siguen la siguiente estructura: git@HOSTNAME:USERNAME/REPONAME.git.</p>
-  
-                <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-                  
-                  <div class="flex column">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg> Un ejemplo de una URL Git SSH sería el siguiente: git@bitbucket.org:rhyolight/javascript-data-store.git, donde los valores de la plantilla equivalen a:
-                    <ul class="list-disc ml-3 bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">
-                      <li>HOSTNAME: bitbucket.org</li>
-                      <li>USERNAME: rhyolight</li>
-                      <li>REPONAME: javascript-data-store</li>
-                    </ul>
-                    <p>Al ejecutarlo, se extraerá la última versión de los archivos del repositorio remoto en la rama principal y se añadirá a una nueva carpeta. Esta carpeta nueva tendrá el mismo nombre que el repositorio (REPONAME), en este caso, javascript-data-store. La carpeta contendrá el historial completo del repositorio remoto y una rama principal recién creada.</p>               
-                  </div>
-                </div>
-                <p>              
-              </li>
-  
-              <li class="my-3.5"><span class="destacado">Para guardar cambios en el repositorio:</span> <strong>git add y git commit</strong>
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Ahora que has iniciado o clonado un repositorio, puedes realizar commits en la versión del archivo. Para el siguiente ejemplo asumiremos que has configurado un proyecto en /path/to/project. Los pasos son los siguientes:</p>
-  
-                <ul class="list-disc ml-3">
-                  <li>Cambia el directorio a /path/to/project</li>
-                  <li>Crea un archivo nuevo CommitTest.txt con el contenido "test content for git tutorial"</li>
-                  <li>Ejecuta el comando git add para añadir CommitTest.txt al área de preparación del repositorio</li>
-                  <li>Crea un commit nuevo con un mensaje que describa qué trabajo se ha hecho en el commit</li>
-                </ul>
-                <pre><code class="language-js">
-                  cd /path/to/project 
-                  echo "test content for git tutorial" >> CommitTest.txt 
-                  git add CommitTest.txt 
-                  git commit -m "added CommitTest.txt to the repo"
-                </code></pre>
-  
-                <p>Tras hacer esto, en el historial de nuestro repositorio se mostrará <strong>CommitTest.txt</strong> y se realizará el seguimiento de las actualizaciones futuras a este archivo.</p>
-  
-                <p>El comando <strong>git add se suele usar con la opción --all</strong>. Al ejecutar git add --all, se añadirán todos los archivos con cambios y sin seguimiento al repositorio y se actualizará el árbol de trabajo.</p>
-                </li>
-  
-              <li class="my-3.5"><span class="destacado">Para colaboración entre repositorios:</span> <strong>git push</strong>
+      
+            </div>          
+          
+            <!-- DEPLOY AUTOMATIZADO EN NETLIFY-->            
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-netlify').toggle();">
+              <h3>Deploy automatizado en Netlify conectado con cuenta de Github</h3>		
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>      
+            <div id="deploy-netlify" class="hidden">
+
+              <p><strong>Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>):</strong> <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span></p>
               
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Es importante comprender que la idea de "copia de trabajo" de Git es muy distinta a la copia de trabajo que se obtiene al extraer código fuente de un repositorio SVN. A diferencia de SVN, Git no distingue entre las copias de trabajo y el repositorio central: todos son repositorios Git completos.</p>
-                <p>Por tanto, colaborar con Git es intrínsecamente distinto que con SVN. Mientras que SVN depende de la relación entre el repositorio central y la copia de trabajo, <strong>el modelo de colaboración de Git se basa en la interacción entre repositorios. En lugar de insertar una copia de trabajo en el repositorio central de SVN, se extraen o envían commits de un repositorio a otro</strong>.</p>
+              <img src="./src/assets/img/manual-automatizar deploy de proyecto vite react en netlify vinculado a github.png" alt="">
+                        
+            </div> 
+          
+
+          </div>          
+          
+          <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// -->
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <p class="flex items-center">
+              <span class="naranja">Tailwindcss</span>
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </p>
+            <div class="flex flex-wrap items-center">
+            <a class="underline mx-1.5" href="./src/assets/Tailwindcss-cheatsheet.html" target="_blank"><strong>Tailwindcss-cheatsheet FO</strong></a> /
+              <a class="underline mx-1.5" href="https://tailwindcss.com/" target="_blank"><strong>Tailwindcss</strong></a> /
+              <a class="underline mx-1.5" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank"><strong>Installation y docs</strong></a> /
+              <a class="underline mx-1.5" href="https://certidevs.com/tutorial-tailwindcss-introduccion" target="_blank"><strong>Tutorial certidevs</strong></a> /
+              <a class="underline mx-1.5" href="https://heroicons.com/" target="_blank"><strong>https://heroicons.com/</strong></a> /
+            </div>
+          </div>
   
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Por supuesto, nada te impide dar un significado especial a ciertos repositorios Git. Por ejemplo, con solo definir un repositorio de Git como el "central", es posible replicar un workflow centralizado usando Git. Esto se consigue por medio de convenciones, no porque esté integrado en el propio VCS.</p>
-                </li>
-  
-              <li class="my-3.5"><span class="destacado">Repositorios bare (vacíos) frente a repositorios clonados</span>
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Si en la sección anterior, "Inicio de un nuevo repositorio", has usado <strong>git clone</strong> para configurar tu repositorio local, entonces ya está listo para la colaboración remota. El comando <strong>git clone</strong> configura automáticamente el repositorio con un remote que apunta a la URL Git de donde lo has clonado. Esto significa que, una vez hagas cambios en un archivo y lo confirmes, puedes enviar los cambios al repositorio remoto con <strong>git push</strong>.</p>
-                
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Si has usado el comando <strong>git init</strong> para crear un repositorio nuevo, entonces no tendrás ningún repositorio remoto al cual enviar cambios. Un patrón común a la hora de iniciar un nuevo repositorio es ir a un servicio Git alojado, como Bitbucket, y crear un repositorio ahí. El servicio te proporcionará una URL Git que podrás añadir a tu repositorio de Git local y enviar con <strong>git push</strong> al repositorio alojado. <span class="destacado">Una vez que hayas creado un repositorio remoto con el servicio de tu elección, deberás actualizar tu repositorio local con una asignación. Comentaremos este proceso en la guía de ajustes y configuración que hay más adelante.</span></p>
-                
-                <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>Si prefieres alojar tu propio repositorio remoto, deberás configurar un "repositorio bare". Tanto <strong>git init</strong> como <strong>git clone</strong> aceptan el argumento <strong>--bare</strong>. Un repositorio bare se suele usar para crear un repositorio central de Git remoto.</p>
-                </li>
-  
-              <li class="my-3.5"><span class="destacado">Para ajustes y configuración:</span> <strong>git config</strong> PENDIENTE DE SEGUIR LINK Y QUE FUNCIONE</li>
-              <li class="my-3.5"></li>
-              <li class="my-3.5"></li>
-              <li class="my-3.5"></li>
-              <li class="my-3.5"></li>
+          <!-- / HERRAMIENTAS /////////////////////////////////////////////////////////////// -->
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <p class="flex items-center">
+              <span class="naranja">Herramientas</span>
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </p>
+            <div class="flex flex-wrap items-center">
+              <a href="https://git-scm.com/" class="underline mx-1.5" target="blank">Git</a> / 
+              <a href="https://nodejs.org/es/" class="underline mx-1.5" target="blank">https://nodejs.org/es/</a> /  		
+              <a href="https://react.dev/" class="underline mx-1.5" target="blank">https://react.dev/</a> /  
+              <a href="https://vite.dev/" class="underline mx-1.5" target="blank">https://vite.dev/</a> (https://es.vite.dev/guide/ --&gt; una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos) 
+              <a href="https://autoprefixer.github.io/" class="txt-negro">https://autoprefixer.github.io/</a> / 
+              <a href="https://llamacoder.together.ai/" class="txt-negro">https://llamacoder.together.ai/</a> / 
+              <a href="https://www.postman.com/downloads/" class="underline mx-1.5" target="blank">Postman</a> /  
               
-            </ul>
-          </div>
-  
-          <!-- Respaldo git de web smmdd 16-02-25 -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#web-smmdd').toggle();">	
-            <h3>Respaldo git de web smmdd 16-02-25</h3>			
-            <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-          </div>
-          <div id="web-smmdd" class="hidden">
-            <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-              <div class="flex column">
-                - Creo repositorio privado https://github.com/andune55/websmmdd<br>
-                - Como hay un límite de espacio en github, creo en el raíz de mi carpeta local un .gitignore donde incluyo carpetas como documentos, flip-book, temp,... (solo quiero - subir las versiones últimas funcionales de los htmls, phps...pero SOBRE TODO LOS JS DE LECTURAS Y CALENDARIO LITURGICO PARA TENER ALMACENADAS VERSIONES OPERATIVAS ANTE POSIBLE FALLO)<br> 
-                - me situo en la terminal en mi carpeta local C:\Users\FOS\OneDrive\Webs\Web SMMDD<br>
-                - desde el terminal de VSC:<br>
-                  - git init<br>
-                -  git add .<br>
-                  - git commit -m "first commit"<br>
-                  - git branch -M main<br>
-                  - git remote add origin https://github.com/andune55/websmmdd.git<br>
-                  - git push -u origin main<br>
-                <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">A partir de ahora su quiero <strong>innovar, probar, cambiar </strong>algo en js de lecturas, arranco mi local server con xamp y cuando esté seguroi que funcionar el cambio:</span>
-                <ul>
-                  <li>respaldo cambio de mi repo local en mi repo github</li>
-                  <li>subo con dw al hosting de la parro</li>
-                </ul>
-              </div>
+              
+              <div class="flex w-[100%]"></div>
+              <a href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&pli=1" class="underline mx-1.5" target="_blank">Ext Chrome React developer tools</a> /  
+              <a href="https://chromewebstore.google.com/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc" class="underline mx-1.5" target="_blank">Ext Chrome JSON viewer Pro</a> /  
+              <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" class="underline mx-1.5" target="blank">Iconos VS Code</a>
             </div>
-          </div>      
-        
-  
-          <!-- Custom snippets, bloques de código para manuales html -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#codigo-manuales').toggle();">	
-            <h3>Custom snippets, bloques de código para manuales html</h3>			
-            <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
           </div>
-          <div id="codigo-manuales" class="hidden">
-            <div class="flex max-sm:flex-col">
-              <div class="w-[33%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">pcj2x</span> Bloque (50+50) --&gt; 100</p>
-                <pre><code class="language-js">
-                  &lt;div class=&quot;flex max-sm:flex-col&quot;&gt;
-                    &lt;div class=&quot;w-[50%] max-sm:w-[100%]&quot;&gt;
-                      &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;w-[50%] max-sm:w-[100%]&quot;&gt;
-                      &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
+          
+          <!-- / TUTORIALES REACT /////////////////////////////////////////////////////////////// -->
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <p class="flex items-center">
+              <span class="naranja">Tutoriales React y Typescript</span>
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </p>
+            <div class="flex flex-wrap items-center">
+              <a href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" class="underline mx-1.5" target="blank">Explicación por qué map genera coma y solventarlo</a> /
+              <a href="https:https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" class="underline mx-1.5" target="blank">Primeros pasos con React Router DOM</a> /
+              <a href="https://medium.com/@rishikeshsolapure0720/building-a-reusable-accordion-component-in-react-using-typescript-3a474a468f20" class="underline mx-1.5" target="blank">Building a Reusable Accordion Component in React using Typescript</a> /                      
+              <a href="https://medium.com/@rishikeshsolapure0720" class="underline mx-1.5" target="blank">El del acordeon (y 3 artículos más interesantes)</a>
+              <a href="https://medium.com/@diego.coder" class="underline mx-1.5" target="blank">Artículos Diego Esteban</a>
+              <a href="http://dhiwise.com/post/understanding-react-prism-building-blocks-of-modern-web" class="underline mx-1.5" target="blank">Comprender React Prism</a>
+              <a href="https://prince.dev/blog/highlight-with-react/" class="underline mx-1.5" target="blank">Add line highlighting to prism-react-renderer</a>
+              <a href="" class="underline mx-1.5" target="blank">xxxxxx</a>
+              <a href="" class="underline mx-1.5" target="blank">xxxxxx</a>
+  
+              <div class="flex w-[100%]"></div>
+  
+              <a href="https://blog.logrocket.com/responsive-image-gallery-css-flexbox/" class="underline mx-1.5">Responsive Image Gallery with flexbox</a> /
+            </div>
+          </div> 
+          
+        </div>
+      </div>
+  
+      <!-- SNIPPETS  -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#snipets1').toggle();">	
+          <h3>Custom snippets, bloques de código para manuales html</h3>				
+          <span class="cambiaicono ico_chevron_down mr-2.5" title=""></span>
+        </div>        
+        <div id="snipets1" class="hidden">        
+          <div class="flex max-sm:flex-col">
+            <div class="w-[33%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">pcj2</span> Bloque (50+50) --&gt; 100</p>
+              <pre><code class="language-js">
+                &lt;div class=&quot;flex max-sm:flex-col&quot;&gt;
+                  &lt;div class=&quot;w-[50%] max-sm:w-[100%]&quot;&gt;
+                    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
                   &lt;/div&gt;
-                </code></pre>
-              </div>
-              <div class="w-[33%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">pcj3x</span> Bloque (33+33+33) --&gt; 100</p>
-                <pre><code class="language-js">
-                  &lt;div class=&quot;flex max-sm:flex-col&quot;&gt;
-                    &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
-                      &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
-                      &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
-                      &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
-                    &lt;/div&gt;
+                  &lt;div class=&quot;w-[50%] max-sm:w-[100%]&quot;&gt;
+                    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
                   &lt;/div&gt;
-                </code></pre>
-              </div>
-              <div class="w-[33%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">sj</span>mostrar código sin escaparlo</p>
-                <pre><code class="language-html">
-                  &lt;script type=&quot;text/plain&quot; class=&quot;language-js&quot;&gt;
-  
-                  &lt;/script&gt;
-                </code></pre>
-              </div>
-            </div>
-                
-            <div class="flex max-sm:flex-col  mt-3">
-              <div class="w-[25%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">(snippet "pch")</span> código html</p>
-                <script type="text/plain" class="language-html">
-                  <pre><code class="language-html">
-  
-                  </code></pre>
-                </script>
-              </div>
-              <div class="w-[25%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">(snippet "pcj")</span> código js</p>
-                <script type="text/plain" class="language-js">
-                  <pre><code class="language-js">
-  
-                  </code></pre>
-                </script>
-              </div>
-              <div class="w-[25%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">(snippet "pct")</span> código ts</p>
-                <script type="text/plain" class="language-js">
-                  <pre><code class="language-ts">
-                    
-                  </code></pre>
-                </script>
-              </div>
-              <div class="w-[25%] max-sm:w-[100%]">
-                <p class="titulo"><span class="destacado">(snippet "pcc")</span> código css</p>
-                <script type="text/plain" class="language-js">
-                  <pre><code class="language-css">
-  
-                  </code></pre>
-                </script>
-              </div>
-            </div>
-  
-            <p class="titulo mt-3"><span class="destacado">divexp</span> bloque explicativo</p>
-            <pre><code class="language-js">
-              &lt;div class=&quot;mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg&quot;&gt;
-              &lt;a href=&quot;XXXXX&quot; class=&quot;block underline ml-1.5 mb-1.5&quot; target=&quot;blank&quot;&gt;XXXXXXX&lt;/a&gt;
-              &lt;div class=&quot;flex&quot;&gt;
-              &lt;svg class=&quot;size-6 shrink-0&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot;&gt;
-              &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3&quot;&gt;&lt;/path&gt;
-                &lt;/svg&gt;
-                &lt;span class=&quot;bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]&quot;&gt;XXXXXXX&lt;/span&gt;
-                &lt;/div&gt;
                 &lt;/div&gt;
               </code></pre>
-            <img src="./src/assets/img/bloque-explicativo.png" alt="">
-            
-            <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://www.smashingmagazine.com/2021/06/custom-emmet-snippets-vscode/" target="_blank">Creando snippets emmet personalizados para vsc</a> - <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://dev.to/kinginit/how-to-code-faster-vs-code-edition-4pa" target="_blank">How to code faster - VS Code edition</a>
-  
-            <p><a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://dev.to/davidemaye/write-code-faster-in-react-jsx-autocompletion-eeg">write-code-faster-in-react-jsx-autocompletion</a> Para hacer que emmet funcione en los .jsx: abrir configuración Ctrl+, y arriba a la derecha icono para Abrir Configuracion JSON (alterna con Configuración UI). Añadimos lo siguiente:</p>
-            
-            <pre><code class="language-js">
-              "emmet.includeLanguages": {
-                "javascript": "javascriptreact"
-            }
-            </code></pre>
-                
-            <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://www.jasoft.org/Blog/post/personalizar-emmet-en-visual-studio-code-y-librarse-del-meta-x-ua-compatible-ie-edge" target="_blank">Personalizar Emmet en Visual Studio Code y librarse del meta "X-UA-Compatible ie=edge"</a> - <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://code.visualstudio.com/docs/editor/emmet" target="_blank">Emmet en VSC</a>
-            <p>archivo>preferencias>configuración de los servicios en línea>escribir Emmet>Extensions Path>ruta de la carpeta donde está el archivo que hemos creado "snippets.json"</p>
-  
-            <p class="titulo">Fichero personalizado snippets.json FO (13/02/25)</p>
-            <pre><code class="language-js">
-              //snippets.json (en el raiz, Curso React)
-              {   
-                "variables": { "lang": "es" }, 
-                "html": {    
-                    "snippets": { 
-                        "pch": "pre>code[class=language-html]", "ch": "code[class=language-html]",
-                        "pcj": "pre>code[class=language-js]", "cj": "code[class=language-js]",
-                        "pct": "pre>code[class=language-ts]", "ct": "code[class=language-ts]",
-                        "pcc": "pre>code[class=language-css]", "cc": "code[class=language-css]",
-                        "sh": "script[type=text/plain][class=language-html]",
-                        "sj": "script[type=text/plain][class=language-js]",
-                        "spr": "span[class=rojo]",
-                        "spdest": "span[class=destacado]",
-                        "spf": "span[class=file]",
-                        "psn": "p[class='esp-15-top esp-0-bottom']>span[class=naranja]",
-                        "pcj2x": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre>code[class='language-js']",
-                        "pcj3x": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre>code[class='language-js']",
-                        "pcj4x": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre>code[class='language-js']",
-                        "divexp": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>a[class='block underline ml-1.5 mb-1.5'][href='XXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex']>svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^span[class='bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]']{${0:XXXXXXX}}",
-                        "divlink": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>p[class='flex items-center']>span[class='naranja']{${0:XXXXXXX}}+svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^^div[class='flex flex-wrap items-center']>a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex w-[100%]']+a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX /}}",
-                        "flechad": "svg[class='size-6 shrink-0 inline'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']",
-                        "imgm": "img[src=./src/assets/img/][alt=img][loading=lazy]"  
-                    }
-                }
-            }
-            </code></pre>
-  
-            <p>Para ver nº líneas <strong>class="line-numbers"</strong> y marcar una o varias líneas <strong>data-line="1,5-11"</strong></p>
-            <pre><code class="language-html">
-              &lt;pre class=&quot;line-numbers&quot; data-line=&quot;1,5-11&quot;&gt;
-            </code></pre>
-            
-            <p class="titulo">Bloque sección:</p>
-            <script type="text/plain" class="language-js">
-              <!-- SECCION XX -->
-              <div class="w-[80%] max-sm:w-[96%] mx-auto bg-gray-200 mb-1.25 py-0.75 pr-0 pl-2.5 rounded-xl">
-                
-                <div class="flex items-center mt-1.25 cursor-pointer desplegable justify-between pointer" onclick="$('#seccionXX').toggle();">
-                  <h2>Sección XXX: XXXXXXXXXXXX</h2>
-                  <span class="cambiaicono ico_chevron_up mr-2.5" title=""></span>
-                </div>
-        
-                <div id="seccionXX">
-                  
-                    <!-- Bloque desplegable interior-->
-                    <div class="flex items-center mt-1.25 cursor-pointer desplegable-interior justify-between oscuro" onclick="$('#seccionXX-XX').toggle();">
-                      <h3>XXXXXXXXXXXXXXX</h3>
-                      <span class="cambiaicono ico_chevron_down_blanco ico20 mr-1.25" title=""></span>
-                    </div>
-                    <div id="seccionXX-XX" class="hidden">
-                      
-                      
-                    </div>
-                    
-                </div>
-                <!-- Fin div colapsable-->
-                          
-              </div>
-              <!-- FIN SECCION XX -->
-            </script> 
-          
+            </div>
+            <div class="w-[33%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">pcj3</span> Bloque (33+33+33) --&gt; 100</p>
+              <pre><code class="language-js">
+                &lt;div class=&quot;flex max-sm:flex-col&quot;&gt;
+                  &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
+                    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
+                    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;w-[33%] max-sm:w-[100%]&quot;&gt;
+                    &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;/code&gt;&lt;/pre&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              </code></pre>
+            </div>
+            <div class="w-[33%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">sj</span>mostrar código sin escaparlo</p>
+              <pre><code class="language-html">
+                &lt;script type=&quot;text/plain&quot; class=&quot;language-js&quot;&gt;
+
+                &lt;/script&gt;
+              </code></pre>
+            </div>
           </div>
               
+          <div class="flex max-sm:flex-col  mt-3">
+            <div class="w-[25%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">(snippet "pch")</span> código html</p>
+              <script type="text/plain" class="language-html">
+                <pre><code class="language-html">
+
+                </code></pre>
+              </script>
+            </div>
+            <div class="w-[25%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">(snippet "pcj")</span> código js</p>
+              <script type="text/plain" class="language-js">
+                <pre><code class="language-js">
+
+                </code></pre>
+              </script>
+            </div>
+            <div class="w-[25%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">(snippet "pct")</span> código ts</p>
+              <script type="text/plain" class="language-js">
+                <pre><code class="language-ts">
+                  
+                </code></pre>
+              </script>
+            </div>
+            <div class="w-[25%] max-sm:w-[100%]">
+              <p class="font-bold"><span class="destacado">(snippet "pcc")</span> código css</p>
+              <script type="text/plain" class="language-js">
+                <pre><code class="language-css">
+
+                </code></pre>
+              </script>
+            </div>
+          </div>
+
+          <p class="titulo mt-3"><span class="destacado">divexp</span> bloque explicativo</p>
+          <pre><code class="language-js">
+            &lt;div class=&quot;mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg&quot;&gt;
+            &lt;a href=&quot;XXXXX&quot; class=&quot;block underline ml-1.5 mb-1.5&quot; target=&quot;blank&quot;&gt;XXXXXXX&lt;/a&gt;
+            &lt;div class=&quot;flex&quot;&gt;
+            &lt;svg class=&quot;size-6 shrink-0&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke-width=&quot;1.5&quot; stroke=&quot;currentColor&quot;&gt;
+            &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; d=&quot;M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3&quot;&gt;&lt;/path&gt;
+              &lt;/svg&gt;
+              &lt;span class=&quot;bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]&quot;&gt;XXXXXXX&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            </code></pre>
+          <img src="./src/assets/img/bloque-explicativo.png" alt="">
+          
+          <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://www.smashingmagazine.com/2021/06/custom-emmet-snippets-vscode/" target="_blank">Creando snippets emmet personalizados para vsc</a> - <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://dev.to/kinginit/how-to-code-faster-vs-code-edition-4pa" target="_blank">How to code faster - VS Code edition</a>
+
+          <p><a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://dev.to/davidemaye/write-code-faster-in-react-jsx-autocompletion-eeg">write-code-faster-in-react-jsx-autocompletion</a> Para hacer que emmet funcione en los .jsx: abrir configuración Ctrl+, y arriba a la derecha icono para Abrir Configuracion JSON (alterna con Configuración UI). Añadimos lo siguiente:</p>
+          
+          <pre><code class="language-js">
+            "emmet.includeLanguages": {
+              "javascript": "javascriptreact"
+          }
+          </code></pre>
               
+          <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://www.jasoft.org/Blog/post/personalizar-emmet-en-visual-studio-code-y-librarse-del-meta-x-ua-compatible-ie-edge" target="_blank">Personalizar Emmet en Visual Studio Code y librarse del meta "X-UA-Compatible ie=edge"</a> - <a class="text-[#f8ba40] bg-[#2d2d2d] px-1.5 py-0.4 rounded-md" href="https://code.visualstudio.com/docs/editor/emmet" target="_blank">Emmet en VSC</a>
+          <p>archivo>preferencias>configuración de los servicios en línea>escribir Emmet>Extensions Path>ruta de la carpeta donde está el archivo que hemos creado "snippets.json"</p>
+
+          <p class="font-bold">Fichero personalizado snippets.json FO (13/02/25)</p>
+          <pre><code class="language-js">
+            //snippets.json (en el raiz, Curso React)
+            {   
+              "variables": { "lang": "es" }, 
+              "html": {    
+                  "snippets": { 
+                      "pch": "pre>code[class=language-html]", "ch": "code[class=language-html]",
+                      "pcj": "pre>code[class=language-js]", "cj": "code[class=language-js]",
+                      "pct": "pre>code[class=language-ts]", "ct": "code[class=language-ts]",
+                      "pcc": "pre>code[class=language-css]", "cc": "code[class=language-css]",
+                      "sh": "script[type=text/plain][class=language-html]",
+                      "sj": "script[type=text/plain][class=language-js]",
+                      "spr": "span[class=rojo]",
+                      "spdest": "span[class=destacado]",
+                      "spf": "span[class=file]",
+                      "psn": "p[class='mt-3.75 mb-0']>span[class=naranja]",
+                      "pcj2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre>code[class='language-js']",
+                      "pcj3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre>code[class='language-js']",
+                      "pcj4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre>code[class='language-js']",
+                      "divexp": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>a[class='block underline ml-1.5 mb-1.5'][href='XXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex']>svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^span[class='bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]']{${0:XXXXXXX}}",
+                      "divlink": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>p[class='flex items-center']>span[class='naranja']{${0:XXXXXXX}}+svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^^div[class='flex flex-wrap items-center']>a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex w-[100%]']+a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX /}}",
+                      "flechad": "svg[class='size-6 shrink-0 inline'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']",
+                      "imgm": "img[src=./src/assets/img/][alt=img][loading=lazy]"  
+                  }
+              }
+          }
+          </code></pre>
+
+          <p>Para ver nº líneas <strong>class="line-numbers"</strong> y marcar una o varias líneas <strong>data-line="1,5-11"</strong></p>
+          <pre><code class="language-html">
+            &lt;pre class=&quot;line-numbers&quot; data-line=&quot;1,5-11&quot;&gt;
+          </code></pre>
+          
+          <p class="font-bold">Bloque sección:</p>
+          <script type="text/plain" class="language-js">
+            <!-- SECCION XX -->
+            <div class="w-[80%] max-sm:w-[96%] mx-auto bg-gray-200 my-1.25 py-0.75 pr-0 pl-2.5 rounded-xl">
+              
+              <div class="flex items-center mt-1.25 cursor-pointer desplegable justify-between" onclick="$('#seccionXX').toggle();">
+                <h2>Sección XXX: XXXXXXXXXXXX</h2>
+                <span class="cambiaicono ico_chevron_up mr-2.5" title=""></span>
+              </div>
+      
+              <div id="seccionXX">
+                
+                  <!-- Bloque desplegable interior-->
+                  <div class="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onclick="$('#seccionXX-XX').toggle();">
+                    <h3>XXXXXXXXXXXXXXX</h3>
+                    <span class="cambiaicono ico_chevron_down_blanco ico20 mr-1.25" title=""></span>
+                  </div>
+                  <div id="seccionXX-XX" class="hidden">
+                    
+                    
+                  </div>
+                  
+              </div>
+              <!-- Fin div colapsable-->
+                        
+            </div>
+            <!-- FIN SECCION XX -->
+          </script> 
+          
+        </div> 
+      </div>      
+
+      <!--  EXPLICACIONES  -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center cursor-pointer desplegable" onclick="$('#explicaciones').toggle();">	
+          <h3>Explicaciones</h3>				
+          <span class="cambiaicono ico_chevron_down mr-2.5" title=""></span>
+        </div>        
+        <div id="explicaciones" class="hidden">
           <!-- FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#snp-fcn-nueva').toggle();">	
+          <div class="flex justify-between items-center cursor-pointer desplegable-interior oscuro" onclick="$('#snp-fcn-nueva').toggle();">	
             <h3>FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO</h3>			
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
           </div>
@@ -908,9 +1090,9 @@
             </code></pre>
             
           </div>
-  
+
           <!-- Explicación de useMemo() y reduce() usando el 122 -->
-          <div class="flex items-center mt-1.25 cursor-pointer desplegable-interior justify-between oscuro" onclick="$('#seccion9-122').toggle();">
+          <div class="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onclick="$('#seccion9-122').toggle();">
             <h3>Explicación de useMemo() y reduce() usando el 122</h3>
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
           </div>
@@ -964,18 +1146,18 @@
                   </code></pre>
       
           </div>
-  
+
           <!-- Explicación map() y join() para img gallery y evitar las "," que salían -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#map-join').toggle();">	
+          <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#map-join').toggle();">	
             <h3>Explicación map() y join() para img gallery y evitar las "," que salían</h3>			
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
           </div>
           <div id="map-join" class="hidden">
             <p>Dada una variable con string de fotos yo intentaba mapearla de esta manera para mostrar una galería dinámicamente, pero me salían "," separando cada elemento ¿por qué? --&gt; <a href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" class="txt-rojo" target="blank">Explicación por qué map genera coma y solventarlo</a>:</p>
             <pre><code class="language-ts">
-              //useModalPanel.ts del proyecto portfolio-aab
+              //useModalPanel.ts del proyecto portfolio-XXX
               const fotos = ['photo01.jpg','photo02.jpg','photo03.jpg','photo04.jpg','photo05.jpg','photo06.jpg','photo07.jpg','photo08.jpg','photo09.jpg','photo10.jpg','photo33.jpg','photo_11.jpg','photo_12.jpg','photo_13.jpg','photo_14.jpg','photo_15.jpg','photo_16.jpg','photo_17.jpg','photo_18.jpg','photo_19.jpg','photo_20.jpg','photo_21.jpg','photo_22.jpg','photo_23.jpg','photo_24.jpg','photo_25.jpg','photo_26.jpg','photo_27.jpg','photo_28.jpg','photo_29.jpg','photo_30.jpg','photo_31.jpg','photo_32.jpg']
-  
+
               `&lt;div class=&quot;flex flex-wrap&quot;&gt;`
                 + fotos.map(foto=&gt;( 
                     `&lt;img class=&quot;w-[auto] max-w-3xs shrink-0 height-[fit-content] mx-1.25 my-1.25&quot; src=&quot;./img/fotografias/${foto}&quot; /&gt;`          
@@ -983,9 +1165,9 @@
                 +
                 `&lt;/div&gt;`
             </code></pre>
-  
+
             <pre><code class="language-ts">
-              //useModalPanel.ts del proyecto portfolio-aab
+              //useModalPanel.ts del proyecto portfolio-XXX
               import { CVItem } from &quot;../types&quot;
       
               export const useModalPanel = () =&gt; {
@@ -1026,9 +1208,9 @@
             </code></pre>
             
           </div>
-  
+
           <!-- Explicación del Hook useEffect() en el punto 82. Carrito persistente con LocalStorage - Almacenando -->
-          <div class="flex items-center mt-1.25 cursor-pointer desplegable-interior justify-between oscuro" onclick="$('#seccion6-82').toggle();">	
+          <div class="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onclick="$('#seccion6-82').toggle();">	
             <h3>Explicación del Hook useEffect() en el punto 82. Carrito persistente con LocalStorage - Almacenando</h3>			
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-1.25" title=""></span>
           </div>
@@ -1038,13 +1220,13 @@
             <p>Tener un carrito persistente es un buen truco para mantener los mismos elementos en el carrito aunque recarguemos navegador. ¿Cómo hacemos para tener sincronizado nuestro carrito de compras <code class="language-js">const [cart, setCart] = useState([])</code> con localStorage</p>
             
             <p>localStorage es una API muy sencilla que solo permite almacenar strings (ni objetos ni arrays). Como nuestro carrito es un array lo podemos convertir a string con <span class="destacado">JSON.stringify(cart)</span></p>
-  
+
             <pre><code class="language-js">
             function saveLocalStorage(){
               localStorage.setItem('cart', JSON.stringify(cart))
             }
             </code></pre>
-  
+
             <pre data-line="11"><code class="language-js">
               function addToCart(item){
                 const itemExists = cart.findIndex(guitar => guitar.id === item.id)
@@ -1060,15 +1242,15 @@
                 saveLocalStorage()
             }
             </code></pre>
-  
+
             <p>Si vamos a las web developer tools, en la pestaña <strong>aplicación>storage</strong> podemos ver el Local Storage. Vemos que si añadimos un primer elemento al carrito agrega algo pero vacío, y ya la segunda vez sí agrega:</p>
             
             <img class="my-2.5" src="./src/assets/img/82-01.png" alt="" />
             
             <p>El estado o state en React ¿es síncrono?¿o es asíncrono y por qué? Pos...es asíncrono, es decir, no se actualiza inmediatamente sino hasta algunos milisegundos después. ¿por qué es asíncrono? Si fuera síncrono (que todas las funciones se ejecuten en orden una tras otra) eso haría que no podríamos interaccionar con la pantalla hasta que no escriba ese estate, lo que nos dejaría sin respuesta en especial si es un state muy grande. <strong>Revisar:</strong> esa función saveLocalStorage() se manda llamar inmediatamente (mientras que el resto de nuestra función addToCart() es síncrona. Es decir cuadno la estamos llamando aún no ha sido escrito el cart por primera vez y es por eso que lo toma como un arreglo vacío</p>
-  
+
             <p>¿como lo solucionamos? usando el versátil <strong>Hook useEffect()</strong> (similar al watch en vue.js). Vimos su uso cuando el componente está listo pero también tiene el siguiente caso de uso (cuando cambie mi carrito ejecutar cierto código). Es muy útil para manejar los "efectos secundarios" de un cambio en nuestro state. <strong>Eliminamos la función que hemos creado y no obstante la usamos dentro del Hook que va a estar observando por nuestro state cart; cada vez que este cambie, ejecutará lo que le especificamos (lo que antes teníamos en la función).</strong>. React se va a encargar de actualizar el localStorage una vez que ese state haya completado su acción de actualizarse en base a las funciones que teNemos definidas para ese state en lo que llevamos hecho, no hemos de preocuparnos de crear una función. Abrimos chrome y limpiamos el local storage (boton derecho borrar) y podemos comprobar que si añadimos ahora elementos al carrito, ya desde la primera vez se actualiza el local storage.</p>
-  
+
             <pre><code class="language-js">
               import { useState, useEffect } from "react" // importamos el Hook useEffect
               //lo añadimos tras nuestras variables MIN_ITEMS, MAX_ITEMS
@@ -1076,13 +1258,13 @@
                 localStorage.setItem('cart', JSON.stringify(cart))
               }, [cart])
             </code></pre>                               
-  
+
             <p class="naranja">Carrito persistente con LocalStorage - Recuperar los productos y mostrarlos</p>
-  
+
             <p>Si recargo me aparece el carrito vacío, veamos cómo hacemos que persista. Esto pasa porque el useEffect que empleo para el almacenamiento local cada vez que carrito cambie también se ejecuta por primera vez cuando el componente esta listo, es decir de manera similar a cuando no tiene ninguna dependencia. Debemos revisar si hay algo en localStorage ese va a ser nuestro valor inicial y si no colocamos un arreglo vacio. <strong>const inicialCart</strong> (en algunos ejemplos la nombran como inicialState pero no lo recomienda en caso de tener varios states)</p> 
-  
+
             <p>vamos a comprobar si hay algo en este elemento <strong>localStorageCart</strong>. (Si no hay nada devuelve un null) Si tiene algo lo convertimos de string a arreglo con JSON.parse()</p>
-  
+
               <pre data-line="5"><code class="language-js">
                 const initialCart = () => {
                   const localStorageCart = localStorage.getItem('cart') // lo primero es recuperar de localStorage
@@ -1096,26 +1278,26 @@
           </div>
           
           <!-- Explicación uso de localStorage para hacer persistente la app (159. Almacenando las actividades en LocalStorage) -->
-          <div class="flex items-center mt-1.25 cursor-pointer desplegable-interior justify-between oscuro" onclick="$('#seccion10-159').toggle();">
+          <div class="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onclick="$('#seccion10-159').toggle();">
             <h3>Explicación uso de localStorage para hacer persistente la app (159. Almacenando las actividades en LocalStorage)</h3>
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-1.25" title=""></span>
           </div>
           <div id="seccion10-159" class="hidden">
             <p>Una buena adición y muy simple de implementar para este proyecto es localStorage. Veamos cómo hacerlo. ¿Donde podríamos colocar la función que escriba en localStorage? Mi reducer podría ser un buen lugar?¿dentro del if de 'save-activity' justo antes del return? sincronizando lo que esté en el state, sería una opción. Sin embargo también habría que agregarlo en el if de la acción 'delete-activity' y en más acciones si las agregara.<span class="destacado"> Otra opción, quizás la más sencilla, es hacerlo en el App.tsx y sincronizar únicamente el state de actividades y pasarlo como dependencia en un useEffect()</span>. <strong>La dependencia en el useEffect, lo que nos interesa que 'esté escuchando para actualizar las actividades guardadadas" es [state.activities]</strong></p>
-  
+
             <pre data-line="7-9"><code class="language-js">
               //App.tsx
               import { useReducer, useEffect } from "react"
               ...
               function App() {  
-  
+
                 const [state, dispatch] = useReducer(activityReducer, initialState)  
               
                 useEffect(() => {
                   localStorage.setItem('activities',JSON.stringify(state.activities))
                 }, [state.activities])
             </code></pre>
-  
+
             <div class="flex max-sm:flex-col">
               <div class="w-[50%] max-sm:w-[100%]">
                 <p>Si miramos en la <strong>pestaña aplicación del WDT</strong> vemos que al añadir una actividad nueva se agrega ahí, y si la editamos se actualiza perfectamente porque está sincronizado con el state.</p>
@@ -1133,7 +1315,7 @@
                 <img src="./src/assets/img/159-2.png" alt="img" loading="lazy">
               </div>
             </div>
-  
+
             <p class="my-3">Por tanto <span class="destacado">en vez de tener ese valor inicial de arreglo vacío <strong>[]</strong> hemos de tener algo que revise si tenemos algo en localStorage:</span></p>
             
             <ul class="my-3">
@@ -1156,10 +1338,9 @@
             
           
           </div>
-  
-  
+
           <!-- Uso de tailwind y css/estilos propios en proyecto de html (Curso y tutoriales FO) -->
-          <div class="flex center-vertical esp-25-top pointer desplegable-interior space-between pointer oscuro" onclick="$('#usocss').toggle();">	
+          <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#usocss').toggle();">	
             <h3>Uso de tailwind y css/estilos propios en proyecto de html (Curso y tutoriales FO)</h3>			
             <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
           </div>
@@ -1186,175 +1367,199 @@
             </code></pre>
             
           </div>
-  
         </div>
-              
-        
-      </div>    
-  
-      <!-- Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages-->
-      <div class="contenedor w-95 background esp-5-bottom">	
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#deploy-github-pages').toggle();">
-          <h3>Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>		
-          <span class="cambiaicono ico_chevron_down esp-10-right" title=""></span>
-        </div>
-        
-        <div id="deploy-github-pages" class="hidden">
-            <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
-            <ul class="ml-7 list-disc">
-              <li>Tener un repositorio creado: <strong>https://github.com/andune55/calculadora_propinas/</strong></li>
-              <li><span class="destacado">Modificar la opción base de nuestro archivo <span class="file">vite.config.js</span></span>. <strong>En el contexto de un archivo de configuración de Vite, la opción base se refiere a la ruta base de nuestra aplicación cuando se sirve en un entorno de producción.</strong> Esta opción es parte de la configuración de construcción (build) de Vite.
-              <pre data-line="7"><code class="language-ts">
-                //vite.config.js
-                import { defineConfig } from 'vite'
-                import tailwindcss from '@tailwindcss/vite'
-                import react from '@vitejs/plugin-react-swc'
-                
-                // https://vite.dev/config/
-                export default defineConfig({
-                  base: "https://andune55.github.io/calculadora_propinas/",
-                  plugins: [
-                    react(),
-                    tailwindcss()
-                  ],
-                })
-              </code></pre>
-              </li>
-              <li><span class="destacado">npm install --save-dev gh-pages</span> &lt;-- Instalamos la librería de NPM para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages:</li>
-              <li>Ya con nuestro paquete instalado, <span class="destacado">En nuestro <span class="file">package.json</span> creamos un nuevo script de NPM para ayudarnos a realizar el empaquetado y el despliegue</span>. A este script lo llamomos <strong>"deploy"</strong>.
-              <pre><code class="language-ts">
-                .... 
-                "scripts": {
-                    ....
-                
-                    "deploy": "npm run build && gh-pages -d dist"
-                  },                  
-                ...
-              </code></pre>
-              </li>
-              <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos nuestro script para poder desplegar.
-              <img src="./src/assets/img/github-pages-deploy.png" alt="">
-              </li>
-              <li><strong>Al acceder a nuestro repositorio, notaremos la presencia de una nueva rama llamada “gh-pages”</strong>. La rama “gh-pages” es una convención utilizada en GitHub para la publicación de sitios web directamente desde un repositorio. Cuando habilitas GitHub Pages para un repositorio, este servicio busca automáticamente una rama llamada “gh-pages” para construir y desplegar el sitio web asociado.
-              <img src="./src/assets/img/github-pages-branch.png" alt=""></li>
-              <li><span class="destacado">En Settings>Pages> seleccionamos la rama gh-pages</span>
-              <img src="./src/assets/img/github-pages-setting-pages.png" alt=""></li>                  
-            </li>
-            <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos de nuevo nuestro script para poder desplegar (el anterior lo ha hecho en la main).</li>
-            <li>Si nos vamos a la pestaña de “Actions” notaremos que se ha creado un nuevo “Workflow” y se ha ejecutado. En GitHub, un “workflow” (flujo de trabajo) se refiere a la automatización de una serie de pasos que se ejecutan cada vez que ocurre un evento específico en nuestro repositorio. <strong>Estos eventos pueden incluir acciones como el envío de cambios a un repositorio (push), la creación de una solicitud de extracción (pull request), o incluso el calendario programado.</strong>. <span class="destacado">Hemos creado y ejecutado nuestro flujo de trabajo utilizando el paquete “gh-pages” de NPM. Esto significa que hemos automatizado todo el proceso necesario para llevar a cabo el despliegue de manera eficiente y sin intervención manual. Por último, <span class="destacado">para visualizar nuestra web en GitHub, debemos dar clic a nuestro workflow y revisar los detalles.</span> Dentro de los detalles se encontrará la URL de nuestro sitio.</span>
-            <img src="./src/assets/img/github-pages-actions.png" alt=""></li>  
-            </li>
-            
-          </ul>
-  
-        </div>
-      </div>	
-    
-      <!-- DEPLOY AUTOMATIZADO EN NETLIFY-->
-      <div class="contenedor w-95 background esp-5-bottom">		  			
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#deploy-netlify').toggle();">
-          <h3>Deploy automatizado en Netlify conectado con cuenta de Github</h3>		
-          <span class="cambiaicono ico_chevron_down esp-10-right" title=""></span>
-        </div>
-  
-        <div id="deploy-netlify" class="hidden">
-          
-          <img src="./src/assets/img/manual-automatizar deploy de proyecto vite react en netlify vinculado a github.png" alt="">
-                    
-        </div> 
-      </div>  
+      </div> 
   
       <!-- DEPLOY MANUAL EN NETLIFY-->
-      <div class="contenedor w-95 background esp-5-bottom">		
-        <div class="row">				
-          <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#deploy-netlify').toggle();">
-            <h3>Deploy manual en Netlify</h3>		
-            <span class="cambiaicono ico_chevron_down esp-10-right" title=""></span>
-          </div>
-  
-          <div id="deploy-netlify" class="hidden">
-            <div class="row column-s">	
-              <div class="col-12 column">
-                <div class="texto">
-                  <p>vídeo 84. Excelente tutorial para hacer build y deployment a mano. [EN NETLIFY AHORA MISMO TENEMOS LINKADO CON UN REPOSITORIO GIT DEL CURSO DE ANGULAR PARA CONTINUO DEPLOYMENT, EXPLORAR CAMBIAR ESTO ]</p>
-  
-                  <p>Tenemos todo esto en desarrollo pero tenemos que construirlo, hacer un Build. El comando del package.json "build: vite build"</p>
-                    
-                  <p>Si tenemos arrancado en desarrollo nuestro proyecto con <span class="destacado">npm run dev</span>, antes tendremos que hacer un <span class="destacado">q</span> y una vez detenida la previsualización de nuestro proyecto y sí podemos construir<span class="destacado">npm run build</span> --> Hace el build y da un resumen (he creado estos archivos) se crea una carpeta llamada "dist" que contiene nuestro código de producción optimizado y minificado, ya preparado para ser desplegado a producción (vite se encarga de converitr nuestros componentes, dependencias, optimizar, minificar código....) Se genera el archivo index.html, la hoja de estilos y el javascript que contiene una versión de React. Si haces doble click en el html no hace nada, se requiere un hosting especial.
-                  
-                  <p>¿falla algo? --&gt; corregimos --&gt; ponemos un <span class="destacado">clear + Enter</span> y volvemos a ejecutar npm run build</p>
-                  
-                  <p>Tenemos que subir esa carpeta llamada dist --&gt; la mejor opción hoy día es Netlify que nos va a permitir subir nuestros proyectos
-                  recomienda logarse con email. Con github si nuestra cuenta es muy nueva comenta que no nos va a dejar, dando problemas que lo hacen por protegerse (PROBAR)</p>
-                  <p>
-                  - pulsamos <span class="destacado">sites</span> a la izquierda
-                  - abajo del todo a la derecha en el <span class="destacado">cuadro con borde punteado "Want to deply a new site....."</span> arrastramos nuestra carpeta dist desde el explorador de archivos
-                    realiza una serie de opciones y nos aparece la opción "<span class="destacado">Open production deploy</span>" --&gt; aparece nuestro proyecto</p>
-                </div>
-              </div>
-            </div>				
-          </div>
-  
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">        			
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#deploymanual-netlify').toggle();">
+          <h3>Deploy manual en Netlify</h3>		
+          <span class="cambiaicono ico_chevron_down mr-2.5" title=""></span>
+        </div>  
+        <div id="deploymanual-netlify" class="hidden">            
+          <p>vídeo 84. Excelente tutorial para hacer build y deployment a mano. [EN NETLIFY AHORA MISMO TENEMOS LINKADO CON UN REPOSITORIO GIT DEL CURSO DE ANGULAR PARA CONTINUO DEPLOYMENT, EXPLORAR CAMBIAR ESTO ]</p>
+
+          <p>Tenemos todo esto en desarrollo pero tenemos que construirlo, hacer un Build. El comando del package.json "build: vite build"</p>
+            
+          <p>Si tenemos arrancado en desarrollo nuestro proyecto con <span class="destacado">npm run dev</span>, antes tendremos que hacer un <span class="destacado">q</span> y una vez detenida la previsualización de nuestro proyecto y sí podemos construir<span class="destacado">npm run build</span> --> Hace el build y da un resumen (he creado estos archivos) se crea una carpeta llamada "dist" que contiene nuestro código de producción optimizado y minificado, ya preparado para ser desplegado a producción (vite se encarga de converitr nuestros componentes, dependencias, optimizar, minificar código....) Se genera el archivo index.html, la hoja de estilos y el javascript que contiene una versión de React. Si haces doble click en el html no hace nada, se requiere un hosting especial.
+          
+          <p>¿falla algo? --&gt; corregimos --&gt; ponemos un <span class="destacado">clear + Enter</span> y volvemos a ejecutar npm run build</p>
+          
+          <p>Tenemos que subir esa carpeta llamada dist --&gt; la mejor opción hoy día es Netlify que nos va a permitir subir nuestros proyectos
+          recomienda logarse con email. Con github si nuestra cuenta es muy nueva comenta que no nos va a dejar, dando problemas que lo hacen por protegerse (PROBAR)</p>
+          <p>
+          - pulsamos <span class="destacado">sites</span> a la izquierda
+          - abajo del todo a la derecha en el <span class="destacado">cuadro con borde punteado "Want to deply a new site....."</span> arrastramos nuestra carpeta dist desde el explorador de archivos
+            realiza una serie de opciones y nos aparece la opción "<span class="destacado">Open production deploy</span>" --&gt; aparece nuestro proyecto</p>              
         </div>
       </div>
   
       <!-- ATAJOS VISUAL STUDIO CODE -->
-      <div class="contenedor w-95 background esp-5-bottom">    
-  
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#atajos-vsc').toggle();">
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#atajos-vsc').toggle();">
             <h3>Atajos Visual Studio Code</h3>		
-            <span class="cambiaicono ico_chevron_down esp-10-right"></span>
+            <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>    
-        <div id="atajos-vsc" class="ml-2.5 hidden">                
+        <div id="atajos-vsc" class="ml-2.5 hidden"> 
+
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
             
-          <p>Evitar que al tocar un archivo se expanda el arbol de explorer. Abrir Configuración del editor --&gt; Explorer: Auto reveal a false</p>
-  
-          <p><strong>Ctrl+Shift+A</strong> Comentario de html</p>
-          <p><strong>Ctrl+B</strong> sacar/ocultar panel izquierdo</p>
-          <p><strong>Ctrl+J</strong> sacar/ocultar panel inferior</p>
-  
-          <p>
-              <strong>En el explorador, agregar carpeta al área de trabajo para tener todos losproyectos que queramos ahí unificados.</strong>
-              Si queremos tener dos server arrancados. Ctrl+J para sacar panel inferior y pulsar en dividir terminal
-          </p>
-  
-          <p><strong>Seleccionar algo a reemplazar y pulsar Ctrl+D (tantas veces como elementos a reemplazar)</strong> --> escribir lo nuevo o borrar</p>
-  
-          <p>
-              <strong>AÑADIDOS POR FO --> ENCAPSULAR CON TAG HTML HACIENDO USO DE EMMET WRAP.</strong> <br>
-              Abrimos comandos abreviados con <strong>Ctrl K + S</strong>
-              <ul>
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+A</strong> Comentario de html</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +C</strong> --&gt; comentar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +U</strong> --&gt; descomentar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Evitar que al tocar un archivo se expanda el arbol de explorer. Abrir Configuración del editor --&gt; Explorer: Auto reveal a false</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+B</strong> sacar/ocultar panel izquierdo</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+J</strong> sacar/ocultar panel inferior</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>En el explorador, agregar carpeta al área de trabajo para tener todos losproyectos que queramos ahí unificados.</strong>
+                Si queremos tener dos server arrancados. CTRL+J para sacar panel inferior y pulsar en dividir terminal</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+D (tantas veces como elementos a reemplazar)</strong> --&gt; escribir lo nuevo o borrar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+F2 (reemplazar lo seleccionado en TODAS sus ocurrencias)</strong> --&gt; escribir lo nuevo o borrar</span>
+            </div>
+            
+            <div class="flex flex-col items-start">
+              <div class="flex items-center mt-1.25">
+                <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                </svg>
+                <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ENCAPSULAR CON TAG HTML HACIENDO USO DE EMMET WRAP.</strong></span>
+              </div>                
+              <ul class="list-disc ml-10">
+                <li>Abrimos comandos abreviados con <strong>CTRL K + S</strong></span></li>
                 <li>buscamos <strong>emmet wrap</strong> y asignamos la combinación
-                  de teclas que queramos: <strong>SHIFT+ALT+W</strong></li>
-                <li>Instalo la extensión (Ctrl+Shift+X) "Escape HTML Code" + buscamos <strong>Replace Selection with escaped HTML</strong> + asignamos la combinación
-                  de teclas que queramos: <strong>SHIFT+CTRL+E</strong></li>
-              </ul>
-          </p>
-  
-          <p><strong>ALT+Click</strong> --> marcar distintos sitios para editar a la vez</p>
-          <p><strong>SHIFT+ALT+flecha arriba o abajo</strong> --> duplicar línea</p>
-          <p><strong>ALT+flecha arriba o abajo</strong> --> mover línea</p>
-          <p><strong>CTRL+K   +C</strong> --> comentar</p>
-          <p><strong>CTRL+K   +U</strong> --> descomentar</p>
-  
-          <p><strong>Alt+Z</strong> --> Word Wrap del texto del editor</p>
-  
-  
-          <p><strong>Ctrl+K +S</strong> --> comandos abreviados de teclado</p>                            
-  
-          <p><strong>RENOMBRAR</strong> --> Instead, go to the definition of that variable and press F2, rename it, and press ENTER. This will change every occurrence. Not only does this work on variables, but also on functions, classes, interfaces, etc. This also works across files.</p>
-  
-  
-                    
-        </div>
-      
+                  de teclas que queramos: <strong>MAYUS+ALT+W</strong></li>
+              </ul>             
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Instalo la extensión (CTRL+MAYUS+X) "Escape HTML Code" + buscamos <strong>Replace Selection with escaped HTML</strong> + asignamos la combinación
+                de teclas que queramos: <strong>MAYUS+CTRL+E</strong></span>
+            </div>
+
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+P y escribimos "Quitar importaciones sin usar"</strong> --&gt; Para quitar importaciones que ya no se utilicen</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+Click</strong> --&gt; marcar distintos sitios para editar a la vez</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>MAYUS+ALT+flecha arriba o abajo</strong> --&gt; duplicar línea</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+flecha arriba o abajo</strong> --&gt; mover línea</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Alt+Z</strong> --&gt; Word Wrap del texto del editor</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K +S</strong> --&gt; comandos abreviados de teclado</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>RENOMBRAR</strong> --&gt; Instead, go to the definition of that variable and press F2, rename it, and press ENTER. This will change every occurrence. Not only does this work on variables, but also on functions, classes, interfaces, etc. This also works across files.</span>
+            </div>
+
+            <!-- <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">XXXXX</span>
+            </div> -->
+
+          
+          
+          </div>
+         
+                         
+        </div>      
       </div>
   
       <!-- PASOS PROYECTO -->
-      <div class="contenedor w-95 background esp-5-bottom">
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#pasos-proyecto').toggle();">
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#pasos-proyecto').toggle();">
           <h3>Pasos Proyecto</h3>
-          <span class="cambiaicono ico_chevron_down esp-10-right"></span>
+          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>
       
         <div id="pasos-proyecto" class="hidden">  
@@ -1442,7 +1647,7 @@
                     &lt;p className=&quot;p-2 text-amber-600&quot;&gt;&lt;strong&gt;{item.titulo}&lt;/strong&gt;&lt;/p&gt;
                     &lt;div className=&quot;card overflow-visible p-2 shadow-4-strong&quot;&gt;
                       &lt;div className=&quot;card-body&quot;&gt;
-                        &lt;img className=&quot;radius-shape-aab &quot; src={`./src/assets/img/${item.foto}`} alt=&quot;Imagen libélula dragón&quot; /&gt;
+                        &lt;img className=&quot;radius-shape-XXX &quot; src={`./src/assets/img/${item.foto}`} alt=&quot;Imagen libélula dragón&quot; /&gt;
                       &lt;/div&gt;
                     &lt;/div&gt;
                     &lt;button className=&quot;mx-auto mt-2.5 mb-6.25 bg-amber-900 rotate-1 opacity-75 hover:rotate-3 transition duration-250 hover:scale-110 text-white py-1.5 px-2 block cursor-pointer rounded-md animate-pulse&quot;&gt;       
@@ -1456,10 +1661,10 @@
       </div>
   
       <!-- VERSIONES PROGRAMAS INSTALADOS -->
-      <div class="contenedor w-95 background esp-5-bottom">            
-        <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#programas').toggle();">
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">            
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#programas').toggle();">
             <h3>Versiones programas instalados</h3>		
-            <span class="cambiaicono ico_chevron_down esp-10-right"></span>
+            <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>
         <div id="programas" class="hidden">  
           <p><a href="https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+actionscript+apacheconf+aspnet+basic+c+csharp+cpp+cobol+http+java+javadoc+javadoclike+jsdoc+js-extras+json+js-templates+less+markdown+markup-templating+pascal+perl+php+phpdoc+php-extras+powershell+python+jsx+tsx+ruby+sas+sass+scss+sql+typescript+typoscript+vbnet&plugins=line-highlight+autolinker+highlight-keywords+remove-initial-line-feed+inline-color+previewers+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+diff-highlight+treeview" class="txt-negro" target="blank">Mi configuración de Prism</a></p>
@@ -1471,107 +1676,99 @@
       </div>
   
       <!-- GITHUB -->
-      <div class="contenedor w-95 background esp-5-bottom">				
-          <div class="flex center-vertical esp-25-top pointer desplegable space-between pointer" onclick="$('#80-81-angular').toggle();">
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">				
+          <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#80-81-angular').toggle();">
               <h3>Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24)</h3>		
-              <span class="cambiaicono ico_chevron_down esp-10-right"></span>
-          </div>
-  
-            <div id="80-81-angular" class="hidden">                
-                
-                            
-              <h3 class="naranja">Respaldar nuestro proyecto en Github</h3>
-              
-              <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
-              
-                <p>en github creamos nuestro repositorio <strong>https://github.com/andune55/angular-bases</strong></p>
-                <p><span class="destacado">git init</span></p>
-                <p>preparamos nuestro código fuente para una fotografía que es conocida como un commit</p>
-                <p><span class="destacado">git add .</span>: le dice a git todos los cambios que he hecho prepáralos para la fotografía.</p>
-                <p><span class="destacado">git commit -m "Fin sección 4"</span></p>
-                <p>Ahora ya tengo respaldos de seguridad en el caso de que ahora me cargue algo en mi código :) <span class="destacado">git checkout -- .</span> reconstruye mi proyecto a como estaba en la última fotografía, el último commit.</p>
-                <p>Subamos este código a github copiando estos comandos de aquí <a href="https://github.com/andune55/angular-bases" target="_blank">https://github.com/andune55/angular-bases</a>:
-                <img id="53-1" class="pointer" src="img/53-1(agular).png" alt="" /> 
-                </p>
-                <ul class="lista-numbers-black esp-10-top esp-20-bottom esp-15-left-right">
-                    <li><span class="destacado">- git remote add origin https://github.com/andune55/angular-bases.git</span> crea la referencia al registro de github para que yo suba mi código ahí (añade esta url para ese lugar remoto y le pones por nombre origin)</li>
-                    <li><span class="destacado">git branch -M main</span> renombra la rama en la que me encuentro y le pones por nombre main</li>
-                    <li><span class="destacado">git push -u origin main</span> hacer el push de los cambios y establecer el origin como origen por defecto de la rama main. Esto va a tomar todos los cambios de mi repositorio, todos los commit que yo he hecho y lso va a subir a ese repositorio.</li>
-                </ul>
-                <p>8:26 Cualquier cambio nuevo que hagamos (por ejemplo modificamos el README.md), <strong>git add . +  git commit - m "mensaje" + git push (ya no hay que poner el -u porque establecí el origin por defecto)</strong></p>
-                
-                <p>Puedo descargar este código y luego hacer un npm install para reconstruir los módulos de node.</p>
-  
-                <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-react lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
-                      
-  
-              <h3 class="naranja">GitHub Pages (pendiente hacer acciones automáticas carpeta doc curso angular)</h3>
-  
-                <p><strong>GitHub Pages</strong> es un servicio en la nube que nos permite dar seguimiento a nuestros proyectos de Git; es un servicio extra que tiene Github en el cual podemos servir contenido estático (contenido que una vez he generado no va a cambiar). Vamos a subir aquí nuestro build.</p>
-  
-                <p>Nos ubicamos en nuestro proyecto (el de angular era 02-bases) y hacemos nuevamente el build de cualquiera de estas dos maneras:</p>
-                <ul class="lista-bullet-black">										
-                    <li><strong>npm run build</strong>: lo corre directamente del angular cli</li>
-                    <li><strong>ng build</strong>: lo corre tb del angular cli pero basado en el script que tenemos definido en nuestro package.json</li>
-                </ul>
-                <p>Nos aparece la carpeta de distribución "dist" con todos sus archivos que son lo que tenemos que subir. Vamos a Github.com y creamos un nuevo repositorio <strong>angular-primeros-pasos</strong> y lo dejamos público porque en provado posiblemente nos pida datos de facturación. Lo creamos y nos copiamos los comandos siguientes:</p>
-                
-                <p><strong>git remote add origin https://github.com/andune55/angular-primeros-pasos.git<br>
-                git branch -M main<br>
-                git push -u origin main</strong></p>
-                
-                <p>reinicializamos: <strong>git init</strong> (por si habíamos borrado la carpeta git, él lo hace así para partir del mimsmo punto)</p>
-                <p><strong>git add .</strong></p>
-                <p><strong>git commit -m "primer commit"</strong></p>
-                <p>pegamos los comandos que copiamos antes</p>
-                
-                <p><strong>git remote add origin https://github.com/andune55/angular-primeros-pasos.git<br>
-                git branch -M main<br>
-                git push -u origin main</strong></p>
-                
-                <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-react lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
-  
-  
-                <p><span class="destacado">git add .</span></p>
-                <p><span class="destacado">git commit -m "el cambio que sea"</span></p>
-                <p><span class="destacado">git push</span></p>
-  
-                <p>veremos en acciones que hay una nueva ejecutándose y desde ahí mismo una vez terminada podremos accer a la url donde se ha vuelto a "montar" la aplicación con nuestros cambios:
-                    <a href="https://github.com/andune55/manual-react/actions/runs/12948584741">https://github.com/andune55/manual-react/actions/runs/12948584741</a><br>
-                    <a href="https://andune55.github.io/manual-react/">https://andune55.github.io/manual-react/</a>
-  
-                </p>
-  
-                
-                <p>Cogemos nuestra carpeta "bases" que es el producto de nuestro build y dentro del mismo VS Code la arrastramos a la altura del root de nuestra aplicación (al lado del src, del .angular) y la vamos a renombrar por docs. Ahora en la consola <strong>git add . + git commit -m "doc creado" + git push</strong> <span class="destacado">Eso ya nos crea en nuestro proyecto de github la carpeta docs que contiene todos los archivos que vamos a querer poner en un sitio web.</span></p>
-                
-                <p>Ahora sí seleccionamos en git main y carpeta docs y guardamos. Esto va a empezar a realizar una acción automática que cada vez que hagamos un despliegue (un deployment en la carpeta docs) a la rama main automáticamente va a ejecutar este proceso. Si clickamos "Actions" vemos como va el procedimiento.</p>
-                
-                <img id="80-1" class="pointer" src="img/80-1(angular).png" alt="" onclick="muestraImg(this.id);"> 	
-                
-                <p>Una vez termina si pulsamos la url que nos facilita nos da blancazo y es porque tenemos que cambiar el base href de nuestro index. Lo tocamos en nuestro build de VS Code, hacemos nuevamente <strong>git add . + git commit -m "actualizado base href './'" + git push</strong> y esperamos de nuevo que finalice la acción de git. Limpiamos caché de navegador y ya nos funciona.</p>
-                
-                <p>A continuación veremos un proceso semiautomatizado para evitar tener que hacer todo esto manualmente, porque cada vez que hago un ng build eso va a sobreescribir muchas cosas y vamos a <strong>tener que volver a mover la carpeta "browser" de dist&gt;base&gt;browser al root, cambiar de nuevo el base ref del index a './' hacer el git add+commit+push...</strong>. Esto se presta a ver algo interesante que podemos hacer en unas apps de node y que fácilmente saquemos provecho a los scripts del package.json de nuestra app.</p>
-                            
-                <h3 class="naranja">Package.json scripts</h3>
-                    
-                <p>Clase "bonus" para automatizar la construcción de esta carpeta doc que tenga el index además el path que ha de tener. Explica como en el cmd podemos crear un directorio <strong>mkdir temporal</strong> y eso mismo podriamos hacerlo creando un nuevo script (separado por coma) en nuestro package.json. --&gt; <span class="naranja">"new:folder": "mkdir temporal2"</span>. En la terminal ejecuto ese comando como <span class="destacado">npm run new:folder</span> y se nos crea la carpeta.</p>
-                
-                <p>Veamos una serie de procesos para automatizar la construcción para github. El proceso del build que tenemos en nuestro package.json está bien técnicamente, pero necesito uno en el que yo tenga el <strong>base href="./"</strong> así configurado en vez de así <strong>base href="/"</strong>. <span class="destacado">Si en la terminal ejecutamos <strong>ng build --help</strong> nos salen todas las "banderas" que podemos ejecutar. Ejecutamos el --base-href que sirve para cambiar el base url de la app que estamos construyendo: <strong>ng build --base-href ./</strong></span>. En nuestro package.json añadimos un nuevo script a continuación del build por defecto que dice <span class="naranja">"build:href": "ng build --base-href ./"</span> tendremos que poner en terminal <span class="destacado">npm run build:href</span></p>
-                
-                <p>Para hacer los dos scripts siguientes (borrar la carpeta docs y copiar ficheros, instala dos paquetes de node para aumentar la compatibilidad y que las instrucciones que vemos para crear estos scripts nos valgan independientemente de si usamos windows, lynux...):</p>
-                
-                <ul class="lista-bullet-black">
-                    <li> <strong>Borrar la carpeta docs</strong> <a class="rojo" href="https://www.npmjs.com/package/del-cli" target="_blank">Paquete Npm  "del-cli"</a>. No lo instalamos de manera global. Vamos a la terminal integrada de Vs Code e instalamos el paquete como una dependencia de desarrollo <strong>npm install del-cli --save-dev</strong>. Esto nos va a permitir a nosotros ejecutar los comandos correspondientes para eliminar archivos. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para borrar la carpeta "docs" <span class="destacado">"delete:docs": "del docs"</span>. En la terminal ponemos <span class="destacado">npm run delete:docs</span></li>
-                    <li> <strong>Copiar</strong>: <a class="rojo" href="https://www.npmjs.com/package/copyfiles" target="_blank">Paquete Npm "CopyFiles"</a>. Instalamos el paquete como una dependencia de desarrollo <strong>npm install copyfiles --save-dev</strong>. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para copiar todo lo que tenemos dentro de la carpeta "/dist/base/browser" a la carpeta "docs" <span class="destacado">"copy:dist": "copyfiles dist/bases/browser/* ./docs -f"</span>. En la terminal ponemos <span class="destacado">npm run copy:dist</span></li>
-                    <li> Hagamos ahora un script que nos sirva para hacer todo de una sola vez, un script para hacer el build listo para github<span class="span naranja">"build:github": "npm run delete:docs &amp;&amp; npm run build:href &amp;&amp; npm run copy:dist"</span>. En la terminal pondremos <span class="destacado">npm run build:github</span> y ya tendremos nuestro build de producción listo para hacer con él lo que queramos.</li>
-                </ul>
-                            
+              <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+          </div>  
+          <div id="80-81-angular" class="hidden">                               
+            <h3 class="naranja">Respaldar nuestro proyecto en Github</h3>
+            
+            <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
+            
+            <p>en github creamos nuestro repositorio <strong>https://github.com/an.....5/angular-bases</strong></p>
+            <p><span class="destacado">git init</span></p>
+            <p>preparamos nuestro código fuente para una fotografía que es conocida como un commit</p>
+            <p><span class="destacado">git add .</span>: le dice a git todos los cambios que he hecho prepáralos para la fotografía.</p>
+            <p><span class="destacado">git commit -m "Fin sección 4"</span></p>
+            <p>Ahora ya tengo respaldos de seguridad en el caso de que ahora me cargue algo en mi código :) <span class="destacado">git checkout -- .</span> reconstruye mi proyecto a como estaba en la última fotografía, el último commit.</p>
+            <p>Subamos este código a github copiando estos comandos de aquí <a href="https://github.com/an.....5/angular-bases" target="_blank">https://github.com/an.....5/angular-bases</a>:
+            <img id="53-1" class="cursor-pointer" src="img/53-1(agular).png" alt="" /> 
+            </p>
+            <ul class="lista-numbers-black mt-2.5 mb-5 mx-3.75">
+                <li><span class="destacado">- git remote add origin https://github.com/an.....5/angular-bases.git</span> crea la referencia al registro de github para que yo suba mi código ahí (añade esta url para ese lugar remoto y le pones por nombre origin)</li>
+                <li><span class="destacado">git branch -M main</span> renombra la rama en la que me encuentro y le pones por nombre main</li>
+                <li><span class="destacado">git push -u origin main</span> hacer el push de los cambios y establecer el origin como origen por defecto de la rama main. Esto va a tomar todos los cambios de mi repositorio, todos los commit que yo he hecho y lso va a subir a ese repositorio.</li>
+            </ul>
+            <p>8:26 Cualquier cambio nuevo que hagamos (por ejemplo modificamos el README.md), <strong>git add . +  git commit - m "mensaje" + git push (ya no hay que poner el -u porque establecí el origin por defecto)</strong></p>
+            
+            <p>Puedo descargar este código y luego hacer un npm install para reconstruir los módulos de node.</p>
+
+            <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
+            
+            <h3 class="naranja">GitHub Pages (pendiente hacer acciones automáticas carpeta doc curso angular)</h3>
+
+            <p><strong>GitHub Pages</strong> es un servicio en la nube que nos permite dar seguimiento a nuestros proyectos de Git; es un servicio extra que tiene Github en el cual podemos servir contenido estático (contenido que una vez he generado no va a cambiar). Vamos a subir aquí nuestro build.</p>
+
+            <p>Nos ubicamos en nuestro proyecto (el de angular era 02-bases) y hacemos nuevamente el build de cualquiera de estas dos maneras:</p>
+            <ul class="lista-bullet-black">										
+                <li><strong>npm run build</strong>: lo corre directamente del angular cli</li>
+                <li><strong>ng build</strong>: lo corre tb del angular cli pero basado en el script que tenemos definido en nuestro package.json</li>
+            </ul>
+            <p>Nos aparece la carpeta de distribución "dist" con todos sus archivos que son lo que tenemos que subir. Vamos a Github.com y creamos un nuevo repositorio <strong>angular-primeros-pasos</strong> y lo dejamos público porque en provado posiblemente nos pida datos de facturación. Lo creamos y nos copiamos los comandos siguientes:</p>
+            
+            <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
+            git branch -M main<br>
+            git push -u origin main</strong></p>
+            
+            <p>reinicializamos: <strong>git init</strong> (por si habíamos borrado la carpeta git, él lo hace así para partir del mimsmo punto)</p>
+            <p><strong>git add .</strong></p>
+            <p><strong>git commit -m "primer commit"</strong></p>
+            <p>pegamos los comandos que copiamos antes</p>
+            
+            <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
+            git branch -M main<br>
+            git push -u origin main</strong></p>
+            
+            <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
+
+
+            <p><span class="destacado">git add .</span></p>
+            <p><span class="destacado">git commit -m "el cambio que sea"</span></p>
+            <p><span class="destacado">git push</span></p>
+
+            <p>veremos en acciones que hay una nueva ejecutándose y desde ahí mismo una vez terminada podremos accer a la url donde se ha vuelto a "montar" la aplicación con nuestros cambios:
+                <a href="https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741">https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741</a><br>
+                <a href="https://an.....5.github.io/manual-xxxxx/">https://an.....5.github.io/manual-xxxxx/</a>
+            </p>
+
+            <p>Cogemos nuestra carpeta "bases" que es el producto de nuestro build y dentro del mismo VS Code la arrastramos a la altura del root de nuestra aplicación (al lado del src, del .angular) y la vamos a renombrar por docs. Ahora en la consola <strong>git add . + git commit -m "doc creado" + git push</strong> <span class="destacado">Eso ya nos crea en nuestro proyecto de github la carpeta docs que contiene todos los archivos que vamos a querer poner en un sitio web.</span></p>
+            
+            <p>Ahora sí seleccionamos en git main y carpeta docs y guardamos. Esto va a empezar a realizar una acción automática que cada vez que hagamos un despliegue (un deployment en la carpeta docs) a la rama main automáticamente va a ejecutar este proceso. Si clickamos "Actions" vemos como va el procedimiento.</p>
+            
+            <img id="80-1" class="cursor-pointer" src="img/80-1(angular).png" alt="" onclick="muestraImg(this.id);"> 	
+            
+            <p>Una vez termina si pulsamos la url que nos facilita nos da blancazo y es porque tenemos que cambiar el base href de nuestro index. Lo tocamos en nuestro build de VS Code, hacemos nuevamente <strong>git add . + git commit -m "actualizado base href './'" + git push</strong> y esperamos de nuevo que finalice la acción de git. Limpiamos caché de navegador y ya nos funciona.</p>
+            
+            <p>A continuación veremos un proceso semiautomatizado para evitar tener que hacer todo esto manualmente, porque cada vez que hago un ng build eso va a sobreescribir muchas cosas y vamos a <strong>tener que volver a mover la carpeta "browser" de dist&gt;base&gt;browser al root, cambiar de nuevo el base ref del index a './' hacer el git add+commit+push...</strong>. Esto se presta a ver algo interesante que podemos hacer en unas apps de node y que fácilmente saquemos provecho a los scripts del package.json de nuestra app.</p>
                         
-        </div>
+            <h3 class="naranja">Package.json scripts</h3>
+                
+            <p>Clase "bonus" para automatizar la construcción de esta carpeta doc que tenga el index además el path que ha de tener. Explica como en el cmd podemos crear un directorio <strong>mkdir temporal</strong> y eso mismo podriamos hacerlo creando un nuevo script (separado por coma) en nuestro package.json. --&gt; <span class="naranja">"new:folder": "mkdir temporal2"</span>. En la terminal ejecuto ese comando como <span class="destacado">npm run new:folder</span> y se nos crea la carpeta.</p>
+            
+            <p>Veamos una serie de procesos para automatizar la construcción para github. El proceso del build que tenemos en nuestro package.json está bien técnicamente, pero necesito uno en el que yo tenga el <strong>base href="./"</strong> así configurado en vez de así <strong>base href="/"</strong>. <span class="destacado">Si en la terminal ejecutamos <strong>ng build --help</strong> nos salen todas las "banderas" que podemos ejecutar. Ejecutamos el --base-href que sirve para cambiar el base url de la app que estamos construyendo: <strong>ng build --base-href ./</strong></span>. En nuestro package.json añadimos un nuevo script a continuación del build por defecto que dice <span class="naranja">"build:href": "ng build --base-href ./"</span> tendremos que poner en terminal <span class="destacado">npm run build:href</span></p>
+            
+            <p>Para hacer los dos scripts siguientes (borrar la carpeta docs y copiar ficheros, instala dos paquetes de node para aumentar la compatibilidad y que las instrucciones que vemos para crear estos scripts nos valgan independientemente de si usamos windows, lynux...):</p>
+            
+            <ul class="lista-bullet-black">
+                <li> <strong>Borrar la carpeta docs</strong> <a class="rojo" href="https://www.npmjs.com/package/del-cli" target="_blank">Paquete Npm  "del-cli"</a>. No lo instalamos de manera global. Vamos a la terminal integrada de Vs Code e instalamos el paquete como una dependencia de desarrollo <strong>npm install del-cli --save-dev</strong>. Esto nos va a permitir a nosotros ejecutar los comandos correspondientes para eliminar archivos. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para borrar la carpeta "docs" <span class="destacado">"delete:docs": "del docs"</span>. En la terminal ponemos <span class="destacado">npm run delete:docs</span></li>
+                <li> <strong>Copiar</strong>: <a class="rojo" href="https://www.npmjs.com/package/copyfiles" target="_blank">Paquete Npm "CopyFiles"</a>. Instalamos el paquete como una dependencia de desarrollo <strong>npm install copyfiles --save-dev</strong>. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para copiar todo lo que tenemos dentro de la carpeta "/dist/base/browser" a la carpeta "docs" <span class="destacado">"copy:dist": "copyfiles dist/bases/browser/* ./docs -f"</span>. En la terminal ponemos <span class="destacado">npm run copy:dist</span></li>
+                <li> Hagamos ahora un script que nos sirva para hacer todo de una sola vez, un script para hacer el build listo para github<span class="span naranja">"build:github": "npm run delete:docs &amp;&amp; npm run build:href &amp;&amp; npm run copy:dist"</span>. En la terminal pondremos <span class="destacado">npm run build:github</span> y ya tendremos nuestro build de producción listo para hacer con él lo que queramos.</li>
+            </ul>     
+          </div>
       </div>
   
-    </div>
+    </div><!-- Cierre contenedor principal div class="bg-gray-100"-->
 
     <script>
       $(".desplegable").click(function () { 
