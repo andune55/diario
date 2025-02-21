@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diario</title>                 
-    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-dfl-oIUh.js"></script>
-    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-xhVcAKZe.css">
+    <title>Diario</title>                 
+    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-K-tSEr-R.js"></script>
+    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-BQnIqXIv.css">
   </head>
   
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
 
     <div class="bg-gray-100 pb-2.5">
 
@@ -551,14 +551,14 @@
                   <p>es decir es una función de conveniencia, mv es un único comando en vez de tres.</p>
                 </li>
   
-                <li class="mb-1.25"><strong>TRABAJO CON RAMAS:</strong>
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100"><span class="bg-black text-white">TRABAJO CON RAMAS:</span>
 
-                  <ul class="list-disc">
-                    <li><strong>Consultar las ramas que hay:</strong> <span class="destacado">git branch</span></li>
-                    <li><strong>Ver a donde apunta cada rama:</strong> <span class="destacado">git log</span></li>
-                    <li><strong>Crear una rama:</strong> <span class="destacado">git branch nombre_rama</span></li>
-                    <li><strong>Movernos a otra rama: </strong> <span class="destacado">git checkout nombre_rama</span></li>
-                    <li class="mb-1.25"><strong>Eliminar una rama:</strong> <span class="destacado">git branch -d nombre_rama</span>. En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el siguiente error:
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Consultar las ramas que hay:</strong> <span class="destacado">git branch</span></li>
+                    <li class="my-1.25"><strong>Ver a donde apunta cada rama:</strong> <span class="destacado">git log</span></li>
+                    <li class="my-1.25"><strong>Crear una rama:</strong> <span class="destacado">git branch nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Movernos a otra rama: </strong> <span class="destacado">git checkout nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Eliminar una rama:</strong> <span class="destacado">git branch -d nombre_rama</span>. En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el siguiente error:
                       <pre><code class="language-js">
                         error: The branch 'nombre-rama' is not an ancestor of your current HEAD.
                         If you are sure you want to delete it, run 'git branch -D nombre-rama'.
@@ -606,6 +606,54 @@
 
                   </ul>
                 </li>  
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100"><span class="bg-black text-white">OBTENER CAMBIOS DE UN REPO REMOTO: </span><a class="underline" href="https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository" target="_blank">https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository</a><br>
+                  Estos comandos son muy útiles al interactuar con un repositorio remoto. <span class="destacado">clone</span> y <span class="destacado">fetch</span> descargan código remoto desde la dirección URL remota de un repositorio al equipo local, <span class="destacado">merge</span> se usa para combinar el trabajo de diferentes personas con el suyo, y <span class="destacado">pull</span> es una combinación de fetch y merge.    
+                
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Clonar un repositorio:</strong> <span class="destacado">git clone https://github.com/USERNAME/REPOSITORY.git</span> obtiene una copia completa del repositorio de otro usuario.
+  
+                    <p>Puede elegir entre varias direcciones URL diferentes al clonar un repositorio. Mientras esté registrado en GitHub, estas direcciones URL están disponibles en la página principal del repositorio al hacer clic en Código:</p>
+  
+                    <img src="https://andune55.github.io/diario/assets/git-clone-DthzbbV8.png" alt="img" loading="lazy">
+
+                    <p>Al ejecutar git clone, tienen lugar las siguientes acciones:</p>
+
+                    <ul class="list-disc ml-5 my-1.25">
+                      <li>Se crea una carpeta con el nombre <strong>repo</strong>.</li>
+                      <li>Esta carpeta se inicializa como un repositorio de Git.</li>
+                      <li>Se crea un repositorio remoto denominado <strong>origin</strong>, que apunta a la dirección URL desde la que ha realizado la clonación.</li>
+                      <li>Todos los archivos y confirmaciones del repositorio se descargan aquí.</li>
+                      <li>La rama predeterminada está desmarcada.</li>
+                    </ul>
+
+                    <p>Para cada rama <strong>foo</strong> del repositorio remoto, se crea una rama <strong>refs/remotes/origin/foo</strong> de seguimiento remoto correspondiente en el repositorio local. Normalmente, puede abreviar estos nombres de rama de seguimiento remoto a <strong>origin/foo</strong>.</p>
+                    
+                    </li>
+                    <li class="my-1.25"><strong>Extraer cambios de un repositorio remoto</strong> <span class="destacado">git fetch</span>: para recuperar el nuevo trabajo realizado por otras personas. Al capturar desde un repositorio se obtienen todas las ramas de seguimiento remoto nuevas y etiquetas sin combinar estos cambios en las ramas propias.<br>
+                    Si ya tiene un repositorio local con una URL remota configurada para el proyecto deseado, puede capturar toda la información nueva si usa <span class="destacado">git fetch REMOTE-NAME</span> en el terminal:                      
+                      <pre>
+                        <code class="language-js">
+                          $ git fetch REMOTE-NAME
+                          # Fetches updates made to a remote repository
+                        </code>
+                      </pre>
+                      De otra forma, siempre puedes agregar un remoto nuevo y luego recuperarlo. Para más información, consulta Administrar repositorios remotos.</li>
+                    <li class="my-1.25"><strong>Fusionar cambios en tu rama local:</strong> <span class="destacado">$ git merge REMOTE-NAME/BRANCH-NAME</span>La fusión combina tus cambios locales con los cambios realizados por otros. Por lo general, fusionas una rama de seguimiento remoto (es decir, una rama extraída desde un repositorio remoto) con tu rama local:
+                    <pre><code class="language-js">
+                      $ git merge REMOTE-NAME/BRANCH-NAME
+                      # Merges updates made online with your local work
+                    </code></pre>
+                    </li>
+                    <li class="my-1.25"><strong>Extraer cambios de un repositorio remoto:</strong> <span class="destacado">git pull</span> es un método abreviado útil para completar <strong>git fetch</strong> y <strong>git merge</strong> en el mismo comando:
+                    <pre><code class="language-js">
+                      $ git pull REMOTE-NAME BRANCH-NAME
+                      # Grabs online updates and merges them with your local work
+                    </code></pre>
+                    <strong>Como pull realiza una combinación en los cambios recuperados, debe asegurarse de que el trabajo local se confirma antes de ejecutar el comando pull</strong>. Si se produce un conflicto de combinación que no puede resolver, o si decide salir de la combinación, puede usar <span class="destacado">git merge --abort</span> para restaurar la rama al estado que tenía antes de extraerla.
+                    </li>
+                  </ul>
+                </li>
               </ul>
                   
                
