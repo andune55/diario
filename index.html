@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario</title>                 
-    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-yImwsD05.js"></script>
-    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-CWcgzeQb.css">
+    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-BT50L1rv.js"></script>
+    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-Wt3WKOLr.css">
   </head>
   
   <body>
@@ -75,7 +75,7 @@
       <!-- PROYECTOS FO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#proyectosfo').toggle();">
-          <h3>Proyectos</h3>		
+          <h3>Proyectos y dependencias útiles npm</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
         <div id="proyectosfo" class="hidden">            
@@ -146,8 +146,10 @@
                     </ul> 
                   </li>
 
-                  <li class="mb-3"><p class="font-bold">Instala la librería de npm para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages - <span class="destacado">npm install --save-dev gh-pages</span></p>
+                  <li class="mb-3"><span class="destacado">npm install --save-dev gh-pages</span> - <a class="underline" href="https://www.npmjs.com/package/gh-pages" target="_blank">https://www.npmjs.com/package/gh-pages</a> - <strong>gh-pages:</strong> librería de npm para poder trabajar y desplegar aplicaciones en github pages</p>
                   </li>
+
+                  <li class="mb-3"><p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p></li>
 
                   <li class="mb-3">
                     <p class="font-bold inline">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
@@ -174,11 +176,11 @@
                     </ul>
                   </li>
 
-                  <li class="mb-3"><span class="destacado">React Hook Form - npm i react-hook-form</span> - <a class="underline" href="https://react-hook-form.com/" target="_blank">https://react-hook-form.com/</a> - es una librería para para la parte de validación y procesamiento de nuestros formularios de manera bastante sencilla.</li>
+                  <li class="mb-3"><span class="destacado">npm i react-hook-form</span> - <a class="underline" href="https://react-hook-form.com/" target="_blank">https://react-hook-form.com/</a> - <strong>React Hook Form:</strong> es una librería para para la parte de validación y procesamiento de nuestros formularios de manera bastante sencilla.</li>
 
-                  <li class="mb-3"><span class="destacado">Zustand - npm i zustand</span> - <a class="underline" href="https://www.npmjs.com/package/zustand" target="_blank">https://www.npmjs.com/package/zustand</a> - <a class="underline" href="https://github.com/pmndrs/zustand" target="_blank"> github zustand</a> - administrador para manejar un estado global de forma muy simple</li>
+                  <li class="mb-3"><span class="destacado">npm i zustand</span> - <a class="underline" href="https://www.npmjs.com/package/zustand" target="_blank">https://www.npmjs.com/package/zustand</a> - <a class="underline" href="https://github.com/pmndrs/zustand" target="_blank"> github zustand</a> - <strong>Zustand:</strong> administrador para manejar un estado global de forma muy simple</li>
                   
-                  <li class="mb-3"><span class="destacado">npm i uuid</span> - <a class="underline" href="https://www.npmjs.com/package/uuid" target="_blank">https://www.npmjs.com/package/uuid</a> - uuid es una dependencia para generar id
+                  <li class="mb-3"><span class="destacado">npm i uuid</span> - <a class="underline" href="https://www.npmjs.com/package/uuid" target="_blank">https://www.npmjs.com/package/uuid</a> - <strong>uuid:</strong> es una dependencia para generar id
                     <pre><code class="language-js">
                       import { v4 as uuidv4 } from 'uuid'
                       ...
@@ -186,9 +188,9 @@
                     </code></pre>
                   </li>
 
-                  <li class="mb-3"><span class="destacado">React-Toastify</span> para notificaciones <a href="https://www.npmjs.com/package/react-toastify" target="_blank" class="underline">https://www.npmjs.com/package/react-toastify</a></li>
+                  <li class="mb-3"><span class="destacado">npm i react-toastify</span> - <a href="https://www.npmjs.com/package/react-toastify" target="_blank" class="underline">https://www.npmjs.com/package/react-toastify</a> - <strong>React-Toastify:</strong> para notificaciones</li>
                   
-                  <li class="mb-3"><span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - hero icons
+                  <li class="mb-3"><span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - Hero icons
                     <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
                       - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a></p>
                       <pre><code class="language-js">
@@ -203,10 +205,36 @@
                         }
                       </code></pre>
                     </div>
-                  </li>
-
-                  <li class="mb-3"><p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p></li>
+                  </li>                 
                   
+                  <li class="mb-3">
+                    @headlessui <span class="destacado">npm install @headlessui/react</span> (vídeo 202) - <a class="underline" href="https://www.npmjs.com/package/@headlessui/react" target="_blank">@headlessui/react</a>
+                 </li>
+                    
+                 <li class="mb-3">                     
+                    <span class="destacado">npm i react-swipeable-list</span> (vídeo 215) - <a class="underline" href="https://www.npmjs.com/package/react-swipeable-list" target="_blank">react-swipeable-list</a> - <a class="underline" href="https://gist.github.com/codigoconjuan/e1a67f2a729bc44978c2c7d0f946ce7e" target="_blank">gist para para swipleable List</a> 
+                    <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                     <span class="rojo">OJO me daba este error y blancazo interfaz:</span><br> 16:44:03 [vite] (client) error while updating dependencies:<br>
+                       Error: Build failed with 1 error:<br>
+                       node_modules/react-swipeable-list/dist/react-swipeable-list.esm.js:2:22: ERROR: Could not resolve "prop-types"
+                       <br><span class="verde">Solucionado con</span> <br>
+                       As of React 15.5.0, PropTypes have been removed from the core React package as a separate dependency. To fix this, add prop-types into your code:
+       
+                       If you're loading via script tags:<br>
+       
+                       &lt;script src="https://unpkg.com/prop-types/prop-types.min.js"&gt;&lt;/script&gt;
+                       Or via NPM:<br>
+       
+                       <span class="destacado">npm install --save prop-types</span><br>
+                     </div>
+                   </li>
+
+                   <li class="mb-3">
+                     <span class="destacado">npm i react-circular-progressbar</span> - <a class="underline" href="https://www.npmjs.com/package/react-circular-progressbar" target="_blank">React Circular Progressbar</a>(vídeo 224)                    
+                 </li>
+
+
+
                   <li class="mb-3">
                     <p class="font-bold">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
                
@@ -281,31 +309,7 @@
                   
                   <li class="mb-3"><p class="font-bold">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p></li>
 
-                  <li class="mb-3">
-                     @headlessui <span class="destacado">npm install @headlessui/react</span> (vídeo 202) - <a class="underline" href="https://www.npmjs.com/package/@headlessui/react" target="_blank">@headlessui/react</a>
-                  </li>
-                     
-                  <li class="mb-3">                     
-                     <span class="destacado">npm i react-swipeable-list</span> (vídeo 215) - <a class="underline" href="https://www.npmjs.com/package/react-swipeable-list" target="_blank">react-swipeable-list</a> - <a class="underline" href="https://gist.github.com/codigoconjuan/e1a67f2a729bc44978c2c7d0f946ce7e" target="_blank">gist para para swipleable List</a> 
-                     <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-                      <span class="rojo">OJO me daba este error y blancazo interfaz:</span><br> 16:44:03 [vite] (client) error while updating dependencies:<br>
-                        Error: Build failed with 1 error:<br>
-                        node_modules/react-swipeable-list/dist/react-swipeable-list.esm.js:2:22: ERROR: Could not resolve "prop-types"
-                        <br><span class="verde">Solucionado con</span> <br>
-                        As of React 15.5.0, PropTypes have been removed from the core React package as a separate dependency. To fix this, add prop-types into your code:
-        
-                        If you're loading via script tags:<br>
-        
-                        &lt;script src="https://unpkg.com/prop-types/prop-types.min.js"&gt;&lt;/script&gt;
-                        Or via NPM:<br>
-        
-                        <span class="destacado">npm install --save prop-types</span><br>
-                      </div>
-                    </li>
-
-                    <li class="mb-3">
-                      <span class="destacado">npm i react-circular-progressbar</span> - <a class="underline" href="https://www.npmjs.com/package/react-circular-progressbar" target="_blank">React Circular Progressbar</a>(vídeo 224)                    
-                  </li>
+                  
                 </ul>   
                 
                 
