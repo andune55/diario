@@ -75,13 +75,13 @@
       </div>
 
 
-      <!-- LINKS FO -->
+      <!-- PROYECTOS FO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#linksfo').toggle();">
-          <h3>Proyectos, Git, Herramientas</h3>		
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#proyectosfo').toggle();">
+          <h3>Proyectos</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
-        <div id="linksfo" class="hidden">            
+        <div id="proyectosfo" class="hidden">            
           <a href="https://app.netlify.com/teams/an.....5/sites" class="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> - 
           <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> - 
           <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br>
@@ -124,135 +124,194 @@
               <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
               <a href="https://an.....5.github.io/bttf/" class="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
               <div class="flex w-[100%]"></div>
+
+              <div class="flex w-[100%]"></div>
+              <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
+              <a href="https://an.....5.github.io/pacientes-zustand/" class="underline mx-1.5" target="blank">https://an.....5.github.io/pacientes-zustand/</a>
+              <div class="flex w-[100%]"></div>
               
               <!-- Crear proyecto e instalar dependencias útiles,... -->
               <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#comandos-npm').toggle();">	
                 <h3>Crear proyecto e instalar dependencias útiles,...</h3>			
                 <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
               </div>
-              <div id="comandos-npm" class="hidden">
-                <p class="font-bold">Crear proyecto:</p>
-                <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-                  <li><span>Vamos al directorio donde queremos crearlo</span></li>
-                  <li><span><span class="destacado">npm create vite@latest</span> > <strong>calorie-tracker</strong> > <strong>react TypeScript + SWC</strong> > <span class="destacado">npm install</span></span></li>
-                  <li><span>arrancamos el servidor de desarrollo <span class="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src>assets, eliminamos src>App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code class="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
-                </ul>                   
-                
-                <p class="font-bold">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
+              <div id="comandos-npm" class="">             
+                                  
+
+                <ul class="list-disc my-2.5 ml-4">
+                  <li class="mb-3"><p><strong>Para listar las dependencias npm instaladas:</strong> <span class="destacado">npm ls</span></p></li>
+
+                  <li class="mb-3"><p class="font-bold">Crear proyecto:</p>               
+                    <ul class="ml-2.5 pl-2.5 border-l-2 border-l-stone-600">
+                      <li><span>Vamos al directorio donde queremos crearlo</span></li>
+                      <li><span><span class="destacado">npm create vite@latest</span> > <strong>calorie-tracker</strong> > <strong>react TypeScript + SWC</strong> > <span class="destacado">npm install</span></span></li>
+                      <li><span>arrancamos el servidor de desarrollo <span class="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src>assets, eliminamos src>App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code class="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
+                    </ul> 
+                  </li>
+
+                  <li class="mb-3"><p class="font-bold">Instala la librería de npm para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages - <span class="destacado">npm install --save-dev gh-pages</span></p>
+                  </li>
+
+                  <li class="mb-3">
+                    <p class="font-bold inline">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
               
-                <ul class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-                  <li><span class="destacado">npm install tailwindcss @tailwindcss/vite</span></li>
-                  <li>configurar el plugin: 
+                    <ul class="ml-2.5 pl-2.5 border-l-2 border-l-stone-600">
+                      <li><span class="destacado">npm install tailwindcss @tailwindcss/vite</span></li>
+                      <li>configurar el plugin: 
+                        <pre><code class="language-js">
+                          //vite.config.ts
+                          import tailwindcss from '@tailwindcss/vite'
+                          export default defineConfig({
+                            plugins: [
+                              tailwindcss(),
+                            ],
+                          })
+                        </code></pre>
+                      </li>
+                      <li>importar tailwindcss en nuestra css principal: 
+                        <pre><code class="language-js">
+                          //src>index.css
+                          @import "tailwindcss";
+                        </code></pre>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="mb-3"><span class="destacado">React Hook Form - npm i react-hook-form</span> - <a class="underline" href="https://react-hook-form.com/" target="_blank">https://react-hook-form.com/</a> - es una librería para para la parte de validación y procesamiento de nuestros formularios de manera bastante sencilla.</li>
+
+                  <li class="mb-3"><span class="destacado">Zustand - npm i zustand</span> - <a class="underline" href="https://www.npmjs.com/package/zustand" target="_blank">https://www.npmjs.com/package/zustand</a> - <a class="underline" href="https://github.com/pmndrs/zustand" target="_blank"> github zustand</a> - administrador para manejar un estado global de forma muy simple</li>
+                  
+                  <li class="mb-3"><span class="destacado">npm i uuid</span> - <a class="underline" href="https://www.npmjs.com/package/uuid" target="_blank">https://www.npmjs.com/package/uuid</a> - uuid es una dependencia para generar id
                     <pre><code class="language-js">
-                      //vite.config.ts
-                      import tailwindcss from '@tailwindcss/vite'
-                      export default defineConfig({
-                        plugins: [
-                          tailwindcss(),
-                        ],
-                      })
+                      import { v4 as uuidv4 } from 'uuid'
+                      ...
+                      uuidv4()
                     </code></pre>
                   </li>
-                  <li>importar tailwindcss en nuestra css principal: 
-                    <pre><code class="language-js">
-                      //src>index.css
-                      @import "tailwindcss";
-                    </code></pre>
-                  </li>
-                  </ul>
-                
-                <p class="font-bold">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
-                <pre><code class="language-js">
-                  // Importing Prism.js
-                  import Prism from 'prismjs'
+
+                  <li class="mb-3"><span class="destacado">React-Toastify</span> para notificaciones <a href="https://www.npmjs.com/package/react-toastify" target="_blank" class="underline">https://www.npmjs.com/package/react-toastify</a></li>
                   
-                  // Importing a language
-                  import 'prismjs/components/prism-javascript'
-                  
-                  // Importing a theme
-                  import 'prismjs/themes/prism-tomorrow.css'          
-                </code></pre>
-      
-                <p>De momento este es mi componente 'CodePrism.tsx' y su uso desde el compo ppal 'App.tsx'</p>
-      
-                <div class="flex max-sm:flex-col">
-                  <div class="w-[50%] max-sm:w-[100%]">
-                    <pre><code class="language-js">
-                      //App.tsx
-                      &lt;CodePrism 
-                        code={`
-                          // Importing Prism.js
-                          import Prism from &#39;prismjs&#39;
-                          
-                          // Importing a language
-                          import &#39;prismjs/components/prism-javascript&#39;
-                          
-                          // Importing a theme
-                          import &#39;prismjs/themes/prism-tomorrow.css&#39;          
-                        `}
-                        language={&#39;js&#39;}
-                      /&gt;              
-                    </code></pre>
-                  </div>
-                  <div class="w-[50%] max-sm:w-[100%]">
-                    <pre><code class="language-js">
-                      //CodePrism.tsx
-                      import { useEffect } from &#39;react&#39;;
-                      import Prism from &#39;prismjs&#39;
-                      
-                      import &#39;prismjs/themes/prism-tomorrow.css&#39;; // Importing a Prism theme
-                      import &#39;prismjs/components/prism-javascript&#39; // Importing js language
-                      import &#39;prismjs/components/prism-typescript&#39; // Importing ts language
-                      
-                      type CodePrismProps = {
-                          code: string,
-                          language: string
-                      }
-                      
-                      export default function CodePrism({code, language} : CodePrismProps) {
-                      
-                          useEffect(() =&gt; {
-                              Prism.highlightAll();
-                              }, [code, language]);
-                            
-                      
+                  <li class="mb-3"><span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - hero icons
+                    <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                      - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a></p>
+                      <pre><code class="language-js">
+                        import { BeakerIcon } from '@heroicons/react/24/solid'
+                        function MyComponent() {
                           return (
-                              &lt;pre&gt;
-                                  &lt;code className={`language-${language}`}&gt;
-                                  {code}
-                                  &lt;/code&gt;
-                              &lt;/pre&gt;
+                            &lt;div&gt;
+                              &lt;BeakerIcon className=&quot;size-6 text-blue-500&quot; /&gt;
+                              &lt;p&gt;...&lt;/p&gt;
+                            &lt;/div&gt;
                           )
-                      }
-                    </code></pre>
-                  </div>
-                </div>
-      
+                        }
+                      </code></pre>
+                    </div>
+                  </li>
+
+                  <li class="mb-3"><p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p></li>
+                  
+                  <li class="mb-3">
+                    <p class="font-bold">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
+               
+                    <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                      <pre><code class="language-js">
+                        // Importing Prism.js
+                        import Prism from 'prismjs'
+                        
+                        // Importing a language
+                        import 'prismjs/components/prism-javascript'
+                        
+                        // Importing a theme
+                        import 'prismjs/themes/prism-tomorrow.css'          
+                      </code></pre>
+          
+                      <p>De momento este es mi componente 'CodePrism.tsx' y su uso desde el compo ppal 'App.tsx'</p>
+          
+                      <div class="flex max-sm:flex-col">
+                        <div class="w-[50%] max-sm:w-[100%]">
+                          <pre><code class="language-js">
+                            //App.tsx
+                            &lt;CodePrism 
+                              code={`
+                                // Importing Prism.js
+                                import Prism from &#39;prismjs&#39;
+                                
+                                // Importing a language
+                                import &#39;prismjs/components/prism-javascript&#39;
+                                
+                                // Importing a theme
+                                import &#39;prismjs/themes/prism-tomorrow.css&#39;          
+                              `}
+                              language={&#39;js&#39;}
+                            /&gt;              
+                          </code></pre>
+                        </div>
+                        <div class="w-[50%] max-sm:w-[100%]">
+                          <pre><code class="language-js">
+                            //CodePrism.tsx
+                            import { useEffect } from &#39;react&#39;;
+                            import Prism from &#39;prismjs&#39;
+                            
+                            import &#39;prismjs/themes/prism-tomorrow.css&#39;; // Importing a Prism theme
+                            import &#39;prismjs/components/prism-javascript&#39; // Importing js language
+                            import &#39;prismjs/components/prism-typescript&#39; // Importing ts language
+                            
+                            type CodePrismProps = {
+                                code: string,
+                                language: string
+                            }
+                            
+                            export default function CodePrism({code, language} : CodePrismProps) {
+                            
+                                useEffect(() =&gt; {
+                                    Prism.highlightAll();
+                                    }, [code, language]);
+                                  
+                            
+                                return (
+                                    &lt;pre&gt;
+                                        &lt;code className={`language-${language}`}&gt;
+                                        {code}
+                                        &lt;/code&gt;
+                                    &lt;/pre&gt;
+                                )
+                            }
+                          </code></pre>
+                        </div>
+                      </div> 
+                    </div>
+                  </li>
+                  
+                  <li class="mb-3"><p class="font-bold">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p></li>
+
+                  <li class="mb-3">
+                     @headlessui <span class="destacado">npm install @headlessui/react</span> (vídeo 202) - <a class="underline" href="https://www.npmjs.com/package/@headlessui/react" target="_blank">@headlessui/react</a>
+                  </li>
+                     
+                  <li class="mb-3">                     
+                     <span class="destacado">npm i react-swipeable-list</span> (vídeo 215) - <a class="underline" href="https://www.npmjs.com/package/react-swipeable-list" target="_blank">react-swipeable-list</a> - <a class="underline" href="https://gist.github.com/codigoconjuan/e1a67f2a729bc44978c2c7d0f946ce7e" target="_blank">gist para para swipleable List</a> 
+                     <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
+                      <span class="rojo">OJO me daba este error y blancazo interfaz:</span><br> 16:44:03 [vite] (client) error while updating dependencies:<br>
+                        Error: Build failed with 1 error:<br>
+                        node_modules/react-swipeable-list/dist/react-swipeable-list.esm.js:2:22: ERROR: Could not resolve "prop-types"
+                        <br><span class="verde">Solucionado con</span> <br>
+                        As of React 15.5.0, PropTypes have been removed from the core React package as a separate dependency. To fix this, add prop-types into your code:
+        
+                        If you're loading via script tags:<br>
+        
+                        &lt;script src="https://unpkg.com/prop-types/prop-types.min.js"&gt;&lt;/script&gt;
+                        Or via NPM:<br>
+        
+                        <span class="destacado">npm install --save prop-types</span><br>
+                      </div>
+                    </li>
+
+                    <li class="mb-3">
+                      <span class="destacado">npm i react-circular-progressbar</span> - <a class="underline" href="https://www.npmjs.com/package/react-circular-progressbar" target="_blank">React Circular Progressbar</a>(vídeo 224)                    
+                  </li>
+                </ul>   
                 
-      
-                <p><strong>Instalar heroicons:</strong> <span class="destacado">npm install @heroicons/react</span> - <a class="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a></p>
-                <pre><code class="language-js">
-                  import { BeakerIcon } from '@heroicons/react/24/solid'
-                  function MyComponent() {
-                    return (
-                      &lt;div&gt;
-                        &lt;BeakerIcon className=&quot;size-6 text-blue-500&quot; /&gt;
-                        &lt;p&gt;...&lt;/p&gt;
-                      &lt;/div&gt;
-                    )
-                  }
-                </code></pre>
                 
-                <p class="font-bold">Instalar dependencia para generar ids únicos <span class="destacado">npm i uuid</span>
-                <pre><code class="language-js">
-                  import { v4 as uuidv4 } from 'uuid'
-                  ...
-                  uuidv4()
-                </code></pre></p>
-      
-                
-                <p class="font-bold">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p>
-                <p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p>
               </div>            
   
               <!-- Respaldo git de web smmdd 16-02-25 -->
@@ -283,7 +342,17 @@
               </div>  
               
             </div>
-          </div>        
+          </div>          
+        </div>
+      </div>
+
+      <!-- GIT,HERRAMIENTAS FO -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#gitfo').toggle();">
+          <h3>Git, Herramientas</h3>		
+          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>        
+        <div id="gitfo" class="hidden">               
           
           <!-- / GIT /////////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -1824,7 +1893,9 @@
           </div>
       </div>
 
-      <a class="underline" href="https://www.chucksacademy.com/es/topic/react-intermediate/cache" target="_blank">Estrategias de Cache y Persistencia de Datos en React</a>
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto">
+        <a class="underline" href="https://www.chucksacademy.com/es/topic/react-intermediate/cache" target="_blank">Estrategias de Cache y Persistencia de Datos en React</a>
+      </div>
       
     </div><!-- Cierre contenedor principal div class="bg-gray-100"-->
 
