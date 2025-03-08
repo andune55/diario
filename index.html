@@ -13,7 +13,6 @@
 
     <div class="bg-gray-100 pb-2.5">
 
-
       <!-- TAREAS FO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#tareasfo').toggle();">
@@ -71,17 +70,16 @@
         </div>
       </div>
 
-
       <!-- PROYECTOS FO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#proyectosfo').toggle();">
           <h3>Proyectos y dependencias útiles npm</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
-        <div id="proyectosfo" class="hidden">            
+        <div id="proyectosfo" class="">            
           <a href="https://app.netlify.com/teams/an.....5/sites" class="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> - 
-          <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> - 
-          <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br>
+          <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> - <br>
+          <!-- <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br> -->
           <a href="https://doesitmutate.xyz/" class="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> / 
           <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> / 
           <a href="https://developer.mozilla.org/es/docs/Web/API/Element" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a><br>
@@ -95,46 +93,59 @@
               </svg>
             </p>
             <div class="flex flex-wrap items-center">
-              <div class="flex w-[100%]"></div>    
-              <a href="https://github.com/an.....5/diario" class="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
-              <div class="flex w-[100%]"></div>
-              <a href="https://manual-xxxxx.netlify.app/" class="underline mx-1.5" target="blank">https://manual-xxxxx.netlify.app/</a> - 
-              <a href="https://an.....5.github.io/manual-xxxxx/" class="underline mx-1.5" target="blank">https://an.....5.github.io/manual-xxxxx/</a>
-              <div class="flex w-[100%]"></div>              
+
+              <!-- Listado de proyectos -->
+              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#listado-proyectos').toggle();">	
+                <h3>Listado de proyectos</h3>			
+                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+              </div>
+              <div id="listado-proyectos" class="hidden"> 
               
-              <a href="https://portfolioXXX.netlify.app/" class="underline mx-1.5 text-red-600" target="blank">https://portfolioXXX.netlify.app/</a> - 
-              <a href="https://an.....5.github.io/portfolio-XXX/" class="underline mx-1.5" target="blank">https://an.....5.github.io/portfolio-XXX/</a>
-              <div class="flex w-[100%]"></div>
-              <a href="https://XXX-calory-tracker.netlify.app/" class="underline mx-1.5" target="blank">https://XXX-calory-tracker.netlify.app/</a> -
-              <a href="https://an.....5.github.io/calory-tracker/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calory-tracker/</a>
-              <div class="flex w-[100%]"></div>
+                <div class="flex w-[100%]"></div>    
+                <a href="https://github.com/an.....5/diario" class="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
+                <div class="flex w-[100%]"></div>
+                <a href="https://manual-xxxxx.netlify.app/" class="underline mx-1.5" target="blank">https://manual-xxxxx.netlify.app/</a> - 
+                <a href="https://an.....5.github.io/manual-xxxxx/" class="underline mx-1.5" target="blank">https://an.....5.github.io/manual-xxxxx/</a>
+                <div class="flex w-[100%]"></div>              
+                
+                <a href="https://portfolioXXX.netlify.app/" class="underline mx-1.5 text-red-600" target="blank">https://portfolioXXX.netlify.app/</a> - 
+                <a href="https://an.....5.github.io/portfolio-XXX/" class="underline mx-1.5" target="blank">https://an.....5.github.io/portfolio-XXX/</a>
+                <div class="flex w-[100%]"></div>
+                <a href="https://XXX-calory-tracker.netlify.app/" class="underline mx-1.5" target="blank">https://XXX-calory-tracker.netlify.app/</a> -
+                <a href="https://an.....5.github.io/calory-tracker/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calory-tracker/</a>
+                <div class="flex w-[100%]"></div>
 
-              <div class="flex w-[100%]"></div>
-              <a href="https://calcula-propinas.netlify.app/" class="underline mx-1.5" target="blank">https://calcula-propinas.netlify.app/</a> -
-              <a href="https://an.....5.github.io/calculadora_propinas/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calculadora_propinas/</a>
+                <div class="flex w-[100%]"></div>
+                <a href="https://calcula-propinas.netlify.app/" class="underline mx-1.5" target="blank">https://calcula-propinas.netlify.app/</a> -
+                <a href="https://an.....5.github.io/calculadora_propinas/" class="underline mx-1.5" target="blank">https://an.....5.github.io/calculadora_propinas/</a>
 
-              <div class="flex w-[100%]"></div>
-              <a href="https://react-tienda-guitarras.netlify.app/" class="underline mx-1.5" target="blank">https://react-tienda-guitarras.netlify.app/</a>
-              <a href="https://an.....5.github.io/guitarla-ts/" class="underline mx-1.5" target="blank">https://an.....5.github.io/guitarla-ts/</a>
-              
-              <div class="flex w-[100%]"></div>
-              <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
-              <a href="https://an.....5.github.io/bttf/" class="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
-              <div class="flex w-[100%]"></div>
+                <div class="flex w-[100%]"></div>
+                <a href="https://react-tienda-guitarras.netlify.app/" class="underline mx-1.5" target="blank">https://react-tienda-guitarras.netlify.app/</a>
+                <a href="https://an.....5.github.io/guitarla-ts/" class="underline mx-1.5" target="blank">https://an.....5.github.io/guitarla-ts/</a>
+                
+                <div class="flex w-[100%]"></div>
+                <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
+                <a href="https://an.....5.github.io/bttf/" class="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
+                <div class="flex w-[100%]"></div>
 
-              <div class="flex w-[100%]"></div>
-              <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
-              <a href="https://an.....5.github.io/pacientes-zustand/" class="underline mx-1.5" target="blank">https://an.....5.github.io/pacientes-zustand/</a>
-              <div class="flex w-[100%]"></div>
+                <div class="flex w-[100%]"></div>
+                <a href="XXXXXXX" class="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> - 
+                <a href="https://an.....5.github.io/pacientes-zustand/" class="underline mx-1.5" target="blank">https://an.....5.github.io/pacientes-zustand/</a>
+                <div class="flex w-[100%]"></div>
+                
+                <div class="flex w-[100%]"></div>
+                <a href="https://control-gastos-fos.netlify.app/" class="underline mx-1.5 text-red-600" target="blank">https://control-gastos-fos.netlify.app/</a> - 
+                <a href="https://an.....5.github.io/control-gastos-fos" class="underline mx-1.5" target="blank">https://an.....5.github.io/control-gastos-fos</a>
+                <div class="flex w-[100%]"></div>
+
+              </div>
               
               <!-- Crear proyecto e instalar dependencias útiles,... -->
               <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#comandos-npm').toggle();">	
                 <h3>Crear proyecto e instalar dependencias útiles,...</h3>			
                 <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
               </div>
-              <div id="comandos-npm" class="">             
-                                  
-
+              <div id="comandos-npm" class="hidden">  
                 <ul class="list-disc my-2.5 ml-4">
                   <li class="mb-3"><p><strong>Para listar las dependencias npm instaladas:</strong> <span class="destacado">npm ls</span></p></li>
 
@@ -186,6 +197,28 @@
                       ...
                       uuidv4()
                     </code></pre>
+                  </li>
+
+                  <li class="mb-3">
+                    <div id="seccion13-205" class="hidden" style="display: block;">                         
+                      <span class="destacado">npm install react-date-picker</span>
+                      
+                      <div class="ml-2.5 pl-2.5 border-l-2 border-l-stone-600">
+                        <p>Buscamos en <a class="underline text-black" href="https://www.npmjs.com/" target="_blank">https://www.npmjs.com/</a> react-date-picker y elegimos este que vemos que soporta TS <a class="underline" href="https://www.npmjs.com/package/react-date-picker" target="_blank">https://www.npmjs.com/package/react-date-picker</a>. En esa misma página hay instrucciones sobre cómo utilizarlo. Instalamos con <span class="destacado">npm install react-date-picker</span>. Vamos a ExpenseForm.tsx e importamos DatePicker, las dos hojas de estilo. A continuación creamos los 2 types que están en la documentación de la dependencia (<strong>estos mejor, los llevamos al fichero de types que vamos a crear, ver siguiente punto</strong>) y con esto ya podemos comenzar a utilizarlo, marcar una fecha, la cual aparecerá ahí una vez empecemos a escribir en el state:</p>
+
+                        <pre><code class="language-ts">
+                          //ExpenseForm.tsx
+                          import DatePicker from 'react-date-picker'
+                          import 'react-date-picker/dist/DatePicker.css';
+                          import 'react-calendar/dist/Calendar.css';
+                          type ValuePiece = Date | null
+                          type Value = ValuePiece | [ValuePiece, ValuePiece]
+                        </code></pre>
+
+                        <p>Si vemos en la app ya nos aparece este calendario personlizado (que podríamos haber usado un input type="date" pero quería mostrarnos como hacerlo con una dependencia).</p>
+          
+                        <img src="https://andune55.github.io/manual-react/assets/206-B0AT7_6t.png" alt="img" loading="lazy">                        
+                    </div>
                   </li>
 
                   <li class="mb-3"><span class="destacado">npm i react-toastify</span> - <a href="https://www.npmjs.com/package/react-toastify" target="_blank" class="underline">https://www.npmjs.com/package/react-toastify</a> - <strong>React-Toastify:</strong> para notificaciones</li>
@@ -310,10 +343,76 @@
                   <li class="mb-3"><p class="font-bold">Desinstalar prism: <span class="destacado">npm uninstall prisma @prisma/client</span></p></li>
 
                   
-                </ul>   
-                
-                
+                </ul>               
+              </div> 
+              
+              <!-- Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages-->          	
+              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-github-pages').toggle();">
+                <h3>Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>		
+                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
               </div>            
+              <div id="deploy-github-pages" class="hidden">
+                  <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
+                  <ul class="ml-7 list-disc">
+                    <li>Tener un repositorio creado: <strong>https://github.com/XXXXXXX55/XXXXXXXXXXXXXX/</strong></li>
+                    <li><span class="destacado">Modificar la opción base de nuestro archivo <span class="file">vite.config.js</span></span>. <strong>En el contexto de un archivo de configuración de Vite, la opción base se refiere a la ruta base de nuestra aplicación cuando se sirve en un entorno de producción.</strong> Esta opción es parte de la configuración de construcción (build) de Vite.
+                    <pre data-line="7"><code class="language-ts">
+                      //vite.config.js
+                      import { defineConfig } from 'vite'
+                      import tailwindcss from '@tailwindcss/vite'
+                      import react from '@vitejs/plugin-react-swc'
+                      
+                      // https://vite.dev/config/
+                      export default defineConfig({
+                        base: "https://XXXXXX.github.io/XXXXX/",
+                        plugins: [
+                          react(),
+                          tailwindcss()
+                        ],
+                      })
+                    </code></pre>
+                    </li>
+                    <li><span class="destacado">npm install --save-dev gh-pages</span> &lt;-- Instalamos la librería de NPM para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages:</li>
+                    <li>Ya con nuestro paquete instalado, <span class="destacado">En nuestro <span class="file">package.json</span> creamos un nuevo script de NPM para ayudarnos a realizar el empaquetado y el despliegue</span>. A este script lo llamomos <strong>"deploy"</strong>.
+                    <pre><code class="language-ts">
+                      .... 
+                      "scripts": {
+                          ....
+                      
+                          "deploy": "npm run build && gh-pages -d dist"
+                        },                  
+                      ...
+                    </code></pre>
+                    </li>
+                    <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos nuestro script para poder desplegar.
+                    <img src="https://andune55.github.io/diario/assets/github-pages-deploy-CTuSR3LL.png" alt="">
+                    </li>
+                    <li><strong>Al acceder a nuestro repositorio, notaremos la presencia de una nueva rama llamada “gh-pages”</strong>. La rama “gh-pages” es una convención utilizada en GitHub para la publicación de sitios web directamente desde un repositorio. Cuando habilitas GitHub Pages para un repositorio, este servicio busca automáticamente una rama llamada “gh-pages” para construir y desplegar el sitio web asociado.
+                    <img src="https://andune55.github.io/diario/assets/github-pages-branch-mBiHmLe5.png" alt=""></li>
+                    <li><span class="destacado">En Settings>Pages> seleccionamos la rama gh-pages</span>
+                    <img src="https://andune55.github.io/diario/assets/github-pages-setting-pages-0c2Ezn0H.png" alt=""></li>                  
+                  </li>
+                  <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos de nuevo nuestro script para poder desplegar (el anterior lo ha hecho en la main).</li>
+                  <li>Si nos vamos a la pestaña de “Actions” notaremos que se ha creado un nuevo “Workflow” y se ha ejecutado. En GitHub, un “workflow” (flujo de trabajo) se refiere a la automatización de una serie de pasos que se ejecutan cada vez que ocurre un evento específico en nuestro repositorio. <strong>Estos eventos pueden incluir acciones como el envío de cambios a un repositorio (push), la creación de una solicitud de extracción (pull request), o incluso el calendario programado.</strong>. <span class="destacado">Hemos creado y ejecutado nuestro flujo de trabajo utilizando el paquete “gh-pages” de NPM. Esto significa que hemos automatizado todo el proceso necesario para llevar a cabo el despliegue de manera eficiente y sin intervención manual. Por último, <span class="destacado">para visualizar nuestra web en GitHub, debemos dar clic a nuestro workflow y revisar los detalles.</span> Dentro de los detalles se encontrará la URL de nuestro sitio.</span>
+                  <img src="https://andune55.github.io/diario/assets/github-pages-actions-BZiqeHBr.png" alt=""></li>  
+                  </li>
+                  
+                </ul>
+        
+              </div>          
+          
+              <!-- DEPLOY AUTOMATIZADO EN NETLIFY-->            
+              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-netlify').toggle();">
+                <h3>Deploy automatizado en Netlify conectado con cuenta de Github</h3>		
+                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+              </div>      
+              <div id="deploy-netlify" class="hidden">
+
+                <p><strong>Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>):</strong> <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span></p>
+                
+                <img src="https://andune55.github.io/diario/assets/manual-automatizar%20deploy%20de%20proyecto%20vite%20react%20en%20netlify%20vinculado%20a%20github-GQxhexO1.png" alt="">
+                          
+              </div> 
   
               <!-- Respaldo git de web smmdd 16-02-25 -->
               <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#web-smmdd').toggle();">	
@@ -353,9 +452,8 @@
           <h3>Git, Herramientas</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
-        <div id="gitfo" class="hidden">               
+        <div id="gitfo" class="hidden">  
           
-          <!-- / GIT /////////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
             <p class="flex items-center">
               <span class="naranja">Git</span> &nbsp; <span class="naranja">GitHub</span>
@@ -838,76 +936,7 @@
     
                 <li class="my-3.5"><span class="destacado">Para ajustes y configuración:</span> <strong>git config</strong> PENDIENTE DE SEGUIR LINK Y QUE FUNCIONE</li>
                 </ul>
-            </div>
-
-            <!-- Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages-->          	
-            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-github-pages').toggle();">
-              <h3>Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>		
-              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-            </div>            
-            <div id="deploy-github-pages" class="hidden">
-                <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
-                <ul class="ml-7 list-disc">
-                  <li>Tener un repositorio creado: <strong>https://github.com/XXXXXXX55/XXXXXXXXXXXXXX/</strong></li>
-                  <li><span class="destacado">Modificar la opción base de nuestro archivo <span class="file">vite.config.js</span></span>. <strong>En el contexto de un archivo de configuración de Vite, la opción base se refiere a la ruta base de nuestra aplicación cuando se sirve en un entorno de producción.</strong> Esta opción es parte de la configuración de construcción (build) de Vite.
-                  <pre data-line="7"><code class="language-ts">
-                    //vite.config.js
-                    import { defineConfig } from 'vite'
-                    import tailwindcss from '@tailwindcss/vite'
-                    import react from '@vitejs/plugin-react-swc'
-                    
-                    // https://vite.dev/config/
-                    export default defineConfig({
-                      base: "https://XXXXXX.github.io/XXXXX/",
-                      plugins: [
-                        react(),
-                        tailwindcss()
-                      ],
-                    })
-                  </code></pre>
-                  </li>
-                  <li><span class="destacado">npm install --save-dev gh-pages</span> &lt;-- Instalamos la librería de NPM para poder trabajar y desplegar aplicaciones en github pages llamada “gh-pages” https://www.npmjs.com/package/gh-pages:</li>
-                  <li>Ya con nuestro paquete instalado, <span class="destacado">En nuestro <span class="file">package.json</span> creamos un nuevo script de NPM para ayudarnos a realizar el empaquetado y el despliegue</span>. A este script lo llamomos <strong>"deploy"</strong>.
-                  <pre><code class="language-ts">
-                    .... 
-                    "scripts": {
-                        ....
-                    
-                        "deploy": "npm run build && gh-pages -d dist"
-                      },                  
-                    ...
-                  </code></pre>
-                  </li>
-                  <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos nuestro script para poder desplegar.
-                  <img src="https://andune55.github.io/diario/assets/github-pages-deploy-CTuSR3LL.png" alt="">
-                  </li>
-                  <li><strong>Al acceder a nuestro repositorio, notaremos la presencia de una nueva rama llamada “gh-pages”</strong>. La rama “gh-pages” es una convención utilizada en GitHub para la publicación de sitios web directamente desde un repositorio. Cuando habilitas GitHub Pages para un repositorio, este servicio busca automáticamente una rama llamada “gh-pages” para construir y desplegar el sitio web asociado.
-                  <img src="https://andune55.github.io/diario/assets/github-pages-branch-mBiHmLe5.png" alt=""></li>
-                  <li><span class="destacado">En Settings>Pages> seleccionamos la rama gh-pages</span>
-                  <img src="https://andune55.github.io/diario/assets/github-pages-setting-pages-0c2Ezn0H.png" alt=""></li>                  
-                </li>
-                <li><span class="destacado">npm run deploy</span> &lt;-- Ejecutamos de nuevo nuestro script para poder desplegar (el anterior lo ha hecho en la main).</li>
-                <li>Si nos vamos a la pestaña de “Actions” notaremos que se ha creado un nuevo “Workflow” y se ha ejecutado. En GitHub, un “workflow” (flujo de trabajo) se refiere a la automatización de una serie de pasos que se ejecutan cada vez que ocurre un evento específico en nuestro repositorio. <strong>Estos eventos pueden incluir acciones como el envío de cambios a un repositorio (push), la creación de una solicitud de extracción (pull request), o incluso el calendario programado.</strong>. <span class="destacado">Hemos creado y ejecutado nuestro flujo de trabajo utilizando el paquete “gh-pages” de NPM. Esto significa que hemos automatizado todo el proceso necesario para llevar a cabo el despliegue de manera eficiente y sin intervención manual. Por último, <span class="destacado">para visualizar nuestra web en GitHub, debemos dar clic a nuestro workflow y revisar los detalles.</span> Dentro de los detalles se encontrará la URL de nuestro sitio.</span>
-                <img src="https://andune55.github.io/diario/assets/github-pages-actions-BZiqeHBr.png" alt=""></li>  
-                </li>
-                
-              </ul>
-      
             </div>          
-          
-            <!-- DEPLOY AUTOMATIZADO EN NETLIFY-->            
-            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#deploy-netlify').toggle();">
-              <h3>Deploy automatizado en Netlify conectado con cuenta de Github</h3>		
-              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-            </div>      
-            <div id="deploy-netlify" class="hidden">
-
-              <p><strong>Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>):</strong> <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span></p>
-              
-              <img src="https://andune55.github.io/diario/assets/manual-automatizar%20deploy%20de%20proyecto%20vite%20react%20en%20netlify%20vinculado%20a%20github-GQxhexO1.png" alt="">
-                        
-            </div> 
-          
 
           </div>          
           
@@ -1776,7 +1805,7 @@
       <!-- PASOS PROYECTO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#pasos-proyecto').toggle();">
-          <h3>Pasos Proyecto</h3>
+          <h3>Pasos Proyecto (antiguo)</h3>
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>
       
@@ -1895,95 +1924,95 @@
   
       <!-- GITHUB -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">				
-          <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#80-81-angular').toggle();">
-              <h3>Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24)</h3>		
-              <span class="cambiaicono ico_chevron_down mr-2.5"></span>
-          </div>  
-          <div id="80-81-angular" class="hidden">                               
-            <h3 class="naranja">Respaldar nuestro proyecto en Github</h3>
-            
-            <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
-            
-            <p>en github creamos nuestro repositorio <strong>https://github.com/an.....5/angular-bases</strong></p>
-            <p><span class="destacado">git init</span></p>
-            <p>preparamos nuestro código fuente para una fotografía que es conocida como un commit</p>
-            <p><span class="destacado">git add .</span>: le dice a git todos los cambios que he hecho prepáralos para la fotografía.</p>
-            <p><span class="destacado">git commit -m "Fin sección 4"</span></p>
-            <p>Ahora ya tengo respaldos de seguridad en el caso de que ahora me cargue algo en mi código :) <span class="destacado">git checkout -- .</span> reconstruye mi proyecto a como estaba en la última fotografía, el último commit.</p>
-            <p>Subamos este código a github copiando estos comandos de aquí <a href="https://github.com/an.....5/angular-bases" target="_blank">https://github.com/an.....5/angular-bases</a>:
-            <img id="53-1" class="cursor-pointer" src="img/53-1(agular).png" alt="" /> 
-            </p>
-            <ul class="lista-numbers-black mt-2.5 mb-5 mx-3.75">
-                <li><span class="destacado">- git remote add origin https://github.com/an.....5/angular-bases.git</span> crea la referencia al registro de github para que yo suba mi código ahí (añade esta url para ese lugar remoto y le pones por nombre origin)</li>
-                <li><span class="destacado">git branch -M main</span> renombra la rama en la que me encuentro y le pones por nombre main</li>
-                <li><span class="destacado">git push -u origin main</span> hacer el push de los cambios y establecer el origin como origen por defecto de la rama main. Esto va a tomar todos los cambios de mi repositorio, todos los commit que yo he hecho y lso va a subir a ese repositorio.</li>
-            </ul>
-            <p>8:26 Cualquier cambio nuevo que hagamos (por ejemplo modificamos el README.md), <strong>git add . +  git commit - m "mensaje" + git push (ya no hay que poner el -u porque establecí el origin por defecto)</strong></p>
-            
-            <p>Puedo descargar este código y luego hacer un npm install para reconstruir los módulos de node.</p>
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#80-81-angular').toggle();">
+            <h3>Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24)</h3>		
+            <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>  
+        <div id="80-81-angular" class="hidden">                               
+          <h3 class="naranja">Respaldar nuestro proyecto en Github</h3>
+          
+          <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
+          
+          <p>en github creamos nuestro repositorio <strong>https://github.com/an.....5/angular-bases</strong></p>
+          <p><span class="destacado">git init</span></p>
+          <p>preparamos nuestro código fuente para una fotografía que es conocida como un commit</p>
+          <p><span class="destacado">git add .</span>: le dice a git todos los cambios que he hecho prepáralos para la fotografía.</p>
+          <p><span class="destacado">git commit -m "Fin sección 4"</span></p>
+          <p>Ahora ya tengo respaldos de seguridad en el caso de que ahora me cargue algo en mi código :) <span class="destacado">git checkout -- .</span> reconstruye mi proyecto a como estaba en la última fotografía, el último commit.</p>
+          <p>Subamos este código a github copiando estos comandos de aquí <a href="https://github.com/an.....5/angular-bases" target="_blank">https://github.com/an.....5/angular-bases</a>:
+          <img id="53-1" class="cursor-pointer" src="img/53-1(agular).png" alt="" /> 
+          </p>
+          <ul class="lista-numbers-black mt-2.5 mb-5 mx-3.75">
+              <li><span class="destacado">- git remote add origin https://github.com/an.....5/angular-bases.git</span> crea la referencia al registro de github para que yo suba mi código ahí (añade esta url para ese lugar remoto y le pones por nombre origin)</li>
+              <li><span class="destacado">git branch -M main</span> renombra la rama en la que me encuentro y le pones por nombre main</li>
+              <li><span class="destacado">git push -u origin main</span> hacer el push de los cambios y establecer el origin como origen por defecto de la rama main. Esto va a tomar todos los cambios de mi repositorio, todos los commit que yo he hecho y lso va a subir a ese repositorio.</li>
+          </ul>
+          <p>8:26 Cualquier cambio nuevo que hagamos (por ejemplo modificamos el README.md), <strong>git add . +  git commit - m "mensaje" + git push (ya no hay que poner el -u porque establecí el origin por defecto)</strong></p>
+          
+          <p>Puedo descargar este código y luego hacer un npm install para reconstruir los módulos de node.</p>
 
-            <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
-            
-            <h3 class="naranja">GitHub Pages (pendiente hacer acciones automáticas carpeta doc curso angular)</h3>
+          <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
+          
+          <h3 class="naranja">GitHub Pages (pendiente hacer acciones automáticas carpeta doc curso angular)</h3>
 
-            <p><strong>GitHub Pages</strong> es un servicio en la nube que nos permite dar seguimiento a nuestros proyectos de Git; es un servicio extra que tiene Github en el cual podemos servir contenido estático (contenido que una vez he generado no va a cambiar). Vamos a subir aquí nuestro build.</p>
+          <p><strong>GitHub Pages</strong> es un servicio en la nube que nos permite dar seguimiento a nuestros proyectos de Git; es un servicio extra que tiene Github en el cual podemos servir contenido estático (contenido que una vez he generado no va a cambiar). Vamos a subir aquí nuestro build.</p>
 
-            <p>Nos ubicamos en nuestro proyecto (el de angular era 02-bases) y hacemos nuevamente el build de cualquiera de estas dos maneras:</p>
-            <ul class="lista-bullet-black">										
-                <li><strong>npm run build</strong>: lo corre directamente del angular cli</li>
-                <li><strong>ng build</strong>: lo corre tb del angular cli pero basado en el script que tenemos definido en nuestro package.json</li>
-            </ul>
-            <p>Nos aparece la carpeta de distribución "dist" con todos sus archivos que son lo que tenemos que subir. Vamos a Github.com y creamos un nuevo repositorio <strong>angular-primeros-pasos</strong> y lo dejamos público porque en provado posiblemente nos pida datos de facturación. Lo creamos y nos copiamos los comandos siguientes:</p>
-            
-            <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
-            git branch -M main<br>
-            git push -u origin main</strong></p>
-            
-            <p>reinicializamos: <strong>git init</strong> (por si habíamos borrado la carpeta git, él lo hace así para partir del mimsmo punto)</p>
-            <p><strong>git add .</strong></p>
-            <p><strong>git commit -m "primer commit"</strong></p>
-            <p>pegamos los comandos que copiamos antes</p>
-            
-            <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
-            git branch -M main<br>
-            git push -u origin main</strong></p>
-            
-            <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
+          <p>Nos ubicamos en nuestro proyecto (el de angular era 02-bases) y hacemos nuevamente el build de cualquiera de estas dos maneras:</p>
+          <ul class="lista-bullet-black">										
+              <li><strong>npm run build</strong>: lo corre directamente del angular cli</li>
+              <li><strong>ng build</strong>: lo corre tb del angular cli pero basado en el script que tenemos definido en nuestro package.json</li>
+          </ul>
+          <p>Nos aparece la carpeta de distribución "dist" con todos sus archivos que son lo que tenemos que subir. Vamos a Github.com y creamos un nuevo repositorio <strong>angular-primeros-pasos</strong> y lo dejamos público porque en provado posiblemente nos pida datos de facturación. Lo creamos y nos copiamos los comandos siguientes:</p>
+          
+          <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
+          git branch -M main<br>
+          git push -u origin main</strong></p>
+          
+          <p>reinicializamos: <strong>git init</strong> (por si habíamos borrado la carpeta git, él lo hace así para partir del mimsmo punto)</p>
+          <p><strong>git add .</strong></p>
+          <p><strong>git commit -m "primer commit"</strong></p>
+          <p>pegamos los comandos que copiamos antes</p>
+          
+          <p><strong>git remote add origin https://github.com/an.....5/angular-primeros-pasos.git<br>
+          git branch -M main<br>
+          git push -u origin main</strong></p>
+          
+          <p><span class="destacado">Ya tenemos la app de angular subida pero no es mi proceso de distribución. Vamos a <strong>settings &gt; menú izquierda "pages" &gt; sources: desde una rama --&gt; main + carpeta docs (que vamos a crear. Esto era en el proyecto Angular. En mi proyecto manual-xxxxx lo dejo en el raiz):</strong></span>. Si vamos a acciones de github, vemos como se está ejecutando. Ya va a haber una acción (un hook) escuchando por cualquier cambio en el directorio especificado. De hecho si cambiamos algo en nuestra app y desde la consola en VSC hacemos lo siguiente:</p>
 
 
-            <p><span class="destacado">git add .</span></p>
-            <p><span class="destacado">git commit -m "el cambio que sea"</span></p>
-            <p><span class="destacado">git push</span></p>
+          <p><span class="destacado">git add .</span></p>
+          <p><span class="destacado">git commit -m "el cambio que sea"</span></p>
+          <p><span class="destacado">git push</span></p>
 
-            <p>veremos en acciones que hay una nueva ejecutándose y desde ahí mismo una vez terminada podremos accer a la url donde se ha vuelto a "montar" la aplicación con nuestros cambios:
-                <a href="https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741">https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741</a><br>
-                <a href="https://an.....5.github.io/manual-xxxxx/">https://an.....5.github.io/manual-xxxxx/</a>
-            </p>
+          <p>veremos en acciones que hay una nueva ejecutándose y desde ahí mismo una vez terminada podremos accer a la url donde se ha vuelto a "montar" la aplicación con nuestros cambios:
+              <a href="https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741">https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741</a><br>
+              <a href="https://an.....5.github.io/manual-xxxxx/">https://an.....5.github.io/manual-xxxxx/</a>
+          </p>
 
-            <p>Cogemos nuestra carpeta "bases" que es el producto de nuestro build y dentro del mismo VS Code la arrastramos a la altura del root de nuestra aplicación (al lado del src, del .angular) y la vamos a renombrar por docs. Ahora en la consola <strong>git add . + git commit -m "doc creado" + git push</strong> <span class="destacado">Eso ya nos crea en nuestro proyecto de github la carpeta docs que contiene todos los archivos que vamos a querer poner en un sitio web.</span></p>
-            
-            <p>Ahora sí seleccionamos en git main y carpeta docs y guardamos. Esto va a empezar a realizar una acción automática que cada vez que hagamos un despliegue (un deployment en la carpeta docs) a la rama main automáticamente va a ejecutar este proceso. Si clickamos "Actions" vemos como va el procedimiento.</p>
-            
-            <img id="80-1" class="cursor-pointer" src="img/80-1(angular).png" alt="" onclick="muestraImg(this.id);"> 	
-            
-            <p>Una vez termina si pulsamos la url que nos facilita nos da blancazo y es porque tenemos que cambiar el base href de nuestro index. Lo tocamos en nuestro build de VS Code, hacemos nuevamente <strong>git add . + git commit -m "actualizado base href './'" + git push</strong> y esperamos de nuevo que finalice la acción de git. Limpiamos caché de navegador y ya nos funciona.</p>
-            
-            <p>A continuación veremos un proceso semiautomatizado para evitar tener que hacer todo esto manualmente, porque cada vez que hago un ng build eso va a sobreescribir muchas cosas y vamos a <strong>tener que volver a mover la carpeta "browser" de dist&gt;base&gt;browser al root, cambiar de nuevo el base ref del index a './' hacer el git add+commit+push...</strong>. Esto se presta a ver algo interesante que podemos hacer en unas apps de node y que fácilmente saquemos provecho a los scripts del package.json de nuestra app.</p>
-                        
-            <h3 class="naranja">Package.json scripts</h3>
-                
-            <p>Clase "bonus" para automatizar la construcción de esta carpeta doc que tenga el index además el path que ha de tener. Explica como en el cmd podemos crear un directorio <strong>mkdir temporal</strong> y eso mismo podriamos hacerlo creando un nuevo script (separado por coma) en nuestro package.json. --&gt; <span class="naranja">"new:folder": "mkdir temporal2"</span>. En la terminal ejecuto ese comando como <span class="destacado">npm run new:folder</span> y se nos crea la carpeta.</p>
-            
-            <p>Veamos una serie de procesos para automatizar la construcción para github. El proceso del build que tenemos en nuestro package.json está bien técnicamente, pero necesito uno en el que yo tenga el <strong>base href="./"</strong> así configurado en vez de así <strong>base href="/"</strong>. <span class="destacado">Si en la terminal ejecutamos <strong>ng build --help</strong> nos salen todas las "banderas" que podemos ejecutar. Ejecutamos el --base-href que sirve para cambiar el base url de la app que estamos construyendo: <strong>ng build --base-href ./</strong></span>. En nuestro package.json añadimos un nuevo script a continuación del build por defecto que dice <span class="naranja">"build:href": "ng build --base-href ./"</span> tendremos que poner en terminal <span class="destacado">npm run build:href</span></p>
-            
-            <p>Para hacer los dos scripts siguientes (borrar la carpeta docs y copiar ficheros, instala dos paquetes de node para aumentar la compatibilidad y que las instrucciones que vemos para crear estos scripts nos valgan independientemente de si usamos windows, lynux...):</p>
-            
-            <ul class="lista-bullet-black">
-                <li> <strong>Borrar la carpeta docs</strong> <a class="rojo" href="https://www.npmjs.com/package/del-cli" target="_blank">Paquete Npm  "del-cli"</a>. No lo instalamos de manera global. Vamos a la terminal integrada de Vs Code e instalamos el paquete como una dependencia de desarrollo <strong>npm install del-cli --save-dev</strong>. Esto nos va a permitir a nosotros ejecutar los comandos correspondientes para eliminar archivos. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para borrar la carpeta "docs" <span class="destacado">"delete:docs": "del docs"</span>. En la terminal ponemos <span class="destacado">npm run delete:docs</span></li>
-                <li> <strong>Copiar</strong>: <a class="rojo" href="https://www.npmjs.com/package/copyfiles" target="_blank">Paquete Npm "CopyFiles"</a>. Instalamos el paquete como una dependencia de desarrollo <strong>npm install copyfiles --save-dev</strong>. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para copiar todo lo que tenemos dentro de la carpeta "/dist/base/browser" a la carpeta "docs" <span class="destacado">"copy:dist": "copyfiles dist/bases/browser/* ./docs -f"</span>. En la terminal ponemos <span class="destacado">npm run copy:dist</span></li>
-                <li> Hagamos ahora un script que nos sirva para hacer todo de una sola vez, un script para hacer el build listo para github<span class="span naranja">"build:github": "npm run delete:docs &amp;&amp; npm run build:href &amp;&amp; npm run copy:dist"</span>. En la terminal pondremos <span class="destacado">npm run build:github</span> y ya tendremos nuestro build de producción listo para hacer con él lo que queramos.</li>
-            </ul>     
-          </div>
+          <p>Cogemos nuestra carpeta "bases" que es el producto de nuestro build y dentro del mismo VS Code la arrastramos a la altura del root de nuestra aplicación (al lado del src, del .angular) y la vamos a renombrar por docs. Ahora en la consola <strong>git add . + git commit -m "doc creado" + git push</strong> <span class="destacado">Eso ya nos crea en nuestro proyecto de github la carpeta docs que contiene todos los archivos que vamos a querer poner en un sitio web.</span></p>
+          
+          <p>Ahora sí seleccionamos en git main y carpeta docs y guardamos. Esto va a empezar a realizar una acción automática que cada vez que hagamos un despliegue (un deployment en la carpeta docs) a la rama main automáticamente va a ejecutar este proceso. Si clickamos "Actions" vemos como va el procedimiento.</p>
+          
+          <img id="80-1" class="cursor-pointer" src="img/80-1(angular).png" alt="" onclick="muestraImg(this.id);"> 	
+          
+          <p>Una vez termina si pulsamos la url que nos facilita nos da blancazo y es porque tenemos que cambiar el base href de nuestro index. Lo tocamos en nuestro build de VS Code, hacemos nuevamente <strong>git add . + git commit -m "actualizado base href './'" + git push</strong> y esperamos de nuevo que finalice la acción de git. Limpiamos caché de navegador y ya nos funciona.</p>
+          
+          <p>A continuación veremos un proceso semiautomatizado para evitar tener que hacer todo esto manualmente, porque cada vez que hago un ng build eso va a sobreescribir muchas cosas y vamos a <strong>tener que volver a mover la carpeta "browser" de dist&gt;base&gt;browser al root, cambiar de nuevo el base ref del index a './' hacer el git add+commit+push...</strong>. Esto se presta a ver algo interesante que podemos hacer en unas apps de node y que fácilmente saquemos provecho a los scripts del package.json de nuestra app.</p>
+                      
+          <h3 class="naranja">Package.json scripts</h3>
+              
+          <p>Clase "bonus" para automatizar la construcción de esta carpeta doc que tenga el index además el path que ha de tener. Explica como en el cmd podemos crear un directorio <strong>mkdir temporal</strong> y eso mismo podriamos hacerlo creando un nuevo script (separado por coma) en nuestro package.json. --&gt; <span class="naranja">"new:folder": "mkdir temporal2"</span>. En la terminal ejecuto ese comando como <span class="destacado">npm run new:folder</span> y se nos crea la carpeta.</p>
+          
+          <p>Veamos una serie de procesos para automatizar la construcción para github. El proceso del build que tenemos en nuestro package.json está bien técnicamente, pero necesito uno en el que yo tenga el <strong>base href="./"</strong> así configurado en vez de así <strong>base href="/"</strong>. <span class="destacado">Si en la terminal ejecutamos <strong>ng build --help</strong> nos salen todas las "banderas" que podemos ejecutar. Ejecutamos el --base-href que sirve para cambiar el base url de la app que estamos construyendo: <strong>ng build --base-href ./</strong></span>. En nuestro package.json añadimos un nuevo script a continuación del build por defecto que dice <span class="naranja">"build:href": "ng build --base-href ./"</span> tendremos que poner en terminal <span class="destacado">npm run build:href</span></p>
+          
+          <p>Para hacer los dos scripts siguientes (borrar la carpeta docs y copiar ficheros, instala dos paquetes de node para aumentar la compatibilidad y que las instrucciones que vemos para crear estos scripts nos valgan independientemente de si usamos windows, lynux...):</p>
+          
+          <ul class="lista-bullet-black">
+              <li> <strong>Borrar la carpeta docs</strong> <a class="rojo" href="https://www.npmjs.com/package/del-cli" target="_blank">Paquete Npm  "del-cli"</a>. No lo instalamos de manera global. Vamos a la terminal integrada de Vs Code e instalamos el paquete como una dependencia de desarrollo <strong>npm install del-cli --save-dev</strong>. Esto nos va a permitir a nosotros ejecutar los comandos correspondientes para eliminar archivos. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para borrar la carpeta "docs" <span class="destacado">"delete:docs": "del docs"</span>. En la terminal ponemos <span class="destacado">npm run delete:docs</span></li>
+              <li> <strong>Copiar</strong>: <a class="rojo" href="https://www.npmjs.com/package/copyfiles" target="_blank">Paquete Npm "CopyFiles"</a>. Instalamos el paquete como una dependencia de desarrollo <strong>npm install copyfiles --save-dev</strong>. Vamos a nuestro <strong>package.json</strong> y creamos nuevo script para copiar todo lo que tenemos dentro de la carpeta "/dist/base/browser" a la carpeta "docs" <span class="destacado">"copy:dist": "copyfiles dist/bases/browser/* ./docs -f"</span>. En la terminal ponemos <span class="destacado">npm run copy:dist</span></li>
+              <li> Hagamos ahora un script que nos sirva para hacer todo de una sola vez, un script para hacer el build listo para github<span class="span naranja">"build:github": "npm run delete:docs &amp;&amp; npm run build:href &amp;&amp; npm run copy:dist"</span>. En la terminal pondremos <span class="destacado">npm run build:github</span> y ya tendremos nuestro build de producción listo para hacer con él lo que queramos.</li>
+          </ul>     
+        </div>
       </div>
 
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto">
