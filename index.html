@@ -173,10 +173,50 @@
                     </ul> 
                   </li>
 
-                  <li class="mb-3"><span class="destacado">npm install --save-dev gh-pages</span> - <a class="underline" href="https://www.npmjs.com/package/gh-pages" target="_blank">https://www.npmjs.com/package/gh-pages</a> - <strong>gh-pages:</strong> librería de npm para poder trabajar y desplegar aplicaciones en github pages</p>
+                  <li class="mb-3"><strong>Para despliegue en un sitio estático (github pages y Netlify):</strong> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a>
+                    <ul class="mt-1 ml-2.5 pl-6 border-l-2 border-l-stone-600 list-decimal">
+                      <li class="mb-2">Creamos los dos sitios en <strong>github</strong> - <a href="https://github.com/" class="underline" target="blank">https://github.com/</a> (añadir repositorio) y <strong>Netlify</strong> - <a href="https://app.netlify.com/" class="underline" target="blank">https://app.netlify.com/</a> (hacemos un build y llevamos a mano la carpeta dist)</li>
+                      <li class="mb-2">Creo repo local git, primera foto, primer commit: <span class="destacado">git init</span> + <span class="destacado">git add .</span> + <span class="destacado">git commit -m "primer commit"</span> + y con esta info que nos da Github en cuanto creamos el repositorio, establecemos el origen remoto + ¿nos situamos en la rama main? + ¿hacemos un push a esa rama?:
+                        <ul class="list-disc my-3 ml-4">
+                          <li class="my-1.25"><span class="destacado">git remote add origin https://github.com/andXXXX5/XXXXXXXXX.git</span>
+                          <li class="my-1.25"><span class="destacado">git branch -M main</span></li>
+                          <li class="my-1.25"><span class="destacado">git push -u origin main</span></li>                          
+                        </ul>
+                      </li>
+                      <li class="mb-2"><span class="destacado">npm install --save-dev gh-pages</span> - <a class="underline" href="https://www.npmjs.com/package/gh-pages" target="_blank">https://www.npmjs.com/package/gh-pages</a> - <strong>gh-pages:</strong> librería de npm para poder trabajar y desplegar aplicaciones en github pages.
+                      </li>
+                      <li class="mb-2"><span class="destacado">npm install netlify-cli -g</span> <strong>CLI de Netlify: lo instalo global</strong> (supuestamente era mejor instalarlo de manera local con: <span class="destacado">npm install --save-dev netlify-cli</span> según lo que dice el link del paquete <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>, pero me daba problemas )</p></li>
+                      <li>en <span class="file">vite.config.ts</span> configuramos el 'base' y en <span class="file">package.json</span> añadimos nuestros scripts personalizados para compilar y desplegar en uno o compilar y desplegar en los dos sitios (En Netlify nos preguntará si queremos asociarlo con un id del sitio, lo copiamos y especificamos la carpeta dist en la siguiente pregunta):
+                      <div class="flex max-sm:flex-col">
+                        <div class="w-[50%] max-sm:w-[100%]">
+                          <pre data-line="3"><code class="language-js">
+                            //vite.config.ts
+                            ...
+                            export default defineConfig({
+                              base:"https://andXXXX5.github.io/XXXXXXXXX/",
+                              plugins: [
+                          </code></pre>
+                        </div>
+                        <div class="w-[50%] max-sm:w-[100%]">
+                          <pre data-line="4-6"><code class="language-js">
+                            //package.json
+                            ...
+                            "scripts": {
+                              ...,
+                              "dpgh": "npm run build && gh-pages -d dist",
+                              "dpnet": "npm run build && ntl deploy --prod",
+                              "dpall": "npm run build && gh-pages -d dist && ntl deploy --prod"
+                          </code></pre>
+                        </div>
+                      </div>
+                      
+                      </li>
+                    </ul>
                   </li>
 
-                  <li class="mb-3"><p class="font-bold">Instalar CLI de Netlify (MEJOR el primero ver <a class="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>): <span class="destacado">npm install --save-dev netlify-cli</span> <span class="destacado">npm install netlify-cli -g</span> - <a class="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a></p></li>
+                  
+
+                  
 
                   <li class="mb-3">
                     <p class="font-bold inline">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
