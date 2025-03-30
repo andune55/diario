@@ -1195,30 +1195,37 @@
           <p class="font-bold">Fichero personalizado snippets.json FO (13/02/25)</p>
           <pre><code class="language-js">
             //snippets.json (en el raiz, Curso React)
-            {   
-              "variables": { "lang": "es" }, 
-              "html": {    
-                  "snippets": { 
-                      "pch": "pre>code[class=language-html]", "ch": "code[class=language-html]",
-                      "pcj": "pre>code[class=language-js]", "cj": "code[class=language-js]",
-                      "pct": "pre>code[class=language-ts]", "ct": "code[class=language-ts]",
-                      "pcc": "pre>code[class=language-css]", "cc": "code[class=language-css]",
-                      "sh": "script[type=text/plain][class=language-html]",
-                      "sj": "script[type=text/plain][class=language-js]",
-                      "spr": "span[class=rojo]",
-                      "spdest": "span[class=destacado]",
-                      "spf": "span[class=file]",
-                      "psn": "p[class='mt-3.75 mb-0']>span[class=naranja]",
-                      "pcj2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre>code[class='language-js']",
-                      "pcj3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre>code[class='language-js']",
-                      "pcj4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre>code[class='language-js']",
-                      "divexp": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>a[class='block underline ml-1.5 mb-1.5'][href='XXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex']>svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^span[class='bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]']{${0:XXXXXXX}}",
-                      "divlink": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>p[class='flex items-center']>span[class='naranja']{${0:XXXXXXX}}+svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^^div[class='flex flex-wrap items-center']>a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex w-[100%]']+a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX /}}",
-                      "flechad": "svg[class='size-6 shrink-0 inline'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']",
-                      "imgm": "img[src=./src/assets/img/][alt=img][loading=lazy]"  
-                  }
+            {
+              "variables": { "lang": "es" },
+              "html": {
+                "snippets": {
+                  "pch": "pre[data-line=0]>code[class=language-html]", "ch": "code[class=language-html]",
+                  "pcj": "pre[data-line=0]>code[class=language-js]", "cj": "code[class=language-js]",
+                  "pct": "pre[data-line=0]>code[class=language-ts]", "ct": "code[class=language-ts]",
+                  "pcc": "pre[data-line=0]>code[class=language-css]", "cc": "code[class=language-css]",
+                  "sh": "script[type=text/plain][class=language-html]",
+                  "sj": "script[type=text/plain][class=language-js]",
+                  "spr": "span[class=rojo]",
+                  "spdest": "span[class=destacado]",
+                  "spf": "span[class=file]",
+                  "spt": "span[class='bg-[#4ec9b0] text-white']",
+                  "spint": "span[class='bg-amber-950 text-amber-300']",
+                  "psn": "p[class='mt-3.75 mb-0']>span[class=naranja]",
+                  "pcj2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre[data-line='0']>code[class='language-js']",
+                  "pcj3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre[data-line='0']>code[class='language-js']",
+                  "pcj4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre[data-line='0']>code[class='language-js']",
+                  "pct2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre[data-line='0']>code[class='language-ts']",
+                  "pct3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre[data-line='0']>code[class='language-ts']",
+                  "pct4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre[data-line='0']>code[class='language-ts']",
+                  "divexp": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>a[class='block underline ml-1.5 mb-1.5'][href='XXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex']>svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^span[class='bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]']{${0:XXXXXXX}}",
+                  "divlink": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>p[class='flex items-center']>span[class='naranja']{${0:XXXXXXX}}+svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^^div[class='flex flex-wrap items-center']>a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX}}+div[class='flex w-[100%]']+a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{${0:XXXXXXX /}}",
+                  "flechad": "svg[class='size-6 shrink-0 inline'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']",
+                  "imgm": "img[src=./src/assets/img/][alt=img][loading=lazy]",
+                  "list1": "ul[class='list-disc my-3']>li[class='my-1.25']*3",
+                  "linkfo": "a[class='underline'][href='XXXXXXX'][target='blank']{${0:XXXXXXX}}"
+                }
               }
-          }
+            }
           </code></pre>
 
           <p>Para ver nº líneas <strong>class="line-numbers"</strong> y marcar una o varias líneas <strong>data-line="1,5-11"</strong></p>
