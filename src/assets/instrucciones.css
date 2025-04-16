@@ -220,5 +220,16 @@ pre.verde .line-highlight {
 	}
 }
 
+@keyframes point-left {			
+	0% {left: 0px;}
+	50% {left: 9px;}
+	100% {left: 0px;}			
+}
+.animation-point-left {
+	position: relative;
+	margin-right: 12px;
+	animation: 1s ease 0s infinite normal none running point-left;
+}
+
 
 
