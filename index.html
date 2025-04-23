@@ -227,11 +227,7 @@
                       
                       </li>
                     </ul>
-                  </li>
-
-                  
-
-                  
+                  </li>                  
 
                   <li class="mb-3">
                     <p class="font-bold inline">Instalar tailwindcss <a class="underline" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a> </p>
@@ -362,10 +358,37 @@
                   <li class="mb-3"><span class="destacado">npm install @dnd-kit/core</span> (proyecto notas-fos)- <a href="https://dndkit.com/" class="underline" target="blank">https://dndkit.com/</a> - <strong>dnd kit:  A modular toolkit for building
                     drag & drop interfaces</strong></li>
 
+                  <li class="mb-3">
+                    <span class="destacado">npm i prism-react-renderer</span> <strong>prism-react-renderer:</strong> - <a href="https://www.npmjs.com/package/prism-react-renderer#usage" class="underline" target="blank">https://www.npmjs.com/package/prism-react-renderer#usage</a>
+
+                    <pre class="mb-2"><code class="language-ts">
+                      import { Highlight, themes } from "prism-react-renderer"
+                    </code></pre>
+                    <pre><code class="language-ts">
+                    &lt;Highlight
+                        theme={emptyTheme}
+                        code={`XXXXXXXXXXX`}
+                        language=&quot;tsx&quot;
+                    &gt;
+                    {({ className, style, tokens, getLineProps, getTokenProps }) =&gt; (
+                    &lt;pre style={style}&gt;
+                        {tokens.map((line, i) =&gt; (
+                        &lt;div key={i} {...getLineProps({ line })}&gt;
+                            &lt;span&gt;{i + 1}&lt;/span&gt;
+                            {line.map((token, key) =&gt; (
+                            &lt;span key={key} {...getTokenProps({ token })} /&gt;
+                            ))}
+                        &lt;/div&gt;
+                        ))}
+                    &lt;/pre&gt;
+                    )}
+                    &lt;/Highlight&gt;
+                    </code></pre>
+                  </li>
 
 
                   <li class="mb-3">
-                    <p class="font-bold">Instalar prism: <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
+                    <p class="font-bold">Instalar prism(esta no va fina): <span class="destacado">npm install prismjs</span>. Una vez que se ha instalado la dependencia ya lo podemos importar en nuestros componentes:</p>
                
                     <div class="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
                       <pre><code class="language-js">
