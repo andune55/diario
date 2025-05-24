@@ -16,61 +16,216 @@
 
     <div class="bg-gray-100 pb-2.5">
 
-      <!-- TAREAS FO -->
+      <!-- ATAJOS VISUAL STUDIO CODE -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#tareasfo').toggle();">
-          <h3>Tareas FO</h3>		
-          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
-        </div>        
-        <div id="tareasfo" class="hidden"> 
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#atajos-vsc').toggle();">
+            <h3>Atajos Visual Studio Code</h3>		
+            <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>    
+        <div id="atajos-vsc" class="ml-2.5 hidden"> 
 
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-            </svg>
-            <span class="verde">COMPLETADAS</span>
+            
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+SHIFT+O</strong> --&gt; remove unused imports</span>
+            </div>
 
-            <div> 
-              <ul class="list-disc ml-5">
-                <li class="line-through">portfolio-XXX</li>
-                <li class="line-through">Códigos javascript de primeros videos</li>
-                <li class="line-through">Hacer build de Delorean</li>
-                <li class="line-through">Seguir con mejoras de diseño en nueva rama de calorie-tracker</li>
-                <li class="line-through">seguir limpiando estilos DIARIO</li>
-                <li class="line-through">Sección 11 Migrar el carrito de compras a useReducer --&gt; 171-175 / 20-02 177 /</li>
-                <li class="line-through">Publicar Diario para TENERLO de consulta (QUITAR TODAS LAS REF PERSONALES POSIBLES Y CAMBIAR A NOMBRE)</li>
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el IS no nos da las sugerencias quick fix de autocompletado (por ejemplo al tipar en nuestro componente un parámetro y sabemos que ese type existe en nuestro archivo de types)</strong> --&gt;<strong>en nuestro jsconfig.json poner a true el checkJS</strong> --&gt; <a href="https://medium.com/fredwong-it/vs-code-not-providing-suggestions-for-imports-in-quick-fix-dae5c8cc592c" class="underline" target="blank">VS Code not providing suggestions for imports in Quick fix</a></span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Para que al cambiar la etiqueta de html automáticamente se cambie también la de cierre</strong> --&gt;<strong>Ctrl+, y "linked editing"</strong></span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Para cambiar el cursor por defecto</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir "cursor blinking"</span>
+            </div>
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Colorizar las barras verticales que marcan los brackets(corchetes)</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir "bracket pairs" (si no teníamos colorizados las distintas profundidades de los brackets buscar "bracket pair colorization")</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>XXXXXXXXXXXXXXXXXXXXXX</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir ""</span>
+            </div>
+
+
+           
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el VSC se buggea y pierde el autompletado del lenguage que sea</strong> --&gt;<strong>CTRL+K</strong> y a continuación <strong>M</strong> seleccionamos el lenguage del cual no está autocompletando</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+A</strong> Comentario de html</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +C</strong> --&gt; comentar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +U</strong> --&gt; descomentar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Evitar que al tocar un archivo se expanda el arbol de explorer. Abrir Configuración del editor --&gt; Explorer: Auto reveal a false</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+B</strong> sacar/ocultar panel izquierdo</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+J</strong> sacar/ocultar panel inferior</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>En el explorador, agregar carpeta al área de trabajo para tener todos losproyectos que queramos ahí unificados.</strong>
+                Si queremos tener dos server arrancados. CTRL+J para sacar panel inferior y pulsar en dividir terminal</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+D (tantas veces como elementos a reemplazar)</strong> --&gt; escribir lo nuevo o borrar</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+F2 (reemplazar lo seleccionado en TODAS sus ocurrencias)</strong> --&gt; escribir lo nuevo o borrar</span>
+            </div>
+            
+            <div class="flex flex-col items-start">
+              <div class="flex items-center mt-1.25">
+                <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                </svg>
+                <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ENCAPSULAR CON TAG HTML HACIENDO USO DE EMMET WRAP.</strong></span>
+              </div>                
+              <ul class="list-disc ml-10">
+                <li>Abrimos comandos abreviados con <strong>CTRL K + S</strong></span></li>
+                <li>buscamos <strong>emmet wrap</strong> y asignamos la combinación
+                  de teclas que queramos: <strong>MAYUS+ALT+W</strong></li>
               </ul>             
-              
             </div>
-          </div>
 
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-            </svg>
-            <span class="rojo">HACIENDO</span>
-
-            <div class="flex flex-col">      
-              <ul class="list-disc ml-5">        
-              <li>Actualizar el portfolio con Calorie Tracker ¿MEJORAS?</li>
-              <li>Crear nueva rama y rediseñar guitarla-ur para añadirla al portfolio</li>
-
-              <li><a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></li>
-              <li>Quitar jquery de portfolio: - link DOM typescript -> https://fullstackpro.es/courses/curso-typescript/gestion-del-dom</li>
-              <li>Arreglar despliegue automático portfolio en netlify (Nuevo y cambiar de nombre) X18/08 - XX19/02 (desinstalado cli de netlify y vuelto a instalar, no global sino dev)</li>              
-              <li>¿Mejoras css en visualización de imágenes de proyectos?</li>
-              <li>¿Mejorar componente modal panel?</li>
-              <li>Añadir boton encendido y apagado de CSS (y mirar mas)</li>  
-              
-              <li>Páginas individuales para secciones <a href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></li>
-              <li>Hacer build de Calendario litúrgico</li>
-              <li>Hacer build de Silmarillion</li>
-            </ul>
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Instalo la extensión (CTRL+MAYUS+X) "Escape HTML Code" + buscamos <strong>Replace Selection with escaped HTML</strong> + asignamos la combinación
+                de teclas que queramos: <strong>MAYUS+CTRL+E</strong></span>
             </div>
-          </div>
+
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+P y escribimos "Quitar importaciones sin usar"</strong> --&gt; Para quitar importaciones que ya no se utilicen</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+Click</strong> --&gt; marcar distintos sitios para editar a la vez</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>MAYUS+ALT+flecha arriba o abajo</strong> --&gt; duplicar línea</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+flecha arriba o abajo</strong> --&gt; mover línea</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Alt+Z</strong> --&gt; Word Wrap del texto del editor</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K +S</strong> --&gt; comandos abreviados de teclado</span>
+            </div>
+
+            <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>RENOMBRAR</strong> --&gt; Instead, go to the definition of that variable and press F2, rename it, and press ENTER. This will change every occurrence. Not only does this work on variables, but also on functions, classes, interfaces, etc. This also works across files.</span>
+            </div>
+
+            <!-- <div class="flex items-center mt-1.25">
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">XXXXX</span>
+            </div> -->
+
           
-
-        </div>
+          
+          </div>
+         
+                         
+        </div>      
       </div>
 
       <!-- PROYECTOS FO -->
@@ -1847,219 +2002,7 @@
           - abajo del todo a la derecha en el <span class="destacado">cuadro con borde punteado "Want to deply a new site....."</span> arrastramos nuestra carpeta dist desde el explorador de archivos
             realiza una serie de opciones y nos aparece la opción "<span class="destacado">Open production deploy</span>" --&gt; aparece nuestro proyecto</p>              
         </div>
-      </div>
-  
-      <!-- ATAJOS VISUAL STUDIO CODE -->
-      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#atajos-vsc').toggle();">
-            <h3>Atajos Visual Studio Code</h3>		
-            <span class="cambiaicono ico_chevron_down mr-2.5"></span>
-        </div>    
-        <div id="atajos-vsc" class="ml-2.5 hidden"> 
-
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+SHIFT+O</strong> --&gt; remove unused imports</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el IS no nos da las sugerencias quick fix de autocompletado (por ejemplo al tipar en nuestro componente un parámetro y sabemos que ese type existe en nuestro archivo de types)</strong> --&gt;<strong>en nuestro jsconfig.json poner a true el checkJS</strong> --&gt; <a href="https://medium.com/fredwong-it/vs-code-not-providing-suggestions-for-imports-in-quick-fix-dae5c8cc592c" class="underline" target="blank">VS Code not providing suggestions for imports in Quick fix</a></span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Para que al cambiar la etiqueta de html automáticamente se cambie también la de cierre</strong> --&gt;<strong>Ctrl+, y "linked editing"</strong></span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Para cambiar el cursor por defecto</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir "cursor blinking"</span>
-            </div>
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Colorizar las barras verticales que marcan los brackets(corchetes)</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir "bracket pairs" (si no teníamos colorizados las distintas profundidades de los brackets buscar "bracket pair colorization")</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>XXXXXXXXXXXXXXXXXXXXXX</strong> --&gt;<strong>Ctrl+,</strong> y a continuación escribir ""</span>
-            </div>
-
-
-           
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el VSC se buggea y pierde el autompletado del lenguage que sea</strong> --&gt;<strong>CTRL+K</strong> y a continuación <strong>M</strong> seleccionamos el lenguage del cual no está autocompletando</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+A</strong> Comentario de html</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +C</strong> --&gt; comentar</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K   +U</strong> --&gt; descomentar</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Evitar que al tocar un archivo se expanda el arbol de explorer. Abrir Configuración del editor --&gt; Explorer: Auto reveal a false</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+B</strong> sacar/ocultar panel izquierdo</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+J</strong> sacar/ocultar panel inferior</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>En el explorador, agregar carpeta al área de trabajo para tener todos losproyectos que queramos ahí unificados.</strong>
-                Si queremos tener dos server arrancados. CTRL+J para sacar panel inferior y pulsar en dividir terminal</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+D (tantas veces como elementos a reemplazar)</strong> --&gt; escribir lo nuevo o borrar</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Seleccionar algo a reemplazar y pulsar CTRL+F2 (reemplazar lo seleccionado en TODAS sus ocurrencias)</strong> --&gt; escribir lo nuevo o borrar</span>
-            </div>
-            
-            <div class="flex flex-col items-start">
-              <div class="flex items-center mt-1.25">
-                <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>
-                <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ENCAPSULAR CON TAG HTML HACIENDO USO DE EMMET WRAP.</strong></span>
-              </div>                
-              <ul class="list-disc ml-10">
-                <li>Abrimos comandos abreviados con <strong>CTRL K + S</strong></span></li>
-                <li>buscamos <strong>emmet wrap</strong> y asignamos la combinación
-                  de teclas que queramos: <strong>MAYUS+ALT+W</strong></li>
-              </ul>             
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">Instalo la extensión (CTRL+MAYUS+X) "Escape HTML Code" + buscamos <strong>Replace Selection with escaped HTML</strong> + asignamos la combinación
-                de teclas que queramos: <strong>MAYUS+CTRL+E</strong></span>
-            </div>
-
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+MAYUS+P y escribimos "Quitar importaciones sin usar"</strong> --&gt; Para quitar importaciones que ya no se utilicen</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+Click</strong> --&gt; marcar distintos sitios para editar a la vez</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>MAYUS+ALT+flecha arriba o abajo</strong> --&gt; duplicar línea</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>ALT+flecha arriba o abajo</strong> --&gt; mover línea</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Alt+Z</strong> --&gt; Word Wrap del texto del editor</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>CTRL+K +S</strong> --&gt; comandos abreviados de teclado</span>
-            </div>
-
-            <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>RENOMBRAR</strong> --&gt; Instead, go to the definition of that variable and press F2, rename it, and press ENTER. This will change every occurrence. Not only does this work on variables, but also on functions, classes, interfaces, etc. This also works across files.</span>
-            </div>
-
-            <!-- <div class="flex items-center mt-1.25">
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-              <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">XXXXX</span>
-            </div> -->
-
-          
-          
-          </div>
-         
-                         
-        </div>      
-      </div>
+      </div>      
   
       <!-- PASOS PROYECTO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
@@ -2291,7 +2234,62 @@
         </div>
       </div>
 
+       <!-- TAREAS FO -->
+      <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#tareasfo').toggle();">
+          <h3>Tareas FO</h3>		
+          <span class="cambiaicono ico_chevron_down mr-2.5"></span>
+        </div>        
+        <div id="tareasfo" class="hidden"> 
 
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+            <span class="verde">COMPLETADAS</span>
+
+            <div> 
+              <ul class="list-disc ml-5">
+                <li class="line-through">portfolio-XXX</li>
+                <li class="line-through">Códigos javascript de primeros videos</li>
+                <li class="line-through">Hacer build de Delorean</li>
+                <li class="line-through">Seguir con mejoras de diseño en nueva rama de calorie-tracker</li>
+                <li class="line-through">seguir limpiando estilos DIARIO</li>
+                <li class="line-through">Sección 11 Migrar el carrito de compras a useReducer --&gt; 171-175 / 20-02 177 /</li>
+                <li class="line-through">Publicar Diario para TENERLO de consulta (QUITAR TODAS LAS REF PERSONALES POSIBLES Y CAMBIAR A NOMBRE)</li>
+              </ul>             
+              
+            </div>
+          </div>
+
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+            </svg>
+            <span class="rojo">HACIENDO</span>
+
+            <div class="flex flex-col">      
+              <ul class="list-disc ml-5">        
+              <li>Actualizar el portfolio con Calorie Tracker ¿MEJORAS?</li>
+              <li>Crear nueva rama y rediseñar guitarla-ur para añadirla al portfolio</li>
+
+              <li><a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></li>
+              <li>Quitar jquery de portfolio: - link DOM typescript -> https://fullstackpro.es/courses/curso-typescript/gestion-del-dom</li>
+              <li>Arreglar despliegue automático portfolio en netlify (Nuevo y cambiar de nombre) X18/08 - XX19/02 (desinstalado cli de netlify y vuelto a instalar, no global sino dev)</li>              
+              <li>¿Mejoras css en visualización de imágenes de proyectos?</li>
+              <li>¿Mejorar componente modal panel?</li>
+              <li>Añadir boton encendido y apagado de CSS (y mirar mas)</li>  
+              
+              <li>Páginas individuales para secciones <a href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></li>
+              <li>Hacer build de Calendario litúrgico</li>
+              <li>Hacer build de Silmarillion</li>
+            </ul>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
 
 
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto">
