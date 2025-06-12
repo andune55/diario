@@ -129,6 +129,8 @@ div.oscuro{
 
 /* Sobreescribimos ajustes estilos de prism */
 
+.flex{display:flex;}
+
 .flex .code-toolbar{width:99%}
 .flex .code-toolbar pre{margin: 0}
 
