@@ -410,8 +410,19 @@
                   </li>
 
                   <li class="mb-3">
-                    <span class="destacado">npm i react-router-dom</span> - <a href="https://www.npmjs.com/package/react-router-dom" class="underline" target="blank">https://www.npmjs.com/package/react-router-dom</a> - <a href="https://api.reactrouter.com/v7/functions/react_router.NavLink.html" class="underline" target="blank">React Router API Reference</a> - <a href="https://www.robinwieruch.de/react-router/" class="underline" target="blank">React Router 7 Tutorial</a> - <strong>React Router DOM:</strong> para poder navegar por diferentes páginas. Borramos App.tsx, creamos router.tsx, <strong>¡Ojo! si tenemos configurado una url base en nuestro vite.config.ts</strong>                    
+                    <span class="destacado">npm i react-router-dom</span> - <a href="https://www.npmjs.com/package/react-router-dom" class="underline" target="blank">https://www.npmjs.com/package/react-router-dom</a> - <a href="https://api.reactrouter.com/v7/functions/react_router.NavLink.html" class="underline" target="blank">React Router API Reference</a> - <a href="https://www.robinwieruch.de/react-router/" class="underline" target="blank">React Router 7 Tutorial</a> - <strong>React Router DOM:</strong> para poder navegar por diferentes páginas. Borramos App.tsx, creamos router.tsx, <strong>¡Ojo! si tenemos configurado una url base en nuestro vite.config.ts</strong> <br>                  
+                 
+                    <strong>¡Ojo! react app con react router dom desplegada en Netlify daba 404 al recargar navegador</strong> - <a href="https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router" class="underline" target="blank">Netlify renders 404 on page refresh (using React and react-router)</a> - <strong>Creamos fichero "netlify.toml":</strong> 
+                    
+                    <pre><code class="language-js">
+                      [[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+                    </code></pre>
                   </li>
+
+
 
                   <li class="mb-3">
                     <span class="destacado">npm install primereact</span> - <a href="https://primereact.org/" class="underline" target="blank">https://primereact.org/</a> - <strong>PrimeReact:</strong> es un conjunto de componentes de interfaz de usuario de React de código abierto que se utiliza para construir aplicaciones web de empresa.
