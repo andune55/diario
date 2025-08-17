@@ -922,7 +922,16 @@
                   <img class="mx-auto my-2" src="./src/assets/img/git-ciclo-vida-estado-archivos.png" alt="img" loading="lazy">              
                 </li>
   
-                <li class="mb-5">
+                <li class="mb-5"><span class="destacado">Forzar el historial (force push) para restablecer un commit determinado como último trabajo (obviando commits posteriores)</span>. Accidentalmente tras clonar un repo pretendiendo que despliegue en otro nuevo que he creado, he hecho dos commits (y push) a la rama principal (main) del repo original. Quiero que el commit db8XXXXXX sea el último de la historia en main, eliminando esos dos commits posteriores. Para ello <strong>fuerzo el historial (force push) lo que sobrescribirá el historial remoto de main, eliminando los dos commits posteriores a db8XXXXXX no deseados.</strong>
+                  <ul class="list-disc ml-5 my-1.5">
+                    <li class="mb-2"><span class="destacado">git checkout main</span> me aseguro de estar en la rama main localmente</li>
+                    <li class="mb-2"><span class="destacado">git reset --hard db8XXXXXX</span> reseteo la rama main al commit db8XXXXXX</li>
+                    <li class="mb-2"><span class="destacado">git push origin main --force</span> hago un push forzado al repositorio remoto</li>
+                  </ul>
+
+                </li>
+
+                <li>
                   <span class="destacado">git status</span> <strong>Cómo comprobar el estado de los archivos:</strong> Si ejecutamos este comando directamente después de una clonación, deberíamos ver algo como lo siguiente que significa que tenemos un directorio de trabajo limpio; en otras palabras, ninguno de tus archivos rastreados se modifica. Git tampoco ve ningún archivo sin rastrear, o estarían listados aquí. Finalmente, el comando te dice en qué rama estás y te informa que no se ha desviado de la misma rama en el servidor. Por ahora, esa rama siempre es <strong>main</strong>, que es la predeterminada; <a href="https://git-scm.com/book/en/v2/ch00/ch03-git-branching" class="underline" target="_blank">Git Branching</a> revisará las ramas y referencias en detalle.: 
                   <div class="flex mr-4">
                     <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
