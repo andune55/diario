@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario</title>                 
-    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-n1q46FtT.js"></script>
-    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-CgkJchOA.css">
+    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-IpT_HYEM.js"></script>
+    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-CWPSfCqF.css">
   </head>
   
   <body>
@@ -925,7 +925,33 @@
                     <li class="mb-2"><span class="destacado">git reset --hard db8XXXXXX</span> reseteo la rama main al commit db8XXXXXX</li>
                     <li class="mb-2"><span class="destacado">git push origin main --force</span> hago un push forzado al repositorio remoto</li>
                   </ul>
+                </li>
 
+                <li class="mb-5"><strong>Tras forzar el historial de esta manera intenté hacer git pull desde otro equipo para actualizar el repo local de ese equipo con todo loq ue había subido al proyecto y despues de hacer git pull, tras "Resolving deltas 100% done", me indicaba:</strong> <i> + 70efXXX...3552YYY main -> origin/main  (forced update) fatal: refusing to merge unrelated histories</i>. <strong>Esto indica que el branch remoto main fue sobrescrito (con git push --force), cambiando de la referencia 70efXXX a 3552YYY. Por eso mi repositorio local y remoto no coinciden.</strong> <br>
+                  
+                <strong>Suele ocurrir cuando Git detecta que el historial de commits de repositorio local y el repositorio remoto no tienen un ancestro común, es decir, como si fueran dos proyectos completamente diferentes, lo cual suele pasar si:</strong>
+                  <ul class="my-3 list-disc ml-5">
+                    <li>Inicializamos el repositorio localmente con git init y luego conectamos a un remoto que ya tenía commits.</li>
+                    <li><strong>El repositorio remoto fue reinicializado o reescrito con un historial diferente (por ejemplo, un "forced update", que es mi caso).</strong></li>
+                    <li>Has clonado el repositorio, pero luego cambió por completo su historial en el remoto (forzando un push).</li>
+                  </ul>
+                  <p>Las alternativas para solucionarlo son:</p>
+
+                   <ul class="my-3 list-disc ml-5">
+                    <li><strong>que mi repositorio sea igual al remoto: reseteo mi rama local</strong><br/>
+                      <span class="destacado">git fetch origin</span><br/>
+                      <span class="destacado">git reset --hard origin/main</span>
+                    </li>
+                    <li><strong>combinar ambos historiales (intentará hacer un merge entre los dos historiales. Si hay conflictos, habrá que resolverlos manualmente):</strong><br/>
+                    <span class="destacado">git pull origin main --allow-unrelated-histories</span>
+                    </li>
+                    <li><strong>Si tenemos cambios locales que queremos guardar, hacemos un backup antes:</strong><br/>
+                    <span class="destacado">git stash</span><br/>
+                    <strong># o bien, crear una rama/branch temporal</strong><br/>
+                    <span class="destacado">git checkout -b backup-mis-cambios</span></span>
+                    </li>
+                    </ul>
+                
                 </li>
 
                 <li>
