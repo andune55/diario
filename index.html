@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario</title>                 
-    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-IpT_HYEM.js"></script>
-    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-CWPSfCqF.css">
+    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-CL-cOr6U.js"></script>
+    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-UtU2N9Bs.css">
   </head>
   
   <body>
@@ -228,7 +228,7 @@
       <!-- PROYECTOS FO -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#proyectosfo').toggle();">
-          <h3>Proyectos y dependencias útiles npm</h3>		
+          <h3>GIT, Proyectos y dependencias útiles npm</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
         <div id="proyectosfo" class="">            
@@ -241,6 +241,682 @@
           <a href="https://gist.github.com/JamieMason/3748498" class="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br>
             
 
+
+
+          <!-- / GIT /////////////////////////////////////////////////////////////// -->
+          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+            <p class="flex items-center">
+              <span class="naranja">Git</span> &nbsp; <span class="naranja">GitHub</span>
+              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+              </svg>
+            </p>
+            <div class="flex flex-wrap items-center">   
+              <a class="underline mx-1.5" href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" target="_blank"><strong>Git basis</strong></a> /
+              <a class="underline mx-1.5" href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git" target="_blank">Fundamentos Control de versiones Git</a> /
+              
+              <div class="flex w-[100%]"></div>
+  
+              <a class="underline mx-1.5" href="https://medium.com/@diego.coder/despliega-tu-aplicaci%C3%B3n-de-reactjs-vite-en-github-pages-34d25e619dae" target="blank">Despliega tu aplicación de ReactJS +Vite en GitHub Pages</a> /
+              <a class="underline mx-1.5" href="https://es.stackoverflow.com/questions/544213/c%C3%B3mo-compartir-un-repositorio-privado-mediante-una-url" target="blank">¿Cómo compartir un repositorio privado mediante una URL?</a> / <a class="underline mx-1.5" href="https://gitfront.io/r/andune/LqWHLJa4HdLF/diario/" target="blank">Repo privado</a> /  <a class="underline mx-1.5" href="https://gitfront.io/" target="blank">https://gitfront.io/</a> /       
+            </div>
+
+            <!-- GIT ///////////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#git').toggle();">	
+              <h3>GIT</h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>
+
+            <!-- GIT: Guía visual y práctica para principiantes y usuarios ocasionales -->
+            <div id="git" class="hidden">
+              <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
+              <ul class="list-disc ml-5 my-2.5">
+
+                <!-- GIT: Guía visual y práctica para principiantes y usuarios ocasionales -->
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">INICIAR Y CONFIGURAR REPOSITORIO</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Inicializar repositorio en un directorio existente:</strong>
+                      <span class="destacado">git init</span>
+                      <pre><code class="language-ts">
+                cd C:/Users/user/my_project
+                git init
+                      </code></pre>
+                      <div class="text-sm">Crea la carpeta .git con toda la estructura interna de Git. ¡Todavía no se rastrea ningún archivo!</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Clonar un repositorio existente:</strong>
+                      <span class="destacado">git clone https://github.com/USERNAME/REPO.git</span>
+                      <pre><code class="language-ts">
+                git clone https://github.com/libgit2/libgit2
+                git clone https://github.com/libgit2/libgit2 mylibgit
+                      </code></pre>
+                      <div class="text-sm">Descarga el historial y todos los archivos del repositorio remoto en un nuevo directorio.</div>
+                      <img class="mx-auto my-2" src="https://andune55.github.io/diario/assets/git-clone-DthzbbV8.png" alt="img" loading="lazy">
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Ignorar archivos:</strong>
+                      <span class="destacado">.gitignore</span>
+                      <pre><code class="language-ts">
+                # ignore all .a files
+                *.a
+
+                # but do track lib.a, even though you're ignoring .a files above
+                !lib.a
+
+                # only ignore the TODO file in the current directory, not subdir/TODO
+                /TODO
+
+                # ignore all files in any directory named build
+                build/
+
+                # ignore doc/notes.txt, but not doc/server/arch.txt
+                doc/*.txt
+
+                # ignore all .pdf files in the doc/ directory and any of its subdirectories
+                doc/**/*.pdf
+                      </code></pre>
+                      <div class="text-sm">Usa <span class="destacado">cat .gitignore</span> para ver patrones. Más ejemplos en <a href="https://github.com/github/gitignore" target="_blank" class="underline">github/gitignore</a></div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">SEGUIMIENTO Y GESTIÓN DE ARCHIVOS</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Preparar archivos para commit:</strong> <span class="destacado">git add archivo.txt</span> <span class="destacado">git add .</span>
+                      <pre><code class="language-ts">
+                git add archivo.txt
+                git add .
+                      </code></pre>
+                      <div class="text-sm">Rastrea archivos nuevos o modifica su estado para el próximo commit.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Comprobar el estado de los archivos:</strong> <span class="destacado">git status</span> <span class="destacado">git status -s</span>
+                      <pre><code class="language-ts">
+                git status
+                git status -s
+                      </code></pre>
+                      <div class="text-sm">Muestra archivos modificados, nuevos o eliminados, y en qué rama estás.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Visualizar cambios no preparados/preparados:</strong>
+                      <span class="destacado">git diff</span> <span class="destacado">git diff --staged</span>
+                      <pre><code class="language-ts">
+                git diff
+                git diff --staged
+                      </code></pre>
+                      <div class="text-sm">Muestra diferencias entre archivos modificados y los preparados para commit.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Commit: registrar cambios en el historial:</strong>
+                      <span class="destacado">git commit -m "mensaje"</span>
+                      <span class="destacado">git commit -v</span>
+                      <span class="destacado">git commit -a -m "mensaje"</span>
+                      <pre><code class="language-ts">
+                git commit -m "detalles del commit"
+                git commit -a -m "commit sin preparar archivos nuevos"
+                      </code></pre>
+                      <div class="text-sm">
+                        <strong>Importante:</strong> Solo se incluye lo preparado con <span class="destacado">git add</span>. <br>
+                        <strong>-a</strong> omite el área de preparación e incluye los archivos modificados pero no nuevos.
+                      </div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Eliminar archivos:</strong>
+                      <span class="destacado">git rm archivo.txt</span>
+                      <span class="destacado">git rm --cached archivo.txt</span>
+                      <pre><code class="language-ts">
+                rm archivo.txt
+                git rm archivo.txt
+                git rm --cached archivo.txt
+                      </code></pre>
+                      <div class="text-sm">Elimina archivos del seguimiento. <span class="destacado">--cached</span> los mantiene en el disco pero no en Git.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Mover/renombrar archivos:</strong>
+                      <span class="destacado">git mv file_from file_to</span>
+                      <pre><code class="language-ts">
+                git mv README.md README
+                      </code></pre>
+                      <div class="text-sm">Equivale a <span class="destacado">mv</span>, <span class="destacado">git rm</span> y <span class="destacado">git add</span> en uno solo.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Ver historial de commits:</strong>
+                      <span class="destacado">git log --pretty=oneline</span>
+                      <pre><code class="language-ts">
+                git log
+                git log --oneline
+                git log --pretty=oneline
+                      </code></pre>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Restablecer el historial al commit deseado:</strong>
+                      <span class="destacado">git reset --hard HASH</span>
+                      <pre><code class="language-ts">
+                git reset --hard c0e55bcbd94bed986b3e2b736040d2917ac073dd
+                      </code></pre>
+                      <div class="text-sm">¡Ojo! Pierdes los cambios posteriores al commit indicado.</div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">SINCRONIZACIÓN, BACKUP LOCAL, CONFLICTOS Y MENSAJES CLAROS</span>
+                  <ul class="list-disc ml-5">
+
+                    <li class="my-1.25">
+                      <strong>Mantener tu segundo equipo (PC2) sincronizado con el repositorio remoto:</strong>
+                      <span class="destacado">git pull origin main</span>
+                      <div class="text-sm mt-1.25">
+                        Hazlo antes de comenzar a trabajar cada día para tener la última versión del proyecto en tu equipo secundario.
+                      </div>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Ver tus commits locales que no están en remoto:</strong>
+                      <span class="destacado">git log origin/main..HEAD --oneline</span>
+                      <div class="text-sm mt-1.25">
+                        Verás los commits que tienes localmente y no han sido subidos a GitHub.
+                      </div>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Guardar tus cambios antes de un reset forzado:</strong>
+                      <ul class="list-disc ml-5">
+                        <li class="my-1.25">
+                          <span class="destacado">Crear una rama de respaldo:</span>
+                          <pre><code class="language-ts">
+                git checkout -b respaldo-cambios-locales
+                git push origin respaldo-cambios-locales
+                          </code></pre>
+                          <span class="text-sm">Tus commits quedan guardados en esa rama en GitHub.</span>
+                        </li>
+                        <li class="my-1.25">
+                          <span class="destacado">Crear un parche (backup offline):</span>
+                          <pre><code class="language-ts">
+                git format-patch origin/main..HEAD -o ./parches-locales
+                git am ./parches-locales/*.patch
+                          </code></pre>
+                          <span class="text-sm">Crea archivos <code>.patch</code> para cada commit. Puedes recuperarlos después con <span class="destacado">git am</span>.</span>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Resetear tu rama y dejarla igual que el remoto:</strong>
+                      <pre><code class="language-ts">
+                git fetch origin
+                git reset --hard origin/main
+                      </code></pre>
+                      <span class="text-sm text-gray-500">¡Ojo! Esto borra los commits locales. Guarda tus cambios importantes antes.</span>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Guía para resolver conflictos de merge:</strong>
+                      <ul class="list-disc ml-5">
+                        <li class="my-1.25">
+                          <span class="destacado">Detecta los archivos en conflicto:</span>
+                          <span class="destacado">git status</span>
+                        </li>
+                        <li class="my-1.25">
+                          <span class="destacado">Edita manualmente los archivos marcados por Git</span>, buscando las marcas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; [other branch]</code>. Decide qué partes conservar y guarda los archivos.
+                        </li>
+                        <li class="my-1.25">
+                          <span class="destacado">Marca los conflictos como resueltos:</span>
+                          <span class="destacado">git add archivo-en-conflicto.ext</span>
+                        </li>
+                        <li class="my-1.25">
+                          <span class="destacado">Finaliza el merge con un commit:</span>
+                          <span class="destacado">git commit</span>
+                        </li>
+                        <li class="my-1.25">
+                          <span class="destacado">Continúa trabajando normalmente.</span> Usa <span class="destacado">git log</span> para ver el historial y <span class="destacado">git diff</span> para ver los cambios.
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Ejemplo visual: Pantalla de edición de mensaje de merge commit (Vim)</strong>
+                      <img class="mx-auto my-2" src="./src/assets/img/git-merge-commit-vim.png" alt="img merge commit vim" loading="lazy">
+                      <ul class="list-disc ml-5">
+                        <li class="my-1.25">Escribe el mensaje (puedes dejar el que viene por defecto).</li>
+                        <li class="my-1.25">Las líneas que empiezan por <span class="destacado">#</span> son comentarios y se ignoran.</li>
+                        <li class="my-1.25"><strong>En Vim:</strong>
+                          <ul class="list-disc ml-5">
+                            <li class="my-1.25">Pulsa <span class="destacado">i</span> para entrar en modo edición (INSERT).</li>
+                            <li class="my-1.25">Escribe tu mensaje o edítalo.</li>
+                            <li class="my-1.25">Pulsa <span class="destacado">Esc</span> para salir de INSERT.</li>
+                            <li class="my-1.25">Escribe <span class="destacado">:wq</span> y pulsa Enter para guardar y salir.</li>
+                          </ul>
+                        </li>
+                        <li class="my-1.25"><strong>En Nano:</strong>
+                          <ul class="list-disc ml-5">
+                            <li class="my-1.25">Escribe el mensaje directamente.</li>
+                            <li class="my-1.25">Pulsa <span class="destacado">Ctrl+O</span> para guardar. Enter.</li>
+                            <li class="my-1.25">Pulsa <span class="destacado">Ctrl+X</span> para salir.</li>
+                          </ul>
+                        </li>
+                        <li class="my-1.25">Para abortar el merge commit sin guardar:
+                          <ul class="list-disc ml-5">
+                            <li class="my-1.25">En Vim: <span class="destacado">:q!</span> y Enter</li>
+                            <li class="my-1.25">En Nano: <span class="destacado">Ctrl+X</span>, responde N si pregunta por guardar</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Plantillas para mensajes de commit claros:</strong>
+                      <pre><code class="language-ts">
+                git commit -m "fix: corrige error en validación de usuario"
+                git commit -m "feat: añade función para exportar reportes a PDF"
+                git commit -m "refactor: simplifica lógica de manejo de estados"
+                git commit -m "docs: actualiza README con nuevas instrucciones"
+                git commit -m "chore: actualiza dependencias"
+                      </code></pre>
+                      <div class="text-sm mt-1.25">
+                        <strong>Consejos:</strong> Usa prefijos como <span class="destacado">feat</span> (nueva funcionalidad), <span class="destacado">fix</span> (corrección de error), <span class="destacado">docs</span> (documentación), <span class="destacado">refactor</span> (reorganización interna), <span class="destacado">chore</span> (tareas menores).
+                        <br>Describe el cambio concreto y evita mensajes genéricos como "update" o "cambios varios".
+                      </div>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Visual extra: Ciclo de vida de los archivos en Git:</strong>
+                      <img class="mx-auto my-2" src="https://andune55.github.io/diario/assets/git-ciclo-vida-estado-archivos-Bq8U_r-r.png" alt="img ciclo vida git" loading="lazy">
+                      <div class="text-sm mt-1.25">
+                        La imagen ilustra cómo los archivos pasan de no rastreados, a rastreados, a modificados y preparados para commit.
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">TRABAJO CON RAMAS</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Consultar ramas locales/remotas:</strong> <span class="destacado">git branch</span> <span class="destacado">git branch -a</span></li>
+                    <li class="my-1.25"><strong>Ver a dónde apunta cada rama:</strong> <span class="destacado">git log</span></li>
+                    <li class="my-1.25"><strong>Crear nueva rama:</strong> <span class="destacado">git branch nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Cambiarse a una rama:</strong> <span class="destacado">git checkout nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Eliminar una rama:</strong> <span class="destacado">git branch -d nombre_rama</span> <span class="destacado">git branch -D nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Eliminar rama remota:</strong> <span class="destacado">git push origin :nombre_rama</span></li>
+                    <li class="my-1.25"><strong>Configurar rama para seguimiento remoto:</strong>
+                      <span class="destacado">git push --set-upstream origin nombre_rama</span>
+                      <span class="destacado">git push -u origin nombre_rama</span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">OBTENER Y ACTUALIZAR CAMBIOS DEL REMOTO</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Clonar repositorio:</strong> <span class="destacado">git clone https://github.com/USERNAME/REPO.git</span></li>
+                    <li class="my-1.25"><strong>Extraer cambios sin mezclar:</strong> <span class="destacado">git fetch REMOTE-NAME</span>
+                      <pre><code class="language-ts">
+                git fetch origin
+                      </code></pre>
+                      <div class="text-sm">Descarga cambios remotos, pero no los mezcla en tu rama actual.</div>
+                    </li>
+                    <li class="my-1.25"><strong>Fusionar cambios en tu rama local:</strong> <span class="destacado">git merge REMOTE-NAME/BRANCH-NAME</span>
+                      <pre><code class="language-ts">
+                git merge origin/main
+                      </code></pre>
+                    </li>
+                    <li class="my-1.25"><strong>Extraer y fusionar en un paso:</strong> <span class="destacado">git pull REMOTE-NAME BRANCH-NAME</span>
+                      <pre><code class="language-ts">
+                git pull origin main
+                      </code></pre>
+                      <div class="text-sm">Descarga y mezcla los cambios remotos en tu rama local.</div>
+                    </li>
+                    <li class="my-1.25"><strong>Abortar un merge conflictivo:</strong> <span class="destacado">git merge --abort</span></li>
+                    <li class="my-1.25"><strong>Permitir combinar historiales sin ancestro común:</strong> <span class="destacado">git pull origin main --allow-unrelated-histories</span></li>
+                    <li class="my-1.25"><strong>Herramienta visual para merges:</strong> <span class="destacado">git mergetool</span></li>
+                    <li class="my-1.25"><strong>Guardar cambios sin confirmar temporalmente:</strong> <span class="destacado">git stash</span> <span class="destacado">git stash save</span></li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">FORZAR HISTORIAL Y RECUPERAR ESTADO</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Forzar el historial (force push) para restablecer un commit:</strong>
+                      <span class="destacado">git checkout main</span>
+                      <span class="destacado">git reset --hard HASH_COMMIT</span>
+                      <span class="destacado">git push origin main --force</span>
+                      <pre><code class="language-ts">
+                git checkout main
+                git reset --hard db8XXXXXX
+                git push origin main --force
+                      </code></pre>
+                      <div class="text-sm">Utiliza con precaución. El historial remoto será sobrescrito por el local.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Recuperar estado tras un forced update:</strong>
+                      <span class="destacado">git fetch origin</span>
+                      <span class="destacado">git reset --hard origin/main</span>
+                      <span class="destacado">git pull origin main --allow-unrelated-histories</span>
+                      <span class="destacado">git stash</span>
+                      <span class="destacado">git checkout -b backup-mis-cambios</span>
+                      <span class="destacado">git push -f origin nombre_rama</span>
+                      <div class="text-sm">Permite igualar tu repo local al remoto, combinar historiales o guardar cambios antes de sobrescribir.</div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">MENSAJES DE COMMIT CLAROS Y BUENAS PRÁCTICAS</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Ejemplos de mensajes claros:</strong>
+                      <pre><code class="language-ts">
+                git commit -m "fix: corrige error en validación de usuario"
+                git commit -m "feat: añade función para exportar reportes a PDF"
+                git commit -m "refactor: simplifica lógica de manejo de estados"
+                git commit -m "docs: actualiza README con nuevas instrucciones"
+                git commit -m "chore: actualiza dependencias"
+                      </code></pre>
+                      <div class="text-sm">
+                        Usa prefijos:<br>
+                        <span class="destacado">feat</span> (nueva funcionalidad)
+                        <span class="destacado">fix</span> (corrección de error)
+                        <span class="destacado">docs</span> (documentación)
+                        <span class="destacado">refactor</span> (reorganización interna)
+                        <span class="destacado">chore</span> (tareas menores)<br>
+                        Evita mensajes genéricos como "update" o "cambios varios".
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">RESOLUCIÓN DE CONFLICTOS Y MERGE COMMIT</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Guía para resolver conflictos de merge:</strong>
+                      <ul class="list-disc ml-5">
+                        <li class="my-1.25"><span class="destacado">git status</span> - Detecta archivos en conflicto.</li>
+                        <li class="my-1.25">Edita manualmente los archivos marcados por Git: busca <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; [other branch]</code>. Decide qué partes conservar y guarda.</li>
+                        <li class="my-1.25"><span class="destacado">git add archivo-en-conflicto.ext</span> - Marca como resuelto.</li>
+                        <li class="my-1.25"><span class="destacado">git commit</span> - Finaliza el merge.</li>
+                        <li class="my-1.25">Si necesitas abortar: <span class="destacado">git merge --abort</span></li>
+                        <li class="my-1.25">Herramienta visual: <span class="destacado">git mergetool</span></li>
+                      </ul>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Ejemplo visual: Pantalla de edición de mensaje de merge commit (Vim)</strong>
+                      <img class="mx-auto my-2" src="./src/assets/img/git-merge-commit-vim.png" alt="img merge commit vim" loading="lazy">
+                      <ul class="list-disc ml-5">
+                        <li>Escribe el mensaje (puedes dejar el que viene por defecto).</li>
+                        <li>Las líneas que empiezan por <span class="destacado">#</span> son comentarios y se ignoran.</li>
+                        <li><strong>En Vim:</strong>
+                          <ul class="list-disc ml-5">
+                            <li>Pulsa <span class="destacado">i</span> para entrar en modo edición (INSERT).</li>
+                            <li>Escribe tu mensaje o edítalo.</li>
+                            <li>Pulsa <span class="destacado">Esc</span> para salir de INSERT.</li>
+                            <li>Escribe <span class="destacado">:wq</span> y pulsa Enter para guardar y salir.</li>
+                          </ul>
+                        </li>
+                        <li><strong>En Nano:</strong>
+                          <ul class="list-disc ml-5">
+                            <li>Escribe el mensaje directamente.</li>
+                            <li>Pulsa <span class="destacado">Ctrl+O</span> para guardar. Enter.</li>
+                            <li>Pulsa <span class="destacado">Ctrl+X</span> para salir.</li>
+                          </ul>
+                        </li>
+                        <li>Abortar el merge commit sin guardar:
+                          <ul class="list-disc ml-5">
+                            <li>En Vim: <span class="destacado">:q!</span> y Enter</li>
+                            <li>En Nano: <span class="destacado">Ctrl+X</span>, responde N si pregunta por guardar</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Ciclo de vida de los archivos en Git:</strong>
+                      <img class="mx-auto my-2" src="https://andune55.github.io/diario/assets/git-ciclo-vida-estado-archivos-Bq8U_r-r.png" alt="img ciclo vida git" loading="lazy">
+                      <div class="text-sm">La imagen ilustra cómo los archivos pasan de no rastreados, a rastreados, a modificados y preparados para commit.</div>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">RECUPERACIÓN DE DATOS Y MANTENIMIENTO</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Reflog: Recupera referencias perdidas (por ejemplo, commits borrados por error):</strong>
+                      <span class="destacado">git reflog</span>
+                      <pre><code class="language-ts">
+                git reflog
+                git checkout HEAD@{2}
+                      </code></pre>
+                      <div class="text-sm">Permite ver y recuperar estados anteriores incluso si fueron borrados del historial.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Recuperar archivos eliminados accidentalmente:</strong>
+                      <span class="destacado">git checkout HEAD archivo.txt</span>
+                      <pre><code class="language-ts">
+                git checkout HEAD archivo.txt
+                      </code></pre>
+                      <div class="text-sm">Recupera el archivo desde la última confirmación.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Limpieza de archivos sin seguimiento:</strong>
+                      <span class="destacado">git clean -n</span> <span class="destacado">git clean -f</span>
+                      <pre><code class="language-ts">
+                git clean -n  # muestra lo que se eliminaría
+                git clean -f  # elimina realmente los archivos
+                      </code></pre>
+                      <div class="text-sm">Útil para limpiar archivos generados, temporales o basura.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Reparar repositorio corrupto:</strong>
+                      <span class="destacado">git fsck</span> <span class="destacado">git gc</span>
+                      <pre><code class="language-ts">
+                git fsck  # verifica la integridad
+                git gc    # optimiza y compacta el repositorio
+                      </code></pre>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">GESTIÓN DE TAGS Y VERSIONES</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Listar todos los tags:</strong> <span class="destacado">git tag</span></li>
+                    <li class="my-1.25"><strong>Crear un tag anotado:</strong> <span class="destacado">git tag -a v1.0 -m "Versión 1.0"</span></li>
+                    <li class="my-1.25"><strong>Subir los tags al remoto:</strong> <span class="destacado">git push origin --tags</span></li>
+                    <li class="my-1.25"><strong>Eliminar un tag local y remoto:</strong>
+                      <span class="destacado">git tag -d v1.0</span>
+                      <span class="destacado">git push origin :refs/tags/v1.0</span>
+                    </li>
+                    <li class="my-1.25"><strong>Ver detalles de un tag:</strong> <span class="destacado">git show v1.0</span></li>
+                    <li class="my-1.25"><strong>Checkout de un tag:</strong> <span class="destacado">git checkout v1.0</span></li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">SUBMÓDULOS: INTEGRAR OTROS REPOSITORIOS</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25"><strong>Añadir un submódulo:</strong>
+                      <span class="destacado">git submodule add https://github.com/usuario/proyecto-rama carpeta/submodulo</span>
+                    </li>
+                    <li class="my-1.25"><strong>Inicializar submódulos:</strong> <span class="destacado">git submodule init</span></li>
+                    <li class="my-1.25"><strong>Actualizar submódulos:</strong> <span class="destacado">git submodule update</span></li>
+                    <li class="my-1.25"><strong>Clonar un repositorio con submódulos:</strong> <span class="destacado">git clone --recursive URL</span></li>
+                  </ul>
+                </li>
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">CONFIGURACIÓN AVANZADA Y INTEGRACIÓN CON GITHUB</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Configurar nombre y email global:</strong>
+                      <span class="destacado">git config --global user.name "Tu Nombre"</span>
+                      <span class="destacado">git config --global user.email "tu@email.com"</span>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Ver configuración actual:</strong>
+                      <span class="destacado">git config --list</span>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Cambiar el editor por defecto (por ejemplo, a nano):</strong>
+                      <span class="destacado">git config --global core.editor "nano"</span>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Autenticación avanzada (SSH):</strong>
+                      <span class="destacado">ssh-keygen -t ed25519 -C "tu@email.com"</span>
+                      <span class="destacado">cat ~/.ssh/id_ed25519.pub</span> (para copiar la clave pública)
+                      <span class="destacado">eval $(ssh-agent -s)</span>
+                      <span class="destacado">ssh-add ~/.ssh/id_ed25519</span>
+                      <div class="text-sm">Agrega la clave pública en GitHub desde la configuración de usuario.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Integrar con GitHub Desktop:</strong>
+                      <span class="destacado">Descarga: <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></span>
+                      <div class="text-sm">Permite gestionar repositorios de forma visual y sencilla.</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Acciones útiles de integración:</strong>
+                      <span class="destacado">git remote -v</span> (ver remotos)
+                      <span class="destacado">git remote add origin URL</span> (añadir remoto)
+                      <span class="destacado">git remote set-url origin URL</span> (cambiar URL remoto)
+                      <span class="destacado">git pull --rebase origin main</span> (sin merge commit)
+                    </li>
+                  </ul>
+                </li>
+
+
+                
+              </ul>                  
+               
+            </div>        
+  
+            <!-- Explicación y pasos repositorio GIT (mas completo el anterior)-->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#tutorial-git').toggle();">	
+              <h3>Explicación y pasos repositorio GIT (mas completo el anterior)</h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>
+            <div id="tutorial-git" class="hidden">
+              <a class="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>        
+              <ul class="my-3.5">
+                <li class="my-3.5"><span class="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
+                  <pre><code class="language-js">
+                    cd /path/to/your/existing/code 
+                    git init
+                  </code></pre>
+                </li>
+    
+                <li class="my-3.5"><span class="destacado">Para clonar un repositorio existente</span>, usa el comando <strong>git clone</strong>. Si un repositorio ya se ha configurado en un repositorio central, el comando de clonación es la manera más común de obtener una copia de desarrollo local. Igual que git init, la clonación suele ser una operación única. Una vez que un desarrollador ha obtenido una copia de trabajo, todas las operaciones de control de versiones se administran por medio de su repositorio local.
+                  <pre><code class="language-js">
+                    git clone <repo url>
+                  </code></pre>
+    
+                  <p><strong>El comando git clone se usa para crear una copia o clonar un repositorio remoto</strong>. Se utiliza git clone con la URL de un repositorio. Git es compatible con varios protocolos de red y sus formatos de URL correspondientes. En este ejemplo, usaremos el protocolo Git SSH. Las URL Git SSH siguen la siguiente estructura: git@HOSTNAME:USERNAME/REPONAME.git.</p>
+    
+                  <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+                    
+                    <div class="flex flex-col">
+                      <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                      </svg> Un ejemplo de una URL Git SSH sería el siguiente: git@bitbucket.org:rhyolight/javascript-data-store.git, donde los valores de la plantilla equivalen a:
+                      <ul class="list-disc ml-3 bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">
+                        <li>HOSTNAME: bitbucket.org</li>
+                        <li>USERNAME: rhyolight</li>
+                        <li>REPONAME: javascript-data-store</li>
+                      </ul>
+                      <p>Al ejecutarlo, se extraerá la última versión de los archivos del repositorio remoto en la rama principal y se añadirá a una nueva carpeta. Esta carpeta nueva tendrá el mismo nombre que el repositorio (REPONAME), en este caso, javascript-data-store. La carpeta contendrá el historial completo del repositorio remoto y una rama principal recién creada.</p>               
+                    </div>
+                  </div>
+                  <p>              
+                </li>
+    
+                <li class="my-3.5"><span class="destacado">Para guardar cambios en el repositorio:</span> <strong>git add y git commit</strong>
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Ahora que has iniciado o clonado un repositorio, puedes realizar commits en la versión del archivo. Para el siguiente ejemplo asumiremos que has configurado un proyecto en /path/to/project. Los pasos son los siguientes:</p>
+    
+                  <ul class="list-disc ml-3">
+                    <li>Cambia el directorio a /path/to/project</li>
+                    <li>Crea un archivo nuevo CommitTest.txt con el contenido "test content for git tutorial"</li>
+                    <li>Ejecuta el comando git add para añadir CommitTest.txt al área de preparación del repositorio</li>
+                    <li>Crea un commit nuevo con un mensaje que describa qué trabajo se ha hecho en el commit</li>
+                  </ul>
+                  <pre><code class="language-js">
+                    cd /path/to/project 
+                    echo "test content for git tutorial" >> CommitTest.txt 
+                    git add CommitTest.txt 
+                    git commit -m "added CommitTest.txt to the repo"
+                  </code></pre>
+    
+                  <p>Tras hacer esto, en el historial de nuestro repositorio se mostrará <strong>CommitTest.txt</strong> y se realizará el seguimiento de las actualizaciones futuras a este archivo.</p>
+    
+                  <p>El comando <strong>git add se suele usar con la opción --all</strong>. Al ejecutar git add --all, se añadirán todos los archivos con cambios y sin seguimiento al repositorio y se actualizará el árbol de trabajo.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Para colaboración entre repositorios:</span> <strong>git push</strong>
+                
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Es importante comprender que la idea de "copia de trabajo" de Git es muy distinta a la copia de trabajo que se obtiene al extraer código fuente de un repositorio SVN. A diferencia de SVN, Git no distingue entre las copias de trabajo y el repositorio central: todos son repositorios Git completos.</p>
+                  <p>Por tanto, colaborar con Git es intrínsecamente distinto que con SVN. Mientras que SVN depende de la relación entre el repositorio central y la copia de trabajo, <strong>el modelo de colaboración de Git se basa en la interacción entre repositorios. En lugar de insertar una copia de trabajo en el repositorio central de SVN, se extraen o envían commits de un repositorio a otro</strong>.</p>
+    
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Por supuesto, nada te impide dar un significado especial a ciertos repositorios Git. Por ejemplo, con solo definir un repositorio de Git como el "central", es posible replicar un workflow centralizado usando Git. Esto se consigue por medio de convenciones, no porque esté integrado en el propio VCS.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Repositorios bare (vacíos) frente a repositorios clonados</span>
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si en la sección anterior, "Inicio de un nuevo repositorio", has usado <strong>git clone</strong> para configurar tu repositorio local, entonces ya está listo para la colaboración remota. El comando <strong>git clone</strong> configura automáticamente el repositorio con un remote que apunta a la URL Git de donde lo has clonado. Esto significa que, una vez hagas cambios en un archivo y lo confirmes, puedes enviar los cambios al repositorio remoto con <strong>git push</strong>.</p>
+                  
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si has usado el comando <strong>git init</strong> para crear un repositorio nuevo, entonces no tendrás ningún repositorio remoto al cual enviar cambios. Un patrón común a la hora de iniciar un nuevo repositorio es ir a un servicio Git alojado, como Bitbucket, y crear un repositorio ahí. El servicio te proporcionará una URL Git que podrás añadir a tu repositorio de Git local y enviar con <strong>git push</strong> al repositorio alojado. <span class="destacado">Una vez que hayas creado un repositorio remoto con el servicio de tu elección, deberás actualizar tu repositorio local con una asignación. Comentaremos este proceso en la guía de ajustes y configuración que hay más adelante.</span></p>
+                  
+                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                  </svg>Si prefieres alojar tu propio repositorio remoto, deberás configurar un "repositorio bare". Tanto <strong>git init</strong> como <strong>git clone</strong> aceptan el argumento <strong>--bare</strong>. Un repositorio bare se suele usar para crear un repositorio central de Git remoto.</p>
+                  </li>
+    
+                <li class="my-3.5"><span class="destacado">Para ajustes y configuración:</span> <strong>git config</strong> PENDIENTE DE SEGUIR LINK Y QUE FUNCIONE</li>
+                </ul>
+            </div>  
+            
+            <!-- Respaldo git de web smmdd 16-02-25 -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#web-smmdd').toggle();">	
+              <h3>Respaldo git de web smmdd 16-02-25</h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>
+            <div id="web-smmdd" class="hidden">
+              <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+                <div class="flex flex-col">
+                  - Creo repositorio privado https://github.com/an.....5/websmmdd<br>
+                  - Como hay un límite de espacio en github, creo en el raíz de mi carpeta local un .gitignore donde incluyo carpetas como documentos, flip-book, temp,... (solo quiero - subir las versiones últimas funcionales de los htmls, phps...pero SOBRE TODO LOS JS DE LECTURAS Y CALENDARIO LITURGICO PARA TENER ALMACENADAS VERSIONES OPERATIVAS ANTE POSIBLE FALLO)<br> 
+                  - me situo en la terminal en mi carpeta local C:\Users\XXXXXXXX\OneDrive\Webs\Web SMMDD<br>
+                  - desde el terminal de VSC:<br>
+                    - git init<br>
+                  -  git add .<br>
+                    - git commit -m "first commit"<br>
+                    - git branch -M main<br>
+                    - git remote add origin https://github.com/an.....5/websmmdd.git<br>
+                    - git push -u origin main<br>
+                  <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">A partir de ahora su quiero <strong>innovar, probar, cambiar </strong>algo en js de lecturas, arranco mi local server con xamp y cuando esté seguro de que funciona el cambio:</span>
+                  <ul>
+                    <li>respaldo cambio de mi repo local en mi repo github</li>
+                    <li>subo con dw al hosting de la parro</li>
+                  </ul>
+                </div>
+              </div>
+            </div>  
+
+          </div> 
+
+
+          <!-- PROYECTOS ///////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
             <p class="flex items-center">
               <span class="naranja">Proyectos</span>
@@ -688,8 +1364,8 @@
                 <h3>Links (CSS, iconos,...)</h3>			
                 <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
               </div>
-              <div class="flex">
-                <div id="linksfo" class="flex p-2 hidden">
+              <div class="flex" style="display:none">
+                <div id="linksfo" class="flex p-2">
                   <div class="bg-amber-200 rounded-2xl p-2 mr-1.25 shadow border border-amber-500">
                     <legend class="font-bold text-amber-900">CSS</legend>
 
@@ -802,566 +1478,24 @@
                           
               </div> 
   
-              <!-- Respaldo git de web smmdd 16-02-25 -->
-              <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#web-smmdd').toggle();">	
-                <h3>Respaldo git de web smmdd 16-02-25</h3>			
-                <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-              </div>
-              <div id="web-smmdd" class="hidden">
-                <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-                  <div class="flex flex-col">
-                    - Creo repositorio privado https://github.com/an.....5/websmmdd<br>
-                    - Como hay un límite de espacio en github, creo en el raíz de mi carpeta local un .gitignore donde incluyo carpetas como documentos, flip-book, temp,... (solo quiero - subir las versiones últimas funcionales de los htmls, phps...pero SOBRE TODO LOS JS DE LECTURAS Y CALENDARIO LITURGICO PARA TENER ALMACENADAS VERSIONES OPERATIVAS ANTE POSIBLE FALLO)<br> 
-                    - me situo en la terminal en mi carpeta local C:\Users\XXXXXXXX\OneDrive\Webs\Web SMMDD<br>
-                    - desde el terminal de VSC:<br>
-                      - git init<br>
-                    -  git add .<br>
-                      - git commit -m "first commit"<br>
-                      - git branch -M main<br>
-                      - git remote add origin https://github.com/an.....5/websmmdd.git<br>
-                      - git push -u origin main<br>
-                    <span class="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">A partir de ahora su quiero <strong>innovar, probar, cambiar </strong>algo en js de lecturas, arranco mi local server con xamp y cuando esté seguro de que funciona el cambio:</span>
-                    <ul>
-                      <li>respaldo cambio de mi repo local en mi repo github</li>
-                      <li>subo con dw al hosting de la parro</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>  
+              
               
             </div>
-          </div>          
+          </div>
+          
+          
         </div>
       </div>
 
-      <!-- GIT,HERRAMIENTAS FO -->
+      <!-- Tailwind, Herramientas, Tutoriales React  -->
       <div class="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
         <div class="flex justify-between items-center desplegable cursor-pointer" onclick="$('#gitfo').toggle();">
-          <h3>Git, Herramientas</h3>		
+          <h3>Tailwind, Herramientas, Tutoriales React</h3>		
           <span class="cambiaicono ico_chevron_down mr-2.5"></span>
         </div>        
         <div id="gitfo" class="hidden">  
           
-          <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-            <p class="flex items-center">
-              <span class="naranja">Git</span> &nbsp; <span class="naranja">GitHub</span>
-              <svg class="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-              </svg>
-            </p>
-            <div class="flex flex-wrap items-center">   
-              <a class="underline mx-1.5" href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" target="_blank"><strong>Git basis</strong></a> /
-              <a class="underline mx-1.5" href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git" target="_blank">Fundamentos Control de versiones Git</a> /
-              
-              <div class="flex w-[100%]"></div>
-  
-              <a class="underline mx-1.5" href="https://medium.com/@diego.coder/despliega-tu-aplicaci%C3%B3n-de-reactjs-vite-en-github-pages-34d25e619dae" target="blank">Despliega tu aplicación de ReactJS +Vite en GitHub Pages</a> /
-              <a class="underline mx-1.5" href="https://es.stackoverflow.com/questions/544213/c%C3%B3mo-compartir-un-repositorio-privado-mediante-una-url" target="blank">¿Cómo compartir un repositorio privado mediante una URL?</a> / <a class="underline mx-1.5" href="https://gitfront.io/r/andune/LqWHLJa4HdLF/diario/" target="blank">Repo privado</a> /  <a class="underline mx-1.5" href="https://gitfront.io/" target="blank">https://gitfront.io/</a> /       
-            </div>
-
-            <!-- GIT-->
-            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#git').toggle();">	
-              <h3>GIT</h3>			
-              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-            </div>
-            <div id="git" class="hidden">
-              <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
-              <ul class="list-disc ml-5 my-2.5">
-                <li class="mb-5">
-                  <span class="destacado">git init</span> <strong>Inicializar repositorio en un directorio existente:</strong> esto crea un nuevo subdirectorio llamado .gitque contiene todos los archivos necesarios del repositorio: un esqueleto de repositorio de Git. En este punto, todavía no se realiza ningún seguimiento de nada en el proyecto. 
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      cd C:/Users/user/my_project
-                      git init</code></pre>
-                  </div>
-                </li>
-                
-                <li class="mb-5">
-                  <span class="destacado">git add</span> <strong>Comando multipropósito que se ursa para 1)Realizar seguimiento de archivos, 2)preparar archivos 3)mas cosas(por ej marcar archivos con conflictos de fusión como resueltos.):</strong> comenzar a rastrear archivos nuevos 
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      git add *.c
-                      git add LICENSE
-                      git commit -m 'Initial project version'                  
-                    </code></pre>
-                  </div>
-                  <p>Si modificamos un fichero que ya teniamos "preparado" con un git add previo, el commit no va a subir esta nueva modificación. <strong>siempre que modifiquemos hemos de hacer un git add(preparar la foto) antes de un nuevo commi(una nueva foto)t</strong></p>
-  
-                </li>
-  
-                <li class="mb-5">
-                  <span class="destacado">git clone</span> <strong>Clonar un respositorio existente:</strong> Esto crea un directorio llamado libgit2, inicializa un .gitdirectorio dentro de él, extrae todos los datos de ese repositorio y extrae una copia funcional de la última versión. Si ingresa al nuevo libgit2directorio que se acaba de crear, verá los archivos del proyecto allí, listos para trabajar en ellos o usarlos (Si desea clonar el repositorio en un directorio con un nombre distinto de libgit2, por ejemplo <strong>mylibgit</strong>, puede especificar el nuevo nombre del directorio como un argumento adicional:) 
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      git clone https://github.com/libgit2/libgit2    
-                      git clone https://github.com/libgit2/libgit2 mylibgit              
-                    </code></pre>
-                  </div>
-                
-                  <p>Ya tenemos nuestro repositorio git y una copia de trabajo=verificación de nuestros archivos. <strong>Empezamos a hacer cambios y confirmar instantáneas de esos cambios en nuestro repositorio cada vez que queramos registrar el avance</strong>. Cada archivo en tu directorio de trabajo puede estar en uno de dos estados: rastreado o no rastreado</p>
-  
-                  <ul class="my-3 list-disc ml-5">
-                    <li> <strong>Los archivos rastreados son archivos que Git conoce:</strong> son archivos que estaban en la última instantánea, así como cualquier archivo recién almacenado; pueden estar sin modificar, modificados o almacenados.</li>
-                    <li><strong>Los archivos sin seguimiento son todo lo demás</strong>: cualquier archivo en nuestro directorio de trabajo que no estaba en la última instantánea y que no está en tu área de ensayo. <strong>Cuando clonas un repositorio por primera vez, todos tus archivos serán rastreados y no modificados porque Git los acaba de extraer y no has editado nada</strong></li>
-                  </ul>
-  
-                  <p>A medida que editas archivos, Git los ve como modificados, porque los has cambiado desde la última confirmación. Mientras trabajas, preparas selectivamente estos archivos modificados y luego confirmas todos esos cambios preparados, y el ciclo se repite</p>
-  
-                  <img class="mx-auto my-2" src="https://andune55.github.io/diario/assets/git-ciclo-vida-estado-archivos-Bq8U_r-r.png" alt="img" loading="lazy">              
-                </li>
-  
-                <li class="mb-5"><span class="destacado">Forzar el historial (force push) para restablecer un commit determinado como último trabajo (obviando commits posteriores)</span>. Accidentalmente tras clonar un repo pretendiendo que despliegue en otro nuevo que he creado, he hecho dos commits (y push) a la rama principal (main) del repo original. Quiero que el commit db8XXXXXX sea el último de la historia en main, eliminando esos dos commits posteriores. Para ello <strong>fuerzo el historial (force push) lo que sobrescribirá el historial remoto de main, eliminando los dos commits posteriores a db8XXXXXX no deseados.</strong>
-                  <ul class="list-disc ml-5 my-1.5">
-                    <li class="mb-2"><span class="destacado">git checkout main</span> me aseguro de estar en la rama main localmente</li>
-                    <li class="mb-2"><span class="destacado">git reset --hard db8XXXXXX</span> reseteo la rama main al commit db8XXXXXX</li>
-                    <li class="mb-2"><span class="destacado">git push origin main --force</span> hago un push forzado al repositorio remoto</li>
-                  </ul>
-                </li>
-
-                <li class="mb-5"><strong>Tras forzar el historial de esta manera intenté hacer git pull desde otro equipo para actualizar el repo local de ese equipo con todo loq ue había subido al proyecto y despues de hacer git pull, tras "Resolving deltas 100% done", me indicaba:</strong> <i> + 70efXXX...3552YYY main -> origin/main  (forced update) fatal: refusing to merge unrelated histories</i>. <strong>Esto indica que el branch remoto main fue sobrescrito (con git push --force), cambiando de la referencia 70efXXX a 3552YYY. Por eso mi repositorio local y remoto no coinciden.</strong> <br>
                   
-                <strong>Suele ocurrir cuando Git detecta que el historial de commits de repositorio local y el repositorio remoto no tienen un ancestro común, es decir, como si fueran dos proyectos completamente diferentes, lo cual suele pasar si:</strong>
-                  <ul class="my-3 list-disc ml-5">
-                    <li>Inicializamos el repositorio localmente con git init y luego conectamos a un remoto que ya tenía commits.</li>
-                    <li><strong>El repositorio remoto fue reinicializado o reescrito con un historial diferente (por ejemplo, un "forced update", que es mi caso).</strong></li>
-                    <li>Has clonado el repositorio, pero luego cambió por completo su historial en el remoto (forzando un push).</li>
-                  </ul>
-                  <p>Las alternativas para solucionarlo son:</p>
-
-                   <ul class="my-3 list-disc ml-5">
-                    <li><strong>que mi repositorio sea igual al remoto: reseteo mi rama local</strong><br/>
-                      <span class="destacado">git fetch origin</span><br/>
-                      <span class="destacado">git reset --hard origin/main</span>
-                    </li>
-                    <li><strong>combinar ambos historiales (intentará hacer un merge entre los dos historiales. Si hay conflictos, habrá que resolverlos manualmente):</strong><br/>
-                    <span class="destacado">git pull origin main --allow-unrelated-histories</span>
-                    </li>
-                    <li><strong>Si tenemos cambios locales que queremos guardar, hacemos un backup antes:</strong><br/>
-                    <span class="destacado">git stash</span><br/>
-                    <strong># o bien, crear una rama/branch temporal</strong><br/>
-                    <span class="destacado">git checkout -b backup-mis-cambios</span></span>
-                    </li>
-                    </ul>
-                
-                </li>
-
-                <li>
-                  <span class="destacado">git status</span> <strong>Cómo comprobar el estado de los archivos:</strong> Si ejecutamos este comando directamente después de una clonación, deberíamos ver algo como lo siguiente que significa que tenemos un directorio de trabajo limpio; en otras palabras, ninguno de tus archivos rastreados se modifica. Git tampoco ve ningún archivo sin rastrear, o estarían listados aquí. Finalmente, el comando te dice en qué rama estás y te informa que no se ha desviado de la misma rama en el servidor. Por ahora, esa rama siempre es <strong>main</strong>, que es la predeterminada; <a href="https://git-scm.com/book/en/v2/ch00/ch03-git-branching" class="underline" target="_blank">Git Branching</a> revisará las ramas y referencias en detalle.: 
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      git status
-                      On branch main
-                      Your branch is up-to-date with 'origin/main'.
-                      nothing to commit, working tree clean
-                    </code></pre>
-                  </div>
-  
-                  <p>Si por ejemplo añadimos un archivo README con <span class="destacado">echo 'My Project' > README</span> y hacemos un git status nos dirá que es un 'untracked file' y que usemos un git add para añadirlo al seguimiento.</p>
-                </li>
-  
-                <li class="mb-5">
-                  <strong><span class="destacado">git status -s</span> <span class="destacado">git status --short</span>Estado breve:</strong> Si bien el git statusresultado es bastante completo, también es bastante extenso. Git también tiene un indicador de estado breve para que puedas ver los cambios de una manera más compacta. Hay dos columnas en la salida: la columna de la izquierda indica el estado del área de preparación y la columna de la derecha indica el estado del árbol de trabajo.
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      git status -s
-                      M README            //modificados
-                      MM Rakefile          //modificado, preparado y luego se modificó nuevamente
-                      A  lib/git.rb        //los archivos nuevos que se han agregado al área de preparación
-                      M  lib/simplegit.rb  //archivos modificado y preparado
-                      ?? LICENSE.txt       //archivos nuevos que no se rastrean             
-                    </code></pre>
-                  </div>
-                </li>
-  
-                <li class="mb-5">
-                  <span class="destacado">cat .gitignore</span><strong>Ignorar archivos:</strong> archivos que no queremos que Git agregue automáticamente o que muestre como no rastreados. Por lo general, se trata de archivos generados automáticamente, como archivos de registro o archivos producidos por el sistema de compilación. Creamos un archivo que incluya patrones para que coincidan con ellos y se llame <strong>.gitignore</strong>. Git tiene ejemplos completos de ficheros .gitignore para distintos tipos de proyectos aquí: <a href="https://github.com/github/gitignore">ejemplos .gitignore</a>
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      $ cat .gitignore
-                      *.[oa] // le dice a Git que ignore cualquier archivo que termine en “.o” o “.a” (archivos de objetos y archivos que pueden ser el producto de la creación de su código)
-                      *~ // le dice a Git que ignore todos los archivos cuyos nombres terminen con una tilde ( ~), que muchos editores de texto, como Emacs, usan para marcar archivos temporales                 
-                    </code></pre>
-                  </div>
-  
-                  <p>Las reglas para los patrones que puedes poner en el archivo .gitignore son las siguientes:</p>
-                  <ul class="my-3 list-disc ml-5">
-                    <li>Las líneas en blanco o las líneas que comienzan con #se ignoran.</li>
-                    <li>Los patrones glob estándar funcionan y se aplicarán de forma recursiva en todo el árbol de trabajo.</li>                
-                    <li>Puedes iniciar patrones con una barra diagonal ( /) para evitar la recursividad.</li>                
-                    <li>Puede finalizar los patrones con una barra diagonal ( /) para especificar un directorio.</li>                
-                    <li>Puedes negar un patrón iniciándolo con un signo de exclamación ( !).</li>
-                    <li>Los patrones glob son como expresiones regulares simplificadas que utilizan los shells.
-                      <ul class="my-3 list-disc ml-5">
-                        <li>Un asterisco ( *) coincide con cero o más caracteres;</li>
-                        <li>[abc]coincide con cualquier carácter dentro de los corchetes (en este caso a, b o c);</li>
-                        <li>un signo de interrogación ( ?) coincide con un solo carácter; </li>
-                        <li>los corchetes que encierran caracteres separados por un guion ( [0-9]) coinciden con cualquier carácter entre ellos (en este caso del 0 al 9).</li>
-                        <li>También puede usar dos asteriscos para que coincidan con directorios anidados; a/**/zcoincidiría con a/z, a/b/z, a/b/c/z, </li>
-                      </ul>
-                    </li>                
-                  </ul>
-                  <pre><code class="language-js">
-                    //Ejemplo de .gitignore
-                    # ignore all .a files
-                    *.a
-                                        
-                    # but do track lib.a, even though you're ignoring .a files above
-                    !lib.a
-                    
-                    # only ignore the TODO file in the current directory, not subdir/TODO
-                    /TODO
-                    
-                    # ignore all files in any directory named build
-                    build/
-                    
-                    # ignore doc/notes.txt, but not doc/server/arch.txt
-                    doc/*.txt
-                    
-                    # ignore all .pdf files in the doc/ directory and any of its subdirectories
-                    doc/**/*.pdf
-                  </code></pre>
-                </li>
-  
-                <li class="mb-5">
-                  <strong>Visualizar cambios preparados y no preparados. ¿Qué has cambiado pero aún no has preparado? ¿Qué has preparado que estás a punto de confirmar?</strong> Aunque git statusresponde a las preguntas de forma muy general al enumerar los nombres de los archivos, git diff te muestra las líneas exactas agregadas y eliminadas (el parche, por así decirlo). 
-  
-                  <br><br><span class="destacado">git diff</span> <strong>¿Qué has cambiado pero aún no has preparado? </strong>: por sí solo, no muestra todos los cambios realizados desde la última confirmación, sino solo los cambios que aún no están preparados. Si ha preparado todos los cambios, git diff no se mostrará ningún resultado.
-  
-                  <br><span class="destacado">git diff --staged</span> <span class="destacado">git diff --cached</span> (--stagedy --cached son sinónimos)<strong> ¿Y qué has preparado que estás a punto de confirmar?</strong> Este comando compara los cambios preparados con su última confirmación
-                </li>
-  
-                <li class="mb-5">
-                  <span class="destacado">git commit</span> <strong>Commit!!! (confirmando cambios):</strong> ya con todo listo podemos confirmar(commit) nuestros cambios <strong>recordar que todo lo que aún no esté preparado (cualquier archivo que hayamos creado o modificado y que no hayamos ejecutado aún git add desde que lo editamos) no se incluirá en este commit.</strong>
-  
-                  <span class="destacado">git commit -v</span> Para tener un recordatorio aún más explícito de lo que hemos modificado, coloc´ndose la diferencia de nuestro cambio en el editor para que podamos ver exactamente qué cambios estamos confirmando (commiteando).
-  
-                  <span class="destacado">git commit -m "detalles de nuestro commit"</span> Como alternativa a lo anterior nosotros ponemos la "bandera", el texto que describe nuestro commit
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      $ git commit -m "Story 182: fix benchmarks for speed"
-                      [master 463dc4f] Story 182: fix benchmarks for speed
-                      2 files changed, 2 insertions(+)
-                      create mode 100644 README                  
-                    </code></pre>
-                  </div>
-                  <p>¡Ya hemos creado nuestro primer commit! Podemos ver que el commit nos da información sobre sí mismo: a qué rama lo has enviado (master), qué suma de comprobación SHA-1 tiene el commit (463dc4f), cuántos archivos se modificaron y estadísticas sobre las líneas agregadas y eliminadas en el commit. <strong>Importante recordar que:</strong></p>
-                  <ul class="my-3 list-disc ml-5">
-                    <li><span class="destacado">El commit registra la instantánea que configuramos en nuestra área de preparación</span>.</li>
-                    <li><span class="destacado">Todo lo que no hayamos preparado sigue ahí modificado; puedes hacer otra confirmación para agregarlo a tu historial</span>.</li>
-                    <li><span class="destacado">Cada vez que realizamo un commit, estamos registrando una instantánea de nuestro proyecto a la que podemos volver o comparar más tarde</span>.</li>
-                  </ul>
-                </li>
-  
-                <li class="mb-5">
-                  <span class="destacado">git commit -a -m "descripción del commit"</span> <strong>Saltarnos el área de preparación:</strong> el área de preparación a veces es un poco más compleja de lo que necesitamos en nuestro flujo de trabajo. Si queremos omitir el área de preparación, Git ofrece un atajo simple: agregar la opción -a al comando git commit hace que Git prepare automáticamente cada archivo que ya está rastreado antes de realizar el commit, lo que nos permite omitir la parte del git add <strong>(esta bandera -a hace que se incluyan todos los archivos modificados) OJO CON USAR ESTO SIN TON NI SON, PUEDE HACER QUE SE INCLUYAN CAMBIOS QUE NO DESEAMOS INCLUIR</strong>
-                </li>
-  
-                <li class="mb-5">
-                  <span class="destacado">git rm</span> <strong>Eliminando archivos:</strong> Para eliminar un archivo de Git, debes eliminarlo de tus archivos rastreados (en concreto, eliminarlo del área de preparación) y luego confirmarlo(commit). El comando git rm hace eso y también elimina el archivo del directorio de trabajo para que no lo veamos como un archivo sin seguimiento la próxima vez. <br>
-                  ¡Ojo! Si simplemente eliminamos el archivo del directorio de trabajo con <span class="destacado">rm xxxx</span>, aparecerá en el área “Cambios no preparados para confirmación” (es decir, no preparados) de nuestro status:
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      $ rm PROJECTS.md
-                      $ git status
-                      On branch master
-                      Your branch is up-to-date with 'origin/master'.
-                      Changes not staged for commit:
-                        (use "git add/rm <file>..." to update what will be committed)
-                        (use "git checkout -- <file>..." to discard changes in working directory)
-                      
-                              deleted:    PROJECTS.md
-                      
-                      no changes added to commit (use "git add" and/or "git commit -a")                  
-                    </code></pre>
-                  </div>
-                  <p>Si ejecutamos a continuación <span class="destacado">git rm xxxx</span></p>
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      $ git rm PROJECTS.md
-                      rm 'PROJECTS.md'
-                      $ git status
-                      On branch master
-                      Your branch is up-to-date with 'origin/master'.
-                      Changes to be committed:
-                        (use "git reset HEAD <file>..." to unstage)
-                      
-                          deleted:    PROJECTS.md     
-                    </code></pre>
-                  </div>
-                  <p>La próxima vez que realicemos un commit, el archivo desaparecerá y ya no se rastreará. Si modificamos el archivo o ya lo habíamos agregado al área de preparación, debemoss <span class="destacado">forzar la eliminación con la opción -f</span>. <strong>Esta es una función de seguridad para evitar la eliminación accidental de datos que aún no se han registrado en una instantánea y que no se pueden recuperar desde Git</strong>.</p>
-  
-                  <p>Si queremos mantener el archivo en el disco duro pero que git ya no lo rastree usamos la opción <span class="destacado">git rm --cached</span> (mantener el archivo en el árbol de trabajo pero eliminarlo del área de preparación) Esto es particularmente útil si olvidamos añadir algo al .gitignore y lo preparamos accidentalmente, como por ejemplo un archivo de registro grande o un montón de archivos .a compilados. </p>
-  
-                  <p>Podemos pasarle a este comando de borrado archivos, directorios o patrones de archivos globales, por ejemplo:</p>
-  
-                  <ul class="my-3 list-disc ml-5">
-                    <li>Para eliminar todos los archivos del directorio log/ que tienen la extensión .log: <code class="language-js">git rm log/\*.log</code></li>
-                    <li>Para eliminar todos los archivos cuyos nombres terminan con ~ <code class="language-js">git rm \*~</code></li>
-                  </ul>
-  
-                  <pre></pre>
-                </li>
-  
-                <li class="mb-5">
-                  <strong>Mover archivos:</strong> A diferencia de muchos otros VCS, Git no rastrea explícitamente el movimiento de archivos. Si cambias el nombre de un archivo en Git, no se almacenan metadatos en Git que indiquen que cambiaste el nombre del archivo. Sin embargo, Git es bastante inteligente a la hora de averiguarlo después del hecho. Por lo tanto, <strong>resulta un poco confuso que Git tenga un comando mv</strong>. Si quieres cambiar el nombre de un archivo en Git, puedes ejecutar algo como: <span class="destacado">git mv file_from file_to</span> y funciona bien. Si miramos el status vemos que git lo considera como un archivo renombrado aunque en verad equivale a ejecutar algo como esto:
-                  <div class="flex mr-4">
-                    <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                    </svg>
-                    <pre><code class="language-ts">
-                      $ mv README.md README
-                      $ git rm README.md
-                      $ git add README                  
-                    </code></pre>
-                  </div>
-  
-                  <p>es decir es una función de conveniencia, mv es un único comando en vez de tres.</p>
-                </li>
-  
-                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100"><span class="bg-black text-white">TRABAJO CON RAMAS:</span>
-
-                  <ul class="list-disc ml-5">
-                    <li class="my-1.25"><strong>Consultar las ramas que hay:</strong> <span class="destacado">git branch</span></li>
-                    <li class="my-1.25"><strong>Consultar TODAS (locales y remotas) las ramas que hay:</strong> <span class="destacado">git branch -a</span></li>
-                    <li class="my-1.25"><strong>Ver a donde apunta cada rama:</strong> <span class="destacado">git log</span></li>
-                    <li class="my-1.25"><strong>Crear una rama:</strong> <span class="destacado">git branch nombre_rama</span></li>
-                    <li class="my-1.25"><strong>Movernos a otra rama: </strong> <span class="destacado">git checkout nombre_rama</span></li>
-                    <li class="my-1.25"><strong>Eliminar una rama:</strong> <span class="destacado">git branch -d nombre_rama</span>. En el caso de que esa rama contenga trabajos sin fusionar, el comando anterior nos devolverá el siguiente error:
-                      <pre><code class="language-js">
-                        error: The branch 'nombre-rama' is not an ancestor of your current HEAD.
-                        If you are sure you want to delete it, run 'git branch -D nombre-rama'.
-                      </code></pre>
-                      Y si aún así queremos eliminar esa rama: <span class="destacado">git branch -D nombre-rama</span>
-                    </li>  
-                    <li>
-                      <strong>Eliminar una rama del repositorio remoto</strong> <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                      </svg>
-                      <span class="destacado">git push origin :nombre-rama</span>
-                    </li>
-                    <li>He creado nueva rama "rediseño1" en calorie-tracker y me he puesto a trabajar. Tras añadir git <strong>add .</strong>, y confirmar <strong>git commit -m ""</strong> mis cambios, cuando he intentado hacer un <strong>git push</strong> desde esa rama nueva "rediseño1", como no había añadido previamente esa rama en github para seguimiento me dice esto:
-                      <pre><code class="language-js">
-                        PS C:\Users\FOS\Desktop\Curso React\calorie-tracker> git push
-                        fatal: The current branch rediseño1 has no upstream branch.
-                        To push the current branch and set the remote as upstream, use
-                        
-                            git push --set-upstream origin rediseño1
-                        
-                        To have this happen automatically for branches without a tracking
-                        upstream, see 'push.autoSetupRemote' in 'git help config'.
-                      </code></pre>
-
-                      así que en vez de un <span class="rojo">git push</span> he hecho un <span class="destacado">git push --set-upstream origin rediseño1</span> y yaprepara esa rama en github para seguimiento:
-                      <pre><code class="language-js">
-                        PS C:\Users\FOS\Desktop\Curso React\calorie-tracker> git push --set-upstream origin rediseño1
-                        Enumerating objects: 17, done.
-                        Counting objects: 100% (17/17), done.
-                        Delta compression using up to 12 threads
-                        Compressing objects: 100% (9/9), done.
-                        Writing objects: 100% (9/9), 1.57 KiB | 1.57 MiB/s, done.
-                        Total 9 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
-                        remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
-                        remote:
-                        remote: Create a pull request for 'rediseño1' on GitHub by visiting:
-                        remote:      https://github.com/an.....5/calory-tracker/pull/new/redise%C3%B1o1
-                        remote:
-                        To https://github.com/an.....5/calory-tracker.git
-                         * [new branch]      rediseño1 -> rediseño1
-                        branch 'rediseño1' set up to track 'origin/rediseño1'.
-                      </code></pre>
-
-                    </li>
-
-                    <li class="my-1.25"><strong>Para establecer una rama ascendente como origen:</strong> <span class="destacado">$ git push --set-upstream-to origin master</span> o versión abreviada <span class="destacado">$ git push -u origin master</span> Esta operación garantiza que la rama master local haga un seguimiento de la rama master remota. Ahora ya podemos extraer con un git pull sin tener que especificar la rama remota de la que extraer. <a class="underline text-black" href="https://unfuddle.com/stack/tips-tricks/git-no-tracking-information-for-the-current-branch/" target="_blank">Consejos y trucos de STACK para desenredar</a></li>
-
-                  </ul>
-                </li>  
-
-                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100"><span class="bg-black text-white">OBTENER CAMBIOS DE UN REPO REMOTO: </span><a class="underline" href="https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository" target="_blank">https://docs.github.com/es/get-started/using-git/getting-changes-from-a-remote-repository</a><br>
-                  Estos comandos son muy útiles al interactuar con un repositorio remoto. <span class="destacado">clone</span> y <span class="destacado">fetch</span> descargan código remoto desde la dirección URL remota de un repositorio al equipo local, <span class="destacado">merge</span> se usa para combinar el trabajo de diferentes personas con el suyo, y <span class="destacado">pull</span> es una combinación de fetch y merge.    
-                
-                  <ul class="list-disc ml-5">
-                    <li class="my-1.25"><strong>Clonar un repositorio:</strong> <span class="destacado">git clone https://github.com/USERNAME/REPOSITORY.git</span> obtiene una copia completa del repositorio de otro usuario.
-  
-                    <p>Puede elegir entre varias direcciones URL diferentes al clonar un repositorio. Mientras esté registrado en GitHub, estas direcciones URL están disponibles en la página principal del repositorio al hacer clic en Código:</p>
-  
-                    <img src="https://andune55.github.io/diario/assets/git-clone-DthzbbV8.png" alt="img" loading="lazy">
-
-                    <p>Al ejecutar git clone, tienen lugar las siguientes acciones:</p>
-
-                    <ul class="list-disc ml-5 my-1.25">
-                      <li>Se crea una carpeta con el nombre <strong>repo</strong>.</li>
-                      <li>Esta carpeta se inicializa como un repositorio de Git.</li>
-                      <li>Se crea un repositorio remoto denominado <strong>origin</strong>, que apunta a la dirección URL desde la que ha realizado la clonación.</li>
-                      <li>Todos los archivos y confirmaciones del repositorio se descargan aquí.</li>
-                      <li>La rama predeterminada está desmarcada.</li>
-                    </ul>
-
-                    <p>Para cada rama <strong>foo</strong> del repositorio remoto, se crea una rama <strong>refs/remotes/origin/foo</strong> de seguimiento remoto correspondiente en el repositorio local. Normalmente, puede abreviar estos nombres de rama de seguimiento remoto a <strong>origin/foo</strong>.</p>
-                    
-                    </li>
-                    <li class="my-1.25"><strong>Extraer cambios de un repositorio remoto</strong> <span class="destacado">git fetch</span>: para recuperar el nuevo trabajo realizado por otras personas. Al capturar desde un repositorio se obtienen todas las ramas de seguimiento remoto nuevas y etiquetas sin combinar estos cambios en las ramas propias.<br>
-                    Si ya tiene un repositorio local con una URL remota configurada para el proyecto deseado, puede capturar toda la información nueva si usa <span class="destacado">git fetch REMOTE-NAME</span> en el terminal:                      
-                      <pre>
-                        <code class="language-js">
-                          $ git fetch REMOTE-NAME
-                          # Fetches updates made to a remote repository
-                        </code>
-                      </pre>
-                      De otra forma, siempre puedes agregar un remoto nuevo y luego recuperarlo. Para más información, consulta Administrar repositorios remotos.</li>
-                    <li class="my-1.25"><strong>Fusionar cambios en tu rama local:</strong> <span class="destacado">$ git merge REMOTE-NAME/BRANCH-NAME</span>La fusión combina tus cambios locales con los cambios realizados por otros. Por lo general, fusionas una rama de seguimiento remoto (es decir, una rama extraída desde un repositorio remoto) con tu rama local:
-                    <pre><code class="language-js">
-                      $ git merge REMOTE-NAME/BRANCH-NAME
-                      # Merges updates made online with your local work
-                    </code></pre>
-                    </li>
-                    <li class="my-1.25"><strong>Extraer cambios de un repositorio remoto:</strong> <span class="destacado">git pull</span> es un método abreviado útil para completar <strong>git fetch</strong> y <strong>git merge</strong> en el mismo comando:
-                    <pre><code class="language-js">
-                      $ git pull REMOTE-NAME BRANCH-NAME
-                      # Grabs online updates and merges them with your local work
-                    </code></pre>
-                    <strong>Como pull realiza una combinación en los cambios recuperados, debe asegurarse de que el trabajo local se confirma antes de ejecutar el comando pull</strong>. Si se produce un conflicto de combinación que no puede resolver, o si decide salir de la combinación, puede usar <span class="destacado">git merge --abort</span> para restaurar la rama al estado que tenía antes de extraerla.
-                    </li>
-                    <li>OTROS:<br>
-                      <span class="destacado">git stash save</span> (da info de lo que falta por hacer)<br>
-                      <span class="destacado">git merge origin --allow-unrelated-histories</span> <br>                      
-                      <span class="destacado">git mergetool</span><br>                     
-                      <span class="destacado">git pull https://github.com/andune55/websmmdd.git master --allow-unrelated-histories</span> <br>
-                      git add .<br>
-                      git commit -m "merged la mejor manera"<br>
-                      git push --set-upstream origin master<br>
-                      <a href="https://git-scm.com/book/es/v2/Los-entresijos-internos-de-Git-Mantenimiento-y-recuperaci%C3%B3n-de-datos" class="underline" target="blank">Entresijos internos de GIT y recuperación de datos</a><br>
-                      <span class="destacado">git log --pretty=oneline</span> - veo los "hash(inedtificadores)" de mis commit<br>
-                      <span class="destacado">git reset --hard c0e55bcbd94bed986b3e2b736040d2917ac073dd</span> restablezco al que quería<br>
-                      <span class="destacado">git push -f origin rediseño1</span> - fuerzo el update                    
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-                  
-               
-            </div>        
-  
-            <!-- Explicación y pasos repositorio GIT (mas completo el anterior)-->
-            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#tutorial-git').toggle();">	
-              <h3>Explicación y pasos repositorio GIT (mas completo el anterior)</h3>			
-              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
-            </div>
-            <div id="tutorial-git" class="hidden">
-              <a class="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>        
-              <ul class="my-3.5">
-                <li class="my-3.5"><span class="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
-                  <pre><code class="language-js">
-                    cd /path/to/your/existing/code 
-                    git init
-                  </code></pre>
-                </li>
-    
-                <li class="my-3.5"><span class="destacado">Para clonar un repositorio existente</span>, usa el comando <strong>git clone</strong>. Si un repositorio ya se ha configurado en un repositorio central, el comando de clonación es la manera más común de obtener una copia de desarrollo local. Igual que git init, la clonación suele ser una operación única. Una vez que un desarrollador ha obtenido una copia de trabajo, todas las operaciones de control de versiones se administran por medio de su repositorio local.
-                  <pre><code class="language-js">
-                    git clone <repo url>
-                  </code></pre>
-    
-                  <p><strong>El comando git clone se usa para crear una copia o clonar un repositorio remoto</strong>. Se utiliza git clone con la URL de un repositorio. Git es compatible con varios protocolos de red y sus formatos de URL correspondientes. En este ejemplo, usaremos el protocolo Git SSH. Las URL Git SSH siguen la siguiente estructura: git@HOSTNAME:USERNAME/REPONAME.git.</p>
-    
-                  <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-                    
-                    <div class="flex flex-col">
-                      <svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                      </svg> Un ejemplo de una URL Git SSH sería el siguiente: git@bitbucket.org:rhyolight/javascript-data-store.git, donde los valores de la plantilla equivalen a:
-                      <ul class="list-disc ml-3 bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]">
-                        <li>HOSTNAME: bitbucket.org</li>
-                        <li>USERNAME: rhyolight</li>
-                        <li>REPONAME: javascript-data-store</li>
-                      </ul>
-                      <p>Al ejecutarlo, se extraerá la última versión de los archivos del repositorio remoto en la rama principal y se añadirá a una nueva carpeta. Esta carpeta nueva tendrá el mismo nombre que el repositorio (REPONAME), en este caso, javascript-data-store. La carpeta contendrá el historial completo del repositorio remoto y una rama principal recién creada.</p>               
-                    </div>
-                  </div>
-                  <p>              
-                </li>
-    
-                <li class="my-3.5"><span class="destacado">Para guardar cambios en el repositorio:</span> <strong>git add y git commit</strong>
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Ahora que has iniciado o clonado un repositorio, puedes realizar commits en la versión del archivo. Para el siguiente ejemplo asumiremos que has configurado un proyecto en /path/to/project. Los pasos son los siguientes:</p>
-    
-                  <ul class="list-disc ml-3">
-                    <li>Cambia el directorio a /path/to/project</li>
-                    <li>Crea un archivo nuevo CommitTest.txt con el contenido "test content for git tutorial"</li>
-                    <li>Ejecuta el comando git add para añadir CommitTest.txt al área de preparación del repositorio</li>
-                    <li>Crea un commit nuevo con un mensaje que describa qué trabajo se ha hecho en el commit</li>
-                  </ul>
-                  <pre><code class="language-js">
-                    cd /path/to/project 
-                    echo "test content for git tutorial" >> CommitTest.txt 
-                    git add CommitTest.txt 
-                    git commit -m "added CommitTest.txt to the repo"
-                  </code></pre>
-    
-                  <p>Tras hacer esto, en el historial de nuestro repositorio se mostrará <strong>CommitTest.txt</strong> y se realizará el seguimiento de las actualizaciones futuras a este archivo.</p>
-    
-                  <p>El comando <strong>git add se suele usar con la opción --all</strong>. Al ejecutar git add --all, se añadirán todos los archivos con cambios y sin seguimiento al repositorio y se actualizará el árbol de trabajo.</p>
-                  </li>
-    
-                <li class="my-3.5"><span class="destacado">Para colaboración entre repositorios:</span> <strong>git push</strong>
-                
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Es importante comprender que la idea de "copia de trabajo" de Git es muy distinta a la copia de trabajo que se obtiene al extraer código fuente de un repositorio SVN. A diferencia de SVN, Git no distingue entre las copias de trabajo y el repositorio central: todos son repositorios Git completos.</p>
-                  <p>Por tanto, colaborar con Git es intrínsecamente distinto que con SVN. Mientras que SVN depende de la relación entre el repositorio central y la copia de trabajo, <strong>el modelo de colaboración de Git se basa en la interacción entre repositorios. En lugar de insertar una copia de trabajo en el repositorio central de SVN, se extraen o envían commits de un repositorio a otro</strong>.</p>
-    
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Por supuesto, nada te impide dar un significado especial a ciertos repositorios Git. Por ejemplo, con solo definir un repositorio de Git como el "central", es posible replicar un workflow centralizado usando Git. Esto se consigue por medio de convenciones, no porque esté integrado en el propio VCS.</p>
-                  </li>
-    
-                <li class="my-3.5"><span class="destacado">Repositorios bare (vacíos) frente a repositorios clonados</span>
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Si en la sección anterior, "Inicio de un nuevo repositorio", has usado <strong>git clone</strong> para configurar tu repositorio local, entonces ya está listo para la colaboración remota. El comando <strong>git clone</strong> configura automáticamente el repositorio con un remote que apunta a la URL Git de donde lo has clonado. Esto significa que, una vez hagas cambios en un archivo y lo confirmes, puedes enviar los cambios al repositorio remoto con <strong>git push</strong>.</p>
-                  
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Si has usado el comando <strong>git init</strong> para crear un repositorio nuevo, entonces no tendrás ningún repositorio remoto al cual enviar cambios. Un patrón común a la hora de iniciar un nuevo repositorio es ir a un servicio Git alojado, como Bitbucket, y crear un repositorio ahí. El servicio te proporcionará una URL Git que podrás añadir a tu repositorio de Git local y enviar con <strong>git push</strong> al repositorio alojado. <span class="destacado">Una vez que hayas creado un repositorio remoto con el servicio de tu elección, deberás actualizar tu repositorio local con una asignación. Comentaremos este proceso en la guía de ajustes y configuración que hay más adelante.</span></p>
-                  
-                  <p><svg class="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                  </svg>Si prefieres alojar tu propio repositorio remoto, deberás configurar un "repositorio bare". Tanto <strong>git init</strong> como <strong>git clone</strong> aceptan el argumento <strong>--bare</strong>. Un repositorio bare se suele usar para crear un repositorio central de Git remoto.</p>
-                  </li>
-    
-                <li class="my-3.5"><span class="destacado">Para ajustes y configuración:</span> <strong>git config</strong> PENDIENTE DE SEGUIR LINK Y QUE FUNCIONE</li>
-                </ul>
-            </div>          
-
-          </div>          
           
           <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
