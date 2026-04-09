@@ -294,6 +294,28 @@
                   </ul>
                 </li> -->
 
+                <li class="my-1.25">
+                      <strong>Alias de Git PRO (muy usados):</strong>
+                      <p>Copiamos lo siguiente en nuestro terminal una vez:</p>
+                      <pre><code class="language-ts">
+                      git config --global alias.logall "log --oneline --graph --all --decorate"
+                      git config --global alias.lg "log --graph --pretty=format:'%C(auto)%h %d %s %C(black)%C(bold)%cr' --abbrev-commit"
+                      git config --global alias.st "status -sb"
+                      git config --global alias.co "checkout"
+                      git config --global alias.br "branch"
+                      git config --global alias.cm "commit -m"
+                      git config --global alias.last "log -1 HEAD"
+                      git config --global alias.unstage "restore --staged ."
+                      git config --global alias.visual "!gitk"
+                      </code></pre>    
+                      
+                      <p>Los más útiles suelen ser:</p>
+                      <span class="destacado">git lg</span> → historial bonito 🔥<br>
+                      <span class="destacado">git st</span> → estado corto<br>
+                      <span class="destacado">git logall</span> → el del curso<br>
+                      <span class="destacado">git last</span> → último commit
+                    </li>
+
                 <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
                   <span class="bg-black text-white">Configuraciones iniciales</span>
                   <ul class="list-disc ml-5">
