@@ -278,6 +278,129 @@
               <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
               <ul class="list-disc ml-5 my-2.5">
 
+
+                <!-- <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">XXXXXXXXXXXXXXXXXXXXXX</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>xxxxxxxxxxxxxxxx:</strong>
+                      <span class="destacado">git xxxxxxxxxxxxxxxxx</span>
+                      <pre><code class="language-ts">
+                        xxxxxxxxxxxxxxxxxxxxxx
+                      </code></pre>
+                      <div class="text-sm">Explicacion</div>
+                    </li>
+
+                  </ul>
+                </li> -->
+
+                <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+                  <span class="bg-black text-white">Configuraciones iniciales</span>
+                  <ul class="list-disc ml-5">
+                    <li class="my-1.25">
+                      <strong>Crear alias logall: <span class="destacado">git logall</span></strong>
+                       <pre><code class="language-ts">
+                        git config --global alias.logall "log --oneline --graph --all --decorate"
+                      </code></pre>
+                      <div class="text-sm">Luego ya podemos usar <span class="destacado">git logall</span> y nos muestra el historial de forma mas visual:
+                        <ul>
+                          <li>
+                            <p><code>--oneline</code> → resumen corto de commits
+                            </p>
+                          </li>
+                          <li>
+                            <p><code>--graph</code> → dibuja el árbol de ramas
+                            </p>
+                          </li>
+                          <li>
+                            <p><code>--all</code> → muestra todas las ramas</p>
+                          </li>
+                          <li>
+                            <p><code>--decorate</code> → enseña etiquetas
+                              (HEAD, branches, etc.)</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <pre><code class="language-ts">
+                        <p>Git abre un visor llamado pager (normalmente less). Por eso se ve esto abajo 👉(END)</p>                        
+                      </code></pre>
+                      controles básicos:
+                        q → salir<br>
+                        ↑ / ↓ → moverte<br>
+                        space → bajar rápido<br>
+                        b → subir<br>
+                        /texto → buscar
+                    </li>
+
+
+                    <li class="my-1.25">
+                      <strong>git log ultra visual tipo árbol bonito con colores pro: <span class="destacado">git log</span></span>
+                      <pre><code class="language-ts">
+                        git config --global alias.lg "log --graph --all --decorate --pretty=format:'%C(auto)%h %d %s %C(black)%C(bold)%cr %C(blue)&lt;%an&gt;'"
+                      </code></pre>
+                      <div class="text-sm">Luego ya podemos usar <span class="destacado">git log</span> y nos muestra el historial viendo cosas como:
+                      <pre><code class="language-ts">
+                        * a1b2c3d (HEAD -&gt; main) añade login hace 2 horas <Agustin>
+                        * 9f8e7d6 fix bug navbar hace 1 día <Agustin>
+                        * 123abcd primer commit hace 3 días <Agustin>
+                      </code></pre>
+                      <p>y con ramas:</p>
+                      <pre><code class="language-ts">
+                        *   a1b2c3d (HEAD -&gt; main) merge branch feature/login
+                        |\  
+                        | * 9f8e7d6 (feature/login) añade login
+                        |/  
+                        * 123abcd init
+                      </code></pre>
+                      significando:
+                      * → commits <br>
+                      líneas (| \ /) → ramas<br>
+                      HEAD -> main → dónde estás<br>
+                      hash corto (a1b2c3d) → id del commit<br>
+                      mensaje → lo que escribiste<br>
+                      tiempo → hace cuánto<br>
+                      autor → quién lo hizo
+                      </div>
+                    </li>
+
+                    <li class="my-1.25">
+                      <strong>Alias ULTRA visual (estilo GitHub): <span class="destacado">git gg</span></strong>
+                      <pre ><code class="language-ts">
+                        git config --global alias.gg "log --graph --all --decorate --date=relative --pretty=format:'%C(auto)%h%C(reset) %C(bold blue)%an%C(reset) %C(dim white)- %ar%C(reset)%C(auto)%d%C(reset)%n%C(white)%s%C(reset)%n'"
+                      </code></pre>                                 
+                      <span class="destacado">git gg</span>
+                      <pre><code class="language-ts">
+                        * a1b2c3d Agustin - hace 2 horas (HEAD -> main)
+                          añade login con validación
+
+                        * 9f8e7d6 Agustin - hace 1 día
+                          fix error en navbar
+
+                        * 123abcd Agustin - hace 3 días
+                          primer commit
+                      </code></pre>
+                      <div class="text-sm">Explicacion</div>
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Colores mejorados en Git:</strong>
+                      <pre><code class="language-ts">
+                      git config --global color.ui auto
+                      git config --global color.branch auto
+                      git config --global color.diff auto
+                      git config --global color.status auto
+                      </code></pre>                     
+                    </li>
+                    <li class="my-1.25">
+                      <strong>Alias corto para el día a día: <span class="destacado">git l</span>   </strong>                      
+                      <pre><code class="language-ts">git config --global alias.l "log --oneline --graph --decorate --all"</code></pre>                       
+                    </li>       
+                  </ul>
+                </li>
+
+
+
+
+
                 <!-- GIT: Guía visual y práctica para principiantes y usuarios ocasionales -->
 
                 <li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
