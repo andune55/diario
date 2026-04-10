@@ -244,112 +244,338 @@
           <a href="https://gist.github.com/JamieMason/3748498" class="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br>
             
 
-          <!-- CONFIGURACIÓN INICIAL ////////////////////////////////////////////////////// -->
-<li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
-  <span class="bg-black text-white">⚙️ CONFIGURACIÓN INICIAL (OBLIGATORIA)</span>
+    
+        <!-- GIT: CONFIGURACIÓN INICIAL ////////////////////////////////////////////////////// -->
+        <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#config-git').toggle();">	
+          <h3 class="flex items-center font-bold">
+            ⚙️ GIT: CONFIGURACIÓN INICIAL (OBLIGATORIA)
+          </h3>			
+          <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+        </div>
+        <div id="config-git" class="hidden">
+          <ul class="list-disc ml-5 my-2.5">        
+            <li class="my-1.25">
+              <strong>1. Comprobar instalación:</strong>
+              <span class="destacado">git --version</span>
+        
+              <pre><code class="language-bash">
+                git --version
+                command -v git
+              </code></pre>
+        
+              <div class="text-sm">
+                Si no devuelve versión → instala Git.
+              </div>
+            </li>
+        
+            <li class="my-1.25">
+              <strong>2. Configuración básica (OBLIGATORIA):</strong>
+        
+              <pre><code class="language-bash">
+                        git config --global user.name "Tu Nombre"
+                        git config --global user.email "tu@email.com"
+                        git config --global core.editor "nano"
+                              </code></pre>
+        
+              <div class="text-sm">
+                🔥 Define tu identidad en commits.
+              </div>
+            </li>
+        
+            <li class="my-1.25">
+              <strong>3. Configuración recomendada (PRO):</strong>
+        
+              <pre><code class="language-bash">
+                        git config --global init.defaultBranch main
+                        git config --global color.ui auto
+                        git config --global pull.ff only
+                              </code></pre>
+        
+              <div class="text-sm">
+                <ul>
+                  <li><code>init.defaultBranch</code> → evita "master"</li>
+                  <li><code>color.ui</code> → mejor visual</li>
+                  <li><code>pull.ff only</code> → evita merges innecesarios 🔥</li>
+                </ul>
+              </div>
+            </li>
+        
+            <li class="my-1.25">
+              <strong>4. Alias clave:</strong>
+        
+              <pre><code class="language-bash">
+                        git config --global alias.st status
+                        git config --global alias.co checkout
+                        git config --global alias.br branch
+                        git config --global alias.cm "commit -m"
+                
+                        git config --global alias.lg "log --graph --oneline --decorate --all"
+                        git config --global alias.logall "log --oneline --graph --all --decorate"
+                              </code></pre>
+        
+              <div class="text-sm">
+                ⭐ <span class="destacado">git st</span> | <span class="destacado">git lg</span>
+              </div>
+            </li>
+        
+            <li class="my-1.25">
+              <strong>5. Ver configuración:</strong>
+        
+              <pre><code class="language-bash">
+                        git config --list
+                        git config --global --list
+                        git config --show-origin --list
+                              </code></pre>
+        
+              <div class="text-sm">
+                🔍 Debug configuración
+              </div>
+            </li>
+        
+            <li class="my-1.25">
+              <strong>✅ Checklist:</strong>
+              <ul class="list-disc ml-5 text-sm">
+                <li>Git instalado ✔️</li>
+                <li>user.name / email ✔️</li>
+                <li>Editor ✔️</li>
+                <li>main por defecto ✔️</li>
+                <li>Alias ✔️</li>
+              </ul>
+            </li>
+        
+          </ul>
+        </div>
 
-  <ul class="list-disc ml-5">
+        <!-- CICLO DE VIDA ////////////////////////////////////////////////////// -->
+        <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+          onclick="$('#ciclo-git').toggle();">
+          <h3 class="flex items-center font-bold">
+            🔁 CICLO DE VIDA DE ARCHIVOS (CORE DE GIT)
+          </h3>
+          <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+        </div>        
+        <div id="ciclo-git" class="hidden">        
+          <ul class="list-disc ml-5 my-2.5">        
+            <!-- MODELO -->
+            <li class="my-1.25">
+              <strong>Modelo mental:</strong>
+              <span class="text-sm">
+                🔥 Esto es Git.
+              </span>
+        
+              <div class="bg-neutral-900 text-green-400 p-2 rounded text-sm font-mono my-1">
+                UNTRACKED → MODIFIED → STAGED → COMMITTED
+              </div>              
+            </li>
+        
+            <!-- UNTRACKED -->
+            <li class="my-1.25">
+              <strong>1. UNTRACKED:</strong> 
+              <span class="text-sm">
+                Archivo nuevo no rastreado.
+              </span>
+        
+              <pre><code class="language-bash">
+              touch archivo.txt
+              git status
+              </code></pre>   
+            </li>
+        
+            <!-- MODIFIED -->
+            <li class="my-1.25">
+              <strong>2. MODIFIED:</strong>
+              <span class="text-sm">
+                Archivo cambiado.
+              </span>
+        
+              <pre><code class="language-bash">
+              echo "cambio" >> archivo.txt
+              git status
+              </code></pre>              
+            </li>
+        
+            <!-- STAGED -->
+            <li class="my-1.25">
+              <strong>3. STAGED:</strong>
+              <span class="text-sm">
+                Preparado para commit.
+              </span>
+        
+              <pre><code class="language-bash">
+              git add archivo.txt
+              git status
+              </code></pre>    
+            </li>
+        
+            <!-- COMMIT -->
+            <li class="my-1.25">
+              <strong>4. COMMIT:</strong>
+              <span class="text-sm">
+                Guardado en historial.
+              </span>
+        
+              <pre><code class="language-bash">
+              git commit -m "feat: ejemplo"
+              </code></pre>
+            </li>
+        
+            <!-- CLAVE -->
+            <li class="my-1.25">
+              <strong>🔥 Clave:</strong>
+        
+              <pre><code class="language-bash">
+              git add ≠ git commit
+              </code></pre>
+            </li>
+        
+            <!-- ZONAS -->
+            <li class="my-1.25">
+              <strong>🧠 Las 3 zonas:</strong>
+        
+              <div class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono my-1">
+                Working → Staging → Repository
+              </div>
+        
+              <ul class="list-disc ml-5 text-sm">
+                <li>Working → editas</li>
+                <li>Staging → eliges</li>
+                <li>Repo → guardas</li>
+              </ul>
+            </li>
+        
+            <!-- ERRORES -->
+            <li class="my-1.25">
+              <strong>⚠️ Errores típicos:</strong>
+        
+              <ul class="list-disc ml-5 text-sm">
+                <li>commit -a no añade nuevos ❌</li>
+                <li>olvidar add ❌</li>
+                <li>no usar status ❌</li>
+              </ul>
+            </li>
+        
+          </ul>
+        
+        </div>
 
-    <!-- 1. VERIFICAR -->
-    <li class="my-1.25">
-      <strong>1. Comprobar instalación:</strong>
-      <span class="destacado">git --version</span>
+        <!-- COMANDOS BÁSICOS ////////////////////////////////////////////////////// -->
+        <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+          onclick="$('#basicos-git').toggle();">
+          <h3 class="flex items-center font-bold">
+            🧱 COMANDOS BÁSICOS (DÍA A DÍA)
+          </h3>
+          <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+        </div>        
+        <div id="basicos-git" class="hidden">        
+          <ul class="list-disc ml-5 my-2.5">        
+            <!-- VISUAL ESQUEMA -->
+            <li class="my-2">
+              <strong>🧠 Flujo real:</strong>
+        
+              <div class="bg-neutral-900 text-green-400 p-2 rounded text-sm font-mono my-1">
+                edit → status → add → status → commit
+              </div>
+            </li>
+        
+            <!-- STATUS -->
+            <li class="my-1.25">
+              <strong>1. git status:</strong>
+              <span class="text-sm">
+                Ver el estado actual del repositorio.
+              </span>
+        
+              <pre><code class="language-bash">
+        git status
+        git status -s
+              </code></pre>
+        
+              <div class="text-sm">
+                👉 Muestra archivos modificados, staged y rama actual
+              </div>
+            </li>
+        
+            <!-- ADD -->
+            <li class="my-1.25">
+              <strong>2. git add:</strong>
+              <span class="text-sm">
+                Añadir cambios al área de staging.
+              </span>
+        
+              <pre><code class="language-bash">
+        git add archivo.txt
+        git add .
+              </code></pre>
+        
+              <div class="text-sm">
+                👉 Decide qué irá al commit
+              </div>
+            </li>
+        
+            <!-- DIFF -->
+            <li class="my-1.25">
+              <strong>3. git diff:</strong>
+              <span class="text-sm">
+                Ver diferencias en los cambios.
+              </span>
+        
+              <pre><code class="language-bash">
+        git diff
+        git diff --staged
+              </code></pre>
+        
+              <div class="text-sm">
+                👉 Antes y después de hacer add
+              </div>
+            </li>
+        
+            <!-- COMMIT -->
+            <li class="my-1.25">
+              <strong>4. git commit:</strong>
+              <span class="text-sm">
+                Guardar cambios en el historial.
+              </span>
+        
+              <pre><code class="language-bash">
+        git commit -m "mensaje"
+        git commit -a -m "sin add (solo modificados)"
+              </code></pre>
+        
+              <div class="text-sm">
+                👉 Solo incluye lo que está en staging
+              </div>
+            </li>
+        
+            <!-- CLAVE -->
+            <li class="my-1.25">
+              <strong>🔥 Clave mental:</strong>
+              <span class="text-sm">
+                Git no guarda archivos, guarda snapshots.
+              </span>
+        
+              <div class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono my-1">
+                commit = foto del estado preparado
+              </div>
+            </li>
+        
+            <!-- ERRORES -->
+            <li class="my-1.25">
+              <strong>⚠️ Errores típicos:</strong>
+        
+              <ul class="list-disc ml-5 text-sm">
+                <li>Usar <code>git add .</code> sin revisar ❌</li>
+                <li>Commit sin mensaje claro ❌</li>
+                <li>No usar <code>git diff</code> ❌</li>
+              </ul>
+            </li>
+        
+          </ul>
+        
+        </div>
+        
 
-      <pre><code class="language-bash">
-git --version
-command -v git
-      </code></pre>
 
-      <div class="text-sm">
-        Si no devuelve versión → instala Git.
-      </div>
-    </li>
 
-    <!-- 2. CONFIG ESENCIAL -->
-    <li class="my-1.25">
-      <strong>2. Configuración básica (OBLIGATORIA):</strong>
 
-      <pre><code class="language-bash">
-git config --global user.name "Tu Nombre"
-git config --global user.email "tu@email.com"
-git config --global core.editor "nano"
-      </code></pre>
-
-      <div class="text-sm">
-        🔥 Esto define quién eres en los commits (MUY importante).
-      </div>
-    </li>
-
-    <!-- 3. CONFIG PRO -->
-    <li class="my-1.25">
-      <strong>3. Configuración recomendada (PRO):</strong>
-
-      <pre><code class="language-bash">
-git config --global init.defaultBranch main
-git config --global color.ui auto
-git config --global pull.ff only
-      </code></pre>
-
-      <div class="text-sm">
-        <ul>
-          <li><code>init.defaultBranch</code> → evita "master"</li>
-          <li><code>color.ui</code> → mejor visualización</li>
-          <li><code>pull.ff only</code> → evita merges raros 🔥</li>
-        </ul>
-      </div>
-    </li>
-
-    <!-- 4. ALIAS -->
-    <li class="my-1.25">
-      <strong>4. Alias clave (productividad diaria):</strong>
-
-      <pre><code class="language-bash">
-git config --global alias.st status
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.cm "commit -m"
-
-git config --global alias.lg "log --graph --oneline --decorate --all"
-git config --global alias.logall "log --oneline --graph --all --decorate"
-      </code></pre>
-
-      <div class="text-sm">
-        ⭐ Los más usados:
-        <br>→ <span class="destacado">git st</span> (estado rápido)
-        <br>→ <span class="destacado">git lg</span> (historial visual)
-      </div>
-    </li>
-
-    <!-- 5. VER CONFIG -->
-    <li class="my-1.25">
-      <strong>5. Ver configuración actual:</strong>
-
-      <pre><code class="language-bash">
-git config --list
-git config --global --list
-git config --show-origin --list
-      </code></pre>
-
-      <div class="text-sm">
-        🔍 Muy útil para debugging (de dónde viene cada config).
-      </div>
-    </li>
-
-    <!-- 6. CHECKLIST -->
-    <li class="my-1.25">
-      <strong>✅ Checklist final:</strong>
-
-      <ul class="list-disc ml-5 text-sm">
-        <li>Git instalado ✔️</li>
-        <li>Nombre/email configurado ✔️</li>
-        <li>Editor definido ✔️</li>
-        <li>Branch main por defecto ✔️</li>
-        <li>Alias básicos ✔️</li>
-      </ul>
-    </li>
-
-  </ul>
-</li>
 
 
           <!-- / GIT /////////////////////////////////////////////////////////////// -->
