@@ -244,6 +244,112 @@
           <a href="https://gist.github.com/JamieMason/3748498" class="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br>
             
 
+          <!-- CONFIGURACIÓN INICIAL ////////////////////////////////////////////////////// -->
+<li class="mb-1.25 border-l-2 border-l-black pl-1.25 bg-gray-100">
+  <span class="bg-black text-white">⚙️ CONFIGURACIÓN INICIAL (OBLIGATORIA)</span>
+
+  <ul class="list-disc ml-5">
+
+    <!-- 1. VERIFICAR -->
+    <li class="my-1.25">
+      <strong>1. Comprobar instalación:</strong>
+      <span class="destacado">git --version</span>
+
+      <pre><code class="language-bash">
+git --version
+command -v git
+      </code></pre>
+
+      <div class="text-sm">
+        Si no devuelve versión → instala Git.
+      </div>
+    </li>
+
+    <!-- 2. CONFIG ESENCIAL -->
+    <li class="my-1.25">
+      <strong>2. Configuración básica (OBLIGATORIA):</strong>
+
+      <pre><code class="language-bash">
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+git config --global core.editor "nano"
+      </code></pre>
+
+      <div class="text-sm">
+        🔥 Esto define quién eres en los commits (MUY importante).
+      </div>
+    </li>
+
+    <!-- 3. CONFIG PRO -->
+    <li class="my-1.25">
+      <strong>3. Configuración recomendada (PRO):</strong>
+
+      <pre><code class="language-bash">
+git config --global init.defaultBranch main
+git config --global color.ui auto
+git config --global pull.ff only
+      </code></pre>
+
+      <div class="text-sm">
+        <ul>
+          <li><code>init.defaultBranch</code> → evita "master"</li>
+          <li><code>color.ui</code> → mejor visualización</li>
+          <li><code>pull.ff only</code> → evita merges raros 🔥</li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- 4. ALIAS -->
+    <li class="my-1.25">
+      <strong>4. Alias clave (productividad diaria):</strong>
+
+      <pre><code class="language-bash">
+git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.cm "commit -m"
+
+git config --global alias.lg "log --graph --oneline --decorate --all"
+git config --global alias.logall "log --oneline --graph --all --decorate"
+      </code></pre>
+
+      <div class="text-sm">
+        ⭐ Los más usados:
+        <br>→ <span class="destacado">git st</span> (estado rápido)
+        <br>→ <span class="destacado">git lg</span> (historial visual)
+      </div>
+    </li>
+
+    <!-- 5. VER CONFIG -->
+    <li class="my-1.25">
+      <strong>5. Ver configuración actual:</strong>
+
+      <pre><code class="language-bash">
+git config --list
+git config --global --list
+git config --show-origin --list
+      </code></pre>
+
+      <div class="text-sm">
+        🔍 Muy útil para debugging (de dónde viene cada config).
+      </div>
+    </li>
+
+    <!-- 6. CHECKLIST -->
+    <li class="my-1.25">
+      <strong>✅ Checklist final:</strong>
+
+      <ul class="list-disc ml-5 text-sm">
+        <li>Git instalado ✔️</li>
+        <li>Nombre/email configurado ✔️</li>
+        <li>Editor definido ✔️</li>
+        <li>Branch main por defecto ✔️</li>
+        <li>Alias básicos ✔️</li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
 
 
           <!-- / GIT /////////////////////////////////////////////////////////////// -->
