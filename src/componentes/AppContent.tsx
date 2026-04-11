@@ -12,20 +12,22 @@ import "prismjs/plugins/line-highlight/prism-line-highlight.css";
 
 import CodeBlock from "./CodeBlock";
 
-
+type AppContentProps = {
+  onLogout: () => void;
+};
 
 import "./AppContent.css";
 
 
-export default function AppContent({ onLogout }) {
+export default function AppContent({ onLogout }: AppContentProps) {
 
   useEffect(() => {
     Prism.highlightAll();
   });
   
-  const [openBlocks, setOpenBlocks] = useState({});
+  const [openBlocks, setOpenBlocks] = useState<Record<string, boolean>>({});
 
-  const toggleBlock = (id) => {
+  const toggleBlock = (id: string) => {
   setOpenBlocks((prev) => ({
     ...prev,
     [id]: !prev[id],

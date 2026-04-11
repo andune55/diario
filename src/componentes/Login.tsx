@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function Login({ onLogin }) {
+type LoginProps = {
+  onLogin: () => void;
+};
+
+export default function Login({ onLogin }:LoginProps) {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
