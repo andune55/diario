@@ -1,37 +1,28 @@
-// Importing Prism.js
-// import CodePrism from './componentes/CodePrism';
+
+import { useEffect, useState } from "react";
+import Login from "./componentes/Login"; // 👈 ajusta ruta si hace falta
+import AppContent from "./componentes/AppContent";
 
 
 
-function App() {
+export default function App() {
+  const [isAuth, setIsAuth] = useState(false);
+    
 
+  useEffect(() => {
+    const auth = localStorage.getItem("auth");
+    if (auth === "true") setIsAuth(true);
+  }, []);
+
+  
+
+  if (!isAuth) {
+    return <Login onLogin={() => setIsAuth(true)} />;
+  }
+
+
+
+  return <AppContent onLogout={() => setIsAuth(false)} />;
  
 
-  return (
-    <>
-
-      {/* <CodePrism 
-        code={`
-          // Importing Prism.js
-          import Prism from 'prismjs'
-          
-          // Importing a language
-          import 'prismjs/components/prism-javascript'
-          
-          // Importing a theme
-          import 'prismjs/themes/prism-tomorrow.css'          
-        `}
-        language={'js'}
-      /> */}
-
-      {/* <CodePrism 
-        code={``}
-        language={'js'}
-      /> */}
-      
-      
-    </>
-  )
 }
-
-export default App
