@@ -94,7 +94,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 }`}
             >▼</span>
           </div>
-          <div id="atajos-vsc" className={`ml-2.5 mr-2.5 ${openBlocks["atajos-vsc"] ? "block" : "hidden"}`}>
+          <div id="atajos-vsc" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["atajos-vsc"] ? "block" : "hidden"}`}>
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
 
               <div className="flex items-center mt-1.25">
@@ -296,7 +296,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 }`}
             >▼</span>
           </div>
-          <div id="proyectosfo" className={`ml-2.5 mr-2.5 ${openBlocks["proyectosfo"] ? "block" : "hidden"}`}>
+          <div id="proyectosfo" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["proyectosfo"] ? "block" : "hidden"}`}>
             <a  href="https://app.netlify.com/teams/an.....5/sites" className="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> -
             <a  href="https://github.com/an.....5/" className="txt-primario" target="blank">https://github.com/an.....5/</a>
 
@@ -324,8 +324,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="config-git" className={`ml-2.5 mr-2.5 ${openBlocks["config-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="config-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["config-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   <li className="my-1.25">
                     <strong>1. Comprobar instalación:</strong>
                     <span className="destacado">git --version</span>
@@ -427,8 +427,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="ciclo-git" className={`ml-2.5 mr-2.5 ${openBlocks["ciclo-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="ciclo-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["ciclo-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- MODELO --> */}
                   <li className="my-1.25">
                     <strong>Modelo mental:</strong>
@@ -539,8 +539,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="basicos-git" className={`ml-2.5 mr-2.5 ${openBlocks["basicos-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="basicos-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["basicos-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- VISUAL ESQUEMA --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo real:</strong>
@@ -653,8 +653,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="init-clone-git" className={`ml-2.5 mr-2.5 ${openBlocks["init-clone-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="init-clone-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["init-clone-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- VISUAL --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo mental:</strong>
@@ -785,8 +785,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="remotos-git" className={`ml-2.5 mr-2.5 ${openBlocks["remotos-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="remotos-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["remotos-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- DIAGRAMA AVANZADO --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo completo:</strong>
@@ -957,8 +957,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="ramas-git" className={`ml-2.5 mr-2.5 ${openBlocks["ramas-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="ramas-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["ramas-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- DIAGRAMA MEJORADO --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo real:</strong>
@@ -1087,8 +1087,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="conflictos-git" className={`ml-2.5 mr-2.5 ${openBlocks["conflictos-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="conflictos-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["conflictos-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- DIAGRAMA CLARO --> */}
                   <li className="my-2">
                     <strong>🧠 Cuándo ocurre un conflicto:</strong>
@@ -1240,8 +1240,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="historial-git" className={`ml-2.5 mr-2.5 ${openBlocks["historial-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="historial-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["historial-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- LOG --> */}
                   <li className="my-1.25">
                     <strong>1. Ver historial:</strong>
@@ -1404,8 +1404,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="stash-git" className={`ml-2.5 mr-2.5 ${openBlocks["stash-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="stash-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["stash-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- DIAGRAMA --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo:</strong>
@@ -1532,8 +1532,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="workflow-git" className={`ml-2.5 mr-2.5 ${openBlocks["workflow-git"] ? "block" : "hidden"}`}>
-                <ul className="list-disc ml-5 my-2.5">
+              <div id="workflow-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["workflow-git"] ? "block" : "hidden"}`}>
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   {/* <!-- DIAGRAMA --> */}
                   <li className="my-2">
                     <strong>🧠 Flujo diario:</strong>
@@ -1627,9 +1627,9 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="git" className={`ml-2.5 mr-2.5 ${openBlocks["git"] ? "block" : "hidden"}`}>
+              <div id="git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["git"] ? "block" : "hidden"}`}>
                 <a  href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" className="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a  href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" className="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
-                <ul className="list-disc ml-5 my-2.5">
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
                   <li className="my-1.25">
                     <strong>Alias de Git PRO (muy usados):</strong>
                     <p>Copiamos lo siguiente en nuestro terminal una vez:</p>
@@ -2272,7 +2272,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="tutorial-git" className={`ml-2.5 mr-2.5 ${openBlocks["tutorial-git"] ? "block" : "hidden"}`}>
+              <div id="tutorial-git" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["tutorial-git"] ? "block" : "hidden"}`}>
                 <a className="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>
                 <ul className="my-3.5">
                   <li className="my-3.5"><span className="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
@@ -2365,7 +2365,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="web-smmdd" className={`ml-2.5 mr-2.5 ${openBlocks["web-smmdd"] ? "block" : "hidden"}`}>
+              <div id="web-smmdd" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["web-smmdd"] ? "block" : "hidden"}`}>
                 <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
                   <div className="flex flex-col">
                     - Creo repositorio privado https://github.com/an.....5/websmmdd<br />
@@ -2407,7 +2407,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="listado-proyectos" className={`ml-2.5 mr-2.5 ${openBlocks["listado-proyectos"] ? "block" : "hidden"}`}>
+                <div id="listado-proyectos" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["listado-proyectos"] ? "block" : "hidden"}`}>
                   <div className="flex w-[100%]"></div>
                   <a  href="https://github.com/an.....5/diario" className="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
                   <div className="flex w-[100%]"></div>
@@ -2471,7 +2471,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="comandos-npm" className={`ml-2.5 mr-2.5 ${openBlocks["comandos-npm"] ? "block" : "hidden"}`}>
+                <div id="comandos-npm" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["comandos-npm"] ? "block" : "hidden"}`}>
                   <ul className="list-disc my-2.5 ml-4">
 
                     <li className="mb-3"><p><strong>MVSCode + Configuración y plugins + https://www.smashingmagazine.com/2021/06/custom-emmet-snippets-vscode/:</strong> Abra la configuración de VS Code (Código → Preferencias → Configuración) y busque “Ruta de extensiones de Emmet” Haga clic en “Agregar elemento”, ingrese la ruta a la carpeta donde guardó el archivo snippets.json que creó anteriormente y presione “Aceptar”</p></li>
@@ -2791,7 +2791,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="accesibilidad-correo" className={`ml-2.5 mr-2.5 ${openBlocks["accesibilidad-correo"] ? "block" : "hidden"}`}>
+                <div id="accesibilidad-correo" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["accesibilidad-correo"] ? "block" : "hidden"}`}>
                   <div className="bg-blue-400 rounded-2xl p-2 mr-1.25 shadow border border-blue-700">
                     <legend>
                       <p className="mr-1.25">Accesibilidad Herramientas </p>
@@ -2840,7 +2840,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 >▼</span>
                 </div>
                 <div className="flex" >
-                  <div id="linksfo" className={`ml-2.5 mr-2.5 ${openBlocks["linksfo"] ? "block" : "hidden"}`}>
+                  <div id="linksfo" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["linksfo"] ? "block" : "hidden"}`}>
                     <div className="bg-amber-200 rounded-2xl p-2 mr-1.25 shadow border border-amber-500">
                       <legend className="font-bold text-amber-900">CSS</legend>
 
@@ -2884,7 +2884,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="deploy-github-pages" className={`ml-2.5 mr-2.5 ${openBlocks["deploy-github-pages"] ? "block" : "hidden"}`}>
+                <div id="deploy-github-pages" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["deploy-github-pages"] ? "block" : "hidden"}`}>
                   <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
                   <ul className="ml-7 list-disc">
                     <li>Tener un repositorio creado: <strong>https://github.com/XXXXXXX55/XXXXXXXXXXXXXX/</strong></li>
@@ -2939,7 +2939,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="deploy-netlify" className={`ml-2.5 mr-2.5 ${openBlocks["deploy-netlify"] ? "block" : "hidden"}`}>
+              <div id="deploy-netlify" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["deploy-netlify"] ? "block" : "hidden"}`}>
                 <p><strong>Instalar CLI de Netlify (MEJOR el primero ver <a className="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>):</strong> <span className="destacado">npm install --save-dev netlify-cli</span> <span className="destacado">npm install netlify-cli -g</span></p>
                 <img src="./src/assets/img/manual-automatizar deploy de proyecto vite react en netlify vinculado a github.png" alt="" />
               </div>
@@ -2963,7 +2963,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 }`}
             >▼</span>
           </div>
-          <div id="tailwind-herramientas" className={`ml-2.5 mr-2.5 ${openBlocks["tailwind-herramientas"] ? "block" : "hidden"}`}>
+          <div id="tailwind-herramientas" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["tailwind-herramientas"] ? "block" : "hidden"}`}>
 
             {/* <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// --> */}
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -3042,7 +3042,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 }`}
             >▼</span>
           </div>        
-          <div id="componenteprism" className={`ml-2.5 mr-2.5 ${openBlocks["componenteprism"] ? "block" : "hidden"}`}>
+          <div id="componenteprism" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["componenteprism"] ? "block" : "hidden"}`}>
             
             <CodeBlock
               lang="js"
@@ -3180,7 +3180,7 @@ const y = 2;`}
                 }`}
             >▼</span>
           </div>        
-          <div id="snipets1" className={`ml-2.5 mr-2.5 ${openBlocks["snipets1"] ? "block" : "hidden"}`}>        
+          <div id="snipets1" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["snipets1"] ? "block" : "hidden"}`}>        
             <div className="flex max-sm:flex-col">
               <div className="w-[33%] max-sm:w-[100%]">
                 <p className="font-bold"><span className="destacado">pcj2</span> Bloque (50+50) --&gt; 100</p>
@@ -3373,7 +3373,7 @@ const y = 2;`}
                 }`}
             >▼</span>
           </div>        
-          <div id="explicaciones" className={`ml-2.5 mr-2.5 ${openBlocks["explicaciones"] ? "block" : "hidden"}`}>
+          <div id="explicaciones" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["explicaciones"] ? "block" : "hidden"}`}>
             {/* <!-- FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO --> */}
             <div className="flex justify-between items-center cursor-pointer desplegable-interior oscuro" onClick={() => toggleBlock("snp-fcn-nueva")}>	
               <h3 className="font-semibold ">FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO</h3>			
@@ -3381,7 +3381,7 @@ const y = 2;`}
                   }`}
               >▼</span>
             </div>
-            <div id="snp-fcn-nueva" className={`ml-2.5 mr-2.5 ${openBlocks["snp-fcn-nueva"] ? "block" : "hidden"}`}>
+            <div id="snp-fcn-nueva" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["snp-fcn-nueva"] ? "block" : "hidden"}`}>
               <pre className="language-ts">
                 <code className="language-ts">
                   {`//useOrder.ts 
@@ -3438,7 +3438,7 @@ const y = 2;`}
                   }`}
                 >▼</span>
             </div>
-            <div id="seccion9-122" className={`ml-2.5 mr-2.5 ${openBlocks["seccion9-122"] ? "block" : "hidden"}`}>
+            <div id="seccion9-122" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["seccion9-122"] ? "block" : "hidden"}`}>
               <p><strong>Calculemos el subtotal a pagar en base al precio de los artículos y sus cantidades.</strong> Si
                 agregamos varios elementos, vemos que el subtotal tiene que ser el resultado de sumar cada precio por la
                 cantidad. Eso antes era más complejo hacerlo pero <strong>gracias a las "nuevos"(2015) array methods como
@@ -3491,7 +3491,7 @@ export default function OrderTotals({order}: OrderTotalsProps) {
                 }`}
               >▼</span>
             </div>
-            <div id="map-join" className={`ml-2.5 mr-2.5 ${openBlocks["map-join"] ? "block" : "hidden"}`}>
+            <div id="map-join" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["map-join"] ? "block" : "hidden"}`}>
               <p>Dada una variable con string de fotos yo intentaba mapearla de esta manera para mostrar una galería dinámicamente, pero me salían "," separando cada elemento ¿por qué? --&gt; <a  href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" className="txt-rojo" target="blank">Explicación por qué map genera coma y solventarlo</a>:</p>
               
               <CodeBlock
@@ -3558,7 +3558,7 @@ export const useModalPanel = () =&gt; {
                 }`}
               >▼</span>
             </div>
-            <div id="seccion6-82" className={`ml-2.5 mr-2.5 ${openBlocks["seccion6-82"] ? "block" : "hidden"}`}>
+            <div id="seccion6-82" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["seccion6-82"] ? "block" : "hidden"}`}>
               <p>el versátil Hook useEffect (similar al watch en vue.js) vimos en el punto 82 (almacenar carrito en localStorage), que además de ser útil cuando el componente está listo, es muy útil para manejar los "efectos secundarios" de un cambio en nuestro state (cuando cambie mi state ejecutar cierto código).</p>
               <p className="naranja">Carrito persistente con LocalStorage - Almacenando</p>
               <p>Tener un carrito persistente es un buen truco para mantener los mismos elementos en el carrito aunque recarguemos navegador. ¿Cómo hacemos para tener sincronizado nuestro carrito de compras <code className="language-js">const [cart, setCart] = useState([])</code> con localStorage</p>
@@ -3628,7 +3628,7 @@ export const useModalPanel = () =&gt; {
                 }`}
               >▼</span>
             </div>
-            <div id="seccion10-159" className={`ml-2.5 mr-2.5 ${openBlocks["seccion10-159"] ? "block" : "hidden"}`}>
+            <div id="seccion10-159" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["seccion10-159"] ? "block" : "hidden"}`}>
               <p>Una buena adición y muy simple de implementar para este proyecto es localStorage. Veamos cómo hacerlo. ¿Donde podríamos colocar la función que escriba en localStorage? Mi reducer podría ser un buen lugar?¿dentro del if de 'save-activity' justo antes del return? sincronizando lo que esté en el state, sería una opción. Sin embargo también habría que agregarlo en el if de la acción 'delete-activity' y en más acciones si las agregara.<span className="destacado"> Otra opción, quizás la más sencilla, es hacerlo en el App.tsx y sincronizar únicamente el state de actividades y pasarlo como dependencia en un useEffect()</span>. <strong>La dependencia en el useEffect, lo que nos interesa que 'esté escuchando para actualizar las actividades guardadadas" es [state.activities]</strong></p>
 
               <pre data-line="7-9"><code className="language-js">
@@ -3692,7 +3692,7 @@ export const useModalPanel = () =&gt; {
                 }`}
               >▼</span>
             </div>
-            <div id="usocss" className={`ml-2.5 mr-2.5 ${openBlocks["usocss"] ? "block" : "hidden"}`}>
+            <div id="usocss" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["usocss"] ? "block" : "hidden"}`}>
               <p>Hasta que no de con la tecla (si es posible) par configurar el uso de tailwind en proyectos de este tipo importando en la css principal tanto tylewindcss como css de terceros tipo prism.css, de momento las incluyo en el index.html principal del proyecto así:</p>
               <pre><code className="language-ts">
                 &lt;title&gt;Curso React&lt;/title&gt;	
@@ -3726,7 +3726,7 @@ export const useModalPanel = () =&gt; {
                 }`}
             >▼</span>
           </div>  
-          <div id="deploymanual-netlify" className={`ml-2.5 mr-2.5 ${openBlocks["deploymanual-netlify"] ? "block" : "hidden"}`}>            
+          <div id="deploymanual-netlify" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["deploymanual-netlify"] ? "block" : "hidden"}`}>            
             <p>vídeo 84. Excelente tutorial para hacer build y deployment a mano. [EN NETLIFY AHORA MISMO TENEMOS LINKADO CON UN REPOSITORIO GIT DEL CURSO DE ANGULAR PARA CONTINUO DEPLOYMENT, EXPLORAR CAMBIAR ESTO ]</p>
 
             <p>Tenemos todo esto en desarrollo pero tenemos que construirlo, hacer un Build. El comando del package.json "build: vite build"</p>
@@ -3753,7 +3753,7 @@ export const useModalPanel = () =&gt; {
             >▼</span>
           </div>
         
-          <div id="pasos-proyecto" className={`ml-2.5 mr-2.5 ${openBlocks["pasos-proyecto"] ? "block" : "hidden"}`}>  
+          <div id="pasos-proyecto" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["pasos-proyecto"] ? "block" : "hidden"}`}>  
             <p><span className="destacado">Crear proyecto, instalar dependencias e instalar Tailwindcss</span></p>
             <p className="mt-1.25 mb-0"><span className="destacado">Instalando TailwindCSS y extensión para VSCode: </span> 
               Vamos al link de <strong><a  href="https://tailwindcss.com/" target="blank" className="text-[#000000]">https://tailwindcss.com/</a> &gt; docs &gt; installation &gt; Framework guides:</strong> contiene guías específicas de framework para instalar TailwindCSS en un gran número distinto de entornos Vite / Next.js / Angular / Ruby on Rails / Parcel / Symfony / Astro / ... nosotros elegimos Vite. A partir de aquí los pasos varían con respecto a lo que indica en el vídeo porque la versión es más nueva, ver <a className="text-[#000000]" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a>:
@@ -3859,7 +3859,7 @@ export const useModalPanel = () =&gt; {
                 }`}
             >▼</span>
           </div>
-          <div id="programas" className={`ml-2.5 mr-2.5 ${openBlocks["programas"] ? "block" : "hidden"}`}>  
+          <div id="programas" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["programas"] ? "block" : "hidden"}`}>  
             <p><a  href="https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+actionscript+apacheconf+aspnet+basic+c+csharp+cpp+cobol+http+java+javadoc+javadoclike+jsdoc+js-extras+json+js-templates+less+markdown+markup-templating+pascal+perl+php+phpdoc+php-extras+powershell+python+jsx+tsx+ruby+sas+sass+scss+sql+typescript+typoscript+vbnet&plugins=line-highlight+autolinker+highlight-keywords+remove-initial-line-feed+inline-color+previewers+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+diff-highlight+treeview" className="txt-negro" target="blank">Mi configuración de Prism</a></p>
             <p>Visual Studio Code <strong>1.96.4</strong> <span className="destacado">Extensiones:</span> <strong>Tailwind CSS IntelliSense</strong> / <strong>ES7+ React/Redux/React-Native snippets</strong> / <strong>Simple React Snippets</strong> / <strong>Escape HTML Code</strong></p>
             <p>node <strong>v22.13.0</strong> / npm <strong>10.9.2</strong> - <a  href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a></p>
@@ -3876,7 +3876,7 @@ export const useModalPanel = () =&gt; {
                 }`}
             >▼</span>
           </div>  
-          <div id="80-81-angular" className={`ml-2.5 mr-2.5 ${openBlocks["80-81-angular"] ? "block" : "hidden"}`}>                               
+          <div id="80-81-angular" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["80-81-angular"] ? "block" : "hidden"}`}>                               
             <h3 className="naranja">Respaldar nuestro proyecto en Github</h3>
             
             <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
@@ -3971,7 +3971,7 @@ export const useModalPanel = () =&gt; {
                 }`}
             >▼</span>
           </div>        
-          <div id="tareasfo" className={`ml-2.5 mr-2.5 ${openBlocks["tareasfo"] ? "block" : "hidden"}`}> 
+          <div id="tareasfo" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["tareasfo"] ? "block" : "hidden"}`}> 
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
               <svg className="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
