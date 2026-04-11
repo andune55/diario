@@ -41,28 +41,17 @@ export default function AppContent({ onLogout }: AppContentProps) {
     <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden">
 
       {/* 🔥 Glow naranja fondo */}
-      {/* <div className="absolute w-[600px] h-[600px] bg-orange-500 opacity-20 blur-[150px] top-[-100px] left-[-100px]"></div>
-      <div className="absolute w-[500px] h-[500px] bg-orange-600 opacity-10 blur-[120px] bottom-[-100px] right-[-100px]"></div> */}
+      <div className="absolute w-[900px] h-[700px] bg-orange-500 opacity-30 blur-[150px] top-[-100px] left-[-100px]"></div>
+      <div className="absolute w-[900px] h-[600px] bg-orange-600 opacity-15 blur-[120px] bottom-[-100px] right-[-100px]"></div>
 
       {/* 🔥 contenido */}
-      <div className="relative z-10 p-6"></div>
-
-
-
-
-
-
-      
-
-
-
-      <div className="bg-gray-100 pb-2.5">
+      <div className="relative z-10 p-6 max-w-7.5xl mx-auto">     
 
 
         <div className="flex justify-between items-center mb-6 w-[90%] max-sm:w-[100%] mx-auto">
-          {/* <h1 className="text-xl font-bold text-orange-400 tracking-wide">
-            ⚡ Dev Panel
-          </h1> */}
+          <h1 className="text-xl font-bold text-orange-400 tracking-wide">
+            ⚡ Diario Agus Panel
+          </h1>
 
           {/* logout aquí */}
           <button
@@ -96,19 +85,16 @@ export default function AppContent({ onLogout }: AppContentProps) {
         </div>
 
 
-
-
-
         {/* <!-- ATAJOS VISUAL STUDIO CODE Y PROYECTOS FO --> */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
 
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("atajos-vsc")}>
-            <h3>Atajos Visual Studio Code</h3>
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["atajos-vsc"] ? "rotate-180" : ""
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("atajos-vsc")}>
+            <h3 className="font-semibold text-orange-300">Atajos Visual Studio Code</h3>
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["atajos-vsc"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>
-          <div id="atajos-vsc" className={`ml-2.5 ${openBlocks["atajos-vsc"] ? "block" : "hidden"}`}>
+          <div id="atajos-vsc" className={`ml-2.5 mr-2.5 ${openBlocks["atajos-vsc"] ? "block" : "hidden"}`}>
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
 
               <div className="flex items-center mt-1.25">
@@ -122,7 +108,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                 <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
                 </svg>
-                <span className="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el IS no nos da las sugerencias quick fix de autocompletado (por ejemplo al tipar en nuestro componente un parámetro y sabemos que ese type existe en nuestro archivo de types)</strong> --&gt;<strong>en nuestro jsconfig.json poner a true el checkJS</strong> --&gt; <a href="https://medium.com/fredwong-it/vs-code-not-providing-suggestions-for-imports-in-quick-fix-dae5c8cc592c" className="underline" target="blank">VS Code not providing suggestions for imports in Quick fix</a></span>
+                <span className="bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]"><strong>Cuando el IS no nos da las sugerencias quick fix de autocompletado (por ejemplo al tipar en nuestro componente un parámetro y sabemos que ese type existe en nuestro archivo de types)</strong> --&gt;<strong>en nuestro jsconfig.json poner a true el checkJS</strong> --&gt; <a  href="https://medium.com/fredwong-it/vs-code-not-providing-suggestions-for-imports-in-quick-fix-dae5c8cc592c" className="underline" target="blank">VS Code not providing suggestions for imports in Quick fix</a></span>
               </div>
 
               <div className="flex items-center mt-1.25">
@@ -301,16 +287,18 @@ export default function AppContent({ onLogout }: AppContentProps) {
         </div>
 
         {/* <!-- GIT, PROYECTOS FO, DEPENDENCIAS ÚTILES --> */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("proyectosfo")}>
-            <h3>GIT, Proyectos y dependencias útiles npm</h3>
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["proyectosfo"] ? "rotate-180" : ""
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("proyectosfo")}>
+            <h3 className="font-semibold text-orange-300 flex">GIT, Proyectos y dependencias útiles npm 
+              <img id="point-left" src="./src/assets/img/icon-finger-left.png" width="30" className="noshadow animation-point-left" alt="" aria-hidden="true" />
+            </h3>
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["proyectosfo"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>
-          <div id="proyectosfo" className={`ml-2.5 ${openBlocks["proyectosfo"] ? "block" : "hidden"}`}>
-            <a href="https://app.netlify.com/teams/an.....5/sites" className="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> -
-            <a href="https://github.com/an.....5/" className="txt-primario" target="blank">https://github.com/an.....5/</a>
+          <div id="proyectosfo" className={`ml-2.5 mr-2.5 ${openBlocks["proyectosfo"] ? "block" : "hidden"}`}>
+            <a  href="https://app.netlify.com/teams/an.....5/sites" className="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> -
+            <a  href="https://github.com/an.....5/" className="txt-primario" target="blank">https://github.com/an.....5/</a>
 
             {/* GIT  */}
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -330,14 +318,13 @@ export default function AppContent({ onLogout }: AppContentProps) {
               {/* <!-- GIT: CONFIGURACIÓN INICIAL ////////////////////////////////////////////////////// --> */}
               <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("config-git")}>
                 <h3 className="flex items-center font-bold">
-                  ⚙️ GIT: CONFIGURACIÓN INICIAL (OBLIGATORIA)
-                  <img id="point-left" src="./src/assets/img/icon-finger-left.png" width="30" className="noshadow animation-point-left" alt="" aria-hidden="true" />
+                  ⚙️ GIT: CONFIGURACIÓN INICIAL (OBLIGATORIA)                  
                 </h3>
                 <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["config-git"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
               </div>
-              <div id="config-git" className={`ml-2.5 ${openBlocks["config-git"] ? "block" : "hidden"}`}>
+              <div id="config-git" className={`ml-2.5 mr-2.5 ${openBlocks["config-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   <li className="my-1.25">
                     <strong>1. Comprobar instalación:</strong>
@@ -440,7 +427,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="ciclo-git" className={`ml-2.5 ${openBlocks["ciclo-git"] ? "block" : "hidden"}`}>
+              <div id="ciclo-git" className={`ml-2.5 mr-2.5 ${openBlocks["ciclo-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- MODELO --> */}
                   <li className="my-1.25">
@@ -552,7 +539,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="basicos-git" className={`ml-2.5 ${openBlocks["basicos-git"] ? "block" : "hidden"}`}>
+              <div id="basicos-git" className={`ml-2.5 mr-2.5 ${openBlocks["basicos-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- VISUAL ESQUEMA --> */}
                   <li className="my-2">
@@ -666,7 +653,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="init-clone-git" className={`ml-2.5 ${openBlocks["init-clone-git"] ? "block" : "hidden"}`}>
+              <div id="init-clone-git" className={`ml-2.5 mr-2.5 ${openBlocks["init-clone-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- VISUAL --> */}
                   <li className="my-2">
@@ -798,7 +785,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="remotos-git" className={`ml-2.5 ${openBlocks["remotos-git"] ? "block" : "hidden"}`}>
+              <div id="remotos-git" className={`ml-2.5 mr-2.5 ${openBlocks["remotos-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- DIAGRAMA AVANZADO --> */}
                   <li className="my-2">
@@ -970,7 +957,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="ramas-git" className={`ml-2.5 ${openBlocks["ramas-git"] ? "block" : "hidden"}`}>
+              <div id="ramas-git" className={`ml-2.5 mr-2.5 ${openBlocks["ramas-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- DIAGRAMA MEJORADO --> */}
                   <li className="my-2">
@@ -1100,7 +1087,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="conflictos-git" className={`ml-2.5 ${openBlocks["conflictos-git"] ? "block" : "hidden"}`}>
+              <div id="conflictos-git" className={`ml-2.5 mr-2.5 ${openBlocks["conflictos-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- DIAGRAMA CLARO --> */}
                   <li className="my-2">
@@ -1253,7 +1240,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="historial-git" className={`ml-2.5 ${openBlocks["historial-git"] ? "block" : "hidden"}`}>
+              <div id="historial-git" className={`ml-2.5 mr-2.5 ${openBlocks["historial-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- LOG --> */}
                   <li className="my-1.25">
@@ -1417,7 +1404,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="stash-git" className={`ml-2.5 ${openBlocks["stash-git"] ? "block" : "hidden"}`}>
+              <div id="stash-git" className={`ml-2.5 mr-2.5 ${openBlocks["stash-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- DIAGRAMA --> */}
                   <li className="my-2">
@@ -1545,7 +1532,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="workflow-git" className={`ml-2.5 ${openBlocks["workflow-git"] ? "block" : "hidden"}`}>
+              <div id="workflow-git" className={`ml-2.5 mr-2.5 ${openBlocks["workflow-git"] ? "block" : "hidden"}`}>
                 <ul className="list-disc ml-5 my-2.5">
                   {/* <!-- DIAGRAMA --> */}
                   <li className="my-2">
@@ -1640,8 +1627,8 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
               </div>
-              <div id="git" className={`ml-2.5 ${openBlocks["git"] ? "block" : "hidden"}`}>
-                <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" className="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" className="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
+              <div id="git" className={`ml-2.5 mr-2.5 ${openBlocks["git"] ? "block" : "hidden"}`}>
+                <a  href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" className="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a  href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" className="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
                 <ul className="list-disc ml-5 my-2.5">
                   <li className="my-1.25">
                     <strong>Alias de Git PRO (muy usados):</strong>
@@ -1811,7 +1798,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                           # ignore all .pdf files in the doc/ directory and any of its subdirectories
                           doc/**/*.pdf
                         </code></pre>
-                        <div className="text-sm">Usa <span className="destacado">cat .gitignore</span> para ver patrones. Más ejemplos en <a href="https://github.com/github/gitignore" target="_blank" className="underline">github/gitignore</a></div>
+                        <div className="text-sm">Usa <span className="destacado">cat .gitignore</span> para ver patrones. Más ejemplos en <a  href="https://github.com/github/gitignore" target="_blank" className="underline">github/gitignore</a></div>
                       </li>
                     </ul>
                   </li>
@@ -2263,7 +2250,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                       </li>
                       <li className="my-1.25">
                         <strong>Integrar con GitHub Desktop:</strong>
-                        <span className="destacado">Descarga: <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></span>
+                        <span className="destacado">Descarga: <a  href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></span>
                         <div className="text-sm">Permite gestionar repositorios de forma visual y sencilla.</div>
                       </li>
                       <li className="my-1.25">
@@ -2280,12 +2267,12 @@ export default function AppContent({ onLogout }: AppContentProps) {
 
               {/* <!-- Explicación y pasos repositorio GIT (mas completo el anterior)--> */}
               <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("tutorial-git")}>
-                <h3>Explicación y pasos repositorio GIT (mas completo el anterior)</h3>
+                <h3 className="font-semibold">Explicación y pasos repositorio GIT (mas completo el anterior)</h3>
                <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["tutorial-git"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
               </div>
-              <div id="tutorial-git" className={`ml-2.5 ${openBlocks["tutorial-git"] ? "block" : "hidden"}`}>
+              <div id="tutorial-git" className={`ml-2.5 mr-2.5 ${openBlocks["tutorial-git"] ? "block" : "hidden"}`}>
                 <a className="underline text-black" href="https://www.atlassian.com/es/git/tutorials/setting-up-a-repository" target="_blank">Explicación y pasos repositorio Git</a>
                 <ul className="my-3.5">
                   <li className="my-3.5"><span className="destacado">Para crear un nuevo repositorio</span>, usa el comando git init. <strong>git init</strong> es un comando que se utiliza una sola vez durante la configuración inicial de un repositorio nuevo. Al ejecutar este comando, se creará un nuevo subdirectorio .git en tu directorio de trabajo actual. También se creará una nueva rama principal.
@@ -2373,12 +2360,12 @@ export default function AppContent({ onLogout }: AppContentProps) {
 
               {/* <!-- Respaldo git de web smmdd 16-02-25 --> */}
               <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("web-smmdd")}>
-                <h3>Respaldo git de web smmdd 16-02-25</h3>
+                <h3 className="font-semibold">Respaldo git de web smmdd 16-02-25</h3>
                 <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["web-smmdd"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
               </div>
-              <div id="web-smmdd" className={`ml-2.5 ${openBlocks["web-smmdd"] ? "block" : "hidden"}`}>
+              <div id="web-smmdd" className={`ml-2.5 mr-2.5 ${openBlocks["web-smmdd"] ? "block" : "hidden"}`}>
                 <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
                   <div className="flex flex-col">
                     - Creo repositorio privado https://github.com/an.....5/websmmdd<br />
@@ -2415,62 +2402,62 @@ export default function AppContent({ onLogout }: AppContentProps) {
 
                 {/* <!-- Listado de proyectos --> */}
                 <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("listado-proyectos")}>
-                  <h3>Listado de proyectos</h3>
+                  <h3 className="font-semibold">Listado de proyectos</h3>
                    <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["listado-proyectos"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
                 </div>
-                <div id="listado-proyectos" className={`ml-2.5 ${openBlocks["listado-proyectos"] ? "block" : "hidden"}`}>
+                <div id="listado-proyectos" className={`ml-2.5 mr-2.5 ${openBlocks["listado-proyectos"] ? "block" : "hidden"}`}>
                   <div className="flex w-[100%]"></div>
-                  <a href="https://github.com/an.....5/diario" className="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
+                  <a  href="https://github.com/an.....5/diario" className="underline mx-1.5" target="blank">https://github.com/an.....5/diario</a>
                   <div className="flex w-[100%]"></div>
-                  <a href="https://manual-xxxxx.netlify.app/" className="underline mx-1.5" target="blank">https://manual-xxxxx.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/manual-xxxxx/" className="underline mx-1.5" target="blank">https://an.....5.github.io/manual-xxxxx/</a>
-                  <div className="flex w-[100%]"></div>
-
-                  <a href="https://portfolioXXX.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://portfolioXXX.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/portfolio-XXX/" className="underline mx-1.5" target="blank">https://an.....5.github.io/portfolio-XXX/</a>
-                  <div className="flex w-[100%]"></div>
-                  <a href="https://XXX-calory-tracker.netlify.app/" className="underline mx-1.5" target="blank">https://XXX-calory-tracker.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/calory-tracker/" className="underline mx-1.5" target="blank">https://an.....5.github.io/calory-tracker/</a>
+                  <a  href="https://manual-xxxxx.netlify.app/" className="underline mx-1.5" target="blank">https://manual-xxxxx.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/manual-xxxxx/" className="underline mx-1.5" target="blank">https://an.....5.github.io/manual-xxxxx/</a>
                   <div className="flex w-[100%]"></div>
 
+                  <a  href="https://portfolioXXX.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://portfolioXXX.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/portfolio-XXX/" className="underline mx-1.5" target="blank">https://an.....5.github.io/portfolio-XXX/</a>
                   <div className="flex w-[100%]"></div>
-                  <a href="https://calcula-propinas.netlify.app/" className="underline mx-1.5" target="blank">https://calcula-propinas.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/calculadora_propinas/" className="underline mx-1.5" target="blank">https://an.....5.github.io/calculadora_propinas/</a>
-
-                  <div className="flex w-[100%]"></div>
-                  <a href="https://react-tienda-guitarras.netlify.app/" className="underline mx-1.5" target="blank">https://react-tienda-guitarras.netlify.app/</a>
-                  <a href="https://an.....5.github.io/guitarla-ts/" className="underline mx-1.5" target="blank">https://an.....5.github.io/guitarla-ts/</a>
-
-                  <div className="flex w-[100%]"></div>
-                  <a href="XXXXXXX" className="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> -
-                  <a href="https://an.....5.github.io/bttf/" className="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
+                  <a  href="https://XXX-calory-tracker.netlify.app/" className="underline mx-1.5" target="blank">https://XXX-calory-tracker.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/calory-tracker/" className="underline mx-1.5" target="blank">https://an.....5.github.io/calory-tracker/</a>
                   <div className="flex w-[100%]"></div>
 
                   <div className="flex w-[100%]"></div>
-                  <a href="XXXXXXX" className="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> -
-                  <a href="https://an.....5.github.io/pacientes-zustand/" className="underline mx-1.5" target="blank">https://an.....5.github.io/pacientes-zustand/</a>
+                  <a  href="https://calcula-propinas.netlify.app/" className="underline mx-1.5" target="blank">https://calcula-propinas.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/calculadora_propinas/" className="underline mx-1.5" target="blank">https://an.....5.github.io/calculadora_propinas/</a>
+
+                  <div className="flex w-[100%]"></div>
+                  <a  href="https://react-tienda-guitarras.netlify.app/" className="underline mx-1.5" target="blank">https://react-tienda-guitarras.netlify.app/</a>
+                  <a  href="https://an.....5.github.io/guitarla-ts/" className="underline mx-1.5" target="blank">https://an.....5.github.io/guitarla-ts/</a>
+
+                  <div className="flex w-[100%]"></div>
+                  <a  href="XXXXXXX" className="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> -
+                  <a  href="https://an.....5.github.io/bttf/" className="underline mx-1.5" target="blank">https://an.....5.github.io/bttf/</a>
                   <div className="flex w-[100%]"></div>
 
                   <div className="flex w-[100%]"></div>
-                  <a href="https://control-gastos-fos.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://control-gastos-fos.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/control-gastos-fos" className="underline mx-1.5" target="blank">https://an.....5.github.io/control-gastos-fos</a>
+                  <a  href="XXXXXXX" className="underline mx-1.5 text-red-600" target="blank">XXXXXXX</a> -
+                  <a  href="https://an.....5.github.io/pacientes-zustand/" className="underline mx-1.5" target="blank">https://an.....5.github.io/pacientes-zustand/</a>
                   <div className="flex w-[100%]"></div>
 
                   <div className="flex w-[100%]"></div>
-                  <a href="https://notas-fos.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://notas-fos.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/notas-fos/" className="underline mx-1.5" target="blank">https://an.....5.github.io/notas-fos/</a>
+                  <a  href="https://control-gastos-fos.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://control-gastos-fos.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/control-gastos-fos" className="underline mx-1.5" target="blank">https://an.....5.github.io/control-gastos-fos</a>
                   <div className="flex w-[100%]"></div>
 
                   <div className="flex w-[100%]"></div>
-                  <a href="https://aab-clima-react-typescript.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://aab-clima-react-typescript.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/clima-react-typescript" className="underline mx-1.5" target="blank">https://an.....5.github.io/clima-react-typescript</a>
+                  <a  href="https://notas-fos.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://notas-fos.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/notas-fos/" className="underline mx-1.5" target="blank">https://an.....5.github.io/notas-fos/</a>
                   <div className="flex w-[100%]"></div>
 
                   <div className="flex w-[100%]"></div>
-                  <a href="https://aab-cripto-react-typescript.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://aab-cripto-react-typescript.netlify.app/</a> -
-                  <a href="https://an.....5.github.io/cripto-react-typescript/" className="underline mx-1.5" target="blank">https://an.....5.github.io/cripto-react-typescript/</a>
+                  <a  href="https://aab-clima-react-typescript.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://aab-clima-react-typescript.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/clima-react-typescript" className="underline mx-1.5" target="blank">https://an.....5.github.io/clima-react-typescript</a>
+                  <div className="flex w-[100%]"></div>
+
+                  <div className="flex w-[100%]"></div>
+                  <a  href="https://aab-cripto-react-typescript.netlify.app/" className="underline mx-1.5 text-red-600" target="blank">https://aab-cripto-react-typescript.netlify.app/</a> -
+                  <a  href="https://an.....5.github.io/cripto-react-typescript/" className="underline mx-1.5" target="blank">https://an.....5.github.io/cripto-react-typescript/</a>
                   <div className="flex w-[100%]"></div>
 
                 </div>
@@ -2484,7 +2471,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="comandos-npm" className={`ml-2.5 ${openBlocks["comandos-npm"] ? "block" : "hidden"}`}>
+                <div id="comandos-npm" className={`ml-2.5 mr-2.5 ${openBlocks["comandos-npm"] ? "block" : "hidden"}`}>
                   <ul className="list-disc my-2.5 ml-4">
 
                     <li className="mb-3"><p><strong>MVSCode + Configuración y plugins + https://www.smashingmagazine.com/2021/06/custom-emmet-snippets-vscode/:</strong> Abra la configuración de VS Code (Código → Preferencias → Configuración) y busque “Ruta de extensiones de Emmet” Haga clic en “Agregar elemento”, ingrese la ruta a la carpeta donde guardó el archivo snippets.json que creó anteriormente y presione “Aceptar”</p></li>
@@ -2495,7 +2482,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                       <span className="destacado">npm -v</span>--&gt; 10.9.2
                     </li>
 
-                    <li className="mb-3"><p><strong>Solución a problema para instalar dependencias:</strong> Intentaba 'npm install' y no me dejaba. Solución en link --&gt; <a href="https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar" className="underline" target="blank">https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar</a></p></li>
+                    <li className="mb-3"><p><strong>Solución a problema para instalar dependencias:</strong> Intentaba 'npm install' y no me dejaba. Solución en link --&gt; <a  href="https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar" className="underline" target="blank">https://www.cdmon.com/es/blog/la-ejecucion-de-scripts-esta-deshabilitada-en-este-sistema-te-contamos-como-actuar</a></p></li>
 
                     <li className="mb-3"><p><strong>Para listar las dependencias npm instaladas:</strong> <span className="destacado">npm ls</span></p></li>
 
@@ -2503,13 +2490,13 @@ export default function AppContent({ onLogout }: AppContentProps) {
                       <ul className="ml-2.5 pl-2.5 border-l-2 border-l-stone-600">
                         <li><span>Vamos al directorio donde queremos crearlo</span></li>
                         <li><span><span className="destacado">npm create vite@latest</span> &gt; <strong>calorie-tracker</strong> &gt; <strong>react TypeScript + SWC</strong> &gt; <span className="destacado">npm install</span></span></li>
-                        <li><span>arrancamos el servidor de desarrollo <span className="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src&gt;assets, eliminamos src&gt;App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code className="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code>. Aquí lo podemos sustituir por el personalizado que creemos con <a href="https://realfavicongenerator.net/" className="underline" target="blank">https://realfavicongenerator.net/</a> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
+                        <li><span>arrancamos el servidor de desarrollo <span className="destacado">npm run dev</span> y hacemos limpieza: eliminamos carpeta src&gt;assets, eliminamos src&gt;App.css, borramos el contenido de index.css, en index.html cambiamos el title y eliminamos icono <code className="language-js">&lt;link rel=&quot;icon&quot; type=&quot;image/svg+xml&quot; href=&quot;/vite.svg&quot; /&gt;</code>. Aquí lo podemos sustituir por el personalizado que creemos con <a  href="https://realfavicongenerator.net/" className="underline" target="blank">https://realfavicongenerator.net/</a> (borramos también el icono vite.svg de la carpeta public) y limpiamos el compo ppal App.tsx.</span></li>
                       </ul>
                     </li>
 
                     <li className="mb-3"><strong>Para despliegue en un sitio estático (github pages y Netlify):</strong> - <a className="underline" href="https://es.vite.dev/guide/static-deploy" target="_blank">instalar cli y deploy en netlify</a>
                       <ul className="mt-1 ml-2.5 pl-6 border-l-2 border-l-stone-600 list-decimal">
-                        <li className="mb-2">Creamos los dos sitios en <strong>github</strong> - <a href="https://github.com/" className="underline" target="blank">https://github.com/</a> (añadir repositorio) y <strong>Netlify</strong> - <a href="https://app.netlify.com/" className="underline" target="blank">https://app.netlify.com/</a> (hacemos un build y llevamos a mano la carpeta dist)</li>
+                        <li className="mb-2">Creamos los dos sitios en <strong>github</strong> - <a  href="https://github.com/" className="underline" target="blank">https://github.com/</a> (añadir repositorio) y <strong>Netlify</strong> - <a  href="https://app.netlify.com/" className="underline" target="blank">https://app.netlify.com/</a> (hacemos un build y llevamos a mano la carpeta dist)</li>
                         <li className="mb-2">Creo repo local git, primera foto, primer commit: <span className="destacado">git init</span> + <span className="destacado">git add .</span> + <span className="destacado">git commit -m "primer commit"</span> + y con esta info que nos da Github en cuanto creamos el repositorio, establecemos el origen remoto + ¿nos situamos en la rama main? + ¿hacemos un push a esa rama?:
                           <ul className="list-disc my-3 ml-4">
                             <li className="my-1.25"><span className="destacado">git remote add origin https://github.com/andXXXX5/XXXXXXXXX.git</span></li>
@@ -2576,9 +2563,9 @@ export default function AppContent({ onLogout }: AppContentProps) {
                     </li>
 
                     <li className="mb-3">
-                      <span className="destacado">npm i react-router-dom</span> - <a href="https://www.npmjs.com/package/react-router-dom" className="underline" target="blank">https://www.npmjs.com/package/react-router-dom</a> - <a href="https://api.reactrouter.com/v7/functions/react_router.NavLink.html" className="underline" target="blank">React Router API Reference</a> - <a href="https://www.robinwieruch.de/react-router/" className="underline" target="blank">React Router 7 Tutorial</a> - <strong>React Router DOM:</strong> para poder navegar por diferentes páginas. Borramos App.tsx, creamos router.tsx, <strong>¡Ojo! si tenemos configurado una url base en nuestro vite.config.ts</strong> <br />
+                      <span className="destacado">npm i react-router-dom</span> - <a  href="https://www.npmjs.com/package/react-router-dom" className="underline" target="blank">https://www.npmjs.com/package/react-router-dom</a> - <a  href="https://api.reactrouter.com/v7/functions/react_router.NavLink.html" className="underline" target="blank">React Router API Reference</a> - <a  href="https://www.robinwieruch.de/react-router/" className="underline" target="blank">React Router 7 Tutorial</a> - <strong>React Router DOM:</strong> para poder navegar por diferentes páginas. Borramos App.tsx, creamos router.tsx, <strong>¡Ojo! si tenemos configurado una url base en nuestro vite.config.ts</strong> <br />
 
-                      <strong>¡Ojo! react app con react router dom desplegada en Netlify daba 404 al recargar navegador</strong> - <a href="https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router" className="underline" target="blank">Netlify renders 404 on page refresh (using React and react-router)</a> - <strong>Creamos fichero "netlify.toml":</strong>
+                      <strong>¡Ojo! react app con react router dom desplegada en Netlify daba 404 al recargar navegador</strong> - <a  href="https://stackoverflow.com/questions/58065603/netlify-renders-404-on-page-refresh-using-react-and-react-router" className="underline" target="blank">Netlify renders 404 on page refresh (using React and react-router)</a> - <strong>Creamos fichero "netlify.toml":</strong>
 
                       <pre><code className="language-js">
                         [[redirects]]
@@ -2591,7 +2578,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                     </li>
 
                     <li className="mb-3">
-                      <span className="destacado">npm install primereact</span> - <a href="https://primereact.org/" className="underline" target="blank">https://primereact.org/</a> - <strong>PrimeReact:</strong> es un conjunto de componentes de interfaz de usuario de React de código abierto que se utiliza para construir aplicaciones web de empresa.
+                      <span className="destacado">npm install primereact</span> - <a  href="https://primereact.org/" className="underline" target="blank">https://primereact.org/</a> - <strong>PrimeReact:</strong> es un conjunto de componentes de interfaz de usuario de React de código abierto que se utiliza para construir aplicaciones web de empresa.
                     </li>
 
                     <li className="mb-3"><span className="destacado">npm i react-hook-form</span> - <a className="underline" href="https://react-hook-form.com/" target="_blank">https://react-hook-form.com/</a> - <strong>React Hook Form:</strong> es una librería para para la parte de validación y procesamiento de nuestros formularios de manera bastante sencilla.</li>
@@ -2628,11 +2615,11 @@ export default function AppContent({ onLogout }: AppContentProps) {
                       </div>
                     </li>
 
-                    <li className="mb-3"><span className="destacado">npm i react-toastify</span> - <a href="https://www.npmjs.com/package/react-toastify" target="_blank" className="underline">https://www.npmjs.com/package/react-toastify</a> - <strong>React-Toastify:</strong> para notificaciones</li>
+                    <li className="mb-3"><span className="destacado">npm i react-toastify</span> - <a  href="https://www.npmjs.com/package/react-toastify" target="_blank" className="underline">https://www.npmjs.com/package/react-toastify</a> - <strong>React-Toastify:</strong> para notificaciones</li>
 
                     <li className="mb-3"><span className="destacado">npm install @heroicons/react</span> - <a className="underline" href="https://heroicons.com/" target="_blank">https://heroicons.com/</a> - Hero icons
                       <div className="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
-                        - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a>
+                        - The 24x24 outline icons can be imported from @heroicons/react/24/outline, the 24x24 solid icons can be imported from @heroicons/react/24/solid, the 20x20 solid icons can be imported from @heroicons/react/20/solid, and 16x16 solid icons can be imported from @heroicons/react/16/solid. - <a  href="https://unpkg.com/browse/@heroicons/react@2.2.0/24/outline/">Browse the full list of icon names on UNPKG →</a>
                         <pre><code className="language-js">
                           import &lbrace; BeakerIcon &rbrace; from '@heroicons/react/24/solid'
                           function MyComponent()  &lbrace;
@@ -2674,7 +2661,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
                     </li>
 
                     <li className="mb-3">
-                      <span className="destacado">npm i react-speakup</span> (proyecto notas-fos)- <a className="underline" href="https://www.npmjs.com/package/react-speakup" target="_blank">react-speakup</a> - <a href="https://github.com/Amin-Partovi/react-speakup#readme" className="underline" target="blank">github react-speakup</a>
+                      <span className="destacado">npm i react-speakup</span> (proyecto notas-fos)- <a className="underline" href="https://www.npmjs.com/package/react-speakup" target="_blank">react-speakup</a> - <a  href="https://github.com/Amin-Partovi/react-speakup#readme" className="underline" target="blank">github react-speakup</a>
 
                       <div className="ml-2.5 pl-2.5 mb-3.75 border-l-2 border-l-stone-600">
                         <p>Dentro del componente VoiceToText.tsx esta es la manera en que configuro las dos únicas props configurables (idioma y grabación continua):</p>
@@ -2687,11 +2674,11 @@ export default function AppContent({ onLogout }: AppContentProps) {
                       </div>
                     </li>
 
-                    <li className="mb-3"><span className="destacado">npm install @dnd-kit/core</span> (proyecto notas-fos)- <a href="https://dndkit.com/" className="underline" target="blank">https://dndkit.com/</a> - <strong>dnd kit:  A modular toolkit for building
+                    <li className="mb-3"><span className="destacado">npm install @dnd-kit/core</span> (proyecto notas-fos)- <a  href="https://dndkit.com/" className="underline" target="blank">https://dndkit.com/</a> - <strong>dnd kit:  A modular toolkit for building
                       drag & drop interfaces</strong></li>
 
                     <li className="mb-3">
-                      <span className="destacado">npm i prism-react-renderer</span> <strong>prism-react-renderer:</strong> - <a href="https://www.npmjs.com/package/prism-react-renderer#usage" className="underline" target="blank">https://www.npmjs.com/package/prism-react-renderer#usage</a>
+                      <span className="destacado">npm i prism-react-renderer</span> <strong>prism-react-renderer:</strong> - <a  href="https://www.npmjs.com/package/prism-react-renderer#usage" className="underline" target="blank">https://www.npmjs.com/package/prism-react-renderer#usage</a>
 
                       <pre className="mb-2"><code className="language-ts">
                         import &lbrace; Highlight, themes &rbrace; from "prism-react-renderer"
@@ -2804,33 +2791,33 @@ export default function AppContent({ onLogout }: AppContentProps) {
                   }`}
                 >▼</span>
                 </div>
-                <div id="accesibilidad-correo" className={`ml-2.5 ${openBlocks["accesibilidad-correo"] ? "block" : "hidden"}`}>
+                <div id="accesibilidad-correo" className={`ml-2.5 mr-2.5 ${openBlocks["accesibilidad-correo"] ? "block" : "hidden"}`}>
                   <div className="bg-blue-400 rounded-2xl p-2 mr-1.25 shadow border border-blue-700">
                     <legend>
                       <p className="mr-1.25">Accesibilidad Herramientas </p>
                     </legend>
 
-                    <a href="https://www.emailonacid.com/app/login/" className="underline block" target="_blank">emailonacid</a>
-                    <a href="https://www.accessible-email.org/" className="underline block" target="blank">https://www.accessible-email.org/</a>
-                    <a href="https://www.ssa.gov/accessibility/andi/help/install.html" target="_blank">ANDI (Accessible Name & Description Inspector Tool)</a> | <a className="txt-negro underline block" href="https://www.section508.gov/training/web-software/andi-training-videos/" target="blank">Vídeos instrucciones Andi</a><br />
+                    <a  href="https://www.emailonacid.com/app/login/" className="underline block" target="_blank">emailonacid</a>
+                    <a  href="https://www.accessible-email.org/" className="underline block" target="blank">https://www.accessible-email.org/</a>
+                    <a  href="https://www.ssa.gov/accessibility/andi/help/install.html" target="_blank">ANDI (Accessible Name & Description Inspector Tool)</a> | <a className="txt-negro underline block" href="https://www.section508.gov/training/web-software/andi-training-videos/" target="blank">Vídeos instrucciones Andi</a><br />
                     <strong><a className="underline block" href="https://a11y.email/blog/" target="_blank">https://a11y.email/blog/</a></strong>
                     <strong><a className="underline block" href="https://dequeuniversity.com/screenreaders/" target="blank">https://dequeuniversity.com/screenreaders/</a></strong>
-                    <strong><a href="https://www.w3.org/WAI/ARIA/apg/patterns/" className="underline block" target="blank">ARIA Authoring Practices Guide (How to build accessibility semantics into web patterns and widgets)</a></strong>
+                    <strong><a  href="https://www.w3.org/WAI/ARIA/apg/patterns/" className="underline block" target="blank">ARIA Authoring Practices Guide (How to build accessibility semantics into web patterns and widgets)</a></strong>
                     <br />
 
-                    <a href="https://www.siteimprove.com/toolkit/accessibility-checker/" className="underline block" target="blank">https://www.siteimprove.com/toolkit/accessibility-checker/</a>
-                    <a href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" className="underline block" target="blank">extensión chrome: axe DevTools - Web Accessibility Testing</a>
-                    <a href="https://webaim.org/resources/contrastchecker/" className="underline block" target="blank">https://webaim.org/resources/contrastchecker/</a>
-                    <a href="https://nvda.es/" className="underline block" target="blank">Lector https://nvda.es/</a>
-                    <a href="https://www.csun.edu/universal-design-center/web-accessibility-criteria-keyboard-accessibility" className="underline block" target="blank">https://www.csun.edu/universal-design-center/web-accessibility-criteria-keyboard-accessibility</a>
+                    <a  href="https://www.siteimprove.com/toolkit/accessibility-checker/" className="underline block" target="blank">https://www.siteimprove.com/toolkit/accessibility-checker/</a>
+                    <a  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" className="underline block" target="blank">extensión chrome: axe DevTools - Web Accessibility Testing</a>
+                    <a  href="https://webaim.org/resources/contrastchecker/" className="underline block" target="blank">https://webaim.org/resources/contrastchecker/</a>
+                    <a  href="https://nvda.es/" className="underline block" target="blank">Lector https://nvda.es/</a>
+                    <a  href="https://www.csun.edu/universal-design-center/web-accessibility-criteria-keyboard-accessibility" className="underline block" target="blank">https://www.csun.edu/universal-design-center/web-accessibility-criteria-keyboard-accessibility</a>
                   </div>
 
                   <div className="bg-blue-200 rounded-2xl p-2 mr-1.25 shadow border border-blue-500">
                     <legend className="font-bold text-blue-900">Accesibilidad Links</legend>
 
-                    <a href="https://blogs.oracle.com/authors/sarah-gallardo" className="underline block" target="blank">Blog de Sarah Gallardo</a>
-                    <a href="https://blogs.oracle.com/marketingcloud/post/can-nocode-emails-be-accessible" className="underline block" target="blank">(Sarah Gallardo) ¿Pueden ser accesibles los correos electrónicos sin código?</a>
-                    <a href="https://blogs.oracle.com/marketingcloud/post/signs-you-need-an-email-accessibility-audit" className="underline block" target="blank">(Sarah Gallardo) 6 señales de que necesitas una auditoría de accesibilidad de correo electrónico</a>
+                    <a  href="https://blogs.oracle.com/authors/sarah-gallardo" className="underline block" target="blank">Blog de Sarah Gallardo</a>
+                    <a  href="https://blogs.oracle.com/marketingcloud/post/can-nocode-emails-be-accessible" className="underline block" target="blank">(Sarah Gallardo) ¿Pueden ser accesibles los correos electrónicos sin código?</a>
+                    <a  href="https://blogs.oracle.com/marketingcloud/post/signs-you-need-an-email-accessibility-audit" className="underline block" target="blank">(Sarah Gallardo) 6 señales de que necesitas una auditoría de accesibilidad de correo electrónico</a>
 
                     <a className="underline block" href="https://www.litmus.com/blog/ultimate-guide-accessible-emails" target="_blank">Litmus 2025 Guide to Creating Accessible Emails</a>
                     <a className="underline block" href="https://www.emailonacid.com/blog/article/email-development/email-accessibilty-in-2017/" target="_blank">Emailonacid Accessibility in 2024 Complete Guide</a>
@@ -2840,64 +2827,64 @@ export default function AppContent({ onLogout }: AppContentProps) {
                     <a className="underline block" href="https://web.ua.es/es/accesibilidad/tecnologias-accesibles/lector-de-pantalla.html" target="_blank">Lectores de pantalla: Resumen, descripción y links</a>
                     <a className="txt-dec" href="https://www.deque.com/blog/text-links-practices-screen-readers/" target="_blank">comparacion aria-label y title en links</a> |  <a className="txt-dec" href="https://w3c.github.io/aria/#aria-label" target="_blank">aria-label W3C Editor's Draft</a> | <a className="txt-dec" href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8.html" target="_blank">Using aria-label for link purpose</a> | <a className="txt-dec" href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label" target="_blank">aria-label mdn web docs</a>
                     <br /><br />
-                    <a href="https://www.mailjet.com/es/blog/emailing/herramientas-pruebas-accesibilidad/" className="underline block" target="blank">https://www.mailjet.com/es/blog/emailing/herramientas-pruebas-accesibilidad/</a>
-                    <a href="https://images.response.oracle-mail.com/Web/OracleAmericaInc/%7B00f7db35-fc32-494a-830a-c84364b24a53%7D_ODX_Accessibility_InclusiveDesign_Checklist.pdf?elqTrackId=b0f36340dbdb4363b77d87d7852a65ca&elqaid=108716&elqat=2&elqak=8AF5884875C8EEA859A419C7C852622154F9C0468871A9AB0CED818F03E1A0454EB1" className="underline" target="blank">Accessibility & Inclusive Design Ideas to Explore</a>
+                    <a  href="https://www.mailjet.com/es/blog/emailing/herramientas-pruebas-accesibilidad/" className="underline block" target="blank">https://www.mailjet.com/es/blog/emailing/herramientas-pruebas-accesibilidad/</a>
+                    <a  href="https://images.response.oracle-mail.com/Web/OracleAmericaInc/%7B00f7db35-fc32-494a-830a-c84364b24a53%7D_ODX_Accessibility_InclusiveDesign_Checklist.pdf?elqTrackId=b0f36340dbdb4363b77d87d7852a65ca&elqaid=108716&elqat=2&elqak=8AF5884875C8EEA859A419C7C852622154F9C0468871A9AB0CED818F03E1A0454EB1" className="underline" target="blank">Accessibility & Inclusive Design Ideas to Explore</a>
                   </div>
                 </div>
 
                 {/* <!-- Links css y fuentes --> */}
                 <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("linksfo")}>
-                  <h3>Links (CSS, iconos,...)</h3>
+                  <h3 className="font-semibold">Links (CSS, iconos,...)</h3>
                    <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["linksfo"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
                 </div>
                 <div className="flex" >
-                  <div id="linksfo" className={`ml-2.5 ${openBlocks["linksfo"] ? "block" : "hidden"}`}>
+                  <div id="linksfo" className={`ml-2.5 mr-2.5 ${openBlocks["linksfo"] ? "block" : "hidden"}`}>
                     <div className="bg-amber-200 rounded-2xl p-2 mr-1.25 shadow border border-amber-500">
                       <legend className="font-bold text-amber-900">CSS</legend>
 
                       <strong>Patrones svg:</strong><br />
-                      <a href="https://www.fffuel.co/" className="underline block" target="blank">https://www.fffuel.co/</a>
-                      <a href="https://pattern.monster/collections" className="underline block" target="blank">https://pattern.monster/collections</a>
-                      <a href="https://www.svgeez.com/" className="underline block" target="blank">https://www.svgeez.com/</a>
-                      <a href="https://www.svgbackgrounds.com/" className="underline block" target="blank">https://www.svgbackgrounds.com/</a>
-                      <a href="https://heropatterns.com/" className="underline block" target="blank">Patrones SVG como fondos - https://heropatterns.com/</a>
-                      <a href="https://www.visiwig.com/patterns/" className="underline block" target="blank">https://www.visiwig.com/patterns/</a>
-                      <a href="https://svgdoodles.com/" className="underline block" target="blank">https://svgdoodles.com/</a>
-                      <a href="https://superdesigner.co/tools/svg-backgrounds" className="underline block" target="blank">https://superdesigner.co/tools/svg-backgrounds</a>
+                      <a  href="https://www.fffuel.co/" className="underline block" target="blank">https://www.fffuel.co/</a>
+                      <a  href="https://pattern.monster/collections" className="underline block" target="blank">https://pattern.monster/collections</a>
+                      <a  href="https://www.svgeez.com/" className="underline block" target="blank">https://www.svgeez.com/</a>
+                      <a  href="https://www.svgbackgrounds.com/" className="underline block" target="blank">https://www.svgbackgrounds.com/</a>
+                      <a  href="https://heropatterns.com/" className="underline block" target="blank">Patrones SVG como fondos - https://heropatterns.com/</a>
+                      <a  href="https://www.visiwig.com/patterns/" className="underline block" target="blank">https://www.visiwig.com/patterns/</a>
+                      <a  href="https://svgdoodles.com/" className="underline block" target="blank">https://svgdoodles.com/</a>
+                      <a  href="https://superdesigner.co/tools/svg-backgrounds" className="underline block" target="blank">https://superdesigner.co/tools/svg-backgrounds</a>
 
-                      <a href="https://uncss-online.com/" className="underline block" target="blank">https://uncss-online.com/</a>
-                      <a href="https://github.com/uncss/uncss" className="underline block" target="blank">https://github.com/uncss/uncss</a>
-                      <a href="https://frontendfoc.us/issues" className="underline block" target="blank">Frontend Focus Archives</a>
-                      <a href="./sombras-css.html" className="underline block" target="blank">Sombras CSS</a>
-                      <a href="https://cssgradient.io/" className="underline block" target="blank">https://cssgradient.io/</a>
-                      <a href="https://tobiasahlin.com/spinkit/" className="underline block" target="blank">Spinners de carga sin JS - https://tobiasahlin.com/spinkit/</a>
-                      <a href="https://developer.chrome.com/blog/carousels-with-css?hl=es-419" className="underline block" target="blank">Carruseles con CSS</a>
-                      <a href="https://tailwindcss.com/docs/installation/using-vite" className="underline block" target="blank">Get Started with Tailwinds</a>
-                      <a href="https://tailwindflex.com/" className="underline block" target="blank">Tailwind CSS Components Library</a>
-                      <a href="https://fontsensei.com/es" className="underline block" target="blank">https://fontsensei.com/es (selector de fuentes de google categorizado por tags)</a>
+                      <a  href="https://uncss-online.com/" className="underline block" target="blank">https://uncss-online.com/</a>
+                      <a  href="https://github.com/uncss/uncss" className="underline block" target="blank">https://github.com/uncss/uncss</a>
+                      <a  href="https://frontendfoc.us/issues" className="underline block" target="blank">Frontend Focus Archives</a>
+                      <a  href="./sombras-css.html" className="underline block" target="blank">Sombras CSS</a>
+                      <a  href="https://cssgradient.io/" className="underline block" target="blank">https://cssgradient.io/</a>
+                      <a  href="https://tobiasahlin.com/spinkit/" className="underline block" target="blank">Spinners de carga sin JS - https://tobiasahlin.com/spinkit/</a>
+                      <a  href="https://developer.chrome.com/blog/carousels-with-css?hl=es-419" className="underline block" target="blank">Carruseles con CSS</a>
+                      <a  href="https://tailwindcss.com/docs/installation/using-vite" className="underline block" target="blank">Get Started with Tailwinds</a>
+                      <a  href="https://tailwindflex.com/" className="underline block" target="blank">Tailwind CSS Components Library</a>
+                      <a  href="https://fontsensei.com/es" className="underline block" target="blank">https://fontsensei.com/es (selector de fuentes de google categorizado por tags)</a>
                     </div>
                     <div className="bg-blue-200 rounded-2xl p-2 mr-1.25 shadow border border-blue-500">
                       <legend className="font-bold text-amber-900">Iconos</legend>
 
-                      <a href="https://realfavicongenerator.net/" className="underline block" target="blank">Generar Favicons</a>
-                      <a href="https://heroicons.com/" className="underline block" target="blank">https://heroicons.com/</a>
-                      <a href="https://flowbite.com/icons/" className="underline block" target="blank">https://flowbite.com/icons/</a>
-                      <a href="https://icons.getbootstrap.com/" className="underline block" target="blank">https://icons.getbootstrap.com/</a>
-                      <a href="https://lineicons.com/free-icons" className="underline block" target="blank">https://lineicons.com/free-icons</a>
+                      <a  href="https://realfavicongenerator.net/" className="underline block" target="blank">Generar Favicons</a>
+                      <a  href="https://heroicons.com/" className="underline block" target="blank">https://heroicons.com/</a>
+                      <a  href="https://flowbite.com/icons/" className="underline block" target="blank">https://flowbite.com/icons/</a>
+                      <a  href="https://icons.getbootstrap.com/" className="underline block" target="blank">https://icons.getbootstrap.com/</a>
+                      <a  href="https://lineicons.com/free-icons" className="underline block" target="blank">https://lineicons.com/free-icons</a>
                     </div>
                   </div>
                 </div>
 
                 {/* <!-- Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages--> */}
                 <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("deploy-github-pages")}>
-                  <h3>Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>
+                  <h3 className="font-semibold">Automatizar despliegue de la app de ReactJS +Vite en GitHub Pages</h3>
                    <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["deploy-github-pages"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
                 </div>
-                <div id="deploy-github-pages" className={`ml-2.5 ${openBlocks["deploy-github-pages"] ? "block" : "hidden"}`}>
+                <div id="deploy-github-pages" className={`ml-2.5 mr-2.5 ${openBlocks["deploy-github-pages"] ? "block" : "hidden"}`}>
                   <p>GitHub Pages es un servicio de alojamiento de sitios web estáticos que permite a los usuarios publicar sitios web directamente desde un repositorio en GitHub. GitHub Pages permite tomar archivos HTML, CSS y JavaScript del repositorio y publicarlos como un sitio web en vivo en Internet.</p>
                   <ul className="ml-7 list-disc">
                     <li>Tener un repositorio creado: <strong>https://github.com/XXXXXXX55/XXXXXXXXXXXXXX/</strong></li>
@@ -2947,44 +2934,121 @@ export default function AppContent({ onLogout }: AppContentProps) {
 
               {/* <!-- DEPLOY AUTOMATIZADO EN NETLIFY-->  */}
               <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("deploy-netlify")}>
-                <h3>Deploy automatizado en Netlify conectado con cuenta de Github</h3>
+                <h3 className="font-semibold">Deploy automatizado en Netlify conectado con cuenta de Github</h3>
                  <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["deploy-netlify"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
               </div>
-              <div id="deploy-netlify" className={`ml-2.5 ${openBlocks["deploy-netlify"] ? "block" : "hidden"}`}>
+              <div id="deploy-netlify" className={`ml-2.5 mr-2.5 ${openBlocks["deploy-netlify"] ? "block" : "hidden"}`}>
                 <p><strong>Instalar CLI de Netlify (MEJOR el primero ver <a className="underline" href="https://www.npmjs.com/package/netlify-cli" target="_blank">link</a>):</strong> <span className="destacado">npm install --save-dev netlify-cli</span> <span className="destacado">npm install netlify-cli -g</span></p>
                 <img src="./src/assets/img/manual-automatizar deploy de proyecto vite react en netlify vinculado a github.png" alt="" />
               </div>
             </div>
           </div>
 
-          {/* <!-- <a href="D:/angular%2017%20(2024)/index.html" className="txt-primario" target="blank">angular 03/24</a> <br/> --> */}
-          <a href="https://doesitmutate.xyz/" className="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> /
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> /
-          <a href="https://developer.mozilla.org/es/docs/Web/API/Element" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a> /
-          <a href="https://gist.github.com/JamieMason/3748498" className="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br />
+          {/* <!-- <a  href="D:/angular%2017%20(2024)/index.html" className="txt-primario" target="blank">angular 03/24</a> <br/> --> */}
+          <a  href="https://doesitmutate.xyz/" className="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> /
+          <a  href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> /
+          <a  href="https://developer.mozilla.org/es/docs/Web/API/Element" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a> /
+          <a  href="https://gist.github.com/JamieMason/3748498" className="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br />
 
 
         </div>  
 
+        {/* <!-- Tailwind, Herramientas, Tutoriales React  --> */}
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("tailwind-herramientas")}>
+            <h3 className="font-semibold text-orange-300">Tailwind, Herramientas, Tutoriales React</h3>
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["tailwind-herramientas"] ? "rotate-180" : ""
+                }`}
+            >▼</span>
+          </div>
+          <div id="tailwind-herramientas" className={`ml-2.5 mr-2.5 ${openBlocks["tailwind-herramientas"] ? "block" : "hidden"}`}>
 
-         {/* COMPONENTE PARA CODIGO PRISM */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("componenteprism")}>
-            <h3>Componente para código prism (AppContent.tsx)</h3>		
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["componenteprism"] ? "rotate-180" : ""
+            {/* <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// --> */}
+            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+              <p className="flex items-center">
+                <span className="naranja">Tailwindcss</span>
+                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                </svg>
+              </p>
+              <div className="flex flex-wrap items-center">
+                <a className="underline mx-1.5" href="./Tailwindcss-cheatsheet.html" target="_blank"><strong>Tailwindcss-cheatsheet FO</strong></a> /
+                <a className="underline mx-1.5" href="https://tailwindcss.com/" target="_blank"><strong>Tailwindcss</strong></a> /
+                <a className="underline mx-1.5" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank"><strong>Installation y docs</strong></a> /
+                <a className="underline mx-1.5" href="https://certidevs.com/tutorial-tailwindcss-introduccion" target="_blank"><strong>Tutorial certidevs</strong></a> /
+                <a className="underline mx-1.5" href="https://heroicons.com/" target="_blank"><strong>https://heroicons.com/</strong></a> /
+              </div>
+            </div>
+
+            {/* <!-- / HERRAMIENTAS /////////////////////////////////////////////////////////////// --> */}
+            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+              <p className="flex items-center">
+                <span className="naranja">Herramientas</span>
+                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                </svg>
+              </p>
+              <div className="flex flex-wrap items-center">
+                <a  href="https://git-scm.com/" className="underline mx-1.5" target="blank">Git</a> /
+                <a  href="https://nodejs.org/es/" className="underline mx-1.5" target="blank">https://nodejs.org/es/</a> /
+                <a  href="https://react.dev/" className="underline mx-1.5" target="blank">https://react.dev/</a> /
+                <a  href="https://vite.dev/" className="underline mx-1.5" target="blank">https://vite.dev/</a> (https://es.vite.dev/guide/ --&gt; una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos)
+                <a  href="https://autoprefixer.github.io/" className="txt-negro">https://autoprefixer.github.io/</a> /
+                <a  href="https://llamacoder.together.ai/" className="txt-negro">https://llamacoder.together.ai/</a> /
+                <a  href="https://www.postman.com/downloads/" className="underline mx-1.5" target="blank">Postman</a> /
+
+                <div className="flex w-[100%]"></div>
+                <a  href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&pli=1" className="underline mx-1.5" target="_blank">Ext Chrome React developer tools</a> /
+                <a  href="https://chromewebstore.google.com/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc" className="underline mx-1.5" target="_blank">Ext Chrome JSON viewer Pro</a> /
+                <a  href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" className="underline mx-1.5" target="blank">Iconos VS Code</a>
+              </div>
+            </div>
+
+            {/* <!-- / TUTORIALES REACT /////////////////////////////////////////////////////////////// --> */}
+            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
+              <p className="flex items-center">
+                <span className="naranja">Tutoriales React y Typescript</span>
+                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+                </svg>
+              </p>
+              <div className="flex flex-wrap items-center">
+                <a  href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" className="underline mx-1.5" target="blank">Explicación por qué map genera coma y solventarlo</a> /
+                <a  href="https:https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" className="underline mx-1.5" target="blank">Primeros pasos con React Router DOM</a> /
+                <a  href="https://medium.com/@rishikeshsolapure0720/building-a-reusable-accordion-component-in-react-using-typescript-3a474a468f20" className="underline mx-1.5" target="blank">Building a Reusable Accordion Component in React using Typescript</a> /
+                <a  href="https://medium.com/@rishikeshsolapure0720" className="underline mx-1.5" target="blank">El del acordeon (y 3 artículos más interesantes)</a>
+                <a  href="https://medium.com/@diego.coder" className="underline mx-1.5" target="blank">Artículos Diego Esteban</a>
+                <a  href="http://dhiwise.com/post/understanding-react-prism-building-blocks-of-modern-web" className="underline mx-1.5" target="blank">Comprender React Prism</a>
+                <a  href="https://prince.dev/blog/highlight-with-react/" className="underline mx-1.5" target="blank">Add line highlighting to prism-react-renderer</a>
+                <a  href="" className="underline mx-1.5" target="blank">xxxxxx</a>
+                <a  href="" className="underline mx-1.5" target="blank">xxxxxx</a>
+
+                <div className="flex w-[100%]"></div>
+
+                <a  href="https://blog.logrocket.com/responsive-image-gallery-css-flexbox/" className="underline mx-1.5">Responsive Image Gallery with flexbox</a> /
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+         {/* COMPONENTE Y SNIPPETS PARA CODIGO PRISM */}
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("componenteprism")}>
+            <h3 className="font-semibold text-orange-300">Componente y snippets para código prism (AppContent.tsx)</h3>		
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["componenteprism"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>        
-          <div id="componenteprism" className={`ml-2.5 ${openBlocks["componenteprism"] ? "block" : "hidden"}`}>
+          <div id="componenteprism" className={`ml-2.5 mr-2.5 ${openBlocks["componenteprism"] ? "block" : "hidden"}`}>
             
             <CodeBlock
               lang="js"
               code={`<CodeBlock
   lang="js"
   code={\`\`}
-  data-line="2"
 />`}
             />
      
@@ -3106,96 +3170,17 @@ const y = 2;`}
               data-line="2"
             />
           </div>
-        </div>
-
-        {/* <!-- Tailwind, Herramientas, Tutoriales React  --> */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("tailwind-herramientas")}>
-            <h3>Tailwind, Herramientas, Tutoriales React</h3>
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["tailwind-herramientas"] ? "rotate-180" : ""
-                }`}
-            >▼</span>
-          </div>
-          <div id="tailwind-herramientas" className={`ml-2.5 ${openBlocks["tailwind-herramientas"] ? "block" : "hidden"}`}>
-
-            {/* <!-- / TAILWINDCSS /////////////////////////////////////////////////////////////// --> */}
-            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-              <p className="flex items-center">
-                <span className="naranja">Tailwindcss</span>
-                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>
-              </p>
-              <div className="flex flex-wrap items-center">
-                <a className="underline mx-1.5" href="./Tailwindcss-cheatsheet.html" target="_blank"><strong>Tailwindcss-cheatsheet FO</strong></a> /
-                <a className="underline mx-1.5" href="https://tailwindcss.com/" target="_blank"><strong>Tailwindcss</strong></a> /
-                <a className="underline mx-1.5" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank"><strong>Installation y docs</strong></a> /
-                <a className="underline mx-1.5" href="https://certidevs.com/tutorial-tailwindcss-introduccion" target="_blank"><strong>Tutorial certidevs</strong></a> /
-                <a className="underline mx-1.5" href="https://heroicons.com/" target="_blank"><strong>https://heroicons.com/</strong></a> /
-              </div>
-            </div>
-
-            {/* <!-- / HERRAMIENTAS /////////////////////////////////////////////////////////////// --> */}
-            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-              <p className="flex items-center">
-                <span className="naranja">Herramientas</span>
-                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>
-              </p>
-              <div className="flex flex-wrap items-center">
-                <a href="https://git-scm.com/" className="underline mx-1.5" target="blank">Git</a> /
-                <a href="https://nodejs.org/es/" className="underline mx-1.5" target="blank">https://nodejs.org/es/</a> /
-                <a href="https://react.dev/" className="underline mx-1.5" target="blank">https://react.dev/</a> /
-                <a href="https://vite.dev/" className="underline mx-1.5" target="blank">https://vite.dev/</a> (https://es.vite.dev/guide/ --&gt; una herramienta de compilación que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos)
-                <a href="https://autoprefixer.github.io/" className="txt-negro">https://autoprefixer.github.io/</a> /
-                <a href="https://llamacoder.together.ai/" className="txt-negro">https://llamacoder.together.ai/</a> /
-                <a href="https://www.postman.com/downloads/" className="underline mx-1.5" target="blank">Postman</a> /
-
-                <div className="flex w-[100%]"></div>
-                <a href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es&pli=1" className="underline mx-1.5" target="_blank">Ext Chrome React developer tools</a> /
-                <a href="https://chromewebstore.google.com/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc" className="underline mx-1.5" target="_blank">Ext Chrome JSON viewer Pro</a> /
-                <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" className="underline mx-1.5" target="blank">Iconos VS Code</a>
-              </div>
-            </div>
-
-            {/* <!-- / TUTORIALES REACT /////////////////////////////////////////////////////////////// --> */}
-            <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
-              <p className="flex items-center">
-                <span className="naranja">Tutoriales React y Typescript</span>
-                <svg className="size-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
-                </svg>
-              </p>
-              <div className="flex flex-wrap items-center">
-                <a href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" className="underline mx-1.5" target="blank">Explicación por qué map genera coma y solventarlo</a> /
-                <a href="https:https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" className="underline mx-1.5" target="blank">Primeros pasos con React Router DOM</a> /
-                <a href="https://medium.com/@rishikeshsolapure0720/building-a-reusable-accordion-component-in-react-using-typescript-3a474a468f20" className="underline mx-1.5" target="blank">Building a Reusable Accordion Component in React using Typescript</a> /
-                <a href="https://medium.com/@rishikeshsolapure0720" className="underline mx-1.5" target="blank">El del acordeon (y 3 artículos más interesantes)</a>
-                <a href="https://medium.com/@diego.coder" className="underline mx-1.5" target="blank">Artículos Diego Esteban</a>
-                <a href="http://dhiwise.com/post/understanding-react-prism-building-blocks-of-modern-web" className="underline mx-1.5" target="blank">Comprender React Prism</a>
-                <a href="https://prince.dev/blog/highlight-with-react/" className="underline mx-1.5" target="blank">Add line highlighting to prism-react-renderer</a>
-                <a href="" className="underline mx-1.5" target="blank">xxxxxx</a>
-                <a href="" className="underline mx-1.5" target="blank">xxxxxx</a>
-
-                <div className="flex w-[100%]"></div>
-
-                <a href="https://blog.logrocket.com/responsive-image-gallery-css-flexbox/" className="underline mx-1.5">Responsive Image Gallery with flexbox</a> /
-              </div>
-            </div>
-
-          </div>
-        </div>
+        </div>       
     
         {/* <!-- SNIPPETS  --> */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("snipets1")}>	
-            <h3>Custom snippets, bloques de código para manuales html</h3>				
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["snipets1"] ? "rotate-180" : ""
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("snipets1")}>	
+            <h3 className="font-semibold text-orange-300">Custom snippets, bloques de código para manuales html</h3>				
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["snipets1"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>        
-          <div id="snipets1" className={`ml-2.5 ${openBlocks["snipets1"] ? "block" : "hidden"}`}>        
+          <div id="snipets1" className={`ml-2.5 mr-2.5 ${openBlocks["snipets1"] ? "block" : "hidden"}`}>        
             <div className="flex max-sm:flex-col">
               <div className="w-[33%] max-sm:w-[100%]">
                 <p className="font-bold"><span className="destacado">pcj2</span> Bloque (50+50) --&gt; 100</p>
@@ -3308,40 +3293,63 @@ const y = 2;`}
             <p>archivo&gt;preferencias&gt;configuración de los servicios en línea&gt;escribir Emmet&gt;Extensions Path&gt;ruta de la carpeta donde está el archivo que hemos creado "snippets.json"</p>
 
             <p className="font-bold">Fichero personalizado snippets.json FO (13/02/25)</p>
-            <pre><code className="language-js">
-              //snippets.json (en el raiz, Curso React)
-              &rbracet;
-                &quot;variables&quot;: &rbracet; &quot;lang&quot;: &quot;es&quot; &rbracet;,
-                &quot;html&quot;: &rbracet;
-                  &quot;snippets&quot;: &rbracet;
-                    &quot;pch&quot;: &quot;pre[data-line=0]&gt;code[className=language-html]&quot;, &quot;ch&quot;: &quot;code[className=language-html]&quot;,
-                    &quot;pcj&quot;: &quot;pre[data-line=0]&gt;code[className=language-js]&quot;, &quot;cj&quot;: &quot;code[className=language-js]&quot;,
-                    &quot;pct&quot;: &quot;pre[data-line=0]&gt;code[className=language-ts]&quot;, &quot;ct&quot;: &quot;code[className=language-ts]&quot;,
-                    &quot;pcc&quot;: &quot;pre[data-line=0]&gt;code[className=language-css]&quot;, &quot;cc&quot;: &quot;code[className=language-css]&quot;,
-                    &quot;sh&quot;: &quot;script[type=text/plain][className=language-html]&quot;,
-                    &quot;sj&quot;: &quot;script[type=text/plain][className=language-js]&quot;,
-                    &quot;spr&quot;: &quot;span[className=rojo]&quot;,
-                    &quot;spdest&quot;: &quot;span[className=destacado]&quot;,
-                    &quot;spf&quot;: &quot;span[className=file]&quot;,
-                    &quot;spt&quot;: &quot;span[className=&#39;bg-[#4ec9b0] text-white&#39;]&quot;,
-                    &quot;spint&quot;: &quot;span[className=&#39;bg-amber-950 text-amber-300&#39;]&quot;,
-                    &quot;psn&quot;: &quot;p[className=&#39;mt-3.75 mb-0&#39;]&gt;span[className=naranja]&quot;,
-                    &quot;pcj2&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[50%] max-sm:w-[100%]&#39;]*2&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-js&#39;]&quot;,
-                    &quot;pcj3&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[33%] max-sm:w-[100%]&#39;]*3&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-js&#39;]&quot;,
-                    &quot;pcj4&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[25%] max-sm:w-[100%]&#39;]*4&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-js&#39;]&quot;,
-                    &quot;pct2&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[50%] max-sm:w-[100%]&#39;]*2&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-ts&#39;]&quot;,
-                    &quot;pct3&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[33%] max-sm:w-[100%]&#39;]*3&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-ts&#39;]&quot;,
-                    &quot;pct4&quot;: &quot;div[className=&#39;flex max-sm:flex-col&#39;]&gt;div[className=&#39;w-[25%] max-sm:w-[100%]&#39;]*4&gt;pre[data-line=&#39;0&#39;]&gt;code[className=&#39;language-ts&#39;]&quot;,
-                    &quot;divexp&quot;: &quot;div[className=&#39;mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg&#39;]&gt;a[className=&#39;block underline ml-1.5 mb-1.5&#39;][href=&#39;XXXXX&#39;][target=&#39;blank&#39;]&lbracet;$&lbracet;0:XXXXXXX&rbracet;&rbracet;+div[className=&#39;flex&#39;]&gt;svg[className=&#39;size-6 shrink-0&#39;][xmlns=&#39;http://www.w3.org/2000/svg&#39;][fill=&#39;none&#39;][viewBox=&#39;0 0 24 24&#39;][strokeWidth=&#39;1.5&#39;][stroke=&#39;currentColor&#39;]&gt;path[strokeLinecap=&#39;round&#39;][strokeLinejoin=&#39;round&#39;][d=&#39;M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3&#39;]^span[className=&#39;bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]&#39;]&lbracet;$&lbracet;0:XXXXXXX&rbracet;&rbracet;&quot;,
-                    &quot;divlink&quot;: &quot;div[className=&#39;mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg&#39;]&gt;p[className=&#39;flex items-center&#39;]&gt;span[className=&#39;naranja&#39;]&lbracet;$&lbracet;0:XXXXXXX&rbracet;&rbracet;+svg[className=&#39;size-6 shrink-0&#39;][xmlns=&#39;http://www.w3.org/2000/svg&#39;][fill=&#39;none&#39;][viewBox=&#39;0 0 24 24&#39;][strokeWidth=&#39;1.5&#39;][stroke=&#39;currentColor&#39;]&gt;path[strokeLinecap=&#39;round&#39;][strokeLinejoin=&#39;round&#39;][d=&#39;M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3&#39;]^^div[className=&#39;flex flex-wrap items-center&#39;]&gt;a[className=&#39;underline mx-1.5&#39;][href=&#39;XXXXXXX&#39;][target=&#39;blank&#39;]&lbracet;$&lbracet;0:XXXXXXX&rbracet;&rbracet;+div[className=&#39;flex w-[100%]&#39;]+a[className=&#39;underline mx-1.5&#39;][href=&#39;XXXXXXX&#39;][target=&#39;blank&#39;]&lbracet;$&lbracet;0:XXXXXXX /&rbracet;&rbracet;&quot;,
-                    &quot;flechad&quot;: &quot;svg[className=&#39;size-6 shrink-0 inline&#39;][xmlns=&#39;http://www.w3.org/2000/svg&#39;][fill=&#39;none&#39;][viewBox=&#39;0 0 24 24&#39;][strokeWidth=&#39;1.5&#39;][stroke=&#39;currentColor&#39;]&gt;path[strokeLinecap=&#39;round&#39;][strokeLinejoin=&#39;round&#39;][d=&#39;M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3&#39;]&quot;,
-                    &quot;imgm&quot;: &quot;img[src=./src/assets/img/][alt=img][loading=lazy]&quot;,
-                    &quot;list1&quot;: &quot;ul[className=&#39;list-disc my-3&#39;]&gt;li[className=&#39;my-1.25&#39;]*3&quot;,
-                    &quot;linkfo&quot;: &quot;a[className=&#39;underline&#39;][href=&#39;XXXXXXX&#39;][target=&#39;blank&#39;]&lbracet;$&lbracet;0:XXXXXXX&rbracet;&rbracet;&quot;
-                  &rbracet;
-                &rbracet;
-              &rbracet;
-            </code></pre>
+            <CodeBlock
+              lang="js"
+              code={`{   
+    "variables": { "lang": "es" }, 
+    "html": {    
+        "snippets": {       
+            "prismjs": "CodeBlock[lang={\`js\`}][code={\`<CodeBlock\n  lang=\"js\"\n  code={\\\`\\\`}\n/>\`}]",
+            "cpj": "CodePrism[code={\`\`}][language={\`js\`}]",
+            "pch": "pre[data-line=0]>code[class=language-html]", "ch": "code[class=language-html]",
+            "pcj": "pre[data-line=0]>code[class=language-js]", "cj": "code[class=language-js]",
+            "pct": "pre[data-line=0]>code[class=language-ts]", "ct": "code[class=language-ts]",
+            "pcc": "pre[data-line=0]>code[class=language-css]", "cc": "code[class=language-css]",
+            "sh": "script[type=text/plain][class=language-html]",
+            "sj": "script[type=text/plain][class=language-js]",
+            "spr": "span[class=rojo]",
+            "spdest": "span[class=destacado]",
+            "spf": "span[class=file]",
+            "spt": "span[class='bg-[#4ec9b0] text-white']",
+            "spint": "span[class='bg-amber-950 text-amber-300']",
+            "psn": "p[class='esp-15-top esp-0-bottom']>span[class=naranja]",
+            "pcj2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre[data-line='0']>code[class='language-js']",
+            "pcj3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre[data-line='0']>code[class='language-js']",
+            "pcj4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre[data-line='0']>code[class='language-js']",
+            "pct2": "div[class='flex max-sm:flex-col']>div[class='w-[50%] max-sm:w-[100%]']*2>pre[data-line='0']>code[class='language-ts']",
+            "pct3": "div[class='flex max-sm:flex-col']>div[class='w-[33%] max-sm:w-[100%]']*3>pre[data-line='0']>code[class='language-ts']",
+            "pct4": "div[class='flex max-sm:flex-col']>div[class='w-[25%] max-sm:w-[100%]']*4>pre[data-line='0']>code[class='language-ts']",
+            "divexp": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>a[class='block underline ml-1.5 mb-1.5'][href='XXXXX'][target='blank']{\${0:XXXXXXX}}+div[class='flex']>svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^span[class='bg-neutral-200 px-1.5 py-0.5 italic leading-[24px]']{\${0:XXXXXXX}}",
+            "divlink": "div[class='mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg']>p[class='flex items-center']>span[class='naranja']{\${0:XXXXXXX}}+svg[class='size-6 shrink-0'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']^^div[class='flex flex-wrap items-center']>a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{\${0:XXXXXXX}}+div[class='flex w-[100%]']+a[class='underline mx-1.5'][href='XXXXXXX'][target='blank']{\${0:XXXXXXX /}}",
+            "flechad": "svg[class='size-6 shrink-0 inline'][xmlns='http://www.w3.org/2000/svg'][fill='none'][viewBox='0 0 24 24'][stroke-width='1.5'][stroke='currentColor']>path[stroke-linecap='round'][stroke-linejoin='round'][d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3']",
+            "imgm": "img[src=./src/assets/img/][alt=img][loading=lazy]",
+            "list1": "ul[class='list-disc my-2.5']>li*2",
+            "linkfo": "a[class='underline'][href='XXXXXXX'][target='blank']{\${0:XXXXXXX}}"  
+        }
+    }
+}`}
+            />
+
+            <p className="font-bold">Fichero personalizado react.code-snippets FO (11/04/26)</p>
+           <CodeBlock
+             lang="js"
+             code={`{
+"CodeBlock Prism": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "prismjs",
+    "body": [
+      "<CodeBlock",
+      "  lang=\"js\"",
+      "  code={\`<CodeBlock",
+      "  lang=\\\"js\\\"",
+      "  code={\\\`\$0\\\`}",
+      "/>\`}",
+      "/>"
+    ],
+    "description": "Snippet CodeBlock Prism"
+  }
+}`}
+           />
 
             <p>Para ver nº líneas <strong>className="line-numbers"</strong> y marcar una o varias líneas <strong>data-line="1,5-11"</strong></p>
             <pre><code className="language-html">
@@ -3349,143 +3357,31 @@ const y = 2;`}
             </code></pre>
             
             <p className="font-bold">Bloque sección:</p>
-            &lt;script type=&quot;text/plain&quot; className=&quot;language-js&quot;&gt;
-              {/* &lt;!-- SECCION XX --&gt; */}
-              &lt;div className=&quot;w-[80%] max-sm:w-[96%] mx-auto bg-gray-200 my-1.25 py-0.75 pr-0 pl-2.5 rounded-xl&quot;&gt;
-                
-                &lt;div className=&quot;flex items-center mt-1.25 cursor-pointer desplegable justify-between&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;
-                  &lt;h2&gt;Sección XXX: XXXXXXXXXXXX&lt;/h2&gt;
-                  &lt;span className=&quot;cambiaicono ico_chevron_up mr-2.5&quot; title=&quot;&quot;&gt;&lt;/span&gt;
-                &lt;/div&gt;
-        
-                &lt;div id=&quot;seccionXX&quot;&gt;
-                  
-                    &lbracet;/* &lt;!-- Bloque desplegable interior--&gt; */&rbracet;
-                    &lt;div className=&quot;flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;
-                      &lt;h3&gt;XXXXXXXXXXXXXXX&lt;/h3&gt;
-                      &lt;span className=&quot;cambiaicono ico_chevron_down_blanco ico20 mr-1.25&quot; title=&quot;&quot;&gt;&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div id=&quot;seccionXX-XX&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;
-                      
-                      
-                    &lt;/div&gt;
-                    
-                &lt;/div&gt;
-                {/* &lt;!-- Fin div colapsable--&gt; */}
-                          
-              &lt;/div&gt;
-              {/* &lt;!-- FIN SECCION XX --&gt; */}
-            &lt;/script&gt; 
+            
 
             <p className="font-bold">Bloque FINALES:</p>
-            &lt;script type=&quot;text/plain&quot; className=&quot;language-js&quot;&gt;
-              &lbracet;/* &lt;!-- Bloque desplegable interior--&gt; */&rbracet;
-              &lt;div className=&quot;flex items-center mt-1.25 cursor-pointer desplegable-interior justify-between oscuro&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;
-              &lt;h3&gt;FICHEROS FINALES&lt;/h3&gt;
-              &lt;span className=&quot;cambiaicono ico_chevron_down_blanco ico20 mr-1.25&quot; title=&quot;&quot;&gt;&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;div id=&quot;seccionXX-ficheros&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;                                
-              &lt;div className=&quot;flex max-sm:flex-col&quot;&gt;
-                &lt;div className=&quot;w-[25%] max-sm:w-[100%]&quot;&gt;
-                  &lt;span className=&quot;destacado&quot;&gt;types/index.ts, App.tsx, index.css, main.tsx, store.ts&lt;/span&gt;&lt;br/&gt;
 
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;types/index.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-types&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //types/index.ts                                   
-                                      
-                  &lt;/code&gt;&lt;/pre&gt;
-
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;App.tsx&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-app&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;                  
-                    //App.tsx
-
-                  &lt;/code&gt;&lt;/pre&gt;
-        
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;index.css&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-indexcss&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-css&quot;&gt;
-                    //index.css
-                    
-                  &lt;/code&gt;&lt;/pre&gt;
-        
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;main.tsx&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-maintsx&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-js&quot;&gt;
-                    //main.tsx
-                        
-                  &lt;/code&gt;&lt;/pre&gt; 
-
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;store.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-store&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //store.ts
-                      
-                    &lt;/code&gt;&lt;/pre&gt;
-                &lt;/div&gt;
-  
-                &lt;div className=&quot;w-[25%] max-sm:w-[100%]&quot;&gt;
-                  &lt;span className=&quot;destacado&quot;&gt;data, helpers, hooks, reducer, services&lt;/span&gt;&lt;br/&gt;
-  
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;data/XXXXX.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-data&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //data/XXXXX.ts
-                      
-                  &lt;/code&gt;&lt;/pre&gt;
-  
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;helpers/index.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-helpers&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //helpers/index.ts
-                    
-                  &lt;/code&gt;&lt;/pre&gt;   
-        
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;hooks/XXXXX.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-customhook&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //hooks/XXXXX.ts
-                    
-                  &lt;/code&gt;&lt;/pre&gt;
-        
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;reducer/XXXXX-reducer.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-XXXXX-reducer&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //reducer/XXXXX-reducer.ts
-                    
-                  &lt;/code&gt;&lt;/pre&gt;      
-                  
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;services/XXXXX.ts&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-services&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    //services/XXXXX.ts
-
-                  &lt;/code&gt;&lt;/pre&gt;
-                &lt;/div&gt;
-                
-                &lt;div className=&quot;w-[50%] max-sm:w-[100%]&quot;&gt;
-                  &lt;span className=&quot;destacado&quot;&gt;Componentes&lt;/span&gt;&lt;br/&gt;
-                  &lt;code className=&quot;cursor-pointer&quot; onClick=&lbracet;() =&gt; toggleBlock(&quot;&quot;)&rbracet;&gt;XXXXXXXXXX.tsx&lt;/code&gt;
-                  &lt;pre data-line=&quot;0&quot; id=&quot;XX-XXXXXXXXXX&quot; className=&lbracet;`ml-2.5 $&lbracet;openBlocks[&quot;XXXXXXXXX&quot;] ? &quot;block&quot; : &quot;hidden&quot;&rbracet;`&rbracet;&gt;&lt;code className=&quot;language-ts&quot;&gt;
-                    // XXXXXXXXXX.tsx  
-                    
-                  &lt;/code&gt;&lt;/pre&gt;
-                &lt;/div&gt;
-              &lt;/div&gt;
-  
-            &lt;/div&gt;
-            &lt;/script&gt;             
+            
           </div> 
         </div>      
 
         {/* <!--  EXPLICACIONES  --> */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
           <div className="flex justify-between items-center cursor-pointer desplegable" onClick={() => toggleBlock("explicaciones")}>	
-            <h3>Explicaciones</h3>				
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["explicaciones"] ? "rotate-180" : ""
+            <h3 className="font-semibold text-orange-300">Explicaciones</h3>				
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["explicaciones"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>        
-          <div id="explicaciones" className={`ml-2.5 ${openBlocks["explicaciones"] ? "block" : "hidden"}`}>
+          <div id="explicaciones" className={`ml-2.5 mr-2.5 ${openBlocks["explicaciones"] ? "block" : "hidden"}`}>
             {/* <!-- FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO --> */}
             <div className="flex justify-between items-center cursor-pointer desplegable-interior oscuro" onClick={() => toggleBlock("snp-fcn-nueva")}>	
-              <h3>FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO</h3>			
-               <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["snp-fcn-nueva"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">FLUJO FCN NUEVA EN HOOK --&gt; PROP --&gt; MODIFICAR EL COMPO</h3>			
+               <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["snp-fcn-nueva"] ? "rotate-180" : ""
                   }`}
               >▼</span>
             </div>
-            <div id="snp-fcn-nueva" className={`ml-2.5 ${openBlocks["snp-fcn-nueva"] ? "block" : "hidden"}`}>
+            <div id="snp-fcn-nueva" className={`ml-2.5 mr-2.5 ${openBlocks["snp-fcn-nueva"] ? "block" : "hidden"}`}>
               <pre className="language-ts">
                 <code className="language-ts">
                   {`//useOrder.ts 
@@ -3537,12 +3433,12 @@ const y = 2;`}
 
             {/* Explicación de useMemo() y reduce() usando el 122  */}
             <div className="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onClick={() => toggleBlock("seccion9-122")}>
-              <h3>Explicación de useMemo() y reduce() usando el 122</h3>
-               <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["seccion9-122"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">Explicación de useMemo() y reduce() usando el 122</h3>
+               <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["seccion9-122"] ? "rotate-180" : ""
                   }`}
                 >▼</span>
             </div>
-            <div id="seccion9-122" className={`ml-2.5 ${openBlocks["seccion9-122"] ? "block" : "hidden"}`}>
+            <div id="seccion9-122" className={`ml-2.5 mr-2.5 ${openBlocks["seccion9-122"] ? "block" : "hidden"}`}>
               <p><strong>Calculemos el subtotal a pagar en base al precio de los artículos y sus cantidades.</strong> Si
                 agregamos varios elementos, vemos que el subtotal tiene que ser el resultado de sumar cada precio por la
                 cantidad. Eso antes era más complejo hacerlo pero <strong>gracias a las "nuevos"(2015) array methods como
@@ -3590,13 +3486,13 @@ export default function OrderTotals({order}: OrderTotalsProps) {
 
             {/* Explicación map() y join() para img gallery y evitar las "," que salían */}
             <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("map-join")}>	
-              <h3>Explicación map() y join() para img gallery y evitar las "," que salían</h3>			
-              <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["map-join"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">Explicación map() y join() para img gallery y evitar las "," que salían</h3>			
+              <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["map-join"] ? "rotate-180" : ""
                 }`}
               >▼</span>
             </div>
-            <div id="map-join" className={`ml-2.5 ${openBlocks["map-join"] ? "block" : "hidden"}`}>
-              <p>Dada una variable con string de fotos yo intentaba mapearla de esta manera para mostrar una galería dinámicamente, pero me salían "," separando cada elemento ¿por qué? --&gt; <a href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" className="txt-rojo" target="blank">Explicación por qué map genera coma y solventarlo</a>:</p>
+            <div id="map-join" className={`ml-2.5 mr-2.5 ${openBlocks["map-join"] ? "block" : "hidden"}`}>
+              <p>Dada una variable con string de fotos yo intentaba mapearla de esta manera para mostrar una galería dinámicamente, pero me salían "," separando cada elemento ¿por qué? --&gt; <a  href="https://webdeveloper.com/community/398346-extra-comma-output-from-map/" className="txt-rojo" target="blank">Explicación por qué map genera coma y solventarlo</a>:</p>
               
               <CodeBlock
                 lang="js"
@@ -3657,12 +3553,12 @@ export const useModalPanel = () =&gt; {
 
             {/* Explicación del Hook useEffect() en el punto 82. Carrito persistente con LocalStorage - Almacenando */}
             <div className="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onClick={() => toggleBlock("seccion6-82")}>	
-              <h3>Explicación del Hook useEffect() en el punto 82. Carrito persistente con LocalStorage - Almacenando</h3>			
-              <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["seccion9-82"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">Explicación del Hook useEffect() en el punto 82. Carrito persistente con LocalStorage - Almacenando</h3>			
+              <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["seccion9-82"] ? "rotate-180" : ""
                 }`}
               >▼</span>
             </div>
-            <div id="seccion6-82" className={`ml-2.5 ${openBlocks["seccion6-82"] ? "block" : "hidden"}`}>
+            <div id="seccion6-82" className={`ml-2.5 mr-2.5 ${openBlocks["seccion6-82"] ? "block" : "hidden"}`}>
               <p>el versátil Hook useEffect (similar al watch en vue.js) vimos en el punto 82 (almacenar carrito en localStorage), que además de ser útil cuando el componente está listo, es muy útil para manejar los "efectos secundarios" de un cambio en nuestro state (cuando cambie mi state ejecutar cierto código).</p>
               <p className="naranja">Carrito persistente con LocalStorage - Almacenando</p>
               <p>Tener un carrito persistente es un buen truco para mantener los mismos elementos en el carrito aunque recarguemos navegador. ¿Cómo hacemos para tener sincronizado nuestro carrito de compras <code className="language-js">const [cart, setCart] = useState([])</code> con localStorage</p>
@@ -3727,12 +3623,12 @@ export const useModalPanel = () =&gt; {
             
             {/* Explicación uso de localStorage para hacer persistente la app (159. Almacenando las actividades en LocalStorage) */}
             <div className="flex justify-between items-center mt-1.25 cursor-pointer desplegable-interior oscuro" onClick={() => toggleBlock("seccion10-159")}>
-              <h3>Explicación uso de localStorage para hacer persistente la app (159. Almacenando las actividades en LocalStorage)</h3>
-               <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["seccion10-159"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">Explicación uso de localStorage para hacer persistente la app (159. Almacenando las actividades en LocalStorage)</h3>
+               <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["seccion10-159"] ? "rotate-180" : ""
                 }`}
               >▼</span>
             </div>
-            <div id="seccion10-159" className={`ml-2.5 ${openBlocks["seccion10-159"] ? "block" : "hidden"}`}>
+            <div id="seccion10-159" className={`ml-2.5 mr-2.5 ${openBlocks["seccion10-159"] ? "block" : "hidden"}`}>
               <p>Una buena adición y muy simple de implementar para este proyecto es localStorage. Veamos cómo hacerlo. ¿Donde podríamos colocar la función que escriba en localStorage? Mi reducer podría ser un buen lugar?¿dentro del if de 'save-activity' justo antes del return? sincronizando lo que esté en el state, sería una opción. Sin embargo también habría que agregarlo en el if de la acción 'delete-activity' y en más acciones si las agregara.<span className="destacado"> Otra opción, quizás la más sencilla, es hacerlo en el App.tsx y sincronizar únicamente el state de actividades y pasarlo como dependencia en un useEffect()</span>. <strong>La dependencia en el useEffect, lo que nos interesa que 'esté escuchando para actualizar las actividades guardadadas" es [state.activities]</strong></p>
 
               <pre data-line="7-9"><code className="language-js">
@@ -3791,12 +3687,12 @@ export const useModalPanel = () =&gt; {
 
             {/* Uso de tailwind y css/estilos propios en proyecto de html (Curso y tutoriales FO) */}
             <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("usocss")}>	
-              <h3>Uso de tailwind y css/estilos propios en proyecto de html (Curso y tutoriales FO)</h3>			
-              <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["usocss"] ? "rotate-180" : ""
+              <h3 className="font-semibold ">Uso de tailwind y css/estilos propios en proyecto de html (Curso y tutoriales FO)</h3>			
+              <span className={` mr-2.5 transition-transform duration-200 ${openBlocks["usocss"] ? "rotate-180" : ""
                 }`}
               >▼</span>
             </div>
-            <div id="usocss" className={`ml-2.5 ${openBlocks["usocss"] ? "block" : "hidden"}`}>
+            <div id="usocss" className={`ml-2.5 mr-2.5 ${openBlocks["usocss"] ? "block" : "hidden"}`}>
               <p>Hasta que no de con la tecla (si es posible) par configurar el uso de tailwind en proyectos de este tipo importando en la css principal tanto tylewindcss como css de terceros tipo prism.css, de momento las incluyo en el index.html principal del proyecto así:</p>
               <pre><code className="language-ts">
                 &lt;title&gt;Curso React&lt;/title&gt;	
@@ -3823,14 +3719,14 @@ export const useModalPanel = () =&gt; {
         </div> 
     
         {/* DEPLOY MANUAL EN NETLIFY */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">        			
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("deploymanual-netlify")}>
-            <h3>Deploy manual en Netlify</h3>		
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["deploymanual-netlify"] ? "rotate-180" : ""
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">        			
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("deploymanual-netlify")}>
+            <h3 className="font-semibold text-orange-300">Deploy manual en Netlify</h3>		
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["deploymanual-netlify"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>  
-          <div id="deploymanual-netlify" className={`ml-2.5 ${openBlocks["deploymanual-netlify"] ? "block" : "hidden"}`}>            
+          <div id="deploymanual-netlify" className={`ml-2.5 mr-2.5 ${openBlocks["deploymanual-netlify"] ? "block" : "hidden"}`}>            
             <p>vídeo 84. Excelente tutorial para hacer build y deployment a mano. [EN NETLIFY AHORA MISMO TENEMOS LINKADO CON UN REPOSITORIO GIT DEL CURSO DE ANGULAR PARA CONTINUO DEPLOYMENT, EXPLORAR CAMBIAR ESTO ]</p>
 
             <p>Tenemos todo esto en desarrollo pero tenemos que construirlo, hacer un Build. El comando del package.json "build: vite build"</p>
@@ -3849,18 +3745,18 @@ export const useModalPanel = () =&gt; {
         </div>      
     
         {/* PASOS PROYECTO */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("pasos-proyecto")}>
-            <h3>Pasos Proyecto (antiguo)</h3>
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["pasos-proyecto"] ? "rotate-180" : ""
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("pasos-proyecto")}>
+            <h3 className="font-semibold text-orange-300">Pasos Proyecto (antiguo)</h3>
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["pasos-proyecto"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>
         
-          <div id="pasos-proyecto" className={`ml-2.5 ${openBlocks["pasos-proyecto"] ? "block" : "hidden"}`}>  
+          <div id="pasos-proyecto" className={`ml-2.5 mr-2.5 ${openBlocks["pasos-proyecto"] ? "block" : "hidden"}`}>  
             <p><span className="destacado">Crear proyecto, instalar dependencias e instalar Tailwindcss</span></p>
             <p className="mt-1.25 mb-0"><span className="destacado">Instalando TailwindCSS y extensión para VSCode: </span> 
-              Vamos al link de <strong><a href="https://tailwindcss.com/" target="blank" className="text-[#000000]">https://tailwindcss.com/</a> &gt; docs &gt; installation &gt; Framework guides:</strong> contiene guías específicas de framework para instalar TailwindCSS en un gran número distinto de entornos Vite / Next.js / Angular / Ruby on Rails / Parcel / Symfony / Astro / ... nosotros elegimos Vite. A partir de aquí los pasos varían con respecto a lo que indica en el vídeo porque la versión es más nueva, ver <a className="text-[#000000]" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a>:
+              Vamos al link de <strong><a  href="https://tailwindcss.com/" target="blank" className="text-[#000000]">https://tailwindcss.com/</a> &gt; docs &gt; installation &gt; Framework guides:</strong> contiene guías específicas de framework para instalar TailwindCSS en un gran número distinto de entornos Vite / Next.js / Angular / Ruby on Rails / Parcel / Symfony / Astro / ... nosotros elegimos Vite. A partir de aquí los pasos varían con respecto a lo que indica en el vídeo porque la versión es más nueva, ver <a className="text-[#000000]" href="https://tailwindcss.com/docs/installation/using-vite" target="_blank">https://tailwindcss.com/docs/installation/using-vite</a>:
               </p>
     
               <ul>
@@ -3956,31 +3852,31 @@ export const useModalPanel = () =&gt; {
         </div>
     
         {/* VERSIONES PROGRAMAS INSTALADOS */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">            
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("programas")}>
-              <h3>Versiones programas instalados</h3>		
-              <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["programas"] ? "rotate-180" : ""
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">            
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("programas")}>
+              <h3 className="font-semibold text-orange-300">Versiones programas instalados</h3>		
+              <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["programas"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>
-          <div id="programas" className={`ml-2.5 ${openBlocks["programas"] ? "block" : "hidden"}`}>  
-            <p><a href="https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+actionscript+apacheconf+aspnet+basic+c+csharp+cpp+cobol+http+java+javadoc+javadoclike+jsdoc+js-extras+json+js-templates+less+markdown+markup-templating+pascal+perl+php+phpdoc+php-extras+powershell+python+jsx+tsx+ruby+sas+sass+scss+sql+typescript+typoscript+vbnet&plugins=line-highlight+autolinker+highlight-keywords+remove-initial-line-feed+inline-color+previewers+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+diff-highlight+treeview" className="txt-negro" target="blank">Mi configuración de Prism</a></p>
+          <div id="programas" className={`ml-2.5 mr-2.5 ${openBlocks["programas"] ? "block" : "hidden"}`}>  
+            <p><a  href="https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+actionscript+apacheconf+aspnet+basic+c+csharp+cpp+cobol+http+java+javadoc+javadoclike+jsdoc+js-extras+json+js-templates+less+markdown+markup-templating+pascal+perl+php+phpdoc+php-extras+powershell+python+jsx+tsx+ruby+sas+sass+scss+sql+typescript+typoscript+vbnet&plugins=line-highlight+autolinker+highlight-keywords+remove-initial-line-feed+inline-color+previewers+unescaped-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+diff-highlight+treeview" className="txt-negro" target="blank">Mi configuración de Prism</a></p>
             <p>Visual Studio Code <strong>1.96.4</strong> <span className="destacado">Extensiones:</span> <strong>Tailwind CSS IntelliSense</strong> / <strong>ES7+ React/Redux/React-Native snippets</strong> / <strong>Simple React Snippets</strong> / <strong>Escape HTML Code</strong></p>
-            <p>node <strong>v22.13.0</strong> / npm <strong>10.9.2</strong> - <a href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a></p>
-            <p>Git for Windows <strong>v2.47.1(2)</strong>  Latest update: January 14th 2025 - <a href="https://git-scm.com/">https://git-scm.com/</a></p>
-            <p>Postman <strong>11.29.3</strong> - <a href="https://www.postman.com/">https://www.postman.com/</a></p>
+            <p>node <strong>v22.13.0</strong> / npm <strong>10.9.2</strong> - <a  href="https://nodejs.org/es/" target="_blank">https://nodejs.org/es/</a></p>
+            <p>Git for Windows <strong>v2.47.1(2)</strong>  Latest update: January 14th 2025 - <a  href="https://git-scm.com/">https://git-scm.com/</a></p>
+            <p>Postman <strong>11.29.3</strong> - <a  href="https://www.postman.com/">https://www.postman.com/</a></p>
           </div>
         </div>    
       
         {/* Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24) */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">				
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("80-81-angular")}>
-              <h3>Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24)</h3>		
-              <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["80-81-angular"] ? "rotate-180" : ""
+        <div className="text-white p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">				
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("80-81-angular")}>
+              <h3 className="font-semibold text-orange-300">Respaldar nuestro proyecto en Github + GitHub Pages + Package.json scripts (del curso de ANGULAR 03/24)</h3>		
+              <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["80-81-angular"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>  
-          <div id="80-81-angular" className={`ml-2.5 ${openBlocks["80-81-angular"] ? "block" : "hidden"}`}>                               
+          <div id="80-81-angular" className={`ml-2.5 mr-2.5 ${openBlocks["80-81-angular"] ? "block" : "hidden"}`}>                               
             <h3 className="naranja">Respaldar nuestro proyecto en Github</h3>
             
             <p>Github es un servicio en la nube que nos permite darle segumiento a nuestros proyectos de Git. Github pages es un servicio extra que tiene Github en el cual podemos servir contenido estático</p>
@@ -3991,7 +3887,7 @@ export const useModalPanel = () =&gt; {
             <p><span className="destacado">git add .</span>: le dice a git todos los cambios que he hecho prepáralos para la fotografía.</p>
             <p><span className="destacado">git commit -m "Fin sección 4"</span></p>
             <p>Ahora ya tengo respaldos de seguridad en el caso de que ahora me cargue algo en mi código :) <span className="destacado">git checkout -- .</span> reconstruye mi proyecto a como estaba en la última fotografía, el último commit.</p>
-            <p>Subamos este código a github copiando estos comandos de aquí <a href="https://github.com/an.....5/angular-bases" target="_blank">https://github.com/an.....5/angular-bases</a>:
+            <p>Subamos este código a github copiando estos comandos de aquí <a  href="https://github.com/an.....5/angular-bases" target="_blank">https://github.com/an.....5/angular-bases</a>:
             <img id="53-1" className="cursor-pointer" src="img/53-1(agular).png" alt="" /> 
             </p>
             <ul className="lista-numbers-black mt-2.5 mb-5 mx-3.75">
@@ -4037,8 +3933,8 @@ export const useModalPanel = () =&gt; {
             <p><span className="destacado">git push</span></p>
 
             <p>veremos en acciones que hay una nueva ejecutándose y desde ahí mismo una vez terminada podremos accer a la url donde se ha vuelto a "montar" la aplicación con nuestros cambios:
-                <a href="https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741">https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741</a><br/>
-                <a href="https://an.....5.github.io/manual-xxxxx/">https://an.....5.github.io/manual-xxxxx/</a>
+                <a  href="https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741">https://github.com/an.....5/manual-xxxxx/actions/runs/12948584741</a><br/>
+                <a  href="https://an.....5.github.io/manual-xxxxx/">https://an.....5.github.io/manual-xxxxx/</a>
             </p>
 
             <p>Cogemos nuestra carpeta "bases" que es el producto de nuestro build y dentro del mismo VS Code la arrastramos a la altura del root de nuestra aplicación (al lado del src, del .angular) y la vamos a renombrar por docs. Ahora en la consola <strong>git add . + git commit -m "doc creado" + git push</strong> <span className="destacado">Eso ya nos crea en nuestro proyecto de github la carpeta docs que contiene todos los archivos que vamos a querer poner en un sitio web.</span></p>
@@ -4068,14 +3964,14 @@ export const useModalPanel = () =&gt; {
         </div>    
 
         {/* TAREAS FO */}
-        <div className="p-2.5 max-sm:p-2 rounded-md w-[90%] max-sm:w-[100%] mx-auto bg-gray-200 my-1.25">
-          <div className="flex justify-between items-center desplegable cursor-pointer" onClick={() => toggleBlock("tareasfo")}>
-            <h3>Tareas FO</h3>		
-            <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["tareasfo"] ? "rotate-180" : ""
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("tareasfo")}>
+            <h3 className="font-semibold text-orange-300">Tareas FO</h3>		
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["tareasfo"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>        
-          <div id="tareasfo" className={`ml-2.5 ${openBlocks["tareasfo"] ? "block" : "hidden"}`}> 
+          <div id="tareasfo" className={`ml-2.5 mr-2.5 ${openBlocks["tareasfo"] ? "block" : "hidden"}`}> 
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
               <svg className="size-6 shrink-0 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
@@ -4107,14 +4003,14 @@ export const useModalPanel = () =&gt; {
                 <li>Actualizar el portfolio con Calorie Tracker ¿MEJORAS?</li>
                 <li>Crear nueva rama y rediseñar guitarla-ur para añadirla al portfolio</li>
 
-                <li><a href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></li>
+                <li><a  href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/learn/lecture/42829276#overview" target="blank">curso udemy react</a></li>
                 <li>Quitar jquery de portfolio: - link DOM typescript -&gt; https://fullstackpro.es/courses/curso-typescript/gestion-del-dom</li>
                 <li>Arreglar despliegue automático portfolio en netlify (Nuevo y cambiar de nombre) X18/08 - XX19/02 (desinstalado cli de netlify y vuelto a instalar, no global sino dev)</li>              
                 <li>¿Mejoras css en visualización de imágenes de proyectos?</li>
                 <li>¿Mejorar componente modal panel?</li>
                 <li>Añadir boton encendido y apagado de CSS (y mirar mas)</li>  
                 
-                <li>Páginas individuales para secciones <a href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></li>
+                <li>Páginas individuales para secciones <a  href="https://medium.com/@diego.coder/primeros-pasos-con-react-router-dom-7a142e5b2ca9" target="_blank">(React Router Dom Diego Esteban)</a></li>
                 <li>Hacer build de Calendario litúrgico</li>
                 <li>Hacer build de Silmarillion</li>
               </ul>
@@ -4133,6 +4029,7 @@ export const useModalPanel = () =&gt; {
 
     </div>
     </div>
+    
     
    
 

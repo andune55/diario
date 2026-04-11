@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 /* Sobreescribimos ajustes estilos de prism */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
 
 pre[class*=language-] {
   margin: .5em 0;
