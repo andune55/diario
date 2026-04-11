@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diario</title>                 
-    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-CL-cOr6U.js"></script>
-    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-UtU2N9Bs.css">
+    <script type="module" crossorigin src="https://andune55.github.io/diario/assets/index-Dv8NdkBs.js"></script>
+    <link rel="stylesheet" crossorigin href="https://andune55.github.io/diario/assets/index-BEeCN-X-.css">
   </head>
   
   <body>
@@ -233,15 +233,8 @@
         </div>        
         <div id="proyectosfo" class="">            
           <a href="https://app.netlify.com/teams/an.....5/sites" class="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> - 
-          <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> - <br>
-          <!-- <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br> -->
-          <a href="https://doesitmutate.xyz/" class="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> / 
-          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> / 
-          <a href="https://developer.mozilla.org/es/docs/Web/API/Element" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a><br>
-          <a href="https://gist.github.com/JamieMason/3748498" class="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br>
-            
-
-
+          <a href="https://github.com/an.....5/" class="txt-primario" target="blank">https://github.com/an.....5/</a> 
+        
 
           <!-- / GIT /////////////////////////////////////////////////////////////// -->
           <div class="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -261,16 +254,1304 @@
               <a class="underline mx-1.5" href="https://es.stackoverflow.com/questions/544213/c%C3%B3mo-compartir-un-repositorio-privado-mediante-una-url" target="blank">¿Cómo compartir un repositorio privado mediante una URL?</a> / <a class="underline mx-1.5" href="https://gitfront.io/r/andune/LqWHLJa4HdLF/diario/" target="blank">Repo privado</a> /  <a class="underline mx-1.5" href="https://gitfront.io/" target="blank">https://gitfront.io/</a> /       
             </div>
 
-            <!-- GIT ///////////////////////////////////////////////////////////// -->
-            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#git').toggle();">	
-              <h3 class="flex font-bold items-center">
-                GIT
+
+            <!-- GIT: CONFIGURACIÓN INICIAL ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#config-git').toggle();">	
+              <h3 class="flex items-center font-bold">
+                ⚙️ GIT: CONFIGURACIÓN INICIAL (OBLIGATORIA)  
                 <img id="point-left" src="https://andune55.github.io/diario/assets/icon-finger-left-LffhithJ.png" width="30" class="noshadow animation-point-left" alt="" aria-hidden="true" style="visibility: visible;box-shadow: none;">
               </h3>			
-              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>
+            <div id="config-git" class="hidden">
+              <ul class="list-disc ml-5 my-2.5">        
+                <li class="my-1.25">
+                  <strong>1. Comprobar instalación:</strong>
+                  <span class="destacado">git --version</span>
+            
+                  <pre><code class="language-bash">
+                    git --version
+                    command -v git
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    Si no devuelve versión → instala Git.
+                  </div>
+                </li>
+            
+                <li class="my-1.25">
+                  <strong>2. Configuración básica (OBLIGATORIA):</strong>
+            
+                  <pre><code class="language-bash">
+                            git config --global user.name "Tu Nombre"
+                            git config --global user.email "tu@email.com"
+                            git config --global core.editor "nano"
+                                  </code></pre>
+            
+                  <div class="text-sm">
+                    🔥 Define tu identidad en commits.
+                  </div>
+                </li>
+            
+                <li class="my-1.25">
+                  <strong>3. Configuración recomendada (PRO):</strong>
+            
+                  <pre><code class="language-bash">
+                            git config --global init.defaultBranch main
+                            git config --global color.ui auto
+                            git config --global pull.ff only
+                                  </code></pre>
+            
+                  <div class="text-sm">
+                    <ul>
+                      <li><code>init.defaultBranch</code> → evita "master"</li>
+                      <li><code>color.ui</code> → mejor visual</li>
+                      <li><code>pull.ff only</code> → evita merges innecesarios 🔥</li>
+                    </ul>
+                  </div>
+                </li>
+            
+                <li class="my-1.25">
+                  <strong>4. Alias clave:</strong>
+            
+                  <pre><code class="language-bash">
+                            git config --global alias.st status
+                            git config --global alias.co checkout
+                            git config --global alias.br branch
+                            git config --global alias.cm "commit -m"
+                    
+                            git config --global alias.lg "log --graph --oneline --decorate --all"
+                            git config --global alias.logall "log --oneline --graph --all --decorate"
+                                  </code></pre>
+            
+                  <div class="text-sm">
+                    ⭐ <span class="destacado">git st</span> | <span class="destacado">git lg</span>
+                  </div>
+                </li>
+            
+                <li class="my-1.25">
+                  <strong>5. Ver configuración:</strong>
+            
+                  <pre><code class="language-bash">
+                            git config --list
+                            git config --global --list
+                            git config --show-origin --list
+                                  </code></pre>
+            
+                  <div class="text-sm">
+                    🔍 Debug configuración
+                  </div>
+                </li>
+            
+                <li class="my-1.25">
+                  <strong>✅ Checklist:</strong>
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Git instalado ✔️</li>
+                    <li>user.name / email ✔️</li>
+                    <li>Editor ✔️</li>
+                    <li>main por defecto ✔️</li>
+                    <li>Alias ✔️</li>
+                  </ul>
+                </li>        
+              </ul>
             </div>
 
-            <!-- GIT: Guía visual y práctica para principiantes y usuarios ocasionales -->
+            <!-- CICLO DE VIDA ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#ciclo-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🔁 CICLO DE VIDA DE ARCHIVOS (CORE DE GIT)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="ciclo-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- MODELO -->
+                <li class="my-1.25">
+                  <strong>Modelo mental:</strong>
+                  <span class="text-sm">
+                    🔥 Esto es Git.
+                  </span>
+            
+                  <div class="bg-neutral-900 text-green-400 p-2 rounded text-sm font-mono my-1">
+                    UNTRACKED → MODIFIED → STAGED → COMMITTED
+                  </div>              
+                </li>
+            
+                <!-- UNTRACKED -->
+                <li class="my-1.25">
+                  <strong>1. UNTRACKED:</strong> 
+                  <span class="text-sm">
+                    Archivo nuevo no rastreado.
+                  </span>
+            
+                  <pre><code class="language-bash">
+                  touch archivo.txt
+                  git status
+                  </code></pre>   
+                </li>
+            
+                <!-- MODIFIED -->
+                <li class="my-1.25">
+                  <strong>2. MODIFIED:</strong>
+                  <span class="text-sm">
+                    Archivo cambiado.
+                  </span>
+            
+                  <pre><code class="language-bash">
+                  echo "cambio" >> archivo.txt
+                  git status
+                  </code></pre>              
+                </li>
+            
+                <!-- STAGED -->
+                <li class="my-1.25">
+                  <strong>3. STAGED:</strong>
+                  <span class="text-sm">
+                    Preparado para commit.
+                  </span>
+            
+                  <pre><code class="language-bash">
+                  git add archivo.txt
+                  git status
+                  </code></pre>    
+                </li>
+            
+                <!-- COMMIT -->
+                <li class="my-1.25">
+                  <strong>4. COMMIT:</strong>
+                  <span class="text-sm">
+                    Guardado en historial.
+                  </span>
+            
+                  <pre><code class="language-bash">
+                  git commit -m "feat: ejemplo"
+                  </code></pre>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave:</strong>
+            
+                  <pre><code class="language-bash">
+                  git add ≠ git commit
+                  </code></pre>
+                </li>
+            
+                <!-- ZONAS -->
+                <li class="my-1.25">
+                  <strong>🧠 Las 3 zonas:</strong>
+            
+                  <div class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono my-1">
+                    Working → Staging → Repository
+                  </div>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Working → editas</li>
+                    <li>Staging → eliges</li>
+                    <li>Repo → guardas</li>
+                  </ul>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>commit -a no añade nuevos ❌</li>
+                    <li>olvidar add ❌</li>
+                    <li>no usar status ❌</li>
+                  </ul>
+                </li>        
+              </ul>        
+            </div>
+
+            <!-- COMANDOS BÁSICOS ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#basicos-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🧱 COMANDOS BÁSICOS (DÍA A DÍA)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="basicos-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- VISUAL ESQUEMA -->
+                <li class="my-2">
+                  <strong>🧠 Flujo real:</strong>
+            
+                  <div class="bg-neutral-900 text-green-400 p-2 rounded text-sm font-mono my-1">
+                    edit → status → add → status → commit
+                  </div>
+                </li>
+            
+                <!-- STATUS -->
+                <li class="my-1.25">
+                  <strong>1. git status:</strong>
+                  <span class="text-sm">
+                    Ver el estado actual del repositorio.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git status
+            git status -s
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Muestra archivos modificados, staged y rama actual
+                  </div>
+                </li>
+            
+                <!-- ADD -->
+                <li class="my-1.25">
+                  <strong>2. git add:</strong>
+                  <span class="text-sm">
+                    Añadir cambios al área de staging.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git add archivo.txt
+            git add .
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Decide qué irá al commit
+                  </div>
+                </li>
+            
+                <!-- DIFF -->
+                <li class="my-1.25">
+                  <strong>3. git diff:</strong>
+                  <span class="text-sm">
+                    Ver diferencias en los cambios.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git diff
+            git diff --staged
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Antes y después de hacer add
+                  </div>
+                </li>
+            
+                <!-- COMMIT -->
+                <li class="my-1.25">
+                  <strong>4. git commit:</strong>
+                  <span class="text-sm">
+                    Guardar cambios en el historial.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git commit -m "mensaje"
+            git commit -a -m "sin add (solo modificados)"
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Solo incluye lo que está en staging
+                  </div>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Git no guarda archivos, guarda snapshots.
+                  </span>
+            
+                  <div class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono my-1">
+                    commit = foto del estado preparado
+                  </div>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Usar <code>git add .</code> sin revisar ❌</li>
+                    <li>Commit sin mensaje claro ❌</li>
+                    <li>No usar <code>git diff</code> ❌</li>
+                  </ul>
+                </li>        
+              </ul>        
+            </div>
+            
+            <!-- INIT vs CLONE ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#init-clone-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🚀 INICIAR REPOSITORIO (init vs clone)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="init-clone-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- VISUAL -->
+                <li class="my-2">
+                  <strong>🧠 Flujo mental:</strong>
+            
+                  <div class="bg-neutral-900 text-green-400 p-3 rounded text-sm font-mono my-1 leading-6">
+                    LOCAL PROYECTO NUEVO
+                    ↓
+                    git init
+                    ↓
+                    REPO LOCAL
+            
+                    ------------------------
+            
+                    REPO REMOTO (GitHub)
+                    ↓
+                    git clone
+                    ↓
+                    REPO LOCAL + HISTORIAL
+                  </div>
+                </li>
+            
+                <!-- INIT -->
+                <li class="my-1.25">
+                  <strong>1. git init:</strong>
+                  <span class="text-sm">
+                    Crear un repositorio desde cero en tu máquina.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            cd mi-proyecto
+            git init
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Crea la carpeta oculta <code>.git</code>
+                  </div>
+                </li>
+            
+                <!-- CLONE -->
+                <li class="my-1.25">
+                  <strong>2. git clone:</strong>
+                  <span class="text-sm">
+                    Descargar un repositorio remoto completo.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git clone https://github.com/user/repo.git
+            git clone https://github.com/user/repo.git mi-carpeta
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Incluye historial + ramas + configuración remota
+                  </div>
+                </li>
+            
+                <!-- DIFERENCIA -->
+                <li class="my-1.25">
+                  <strong>🔥 Diferencia clave:</strong>
+                  <span class="text-sm">
+                    init crea, clone copia.
+                  </span>
+            
+                  <div class="bg-neutral-900 text-blue-400 p-3 rounded text-sm font-mono my-1 leading-6">
+                    git init → empiezas desde cero
+                    git clone → partes de algo ya existente
+                  </div>
+                </li>
+            
+                <!-- CASOS REALES -->
+                <li class="my-1.25">
+                  <strong>💼 Casos reales:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+            
+                    <li>
+                      <strong>Proyecto personal nuevo:</strong>
+                      → <span class="destacado">git init</span>
+                    </li>
+            
+                    <li>
+                      <strong>Te bajas un proyecto de GitHub:</strong>
+                      → <span class="destacado">git clone</span>
+                    </li>
+            
+                    <li>
+                      <strong>Empiezas local y luego subes a GitHub:</strong>
+            
+                      <pre><code class="language-bash">
+            git init
+            git add .
+            git commit -m "init"
+            git remote add origin URL
+            git push -u origin main
+                      </code></pre>
+                    </li>
+            
+                  </ul>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Git es distribuido → no hay "servidor central obligatorio".
+                  </span>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Hacer <code>git init</code> dentro de otro repo ❌</li>
+                    <li>Confundir clone con download zip ❌</li>
+                    <li>No configurar remoto después de init ❌</li>
+                  </ul>
+                </li>        
+              </ul>        
+            </div>
+
+            <!-- REMOTOS + PUSH + PULL ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#remotos-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🌍 REMOTOS + PUSH + PULL (FLUJO REAL). Lo que convierte a GIT en herramienta colaborativa
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="remotos-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- DIAGRAMA AVANZADO -->
+                <li class="my-2">
+                  <strong>🧠 Flujo completo:</strong>
+            
+                  <div class="bg-neutral-900 text-green-400 p-4 rounded text-sm font-mono my-2 leading-6">
+                    [ LOCAL ]
+                    ↑ edit
+                    [ Working Directory ]
+                    ↑ git add
+                    [ Staging ]
+                    ↑ git commit
+                    [ Local Repo ]
+                    ↑ git push
+                    =========================
+                    [ Remote Repo (GitHub) ]
+                    =========================
+                    ↓ git pull
+                    [ Local Repo ]
+                  </div>
+                </li>
+            
+                <!-- REMOTE -->
+                <li class="my-1.25">
+                  <strong>1. git remote:</strong>
+                  <span class="text-sm">
+                    Conectar tu repo local con uno remoto.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git remote -v
+            git remote add origin URL
+            git remote set-url origin URL
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 <code>origin</code> = nombre del remoto (por convención)
+                  </div>
+                </li>
+            
+                <!-- PUSH -->
+                <li class="my-1.25">
+                  <strong>2. git push:</strong>
+                  <span class="text-sm">
+                    Subir commits al repositorio remoto.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git push origin main
+            git push -u origin main
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 <code>-u</code> enlaza rama local con remota (solo 1 vez)
+                  </div>
+                </li>
+            
+                <!-- PULL -->
+                <li class="my-1.25">
+                  <strong>3. git pull:</strong>
+                  <span class="text-sm">
+                    Traer cambios del remoto.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git pull origin main
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 = fetch + merge automático
+                  </div>
+                </li>
+            
+                <!-- FETCH -->
+                <li class="my-1.25">
+                  <strong>4. git fetch:</strong>
+                  <span class="text-sm">
+                    Descargar cambios SIN aplicarlos.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git fetch origin
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 Más seguro que pull (control total)
+                  </div>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    push envía tus cambios, pull trae cambios de otros.
+                  </span>
+            
+                  <div class="bg-neutral-900 text-blue-400 p-3 rounded text-sm font-mono my-1">
+                    LOCAL → push → REMOTE
+                    REMOTE → pull → LOCAL
+                  </div>
+                </li>
+            
+                <!-- CASOS REALES -->
+                <li class="my-1.25">
+                  <strong>💼 Casos reales:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+            
+                    <li>
+                      <strong>Subir tu proyecto por primera vez:</strong>
+            
+                      <pre><code class="language-bash">
+            git init
+            git add .
+            git commit -m "init"
+            git remote add origin URL
+            git push -u origin main
+                      </code></pre>
+                    </li>
+            
+                    <li>
+                      <strong>Empiezas a trabajar cada día:</strong>
+            
+                      <pre><code class="language-bash">
+            git pull origin main
+                      </code></pre>
+                    </li>
+            
+                    <li>
+                      <strong>Guardar tu trabajo:</strong>
+            
+                      <pre><code class="language-bash">
+            git add .
+            git commit -m "feat: cambios"
+            git push
+                      </code></pre>
+                    </li>
+            
+                    <li>
+                      <strong>Ver cambios antes de mezclar:</strong>
+            
+                      <pre><code class="language-bash">
+            git fetch
+            git log origin/main --oneline
+                      </code></pre>
+                    </li>
+            
+                  </ul>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Hacer push sin hacer pull antes ❌</li>
+                    <li>Confundir fetch con pull ❌</li>
+                    <li>No usar <code>-u</code> en primer push ❌</li>
+                    <li>Forzar push sin saber (<code>--force</code>) ❌🔥</li>
+                  </ul>
+                </li>        
+              </ul>        
+            </div>
+
+            <!-- RAMAS (REFACTOR PRO) ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#ramas-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🌿 RAMAS (BRANCHING REAL)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>
+            <div id="ramas-git" class="hidden">
+              <ul class="list-disc ml-5 my-2.5">
+                <!-- DIAGRAMA MEJORADO -->
+                <li class="my-2">
+                  <strong>🧠 Flujo real:</strong>
+                
+                    <pre class="bg-neutral-900 text-green-400 rounded text-sm font-mono leading-4"><code>
+        main ────────●───────●──────────
+                  \
+                  \──●──●   feature/login
+                        ↑ trabajo aislado
+
+        merge ↓
+
+        main ────────●───────●──●──────
+                    </code></pre>
+                  
+                  
+                </li>
+
+                <!-- CAMBIO DE RAMA -->
+                <li class="my-1.25">
+                  <strong>1. Cambiar de rama:</strong>
+                  <span class="text-sm">
+                    Moverte entre ramas.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git switch main
+            git switch feature/login
+                  </code></pre>
+
+                  <div class="text-sm">
+                    👉 Alternativa antigua: <code>git checkout</code>
+                  </div>
+                </li>
+
+                <!-- VER RAMAS -->
+                <li class="my-1.25">
+                  <strong>2. Ver ramas:</strong>
+                  <span class="text-sm">
+                    Listar ramas disponibles.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git branch      # solo locales
+            git branch -a   # locales + remotas
+                  </code></pre>
+                </li>
+
+                <!-- MERGE -->
+                <li class="my-1.25">
+                  <strong>3. Merge:</strong>
+                  <span class="text-sm">
+                    Integrar cambios en otra rama.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git switch main
+            git merge feature/login
+                  </code></pre>
+
+                  <div class="text-sm">
+                    👉 Estás en <strong>main</strong> y traes cambios de <strong>feature/login</strong>
+                  </div>
+                </li>
+
+                <!-- BORRAR -->
+                <li class="my-1.25">
+                  <strong>4. Borrar rama:</strong>
+                  <span class="text-sm">
+                    Eliminar ramas ya usadas.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git branch -d feature/login   # segura (solo si está mergeada)
+            git branch -D feature/login   # forzada
+                  </code></pre>
+                </li>
+
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Cada rama = contexto independiente.
+                  </span>
+
+                  <div class="bg-neutral-900 text-blue-400 p-3 rounded text-sm font-mono my-1">
+                    main = estable
+                    feature/* = desarrollo
+                    fix/* = bugs
+                  </div>
+                </li>
+
+                <!-- CASO REAL -->
+                <li class="my-1.25">
+                  <strong>💼 Caso real típico:</strong>
+
+                  <pre><code class="language-bash">
+            git switch -c feature/login   # crear + cambiar
+            # trabajas
+            git add .
+            git commit -m "feat: login"
+
+            git switch main
+            git merge feature/login
+                  </code></pre>
+                </li>
+
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Trabajar en main ❌</li>
+                    <li>Merge sin actualizar (sin pull) ❌</li>
+                    <li>Borrar rama sin merge ❌</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CONFLICTOS ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#conflictos-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                ⚔️ CONFLICTOS (MERGE REAL)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>
+            <div id="conflictos-git" class="hidden">
+              <ul class="list-disc ml-5 my-2.5">
+                <!-- DIAGRAMA CLARO -->
+                <li class="my-2">
+                  <strong>🧠 Cuándo ocurre un conflicto:</strong>
+
+                  <pre class="bg-neutral-900 text-green-400 rounded text-sm font-mono">
+            main ─────●────────●────────
+                        \
+                        ●──●  feature/login
+                              (mismo archivo modificado)
+
+            merge ↓ ❌ conflicto
+                  </pre>
+                </li>
+
+                <!-- CONCEPTO -->
+                <li class="my-1.25">
+                  <strong>¿Qué es un conflicto?</strong>
+                  <span class="text-sm">
+                    Dos ramas modifican la misma parte de un archivo y Git no sabe cuál elegir.
+                  </span>
+                </li>
+
+                <!-- EJEMPLO REAL -->
+                <li class="my-1.25">
+                  <strong>💼 Caso real:</strong>
+                  <span class="text-sm">
+                    Dos devs cambian la misma línea.
+                  </span>
+
+                  <pre><code class="language-bash">
+            # en main
+            const user = "admin"
+
+            # en feature
+            const user = "guest"
+                  </code></pre>
+                </li>
+
+                <!-- MERGE CONFLICT -->
+                <li class="my-1.25">
+                  <strong>1. Intentas hacer merge:</strong>
+                  <span class="text-sm">
+                    Git detecta conflicto.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git switch main
+            git merge feature/login
+                  </code></pre>
+
+                  <div class="text-sm">
+                    ❌ Git no puede decidir → conflicto
+                  </div>
+                </li>
+
+                <!-- ARCHIVO -->
+                <li class="my-1.25">
+                  <strong>2. Git marca el archivo:</strong>
+                  <span class="text-sm">
+                    Debes resolverlo manualmente.
+                  </span>
+
+                  <pre><code class="language-bash">
+            &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+            const user = "admin"
+            =======
+            const user = "guest"
+            &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/login
+                  </code></pre>
+
+                  <div class="text-sm">
+                    👉 HEAD = tu rama actual (main)
+                    👉 abajo = la otra rama
+                  </div>
+                </li>
+
+                <!-- RESOLVER -->
+                <li class="my-1.25">
+                  <strong>3. Resolver conflicto:</strong>
+                  <span class="text-sm">
+                    Editas el archivo y decides qué dejar.
+                  </span>
+
+                  <pre><code class="language-bash">
+            const user = "admin"   # o guest o mezcla
+                  </code></pre>
+                </li>
+
+                <!-- FINALIZAR -->
+                <li class="my-1.25">
+                  <strong>4. Finalizar merge:</strong>
+                  <span class="text-sm">
+                    Marcar como resuelto y confirmar.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git add archivo.js
+            git commit
+                  </code></pre>
+                </li>
+
+                <!-- ABORT -->
+                <li class="my-1.25">
+                  <strong>Extra: cancelar merge:</strong>
+                  <span class="text-sm">
+                    Volver atrás si te lías.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git merge --abort
+                  </code></pre>
+                </li>
+
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Git no pierde nada → tú decides el resultado final.
+                  </span>
+
+                  <pre class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono">
+            conflicto = decisión humana
+                  </pre>
+                </li>
+
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>No entender HEAD vs rama ❌</li>
+                    <li>Borrar código sin revisar ❌</li>
+                    <li>No probar antes de commit ❌</li>
+                    <li>Entrar en pánico 😅</li>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!-- HISTORIAL Y RECUPERACIÓN ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#historial-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🧭 HISTORIAL + RECUPERACIÓN (REAL)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="historial-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- LOG -->
+                <li class="my-1.25">
+                  <strong>1. Ver historial:</strong>
+                  <span class="text-sm">
+                    Ver commits.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git log
+            git log --oneline
+            git lg   # alias pro
+                  </code></pre>
+                </li>
+            
+                <!-- REVERT -->
+                <li class="my-1.25">
+                  <strong>2. Revert (seguro):</strong>
+                  <span class="text-sm">
+                    Deshacer un commit SIN borrar historial.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git revert HASH
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 crea un commit nuevo que revierte el anterior
+                  </div>
+                </li>
+            
+                <!-- RESET -->
+                <li class="my-1.25">
+                  <strong>3. Reset (peligroso):</strong>
+                  <span class="text-sm">
+                    Mover el puntero del repo.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git reset --soft HEAD~1   # mantiene cambios
+            git reset --hard HEAD~1   # borra TODO
+                  </code></pre>
+                </li>
+            
+                <!-- REFlOG -->
+                <li class="my-1.25">
+                  <strong>4. Reflog (salvavidas):</strong>
+                  <span class="text-sm">
+                    Historial interno incluso de lo borrado.
+                  </span>
+            
+                  <pre><code class="language-bash">
+            git reflog
+            git checkout HEAD@{2}
+                  </code></pre>
+                </li>
+            
+                <!-- CASO REAL 1 -->
+                <li class="my-2">
+                  <strong>💼 Caso real 1: borraste commits por error</strong>
+            
+                  <pre class="bg-neutral-900 text-green-400 rounded text-sm font-mono">
+            ANTES:
+            main ───●──●──●
+            
+            git reset --hard HEAD~2
+            
+            DESPUÉS:
+            main ───●
+                  </pre>
+            
+                  <div class="text-sm">
+                    ❌ parece perdido... pero no lo está
+                  </div>
+            
+                  <pre><code class="language-bash">
+            git reflog
+            git reset --hard HEAD@{1}
+                  </code></pre>
+                </li>
+            
+                <!-- CASO REAL 2 -->
+                <li class="my-2">
+                  <strong>💼 Caso real 2: commit malo en producción</strong>
+            
+                  <pre class="bg-neutral-900 text-green-400 rounded text-sm font-mono">
+            main ───●──●──● (bug)
+                  </pre>
+            
+                  <pre><code class="language-bash">
+            git revert HEAD
+                  </code></pre>
+            
+                  <pre class="bg-neutral-900 text-green-400 rounded text-sm font-mono">
+            main ───●──●──●──● (revert)
+                  </pre>
+            
+                  <div class="text-sm">
+                    ✔ no rompes historial
+                    ✔ seguro para equipos
+                  </div>
+                </li>
+            
+                <!-- CASO REAL 3 -->
+                <li class="my-2">
+                  <strong>💼 Caso real 3: quieres rehacer commits</strong>
+            
+                  <pre><code class="language-bash">
+            git reset --soft HEAD~1
+                  </code></pre>
+            
+                  <div class="text-sm">
+                    👉 deshace commit pero mantiene cambios
+                  </div>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Nada se pierde realmente en Git.
+                  </span>
+            
+                  <pre class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono">
+            reflog = máquina del tiempo
+                  </pre>
+                </li>
+            
+                <!-- DIFERENCIA CLAVE -->
+                <li class="my-1.25">
+                  <strong>⚖️ Reset vs Revert:</strong>
+            
+                  <pre class="bg-neutral-900 text-green-400 p-2 rounded text-sm font-mono">
+            reset  → borra historial (local)
+            revert → crea nuevo commit (seguro)
+                  </pre>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Usar reset en remoto ❌</li>
+                    <li>No usar reflog ❌</li>
+                    <li>Confundir revert con reset ❌</li>
+                  </ul>
+                </li>
+            
+              </ul>
+            
+            </div>
+
+            <!-- STASH ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#stash-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                📦 STASH (CAMBIOS TEMPORALES)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>
+            <div id="stash-git" class="hidden">
+              <ul class="list-disc ml-5 my-2.5">
+                <!-- DIAGRAMA -->
+                <li class="my-2">
+                  <strong>🧠 Flujo:</strong>
+
+                  <pre class="bg-neutral-900 text-green-400 p-3 rounded text-sm font-mono my-2">
+            working dir (cambios)
+                    ↓ git stash
+            [ stash guardado ]
+                    ↓ git stash pop
+            working dir (recuperado)
+                  </pre>
+                </li>
+
+                <!-- CONCEPTO -->
+                <li class="my-1.25">
+                  <strong>¿Qué es stash?</strong>
+                  <span class="text-sm">
+                    Guardar cambios temporales sin hacer commit.
+                  </span>
+                </li>
+
+                <!-- GUARDAR -->
+                <li class="my-1.25">
+                  <strong>1. Guardar cambios:</strong>
+                  <span class="text-sm">
+                    Limpia tu working directory.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git stash
+            git stash -u   # incluye archivos nuevos
+                  </code></pre>
+                </li>
+
+                <!-- LISTAR -->
+                <li class="my-1.25">
+                  <strong>2. Ver stash:</strong>
+                  <span class="text-sm">
+                    Lista de cambios guardados.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git stash list
+                  </code></pre>
+                </li>
+
+                <!-- RECUPERAR -->
+                <li class="my-1.25">
+                  <strong>3. Recuperar cambios:</strong>
+                  <span class="text-sm">
+                    Aplicar stash guardado.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git stash apply   # mantiene stash
+            git stash pop     # aplica y borra
+                  </code></pre>
+                </li>
+
+                <!-- BORRAR -->
+                <li class="my-1.25">
+                  <strong>4. Borrar stash:</strong>
+                  <span class="text-sm">
+                    Limpiar lista.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git stash drop
+            git stash clear
+                  </code></pre>
+                </li>
+
+                <!-- CASO REAL -->
+                <li class="my-2">
+                  <strong>💼 Caso real:</strong>
+
+                  <span class="text-sm">
+                    Estás trabajando y te piden cambiar de rama urgentemente.
+                  </span>
+
+                  <pre><code class="language-bash">
+            git stash
+            git switch main
+            # arreglas bug
+            git switch feature
+            git stash pop
+                  </code></pre>
+                </li>
+
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    stash = “guardar sin comprometer”
+                  </span>
+
+                  <pre class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono">
+            no commit → stash
+                  </pre>
+                </li>
+
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Olvidar stash y perder cambios ❌</li>
+                    <li>No usar <code>-u</code> ❌</li>
+                    <li>Acumular stash innecesarios ❌</li>
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <!-- WORKFLOW REAL ////////////////////////////////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro"
+              onclick="$('#workflow-git').toggle();">
+              <h3 class="flex items-center font-bold">
+                🔄 WORKFLOW REAL (DÍA A DÍA)
+              </h3>
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2"></span>
+            </div>        
+            <div id="workflow-git" class="hidden">        
+              <ul class="list-disc ml-5 my-2.5">        
+                <!-- DIAGRAMA -->
+                <li class="my-2">
+                  <strong>🧠 Flujo diario:</strong>
+            
+                  <pre class="bg-neutral-900 text-green-400 p-3 rounded text-sm font-mono my-2">
+            mañana:
+            git pull
+            
+            trabajo:
+            edit → add → commit
+            
+            fin:
+            git push
+                  </pre>
+                </li>
+            
+                <!-- CASO COMPLETO -->
+                <li class="my-2">
+                  <strong>💼 Caso real completo:</strong>
+            
+                  <pre><code class="language-bash">
+            # 1. empezar el día
+            git pull origin main
+            
+            # 2. crear rama
+            git switch -c feature/login
+            
+            # 3. trabajar
+            git add .
+            git commit -m "feat: login"
+            
+            # 4. subir cambios
+            git push -u origin feature/login
+            
+            # 5. merge (tras revisión)
+            git switch main
+            git pull
+            git merge feature/login
+            
+            # 6. limpiar
+            git branch -d feature/login
+                  </code></pre>
+                </li>
+            
+                <!-- VARIANTE EQUIPO -->
+                <li class="my-2">
+                  <strong>👥 En equipo:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>Trabajas en ramas</li>
+                    <li>No tocas main directamente</li>
+                    <li>Pull antes de trabajar</li>
+                    <li>Push frecuente</li>
+                  </ul>
+                </li>
+            
+                <!-- CLAVE -->
+                <li class="my-1.25">
+                  <strong>🔥 Clave mental:</strong>
+                  <span class="text-sm">
+                    Git = flujo continuo, no acciones sueltas
+                  </span>
+            
+                  <pre class="bg-neutral-900 text-blue-400 p-2 rounded text-sm font-mono">
+            pull → trabajar → push
+                  </pre>
+                </li>
+            
+                <!-- ERRORES -->
+                <li class="my-1.25">
+                  <strong>⚠️ Errores típicos:</strong>
+            
+                  <ul class="list-disc ml-5 text-sm">
+                    <li>No hacer pull al empezar ❌</li>
+                    <li>Trabajar en main ❌</li>
+                    <li>No subir cambios ❌</li>
+                    <li>Commits poco claros ❌</li>
+                  </ul>
+                </li>
+            
+              </ul>
+            
+            </div>
+
+
+            <!-- GIT (ANTIGUA DOC FO) Guía visual y práctica para principiantes y usuarios ocasionales ///////////////////////////// -->
+            <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#git').toggle();">	
+              <h3 class="flex font-bold items-center">
+                GIT  (ANTIGUA DOC FO)              
+              </h3>			
+              <span class="cambiaicono ico_chevron_down_blanco ico20 mr-2" title=""></span>
+            </div>           
             <div id="git" class="hidden">
               <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository#ch02-git-basics-chapter" class="underline ml-1.5 mb-1.5 inline" target="blank">Repositorio GIT</a> - <a href="https://git-scm.com/book/es/v2/Ramificaciones-en-Git-%c2%bfQu%c3%a9-es-una-rama%3F" class="underline ml-1.5 mb-1.5 inline" target="blank">Ramificaciones en GIT</a>
               <ul class="list-disc ml-5 my-2.5">
@@ -940,7 +2221,7 @@
                 
               </ul>                  
                
-            </div>        
+            </div> 
   
             <!-- Explicación y pasos repositorio GIT (mas completo el anterior)-->
             <div class="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onclick="$('#tutorial-git').toggle();">	
@@ -1632,6 +2913,13 @@
               
             </div>
           </div>
+
+
+          <!-- <a href="D:/angular%2017%20(2024)/index.html" class="txt-primario" target="blank">angular 03/24</a> <br> -->
+          <a href="https://doesitmutate.xyz/" class="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> / 
+          <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> / 
+          <a href="https://developer.mozilla.org/es/docs/Web/API/Element" class="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a> /
+          <a href="https://gist.github.com/JamieMason/3748498" class="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br>
           
           
         </div>
