@@ -85,6 +85,324 @@ export default function AppContent({ onLogout }: AppContentProps) {
         </div>
 
 
+       {/* <!-- CLAUDE CODE --> */}
+        <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
+
+          <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("atajos-cc")}>
+            <h3 className="font-semibold text-orange-300">Atajos y conceptos Claude Code</h3>
+            <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["atajos-cc"] ? "rotate-180" : ""
+                }`}
+            >▼</span>
+          </div>
+          <div id="atajos-cc" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["atajos-cc"] ? "block" : "hidden"}`}>
+            <div className="mt-3 mb-2 pl-1.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg"> 
+
+              <a target="_blank" href="./02-Ponerse Manos a la obra.pdf">02-Ponerse Manos a la obra.pdf</a>
+
+              {/* <!-- Realizar cambios --> */}
+              <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("configurar-claude-code")}>
+                  <h3 className="font-semibold">Configuración de Claude Code</h3>
+                   <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["configurar-claude-code"] ? "rotate-180" : ""
+                  }`}
+                >▼</span>
+              </div>              
+              <div id="configurar-claude-code" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["configurar-claude-code"] ? "block" : "hidden"}`}>                        
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Install Claude Code</strong></span> --&gt; 
+                  <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                    <li className="my-1"><strong>macOS, Linux, WSL:</strong> <span className="destacado">curl -fsSL https ://claude.ai/install.sh | bash</span></li>
+                    <li className="my-1"><strong>Windows PowerShell:</strong> <span className="destacado">irm https://claude.ai/install.ps1 | iex</span></li>
+                    <li className="my-1"><strong>Símbolo del sistema de Windows (cmd.exe):</strong> <span className="destacado">curl -fsSL https ://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd</span></li>                    
+                    <li className="my-1"><strong>MacOS (Homebrew):</strong> <span className="destacado">brew install --cask claude-code</span></li>                                   
+                  </ul> 
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Solucionar problemas de instalación</strong></span> --&gt; 
+                  <a target="_blank" href="https://code.claude.com/docs/en/troubleshoot-install">https://code.claude.com/docs/en/troubleshoot-install</a>
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Configuración de proveedor externo</strong></span> --&gt; 
+                  <a target="_blank" href="https://code.claude.com/docs/en/third-party-integrations">https://code.claude.com/docs/en/third-party-integrations</a>
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Claude Code docs, primeros pasos</strong></span> --&gt; 
+                  <a target="_blank" href="https://code.claude.com/docs/es/quickstart">https://code.claude.com/docs/es/quickstart</a>
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Comandos de uso diario más importantes</strong></span> --&gt; 
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Comando</th>
+                          <th>Qué hace</th>
+                          <th>Ejemplo</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code>claude</code></td>
+                          <td>Inicia el modo interactivo</td>
+                          <td><code>claude</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>claude "task"</code></td>
+                          <td>Ejecuta una tarea única</td>
+                          <td><code>claude "fix the build error"</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>claude -p "query"</code></td>
+                          <td>Ejecuta una consulta única y luego sale</td>
+                          <td><code>claude -p "explain this function"</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>claude -c</code></td>
+                          <td>Continúa la conversación más reciente en el directorio actual</td>
+                          <td><code>claude -c</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>claude -r</code></td>
+                          <td>Reanuda una conversación anterior</td>
+                          <td><code>claude -r</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>/clear</code></td>
+                          <td>Borra el historial de conversación</td>
+                          <td><code>/clear</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>/help</code></td>
+                          <td>Muestra los comandos disponibles</td>
+                          <td><code>/help</code></td>
+                        </tr>
+                        <tr>
+                          <td><code>exit</code> o <code>Ctrl+D</code></td>
+                          <td>Salir de Claude Code</td>
+                          <td><code>exit</code></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>   
+
+              </div>
+
+
+              {/* <!-- Añadiendo contexto --> */}
+              <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("andiendo-contexto")}>
+                  <h3 className="font-semibold">Añadiendo contexto</h3>
+                   <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["andiendo-contexto"] ? "rotate-180" : ""
+                  }`}
+                >▼</span>
+              </div>              
+              <div id="andiendo-contexto" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["andiendo-contexto"] ? "block" : "hidden"}`}>
+                  <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                    <li className="my-1">La calidad del contexto influye directamente en la calidad de las respuestas.</li>
+                    <li className="my-1">Claude Code utiliza archivos persistentes para recordar instrucciones.</li>
+                    <li className="my-1">Las instrucciones deben mantenerse simples y específicas.</li>
+                    <li className="my-1">Referenciar archivos relevantes reduce tiempo de búsqueda.</li>
+                    <li className="my-1">El contexto compartido ayuda a estandarizar el trabajo entre equipos.</li>                 
+                  </ul>   
+                 <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/init</strong></span> --&gt; 
+                  <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                    <li className="my-1"> analiza todo el código fuente y comprende:
+                      <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                        <li className="ml-4">El propósito y la arquitectura del proyecto</li>
+                        <li className="ml-4">Comandos importantes y archivos críticos</li>
+                        <li className="ml-4">Patrones y estructura de codificación</li>
+                      </ul>
+                    </li>
+                    <li className="my-1">crea un resumen </li>
+                    <li className="my-1">lo guarda en un archivo <span className="bg-neutral-200 px-1"><strong>CLAUDE.md</strong>:</span>
+                       <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                        <li className="ml-4">Guía a Claude a través de tu código fuente, señalando comandos importantes, arquitectura y estilo de codificación.</li>
+                        <li className="ml-4">Permite darle a Claude instrucciones específicas o personalizadas.</li>
+                        <li className="ml-4">Se incluye en cada solicitud que le hagas a Claude --&gt; es como tener una solicitud del sistema permanente para tu proyecto.</li>                       
+                        <li className="ml-4">Lo podemos editar directamente o ejecutando <strong>/memory </strong>Claude Code.</li>
+                      </ul> 
+                    </li>                    
+                  </ul>
+                </div>
+
+                 <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Claude reconoce tres archivos CLAUDE.md diferentes:</strong></span> --&gt; 
+                    <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                      <li className="ml-4"><strong>CLAUDE.md</strong> - Generado con /init, añadido al control de versiones, compartido con otros ingenieros.</li>
+                      <li className="ml-4"><strong>CLAUDE.local.md</strong> - No se comparte con otros ingenieros, contiene instrucciones personales y personalizaciones para Claude.</li>
+                      <li className="ml-4"><strong>~/.claude/CLAUDE.md</strong> - Se utiliza con todos los proyectos de tu máquina y contiene las instrucciones que quieres que Claude siga en todos los proyectos.</li>
+                    </ul>
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>usar @seguido de la ruta del archivo</strong></span> --&gt;
+                  cuando necesites que en una solicitud Claude examine archivos específicos --&gt; <span className="destacado">si quieres preguntar sobre tu sistema de autenticación y conoces los archivos relevantes, puedes escribir: How does the auth system work? @auth
+                  </span>
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>usar @sintaxis paa referencias archivos en CLAUDE.md</strong></span> --&gt; 
+                  muy útil para archivos que son relevantes para muchos aspectos de tu proyecto:
+
+                   <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                      <li className="ml-4">Por ejemplo, si tenemos un archivo de esquema de base de datos que define la estructura de datos podemos agregar a nuestro CLAUDE.md: <span className="destacado">The database schema is defined in the @prisma/schema.prisma file. Reference it anytime you need to understand the structure of data stored in the database.</span> <strong>un archivo así incluido, su contenido se incluye automáticamente en cada solicitud</strong></li>
+                      <li className="ml-4">también es útil si tu repositorio ya tiene un archivo <strong>AGENTS.md para otra herramienta</strong>: no necesitas duplicar las instrucciones --&gt; <span className="destacado">agregamos @AGENTS.md en la primera línea de tu archivo CLAUDE.md y Claude cargará primero el contenido de ese archivo</span></li>
+                    </ul>
+                </div>
+              </div>
+
+
+              {/* <!-- Realizar cambios --> */}
+              <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("realizar-cambios")}>
+                  <h3 className="font-semibold">Realizar cambios</h3>
+                   <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["realizar-cambios"] ? "rotate-180" : ""
+                  }`}
+                >▼</span>
+              </div>              
+              <div id="realizar-cambios" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["realizar-cambios"] ? "block" : "hidden"}`}>                            
+                <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                  <li className="my-1">Claude entiende el contexto del proyecto antes de modificar código.</li>
+                  <li className="my-1">Las herramientas integradas permiten automatizar cambios complejos.</li>
+                  <li className="my-1">El flujo de trabajo combina análisis, modificación y validación.</li>
+                  <li className="my-1">Claude puede iterar sobre soluciones hasta refinarlas.</li>
+                  <li className="my-1">El sistema acelera tareas repetitivas y estructurales.</li>
+                </ul>   
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Ctrl + v</strong></span> --&gt; 
+                  Atajo de teclado diseñado específicamente para pegar capturas de pantalla en la interfaz de chat
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/plan</strong> o 2veces <strong>Shift + Tab (1 si ya acepta ediciones automat.)</strong></span> --&gt; 
+                  activa el modo de planificación
+                  <ul className="list-disc ml-4 sm:ml-4 my-2.5">
+                    <li className="ml-4">Lee más archivos en tu proyecto</li>
+                    <li className="ml-4">Crear un plan de implementación detallado</li>
+                    <li className="ml-4">Te mostrará exactamente lo que pretende hacer.</li>
+                    <li className="ml-4">Espera su aprobación antes de continuar.</li>
+                  </ul>
+                  <span className="bg-neutral-200 px-1"><strong>Ctrl + G</strong></span> --&gt; 
+                  Revisar el plan en editor de texto
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>Ctrl + O</strong></span> --&gt; 
+                  ver pasos detallados del razonamiento de Claude
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/effort</strong></span> --&gt; 
+                  ver nivel de esfuerzo de Claude y ajustarlo
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>ultrathink (en una pregunta)</strong></span> --&gt; 
+                  para que razone más en ese turno (no modifica nivel de esfuerzo de sesión)
+                </div>               
+              </div>
+
+
+               {/* <!-- Contexto de control --> */}
+              <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("contexto-de-control")}>
+                  <h3 className="font-semibold">Contexto de control</h3>
+                   <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["contexto-de-control"] ? "rotate-180" : ""
+                  }`}
+                >▼</span>
+              </div>              
+              <div id="contexto-de-control" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["contexto-de-control"] ? "block" : "hidden"}`}> 
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>para evitar que Claude cometa el mismo error repetitivo</strong></span> --&gt; 
+                    <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                      <li className="my-1"><strong>Pulsar Escape</strong> para detener la respuesta actual.</li>
+                      <li className="my-1"><strong>/memory</strong> (o edita <strong>CLAUDE.md</strong> directamente) para añadir una nota sobre el enfoque correcto.</li>
+                      <li className="my-1">Continúa la conversación con la información corregida.</li>                     
+                    </ul> 
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/rewind</strong> (o pulsar escape dos veces)</span> --&gt; 
+                  mostrará todos los mensajes que has enviado, lo que permite volver a un punto anterior y continuar desde allí. Esto ayuda a:
+
+                    <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                      <li className="my-1 ml-4">Mantener un contexto valioso (como la comprensión que tiene Claude de tu código fuente).</li>
+                      <li className="my-1 ml-4">Eliminar el historial de conversaciones que distraigan o sean irrelevantes</li>
+                      <li className="my-1 ml-4">Mantener a Claude concentrado en la tarea actual.</li>
+                    </ul> 
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/compact</strong></span> --&gt; 
+                   resume todo el historial de conversaciones, conservando la información clave que Claude ha aprendido
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/clear</strong></span> --&gt; 
+                  inicia una nueva conversación con contexto nuevo (no elimina la conversacón de tu historial de sesión)
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>/resume</strong></span> --&gt; 
+                  volver a conversación anterior
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+              </div>
+
+
+              <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><span className="destacado">claude mcp add playwright npx @playwright/mcp@latest</span></span> --&gt; 
+                  instala el servidor MCP(Procolo de contexto de modelo) <strong>Playwright</strong> que le da a Claude la capacidad de controlar un navegador web.
+                </div>
+
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+
+
+              {/* <!-- XXXXXXXXXXX --> */}
+              <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("XXXXXXXXXX")}>
+                  <h3 className="font-semibold">XXXXXXXXXXXXX</h3>
+                   <span className={`mr-2.5 transition-transform duration-200 ${openBlocks["XXXXXXXXXX"] ? "rotate-180" : ""
+                  }`}
+                >▼</span>
+              </div>              
+              <div id="XXXXXXXXXX" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["XXXXXXXXXX"] ? "block" : "hidden"}`}> 
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXXXXXXXXXXXXXXX</strong></span> --&gt; 
+                    <ul className="list-disc ml-0 sm:ml-4 my-2.5">
+                      <li className="my-1">XXXXXXXXX</li>
+                      <li className="my-1">XXXXXXXXX</li>
+                      <li className="my-1">XXXXXXXXX</li>
+                      <li className="my-1">XXXXXXXXX</li>
+                    </ul> 
+                </div>              
+                  
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+
+                <div className="px-1.5 py-0.5 italic leading-[24px]">
+                  <span className="bg-neutral-200 px-1"><strong>XXXXXXXXX</strong></span> --&gt; 
+                  XXXXXXXXXXX
+                </div>
+              </div>
+              
+
+              
+
+            </div>
+          </div>      
+        </div>     
+
         {/* <!-- ATAJOS VISUAL STUDIO CODE Y PROYECTOS FO --> */}
         <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
 

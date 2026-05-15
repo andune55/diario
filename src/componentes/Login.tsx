@@ -8,7 +8,7 @@ export default function Login({ onLogin }:LoginProps) {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    if (password === "FOS123abc") {
+    if (password === "4puritos5") {
       localStorage.setItem("auth", "true");
       onLogin();
     } else {
