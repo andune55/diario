@@ -92,12 +92,16 @@ export default function AppContent({ onLogout }: AppContentProps) {
             <h3 className="font-semibold text-orange-300">Atajos y conceptos Claude Code</h3>
             <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["atajos-cc"] ? "rotate-180" : ""
                 }`}
-            >▼</span>
+            >▼</span>   
           </div>
+           <a target="_blank" className="underline mr-1.5 txt-rojo" href="./00-Acerca de este curso.pdf">00-Acerca de este curso.pdf</a>
+           <a target="_blank" className="underline mr-1.5 txt-rojo" href="./01-Que es Claude Code.pdf">01-Que es Claude Code.pdf</a>
+           <a target="_blank" className="underline mr-1.5 txt-rojo" href="./02-Ponerse Manos a la obra.pdf">02-Ponerse Manos a la obra.pdf</a>
+           <a target="_blank" className="underline mr-1.5 txt-rojo" href="./03-Hooks y el SDK.pdf">03-Hooks y el SDK.pdf</a>
           <div id="atajos-cc" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["atajos-cc"] ? "block" : "hidden"}`}>
             <div className="mt-3 mb-2 pl-1.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg"> 
 
-              <a target="_blank" href="./02-Ponerse Manos a la obra.pdf">02-Ponerse Manos a la obra.pdf</a>
+              
 
               {/* <!-- Realizar cambios --> */}
               <div className="flex justify-between items-center desplegable-interior cursor-pointer oscuro" onClick={() => toggleBlock("configurar-claude-code")}>
