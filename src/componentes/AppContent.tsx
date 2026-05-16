@@ -611,16 +611,26 @@ export default function AppContent({ onLogout }: AppContentProps) {
         {/* <!-- GIT, PROYECTOS FO, DEPENDENCIAS ÚTILES --> */}
         <div className="p-2.5 rounded-xl w-[90%] max-sm:w-[100%] mx-auto my-2 bg-gradient-to-br from-[#0a0a0a] via-[#1a0f05] to-[#0a0a0a] border border-orange-500/10 shadow-[0_0_10px_rgba(255,115,0,0.05)] hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,115,0,0.25)] transition-all duration-300 cursor-pointer">
           <div className="flex justify-between items-center desplegable cursor-pointer transition" onClick={() => toggleBlock("proyectosfo")}>
-            <h3 className="font-semibold text-orange-300 flex">GIT, Proyectos y dependencias útiles npm 
+            <h3 className="font-semibold text-orange-300 flex">GIT, Proyectos y dependencias útiles npm &nbsp; <a href="https://app.netlify.com/teams/an.....5/sites" className="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> -
+            <a href="https://github.com/an.....5/" className="txt-primario" target="blank">https://github.com/an.....5/</a>
               <img id="point-left" src="./src/assets/img/icon-finger-left.png" width="30" className="noshadow animation-point-left" alt="" aria-hidden="true" />
             </h3>
             <span className={`text-orange-300 mr-2.5 transition-transform duration-200 ${openBlocks["proyectosfo"] ? "rotate-180" : ""
                 }`}
             >▼</span>
           </div>
+
+            {/* <!-- <a  href="D:/angular%2017%20(2024)/index.html" className="txt-primario" target="blank">angular 03/24</a> <br/> --> */}
+            <a target="_blank" className="underline mr-1.5 txt-rojo" href="./curso-GIT-Abril26-Sesion2-cheatsheet.pdf">curso-GIT-cheatsheet</a>
+            <a target="_blank" className="underline mr-1.5 txt-rojo" href="./curso-GIT-Abril26-Sesion1-practicas.pdf">curso-GIT-practicas</a>
+
+            <a href="https://doesitmutate.xyz/" className="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> /
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> /
+            <a href="https://developer.mozilla.org/es/docs/Web/API/Element" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a> /
+            <a href="https://gist.github.com/JamieMason/3748498" className="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br />
+
+
           <div id="proyectosfo" className={`ml-0 sm:ml-2.5 mr-1 sm:mr-2.5 ${openBlocks["proyectosfo"] ? "block" : "hidden"}`}>
-            <a  href="https://app.netlify.com/teams/an.....5/sites" className="txt-primario" target="blank">https://app.netlify.com/teams/an.....5/sites</a> -
-            <a  href="https://github.com/an.....5/" className="txt-primario" target="blank">https://github.com/an.....5/</a>
 
             {/* GIT  */}
             <div className="mt-3 mb-2 ml-1.5 pl-2.5 pt-0.5 pb-2  border-l-2 border-dashed border-l-stone-600 rounded-tl-2xl rounded-bl-2xl bg-neutral-50 shadow-lg">
@@ -3268,11 +3278,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
             </div>
           </div>
 
-          {/* <!-- <a  href="D:/angular%2017%20(2024)/index.html" className="txt-primario" target="blank">angular 03/24</a> <br/> --> */}
-          <a  href="https://doesitmutate.xyz/" className="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> /
-          <a  href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> /
-          <a  href="https://developer.mozilla.org/es/docs/Web/API/Element" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Element</a> /
-          <a  href="https://gist.github.com/JamieMason/3748498" className="underline mx-1.5 txt-rojo" target="blank">ISO Language code references</a><br />
+         
 
 
         </div>  
