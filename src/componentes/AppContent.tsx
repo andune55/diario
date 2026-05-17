@@ -623,6 +623,7 @@ export default function AppContent({ onLogout }: AppContentProps) {
             {/* <!-- <a  href="D:/angular%2017%20(2024)/index.html" className="txt-primario" target="blank">angular 03/24</a> <br/> --> */}
             <a target="_blank" className="underline mr-1.5 txt-rojo" href="./curso-GIT-Abril26-Sesion2-cheatsheet.pdf">curso-GIT-cheatsheet</a>
             <a target="_blank" className="underline mr-1.5 txt-rojo" href="./curso-GIT-Abril26-Sesion1-practicas.pdf">curso-GIT-practicas</a>
+            <a target="_blank" className="underline mr-1.5 txt-rojo" href="./squash.pdf">squash.pdf</a>
 
             <a href="https://doesitmutate.xyz/" className="underline mr-1.5 txt-rojo" target="blank">https://doesitmutate.xyz/</a> /
             <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array" className="underline mx-1.5 txt-rojo" target="blank">Enlace MDN Arrays</a> /
